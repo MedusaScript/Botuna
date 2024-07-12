@@ -4,8 +4,8 @@ local SaveManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/d
 local InterfaceManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/dawid-scripts/Fluent/master/Addons/InterfaceManager.lua"))()
 ----------------------------------------------------------------------------------------------------------------------------------------------
 local Window = Fluent:CreateWindow({
-    Title = "Fai Fao Hub",
-    SubTitle = "Version 2",
+    Title = "BRUTALITY HUB",
+    SubTitle = "V2",
     TabWidth = 160,
     Size = UDim2.fromOffset(530, 350),
     Acrylic = false,
