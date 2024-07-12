@@ -1096,7 +1096,7 @@ function UpdateIslandESP()
                         name.TextYAlignment = 'Top'
                         name.BackgroundTransparency = 1
                         name.TextStrokeTransparency = 0.5
-                        name.TextColor3 = Color3.fromRGB(255, 5, 5)
+                        name.TextColor3 = Color3.fromRGB(7, 236, 240)
                     else
                         v['NameEsp'].TextLabel.Text = (v.Name ..'   \n'.. round((game:GetService('Players').LocalPlayer.Character.Head.Position - v.Position).Magnitude/3) ..' Distance')
                     end
@@ -1181,11 +1181,11 @@ for i,v in pairs(game.Workspace:GetChildren()) do
                             name.Text = ("Chest 1" ..' \n'.. round((game:GetService('Players').LocalPlayer.Character.Head.Position - v.Position).Magnitude/3) ..' Distance')
                         end
                         if v.Name == "Chest2" then
-                            name.TextColor3 = Color3.fromRGB(109, 109, 109)
+                            name.TextColor3 = Color3.fromRGB(173, 158, 21)
                             name.Text = ("Chest 2" ..' \n'.. round((game:GetService('Players').LocalPlayer.Character.Head.Position - v.Position).Magnitude/3) ..' Distance')
                         end
                         if v.Name == "Chest3" then
-                            name.TextColor3 = Color3.fromRGB(109, 109, 109)
+                            name.TextColor3 = Color3.fromRGB(85, 255, 255)
                             name.Text = ("Chest 3" ..' \n'.. round((game:GetService('Players').LocalPlayer.Character.Head.Position - v.Position).Magnitude/3) ..' Distance')
                         end
                     else
@@ -2317,11 +2317,11 @@ ImageButton.Image = "rbxassetid://16058297648"
 UICorner.CornerRadius = UDim.new(0, 30)
 UICorner.Parent = ImageButton
 
-UIGradient.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.90, Color3.fromRGB(244, 0, 0)), ColorSequenceKeypoint.new(0.32, Color3.fromRGB(244, 0, 0)), ColorSequenceKeypoint.new(0.65, Color3.fromRGB(244, 0, 0)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(96, 255, 231))}
+UIGradient.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(244, 0, 0)), ColorSequenceKeypoint.new(0.32, Color3.fromRGB(146, 255, 251)), ColorSequenceKeypoint.new(0.65, Color3.fromRGB(180, 255, 255)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(96, 255, 231))}
 UIGradient.Parent = ImageButton
 
 UIAspectRatioConstraint.Parent = ImageButton
-UIAspectRatioConstraint.AspectRatio = 0.930
+UIAspectRatioConstraint.AspectRatio = 0.988
 
 
 local function HCEGY_fake_script()
@@ -6164,7 +6164,7 @@ function UpdateIslandESP()
 						name.TextYAlignment = 'Top'
 						name.BackgroundTransparency = 1
 						name.TextStrokeTransparency = 0.5
-						name.TextColor3 = Color3.fromRGB(255, 5, 5)
+						name.TextColor3 = Color3.fromRGB(7, 236, 240)
 					else
 						v['NameEsp'].TextLabel.Text = (v.Name ..'   \n'.. round((game:GetService('Players').LocalPlayer.Character.Head.Position - v.Position).Magnitude/3) ..' Distance')
 					end
