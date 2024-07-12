@@ -1,6 +1,6 @@
 local SlayerzUI_Notify = loadstring(game:HttpGet("https://raw.githubusercontent.com/x2-Neptune/SlayerzUI/main/Notification.script"))()
 local NameHub = "Medusa Script"
-local Description = "Thanks For Using, Please Subsribe"
+local Description = "Thanks For Using, Please Subscribe"
 local Logo = "rbxassetid://16058297648"
 local Color = Color3.fromRGB(0, 255, 145)
 SlayerzUI_Notify:Notify(NameHub, Description, Logo, Color, 5)
@@ -2406,7 +2406,7 @@ ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
 ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 
 ImageButton.Parent = ScreenGui
-ImageButton.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+ImageButton.BackgroundColor3 = Color3.fromRGB(171, 170, 164)
 ImageButton.Position = UDim2.new(0.10615778, 0, 0.16217947, 0)
 ImageButton.Size = UDim2.new(0.0627121851, 0, 0.107579626, 0)
 ImageButton.Image = "rbxassetid://16058297648"
@@ -2414,7 +2414,7 @@ ImageButton.Image = "rbxassetid://16058297648"
 UICorner.CornerRadius = UDim.new(0, 30)
 UICorner.Parent = ImageButton
 
-UIGradient.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(244, 0, 0)), ColorSequenceKeypoint.new(0.32, Color3.fromRGB(146, 255, 251)), ColorSequenceKeypoint.new(0.65, Color3.fromRGB(180, 255, 255)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(96, 255, 231))}
+UIGradient.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(0, 220, 244)), ColorSequenceKeypoint.new(0.42, Color3.fromRGB(146, 255, 251)), ColorSequenceKeypoint.new(0.65, Color3.fromRGB(180, 255, 255)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(96, 255, 231))}
 UIGradient.Parent = ImageButton
 
 UIAspectRatioConstraint.Parent = ImageButton
