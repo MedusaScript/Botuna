@@ -2321,7 +2321,7 @@ UIGradient.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.90, Color3.from
 UIGradient.Parent = ImageButton
 
 UIAspectRatioConstraint.Parent = ImageButton
-UIAspectRatioConstraint.AspectRatio = 1.000
+UIAspectRatioConstraint.AspectRatio = 0.930
 
 
 local function HCEGY_fake_script()
