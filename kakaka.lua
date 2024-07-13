@@ -4108,7 +4108,7 @@ Main:AddToggle("Super Fast Attack ",true,function(value)
                                                 PosMon = v.HumanoidRootPart.CFrame
                                                 TP1(v.HumanoidRootPart.CFrame * CFrame.new(PosX,PosY,PosZ))
                                                 v.HumanoidRootPart.CanCollide = false
-                                                v.Humanoid.WalkSpeed = 0
+                                                v.Humanoid.WalkSpeed = 2
                                                 v.Head.CanCollide = false
                                                 v.HumanoidRootPart.Size = Vector3.new(70,70,70)
                                                 StartMagnet = true
@@ -4141,7 +4141,7 @@ Main:AddToggle("Super Fast Attack ",true,function(value)
                                                     PosMon = v.HumanoidRootPart.CFrame
                                                     TP1(v.HumanoidRootPart.CFrame * CFrame.new(PosX,PosY,PosZ))
                                                     v.HumanoidRootPart.CanCollide = false
-                                                    v.Humanoid.WalkSpeed = 0
+                                                    v.Humanoid.WalkSpeed = 2
                                                     v.Head.CanCollide = false
                                                     v.HumanoidRootPart.Size = Vector3.new(70,70,70)
                                                     StartMagnet = true
@@ -4339,7 +4339,7 @@ end)
                                         AutoHaki()
                                         EquipWeapon(_G.SelectWeapon)
                                         v.HumanoidRootPart.CanCollide = false
-                                        v.Humanoid.WalkSpeed = 0
+                                        v.Humanoid.WalkSpeed = 2
                                         v.HumanoidRootPart.Size = Vector3.new(50,50,50)
                                         HyperCahaya(v.HumanoidRootPart.CFrame * CFrame.new(PosX,PosY,PosZ))
                                         game:GetService("VirtualUser"):CaptureController()
@@ -4364,7 +4364,7 @@ end)
                                                     AutoHaki()
                                                     EquipWeapon(_G.SelectWeapon)
                                                     v.HumanoidRootPart.CanCollide = false
-                                                    v.Humanoid.WalkSpeed = 0
+                                                    v.Humanoid.WalkSpeed = 2
                                                     v.Head.CanCollide = false 
                                                     v.HumanoidRootPart.Size = Vector3.new(50,50,50)
                                                     MagnetDought = true
@@ -4436,7 +4436,7 @@ end)
                                         AutoHaki()
                                         EquipWeapon(_G.SelectWeapon)
                                         v.HumanoidRootPart.CanCollide = false
-                                        v.Humanoid.WalkSpeed = 0
+                                        v.Humanoid.WalkSpeed = 2
                                         v.HumanoidRootPart.Size = Vector3.new(50,50,50)
                                         HyperCahaya(v.HumanoidRootPart.CFrame * CFrame.new(PosX,PosY,PosZ))
                                         game:GetService("VirtualUser"):CaptureController()
@@ -4536,7 +4536,7 @@ end)
                                         AutoHaki()
                                         EquipWeapon(_G.SelectWeapon)
                                         v.HumanoidRootPart.CanCollide = false
-                                        v.Humanoid.WalkSpeed = 0
+                                        v.Humanoid.WalkSpeed = 2
                                         v.HumanoidRootPart.Size = Vector3.new(80,80,80)                             
                                         HyperCahaya(v.HumanoidRootPart.CFrame * CFrame.new(PosX,PosY,PosZ))
                                         game:GetService("VirtualUser"):CaptureController()
@@ -4583,7 +4583,7 @@ spawn(function()
                                 task.wait()
                                 AutoHaki()
                                 EquipWeapon(_G.SelectWeapon)
-                                v.Humanoid.WalkSpeed = 0
+                                v.Humanoid.WalkSpeed = 2
                                 v.HumanoidRootPart.CanCollide = false
                                 v.Head.CanCollide = false
                                 v.HumanoidRootPart.Size = Vector3.new(80,80,80)
@@ -4924,7 +4924,7 @@ end)
                                                             AutoHaki()
                                                             EquipWeapon(_G.SelectWeapon)
                                                             v.HumanoidRootPart.CanCollide = false
-                                                            v.Humanoid.WalkSpeed = 0
+                                                            v.Humanoid.WalkSpeed = 2
                                                             v.Head.CanCollide = false
                                                             v.HumanoidRootPart.Size = Vector3.new(50,50,50)
                                                             v.HumanoidRootPart.CFrame = OldCFrameSecond
@@ -5001,7 +5001,7 @@ end)
                                                                                 v.HumanoidRootPart.Size = Vector3.new(80, 80, 80)
                                                                                 v.Humanoid.JumpPower = 0
                                                                                 v.HumanoidRootPart.CanCollide = false
-                                                                                v.Humanoid.WalkSpeed = 0
+                                                                                v.Humanoid.WalkSpeed = 2
                                                                                 v.Humanoid:ChangeState(11)
                                                                                 v.Humanoid:ChangeState(14)
                                                                                 v.Humanoid:ChangeState(16)
@@ -5053,7 +5053,7 @@ end)
                                                                                 v.HumanoidRootPart.Size = Vector3.new(80, 80, 80)
                                                                                 v.Humanoid.JumpPower = 0
                                                                                 v.HumanoidRootPart.CanCollide = false
-                                                                                v.Humanoid.WalkSpeed = 0
+                                                                                v.Humanoid.WalkSpeed = 2
                                                                                 v.Humanoid:ChangeState(14)
                                                                                 v.Humanoid:ChangeState(16)
                                                                                 v.Humanoid:ChangeState(11)
@@ -5144,7 +5144,7 @@ end)
                                                                                     v.HumanoidRootPart.Size = Vector3.new(80, 80, 80)
                                                                                     v.Humanoid.JumpPower = 0
                                                                                     v.HumanoidRootPart.CanCollide = false
-                                                                                    v.Humanoid.WalkSpeed = 0
+                                                                                    v.Humanoid.WalkSpeed = 2
                                                                                     v.Humanoid:ChangeState(11)
                                                                                     v.Humanoid:ChangeState(14)
                                                                                     v.Humanoid:ChangeState(16)
@@ -5202,7 +5202,7 @@ end)
                                                                             end
                                                                             v.HumanoidRootPart.Size = Vector3.new(80, 80, 80)
                                                                             v.Humanoid.JumpPower = 0
-                                                                            v.Humanoid.WalkSpeed = 0
+                                                                            v.Humanoid.WalkSpeed = 2
                                                                             v.HumanoidRootPart.CanCollide = false
                                                                             v.Humanoid:ChangeState(11)
                                                                             v.Humanoid:ChangeState(14)
@@ -5629,7 +5629,7 @@ spawn(function()
                                             AutoHaki()
                                             EquipWeapon(_G.SelectWeapon)
                                             v.Head.CanCollide = false
-                                            v.Humanoid.WalkSpeed = 0
+                                            v.Humanoid.WalkSpeed = 2
                                             v.HumanoidRootPart.CanCollide = false
                                             v.HumanoidRootPart.Size = Vector3.new(50,50,50)
                                             v.HumanoidRootPart.CFrame = OldCFrameShark
@@ -5854,7 +5854,7 @@ spawn(function()
                                         AutoHaki()
                                         EquipWeapon(_G.SelectWeapon)
                                         v.HumanoidRootPart.CanCollide = false
-                                        v.Humanoid.WalkSpeed = 0
+                                        v.Humanoid.WalkSpeed = 2
                                         v.Head.CanCollide = false 
                                         MakoriGayMag = true
                                         PosGay = v.HumanoidRootPart.CFrame
@@ -5898,7 +5898,7 @@ spawn(function()
                                         AutoHaki()
                                         EquipWeapon(_G.SelectWeapon)
                                         v.HumanoidRootPart.CanCollide = false
-                                        v.Humanoid.WalkSpeed = 0
+                                        v.Humanoid.WalkSpeed = 2
                                         v.Head.CanCollide = false 
                                         MakoriGayMag = true
                                         PosGay = v.HumanoidRootPart.CFrame
@@ -5943,7 +5943,7 @@ spawn(function()
                                         AutoHaki()
                                         EquipWeapon(_G.SelectWeapon)
                                         v.HumanoidRootPart.CanCollide = false
-                                        v.Humanoid.WalkSpeed = 0
+                                        v.Humanoid.WalkSpeed = 2
                                         v.Head.CanCollide = false 
                                         StartEctoplasmMagnet = true
                                         EctoplasmMon = v.HumanoidRootPart.CFrame
@@ -5985,7 +5985,7 @@ spawn(function()
                                         AutoHaki()
                                         EquipWeapon(_G.SelectWeapon)
                                         v.HumanoidRootPart.CanCollide = false
-                                        v.Humanoid.WalkSpeed = 0
+                                        v.Humanoid.WalkSpeed = 2
                                         v.Head.CanCollide = false 
                                         MakoriGayMag = true
                                         PosGay = v.HumanoidRootPart.CFrame
@@ -6030,7 +6030,7 @@ spawn(function()
                                         AutoHaki()
                                         EquipWeapon(_G.SelectWeapon)
                                         v.HumanoidRootPart.CanCollide = false
-                                        v.Humanoid.WalkSpeed = 0
+                                        v.Humanoid.WalkSpeed = 2
                                         v.Head.CanCollide = false 
                                         MakoriGayMag = true
                                         PosGay = v.HumanoidRootPart.CFrame
@@ -6070,7 +6070,7 @@ spawn(function()
                                         AutoHaki()
                                         EquipWeapon(_G.SelectWeapon)
                                         v.HumanoidRootPart.CanCollide = false
-                                        v.Humanoid.WalkSpeed = 0
+                                        v.Humanoid.WalkSpeed = 2
                                         v.Head.CanCollide = false 
                                         MakoriGayMag = true
                                         PosGay = v.HumanoidRootPart.CFrame
@@ -6114,7 +6114,7 @@ spawn(function()
                                         AutoHaki()
                                         EquipWeapon(_G.SelectWeapon)
                                         v.HumanoidRootPart.CanCollide = false
-                                        v.Humanoid.WalkSpeed = 0
+                                        v.Humanoid.WalkSpeed = 2
                                         v.Head.CanCollide = false 
                                         MakoriGayMag = true
                                         PosGay = v.HumanoidRootPart.CFrame
@@ -6158,7 +6158,7 @@ spawn(function()
                                         AutoHaki()
                                         EquipWeapon(_G.SelectWeapon)
                                         v.HumanoidRootPart.CanCollide = false
-                                        v.Humanoid.WalkSpeed = 0
+                                        v.Humanoid.WalkSpeed = 2
                                         v.Head.CanCollide = false 
                                         MakoriGayMag = true
                                         PosGay = v.HumanoidRootPart.CFrame
@@ -6197,7 +6197,7 @@ spawn(function()
                                         AutoHaki()
                                         EquipWeapon(_G.SelectWeapon)
                                         v.HumanoidRootPart.CanCollide = false
-                                        v.Humanoid.WalkSpeed = 0
+                                        v.Humanoid.WalkSpeed = 2
                                         v.Head.CanCollide = false 
                                         MakoriGayMag = true
                                         PosGay = v.HumanoidRootPart.CFrame
@@ -6236,7 +6236,7 @@ spawn(function()
                                         AutoHaki()
                                         EquipWeapon(_G.SelectWeapon)
                                         v.HumanoidRootPart.CanCollide = false
-                                        v.Humanoid.WalkSpeed = 0
+                                        v.Humanoid.WalkSpeed = 2
                                         v.Head.CanCollide = false 
                                         MakoriGayMag = true
                                         PosGay = v.HumanoidRootPart.CFrame
@@ -6280,7 +6280,7 @@ spawn(function()
                                         AutoHaki()
                                         EquipWeapon(_G.SelectWeapon)
                                         v.HumanoidRootPart.CanCollide = false
-                                        v.Humanoid.WalkSpeed = 0
+                                        v.Humanoid.WalkSpeed = 2
                                         v.Head.CanCollide = false 
                                         MakoriGayMag = true
                                         PosGay = v.HumanoidRootPart.CFrame
@@ -6319,7 +6319,7 @@ spawn(function()
                                         AutoHaki()
                                         EquipWeapon(_G.SelectWeapon)
                                         v.HumanoidRootPart.CanCollide = false
-                                        v.Humanoid.WalkSpeed = 0
+                                        v.Humanoid.WalkSpeed = 2
                                         v.Head.CanCollide = false 
                                         MakoriGayMag = true
                                         PosGay = v.HumanoidRootPart.CFrame
@@ -6358,7 +6358,7 @@ spawn(function()
                                         AutoHaki()
                                         EquipWeapon(_G.SelectWeapon)
                                         v.HumanoidRootPart.CanCollide = false
-                                        v.Humanoid.WalkSpeed = 0
+                                        v.Humanoid.WalkSpeed = 2
                                         v.Head.CanCollide = false 
                                         MakoriGayMag = true
                                         PosGay = v.HumanoidRootPart.CFrame
@@ -6402,7 +6402,7 @@ spawn(function()
                                         AutoHaki()
                                         EquipWeapon(_G.SelectWeapon)
                                         v.HumanoidRootPart.CanCollide = false
-                                        v.Humanoid.WalkSpeed = 0
+                                        v.Humanoid.WalkSpeed = 2
                                         v.Head.CanCollide = false 
                                         MakoriGayMag = true
                                         PosGay = v.HumanoidRootPart.CFrame
@@ -6446,7 +6446,7 @@ spawn(function()
                                         AutoHaki()
                                         EquipWeapon(_G.SelectWeapon)
                                         v.HumanoidRootPart.CanCollide = false
-                                        v.Humanoid.WalkSpeed = 0
+                                        v.Humanoid.WalkSpeed = 2
                                         v.Head.CanCollide = false 
                                         MakoriGayMag = true
                                         PosGay = v.HumanoidRootPart.CFrame
@@ -6490,7 +6490,7 @@ spawn(function()
                                         AutoHaki()
                                         EquipWeapon(_G.SelectWeapon)
                                         v.HumanoidRootPart.CanCollide = false
-                                        v.Humanoid.WalkSpeed = 0
+                                        v.Humanoid.WalkSpeed = 2
                                         v.Head.CanCollide = false 
                                         MakoriGayMag = true
                                         PosGay = v.HumanoidRootPart.CFrame
@@ -6534,7 +6534,7 @@ spawn(function()
                                         AutoHaki()
                                         EquipWeapon(_G.SelectWeapon)
                                         v.HumanoidRootPart.CanCollide = false
-                                        v.Humanoid.WalkSpeed = 0
+                                        v.Humanoid.WalkSpeed = 2
                                         v.Head.CanCollide = false 
                                         MakoriGayMag = true
                                         PosGay = v.HumanoidRootPart.CFrame
@@ -6578,7 +6578,7 @@ spawn(function()
                                         AutoHaki()
                                         EquipWeapon(_G.SelectWeapon)
                                         v.HumanoidRootPart.CanCollide = false
-                                        v.Humanoid.WalkSpeed = 0
+                                        v.Humanoid.WalkSpeed = 2
                                         v.Head.CanCollide = false 
                                         MakoriGayMag = true
                                         PosGay = v.HumanoidRootPart.CFrame
@@ -6797,7 +6797,7 @@ spawn(function()
                                         AutoHaki()
                                         EquipWeapon(_G.SelectWeapon)
                                         v.HumanoidRootPart.CanCollide = false
-                                        v.Humanoid.WalkSpeed = 0
+                                        v.Humanoid.WalkSpeed = 2
                                         v.Head.CanCollide = false 
                                         MakoriGayMag = false
                                         PosGay = v.HumanoidRootPart.CFrame
@@ -6840,7 +6840,7 @@ spawn(function()
                                         AutoHaki()
                                         EquipWeapon(_G.SelectWeapon)
                                         v.HumanoidRootPart.CanCollide = false
-                                        v.Humanoid.WalkSpeed = 0
+                                        v.Humanoid.WalkSpeed = 2
                                         v.Head.CanCollide = false 
                                         MakoriGayMag = false
                                         PosGay = v.HumanoidRootPart.CFrame
@@ -6883,7 +6883,7 @@ spawn(function()
                                         AutoHaki()
                                         EquipWeapon(_G.SelectWeapon)
                                         v.HumanoidRootPart.CanCollide = false
-                                        v.Humanoid.WalkSpeed = 0
+                                        v.Humanoid.WalkSpeed = 2
                                         v.Head.CanCollide = false 
                                         MakoriGayMag = false
                                         PosGay = v.HumanoidRootPart.CFrame
@@ -7437,7 +7437,7 @@ end)
                                                     TP1(v.HumanoidRootPart.CFrame * CFrame.new(0,10,0))
                                                     v.HumanoidRootPart.CanCollide = false
                                                     PosMonMasteryFruit = v.HumanoidRootPart.CFrame
-                                                    v.Humanoid.WalkSpeed = 0
+                                                    v.Humanoid.WalkSpeed = 2
                                                     v.Head.CanCollide = false
                                                     UseSkill = true
                                                 else           
@@ -7448,7 +7448,7 @@ end)
                                                     v.HumanoidRootPart.CanCollide = false
                                                     v.HumanoidRootPart.Size = Vector3.new(50,50,50)
                                                     PosMonMasteryFruit = v.HumanoidRootPart.CFrame
-                                                    v.Humanoid.WalkSpeed = 0
+                                                    v.Humanoid.WalkSpeed = 2
                                                     v.Head.CanCollide = false
                                                 end
                                                 StartMasteryFruitMagnet = true
@@ -7694,7 +7694,7 @@ end)
                                                 if v.Humanoid.Health <= HealthMin then                                                
                                                     EquipWeapon(SelectWeaponGun)
                                                     TP1(v.HumanoidRootPart.CFrame * CFrame.new(0,0,10))
-                                                    v.Humanoid.WalkSpeed = 0
+                                                    v.Humanoid.WalkSpeed = 2
                                                     v.HumanoidRootPart.CanCollide = false
                                                     v.HumanoidRootPart.Size = Vector3.new(2,2,1)
                                                     v.Head.CanCollide = false                                 
@@ -7706,7 +7706,7 @@ end)
                                                 else
                                                     AutoHaki()
                                                     EquipWeapon(_G.SelectWeapon)
-                                                    v.Humanoid.WalkSpeed = 0
+                                                    v.Humanoid.WalkSpeed = 2
                                                     v.HumanoidRootPart.CanCollide = false
                                                     v.Head.CanCollide = false               
                                                     v.HumanoidRootPart.Size = Vector3.new(60,60,60)
@@ -7768,7 +7768,7 @@ end)
                                         AutoHaki()
                                         EquipWeapon(_G.SelectWeapon)
                                         v.HumanoidRootPart.CanCollide = false
-                                        v.Humanoid.WalkSpeed = 0
+                                        v.Humanoid.WalkSpeed = 2
                                         v.HumanoidRootPart.Size = Vector3.new(50,50,50)
                                         HyperCahaya(v.HumanoidRootPart.CFrame * CFrame.new(PosX,PosY,PosZ))
                                         game:GetService("VirtualUser"):CaptureController()
@@ -7816,7 +7816,7 @@ end)
                                         AutoHaki()
                                         EquipWeapon(_G.SelectWeapon)
                                         v.HumanoidRootPart.CanCollide = false
-                                        v.Humanoid.WalkSpeed = 0
+                                        v.Humanoid.WalkSpeed = 2
                                         v.HumanoidRootPart.Size = Vector3.new(50,50,50)
                                         HyperCahaya(v.HumanoidRootPart.CFrame * CFrame.new(5,40,5))
                                         game:GetService("VirtualUser"):CaptureController()
@@ -7967,7 +7967,7 @@ spawn(function()
 														v.HumanoidRootPart.Size = Vector3.new(60,60,60)
 														v.HumanoidRootPart.Transparency = 1
 														v.Humanoid.JumpPower = 0
-														v.Humanoid.WalkSpeed = 0
+														v.Humanoid.WalkSpeed = 2
 														v.HumanoidRootPart.CanCollide = false
 														v.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame * CFrame.new(0,20,0)
 														HyperCahaya(CFrame.new(-10160.787109375, 138.6616973876953, 5955.03076171875))
@@ -8209,7 +8209,7 @@ spawn(function()
 										v.HumanoidRootPart.Transparency = 1
 									end
 									v.Humanoid.JumpPower = 0
-									v.Humanoid.WalkSpeed = 0
+									v.Humanoid.WalkSpeed = 2
 									v.HumanoidRootPart.CanCollide = false
 									v.Humanoid:ChangeState(11)
 									HyperCahaya(v.HumanoidRootPart.CFrame * CFrame.new(0,20,0))								
@@ -8269,7 +8269,7 @@ spawn(function()
 													v.HumanoidRootPart.Transparency = 1
 												end
 												v.Humanoid.JumpPower = 0
-												v.Humanoid.WalkSpeed = 0
+												v.Humanoid.WalkSpeed = 2
 												v.HumanoidRootPart.CanCollide = false
 												v.Humanoid:ChangeState(11)
 												HyperCahaya(v.HumanoidRootPart.CFrame * CFrame.new(0,50,0))
@@ -8395,7 +8395,7 @@ spawn(function()
 												v.HumanoidRootPart.Transparency = 1
 											end
 											v.Humanoid.JumpPower = 0
-											v.Humanoid.WalkSpeed = 0
+											v.Humanoid.WalkSpeed = 2
 											v.HumanoidRootPart.CanCollide = false
 											v.Humanoid:ChangeState(11)
 											HyperCahaya(v.HumanoidRootPart.CFrame * CFrame.new(0,50,0))
@@ -8433,7 +8433,7 @@ spawn(function()
 													v.HumanoidRootPart.Transparency = 1
 												end
 												v.Humanoid.JumpPower = 0
-												v.Humanoid.WalkSpeed = 0
+												v.Humanoid.WalkSpeed = 2
 												v.HumanoidRootPart.CanCollide = false
 												v.Humanoid:ChangeState(11)
 											until v.Humanoid.Health <= 0 or not v.Parent or Auto_Quest_Tushita_3 == false
@@ -8488,7 +8488,7 @@ M:AddToggle("Taken Tushita", _G.Autotushita,function(value)
                                         AutoHaki()
                                         EquipWeapon(_G.SelectWeapon)
                                         v.HumanoidRootPart.CanCollide = false
-                                        v.Humanoid.WalkSpeed = 0
+                                        v.Humanoid.WalkSpeed = 2
                                         v.HumanoidRootPart.Size = Vector3.new(50,50,50)
                                         HyperCahaya(v.HumanoidRootPart.CFrame * CFrame.new(PosX,PosY,PosZ))
                                         game:GetService("VirtualUser"):CaptureController()
@@ -8536,7 +8536,7 @@ M:AddToggle("Taken Tushita", _G.Autotushita,function(value)
                                         AutoHaki()
                                         EquipWeapon(_G.SelectWeapon)
                                         v.HumanoidRootPart.CanCollide = false
-                                        v.Humanoid.WalkSpeed = 0
+                                        v.Humanoid.WalkSpeed = 2
                                         v.HumanoidRootPart.Size = Vector3.new(50,50,50)
                                         HyperCahaya(v.HumanoidRootPart.CFrame * CFrame.new(PosX,PosY,PosZ))
                                         game:GetService("VirtualUser"):CaptureController()
@@ -8621,7 +8621,7 @@ end)
                                         AutoHaki()
                                         EquipWeapon(_G.SelectWeapon)
                                         v.HumanoidRootPart.CanCollide = false
-                                        v.Humanoid.WalkSpeed = 0
+                                        v.Humanoid.WalkSpeed = 2
                                         v.HumanoidRootPart.Size = Vector3.new(50,50,50)
                                         HyperCahaya(v.HumanoidRootPart.CFrame * CFrame.new(PosX,PosY,PosZ))
                                         game:GetService("VirtualUser"):CaptureController()
@@ -8693,7 +8693,7 @@ end)
 												AutoHaki()
                                                 EquipWeapon(_G.SelectWeapon)
                                                 v.HumanoidRootPart.CanCollide = false
-                                                v.Humanoid.WalkSpeed = 0
+                                                v.Humanoid.WalkSpeed = 2
                                                 v.HumanoidRootPart.Size = Vector3.new(50,50,50)
                                                 HyperCahaya(v.HumanoidRootPart.CFrame * CFrame.new(PosX,PosY,PosZ))
                                                 game:GetService("VirtualUser"):CaptureController()
@@ -8888,7 +8888,7 @@ end)
                                         AutoHaki()
                                         EquipWeapon(_G.SelectWeapon)
                                         v.HumanoidRootPart.CanCollide = false
-                                        v.Humanoid.WalkSpeed = 0
+                                        v.Humanoid.WalkSpeed = 2
                                         v.HumanoidRootPart.Size = Vector3.new(50,50,50)
                                         HyperCahaya(v.HumanoidRootPart.CFrame * CFrame.new(PosX,PosY,PosZ))
                                         game:GetService("VirtualUser"):CaptureController()
@@ -8937,7 +8937,7 @@ end)
                                         AutoHaki()
                                         EquipWeapon(_G.SelectWeapon)
                                         v.HumanoidRootPart.CanCollide = false
-                                        v.Humanoid.WalkSpeed = 0
+                                        v.Humanoid.WalkSpeed = 2
                                         v.HumanoidRootPart.Size = Vector3.new(50,50,50)
                                         HyperCahaya(v.HumanoidRootPart.CFrame * CFrame.new(PosX,PosY,PosZ))
                                         game:GetService("VirtualUser"):CaptureController()
@@ -8985,7 +8985,7 @@ end)
                                         AutoHaki()
                                         EquipWeapon(_G.SelectWeapon)
                                         v.HumanoidRootPart.CanCollide = false
-                                        v.Humanoid.WalkSpeed = 0
+                                        v.Humanoid.WalkSpeed = 2
                                         v.HumanoidRootPart.Size = Vector3.new(50,50,50)
                                         HyperCahaya(v.HumanoidRootPart.CFrame * CFrame.new(PosX,PosY,PosZ))
                                         game:GetService("VirtualUser"):CaptureController()
@@ -9033,7 +9033,7 @@ end)
                                         AutoHaki()
                                         EquipWeapon(_G.SelectWeapon)
                                         v.HumanoidRootPart.CanCollide = false
-                                        v.Humanoid.WalkSpeed = 0
+                                        v.Humanoid.WalkSpeed = 2
                                         v.HumanoidRootPart.Size = Vector3.new(50,50,50)
                                         HyperCahaya(v.HumanoidRootPart.CFrame * CFrame.new(PosX,PosY,PosZ))
                                         game:GetService("VirtualUser"):CaptureController()
@@ -9123,7 +9123,7 @@ end)
                                         AutoHaki()
                                         EquipWeapon(_G.SelectWeapon)
                                         v.HumanoidRootPart.CanCollide = false
-                                        v.Humanoid.WalkSpeed = 0
+                                        v.Humanoid.WalkSpeed = 2
                                         v.HumanoidRootPart.Size = Vector3.new(50,50,50)
                                         HyperCahaya(v.HumanoidRootPart.CFrame * CFrame.new(PosX,PosY,PosZ))
                                         game:GetService("VirtualUser"):CaptureController()
@@ -9206,7 +9206,7 @@ end)
                                         AutoHaki()
                                         EquipWeapon(_G.SelectWeapon)
                                         v.HumanoidRootPart.CanCollide = false
-                                        v.Humanoid.WalkSpeed = 0
+                                        v.Humanoid.WalkSpeed = 2
                                         v.Head.CanCollide = false 
                                         StartMagnetBoneMon = true
                                         PosMonBone = v.HumanoidRootPart.CFrame
@@ -10540,7 +10540,7 @@ task.spawn(function()
 						if InMyNetWork(v.HumanoidRootPart) then
 							v.HumanoidRootPart.CFrame = PosGay
 							v.Humanoid.JumpPower = 0
-							v.Humanoid.WalkSpeed = 0
+							v.Humanoid.WalkSpeed = 2
 							v.HumanoidRootPart.Size = Vector3.new(60,60,60)
 							v.HumanoidRootPart.Transparency = 1
 							v.HumanoidRootPart.CanCollide = false
@@ -10579,7 +10579,7 @@ task.spawn(function()
 						if InMyNetWork(v.HumanoidRootPart) then
 							v.HumanoidRootPart.CFrame = PosMon
 							v.Humanoid.JumpPower = 0
-							v.Humanoid.WalkSpeed = 0
+							v.Humanoid.WalkSpeed = 2
 							v.HumanoidRootPart.Size = Vector3.new(60,60,60)
 							v.HumanoidRootPart.Transparency = 1
 							v.HumanoidRootPart.CanCollide = false
@@ -11758,7 +11758,7 @@ end)
                                         AutoHaki()
                                         EquipWeapon(_G.SelectWeapon)
                                         v.HumanoidRootPart.CanCollide = false
-                                        v.Humanoid.WalkSpeed = 0
+                                        v.Humanoid.WalkSpeed = 2
                                         v.HumanoidRootPart.Size = Vector3.new(50,50,50)
                                         HyperCahaya(v.HumanoidRootPart.CFrame * CFrame.new(PosX,PosY,PosZ))
                                         game:GetService("VirtualUser"):CaptureController()
@@ -13923,7 +13923,7 @@ end)
 	local l = g.Lighting
 	local t = w.Terrain
 	t.WaterWaveSize = 0
-	t.WaterWaveSpeed = 0
+	t.WaterWaveSpeed = 2
 	t.WaterReflectance = 0
 	t.WaterTransparency = 0
 	l.GlobalShadows = false
