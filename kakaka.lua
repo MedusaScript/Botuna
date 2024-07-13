@@ -367,7 +367,7 @@ function Update:Window(text,logo,keybind)
     Ping.Position = UDim2.new(0.28, 0,0.074, 0)
     Ping.Size = UDim2.new(0, 225, 0, 25)
     Ping.Font = Enum.Font.GothamSemibold
-    Ping.Text = "BRUTALITY V3 | By Medusa Script         [SCRIPT PREMIUM]"
+    Ping.Text = "BRUTALITY V3 | By Medusa Script           [SCRIPT PREMIUM]"
     Ping.TextColor3 = Color3.fromRGB(9, 255, 0)
     Ping.TextSize = 14.000
     Ping.TextXAlignment = Enum.TextXAlignment.Left
@@ -3818,29 +3818,30 @@ getgenv().HyperCahayas = function(p)
     end)
     
 
-local Library = Update:Window("Bstory Premium","",Enum.KeyCode.RightControl);
+local Library = Update:Window("Brutality Premium","",Enum.KeyCode.RightControl);
 
-local NguyenTien = Library:AddTab("Information","4483345998")
-local Main = Library:AddTab("Main","4483345998")
-local M = Library:AddTab("Item","4483345998")
+local NguyenTien = Library:AddTab("Information","16058297648")
+local Main = Library:AddTab("Farm","4483345998")
+local M = Library:AddTab("Quest","4483345998")
 local Ss = Library:AddTab("Stats","4483345998")
 local RaceV4 = Library:AddTab("Race V4","4483345998")
-local P = Library:AddTab("PVP","4483345998")
-local R = Library:AddTab("Dungeon","4483345998")
+local P = Library:AddTab("Bounty","4483345998")
+local R = Library:AddTab("Auto Raid","4483345998")
 local T = Library:AddTab("Teleport","4483345998")
 local S = Library:AddTab("Shop","4483345998")
 local D = Library:AddTab("Devil Fruit","4483345998")
 local Misc = Library:AddTab("Misc","4483345998")
---- ThÃ´ng Tin
+--- Nama toggle ui
 NguyenTien:AddSeperator("Information Developer")
 NguyenTien:AddLabel("Owner: Medusa Script")
 NguyenTien:AddLabel("Support Code: BOTUNA ")
-NguyenTien:AddLabel("Ui: Bocah Tua Nakal")
+NguyenTien:AddLabel("Design: Bocah Tua Nakal")
+NguyenTien:AddLabel("Language: English")
 NguyenTien:AddLabel("If you like script brutality V3\n please subscribe to my YouTube channel")
 
 NguyenTien:AddSeperator("Join Community")
 NguyenTien:AddButton("Discord Sever",function()
-setclipboard("https://discord.gg/medusascript")
+setclipboard("https://discord.gg/medusa-script-1182005198206545941")
 Notif.New("Copying To Clipboard Done", 3)
 end)
 NguyenTien:AddButton("YouTube Medusa Script",function()
@@ -3901,7 +3902,7 @@ task.spawn(function()
     end)
 
 local AttackList = {"0", "0.1", "0.15", "0.155", "0.16", "0.165", "0.17", "0.175", "0.18", "0.185"}
-_G.FastAttackDelay = "0.15"
+_G.FastAttackDelay = "0.1"
 Main:AddDropdown("Fast Attack Delay", AttackList,function(MakoGay)
     _G.FastAttackDelay = MakoGay
 end)
@@ -7862,17 +7863,17 @@ end)
             while task.wait() do
                 pcall(function()
                     if game:GetService("Lighting").Sky.MoonTextureId=="http://www.roblox.com/asset/?id=9709149431" then
-                        FM:Set("ðŸŒ‘: Full Moon 100%")
+                        FM:Set("🌕: Full Moon 100%")
                     elseif game:GetService("Lighting").Sky.MoonTextureId=="http://www.roblox.com/asset/?id=9709149052" then
-                        FM:Set("ðŸŒ’: Full Moon 75%")
+                        FM:Set("🌖: Full Moon 75%")
                     elseif game:GetService("Lighting").Sky.MoonTextureId=="http://www.roblox.com/asset/?id=9709143733" then
-                        FM:Set("ðŸŒ“: Full Moon 50%")
+                        FM:Set("🌗: Full Moon 50%")
                     elseif game:GetService("Lighting").Sky.MoonTextureId=="http://www.roblox.com/asset/?id=9709150401" then
-                        FM:Set("ðŸŒ”: Full Moon 25%")
+                        FM:Set("🌘”: Full Moon 25%")
                     elseif game:GetService("Lighting").Sky.MoonTextureId=="http://www.roblox.com/asset/?id=9709149680" then
-                        FM:Set("ðŸŒ–: Full Moon 15%")
+                        FM:Set("🌘: Full Moon 15%")
                     else
-                        FM:Set("🌒: Wait For Moon")
+                        FM:Set("🌙: Wait For Moon")
                     end
                 end)
             end
@@ -10618,8 +10619,8 @@ spawn(function()
 				end
 			end
 		end
-		Fruit:Set("🍒:Fruit : "..count)
-		Chest:Set("🎁:Chest : "..count10)
+		Fruit:Set("🍒:Fruit Spawn: "..count)
+		Chest:Set("🎁:Chest Server: "..count10)
 		wait(5)
 	end
 end)
@@ -10628,7 +10629,7 @@ Chest = Ss:AddLabel("Chest")
 
 Fruit = Ss:AddLabel("Fruit")
 
-  local Pointstat = Ss:AddLabel("Stat Points")
+  local Pointstat = Ss:AddLabel("✍:Stat Points")
     
     spawn(function()
         while wait() do
@@ -10638,16 +10639,16 @@ Fruit = Ss:AddLabel("Fruit")
         end
     end)
     
-local Melee = Ss:AddLabel("Melee : ")
-local Defense = Ss:AddLabel("Defense : ")
-local Sword = Ss:AddLabel("Sword : ")
-local Gun = Ss:AddLabel("Gun : ")
-local Fruit = Ss:AddLabel("Fruit : ")
+local Melee = Ss:AddLabel("👊: Exp Melee : ")
+local Defense = Ss:AddLabel("💪: Exp Deff : ")
+local Sword = Ss:AddLabel("🔪: Use Sword : ")
+local Gun = Ss:AddLabel("🔫: Use Gun : ")
+local Fruit = Ss:AddLabel("🍋: Exp Fruit : ")
 
     spawn(function()
         while wait() do
             pcall(function()
-                Melee:Set("Melee : "..game.Players.localPlayer.Data.Stats.Melee.Level.Value)
+                Melee:Set("👊: Exp Melee : "..game.Players.localPlayer.Data.Stats.Melee.Level.Value)
             end)
         end
     end)
@@ -10655,7 +10656,7 @@ local Fruit = Ss:AddLabel("Fruit : ")
     spawn(function()
         while wait() do
             pcall(function()
-                Defense:Set("Defense : "..game.Players.localPlayer.Data.Stats.Defense.Level.Value)
+                Defense:Set("💪: Exp Deff : "..game.Players.localPlayer.Data.Stats.Defense.Level.Value)
             end)
         end
     end)
@@ -10663,7 +10664,7 @@ local Fruit = Ss:AddLabel("Fruit : ")
     spawn(function()
         while wait() do
             pcall(function()
-                Sword:Set("Sword : "..game.Players.localPlayer.Data.Stats.Sword.Level.Value)
+                Sword:Set("🔪: Use Sword : "..game.Players.localPlayer.Data.Stats.Sword.Level.Value)
             end)
         end
     end)
@@ -10671,7 +10672,7 @@ local Fruit = Ss:AddLabel("Fruit : ")
     spawn(function()
         while wait() do
             pcall(function()
-                Gun:Set("Gun : "..game.Players.localPlayer.Data.Stats.Gun.Level.Value)
+                Gun:Set("🔫: Use Gun : "..game.Players.localPlayer.Data.Stats.Gun.Level.Value)
             end)
         end
     end)
@@ -10679,7 +10680,7 @@ local Fruit = Ss:AddLabel("Fruit : ")
     spawn(function()
         while wait() do
             pcall(function()
-                Fruit:Set("Fruit : "..game.Players.localPlayer.Data.Stats["Demon Fruit"].Level.Value)
+                Fruit:Set("🍋: Exp Fruit : "..game.Players.localPlayer.Data.Stats["Demon Fruit"].Level.Value)
             end)
         end
     end)
@@ -13061,7 +13062,7 @@ spawn(function()
 end)
 
 
-    D:AddToggle("Get Fruit Spawn",_G.Grabfruit,function(value)
+    D:AddToggle("Bring Fruit Spawn",_G.Grabfruit,function(value)
     _G.Grabfruit = value
     end)
     spawn(function()
@@ -13076,7 +13077,7 @@ end)
     end
     end)
     
-    D:AddToggle("Tween to Fruit",_G.Tweenfruit,function(value)
+    D:AddToggle("Teleport to Fruit",_G.Tweenfruit,function(value)
     _G.Tweenfruit = value
     StopTween(_G.Tweenfruit)
     end)
