@@ -5286,15 +5286,15 @@ end)
         pcall(function()
             while wait() do
     if game.Workspace._WorldOrigin.Locations:FindFirstChild('Mirage Island') then
-    Mirragecheck:Set('🌖: Mystic Island Spawning')
+    Mirragecheck:Set('✅: Mystic Island Spawning')
     else
-      Mirragecheck:Set('🌏: Mystic Island Not Found ' )end
+      Mirragecheck:Set('❌: Mystic Island Not Found ' )end
             end
         end)
 end)
 
 Mirragecheck = M:AddLabel("")
-M:AddToggle("Tween Mystic Island",_G.AutoMysticIsland,function(value)
+M:AddToggle("Teleport Mystic Island",_G.AutoMysticIsland,function(value)
         _G.AutoMysticIsland = value
         StopTween(_G.AutoMysticIsland)
         end)
@@ -5474,7 +5474,7 @@ spawn(function()
 end)
 
 
-M:AddToggle("Tween Gear",_G.TweenMGear,function(value)
+M:AddToggle("Teleport Blue Gear",_G.TweenMGear,function(value)
 _G.TweenMGear = value
 StopTween(_G.TweenMGear)
 end)
@@ -5501,7 +5501,7 @@ spawn(function()
 
     M:AddSeperator("Fighting Style")
     
-    M:AddToggle("Taken Superhuman",_G.AutoSuperhuman,function(value)
+    M:AddToggle("Buy Superhuman",_G.AutoSuperhuman,function(value)
         _G.AutoSuperhuman = value
     end)
     
@@ -5578,7 +5578,7 @@ spawn(function()
         end)
     end)
     
-    M:AddToggle("Taken DeathStep",_G.AutoDeathStep,function(value)
+    M:AddToggle("Buy DeathStep",_G.AutoDeathStep,function(value)
         _G.AutoDeathStep = value
     end)
     
@@ -5604,7 +5604,7 @@ spawn(function()
         end
     end)
     
-    M:AddToggle("Taken Sharkman Karate",_G.AutoSharkman,function(value)
+    M:AddToggle("Buy Sharkman Karate",_G.AutoSharkman,function(value)
         _G.AutoSharkman = value
     end)
     
@@ -5652,7 +5652,7 @@ spawn(function()
         end)
     end)
     
-    M:AddToggle("Taken Electric Claw",_G.AutoElectricClaw,function(value)
+    M:AddToggle("Buy Electric Claw",_G.AutoElectricClaw,function(value)
         _G.AutoElectricClaw = value
         StopTween(_G.AutoElectricClaw)
     end)
@@ -5723,7 +5723,7 @@ spawn(function()
         end)
     end)
     
-    M:AddToggle("Taken Dragon Talon",_G.AutoDragonTalon,function(value)
+    M:AddToggle("Buy Dragon Talon",_G.AutoDragonTalon,function(value)
         _G.AutoDragonTalon = value
     end)
     
@@ -5749,7 +5749,7 @@ spawn(function()
         end
     end)
     
-    M:AddToggle("Taken GodHuman",_G.Auto_God_Human,function(value)
+    M:AddToggle("Buy GodHuman",_G.Auto_God_Human,function(value)
  _G.Auto_God_Human = value
 end)
 spawn(function()
@@ -6751,7 +6751,7 @@ spawn(function()
             if game.Workspace._WorldOrigin.Locations:FindFirstChild('Frozen Dimension') then
                 FrozenIsland:Set('🏔️: Frozen Dimension Spawning')
             else
-                FrozenIsland:Set('🌏: Frozen Dimension Not Found')
+                FrozenIsland:Set('❌: Frozen Dimension Not Found')
             end
         end
     end)
@@ -10618,8 +10618,8 @@ spawn(function()
 				end
 			end
 		end
-		Fruit:Set("Fruit : "..count)
-		Chest:Set("Chest : "..count10)
+		Fruit:Set("🍒:Fruit : "..count)
+		Chest:Set("🎁:Chest : "..count10)
 		wait(5)
 	end
 end)
