@@ -367,7 +367,7 @@ function Update:Window(text,logo,keybind)
     Ping.Position = UDim2.new(0.28, 0,0.074, 0)
     Ping.Size = UDim2.new(0, 225, 0, 25)
     Ping.Font = Enum.Font.GothamSemibold
-    Ping.Text = "BRUTALITY V3| Made By Medusa Script       [SCRIPT PREMIUM]"
+    Ping.Text = "BRUTALITY V3 | By Medusa Script         [SCRIPT PREMIUM]"
     Ping.TextColor3 = Color3.fromRGB(9, 255, 0)
     Ping.TextSize = 14.000
     Ping.TextXAlignment = Enum.TextXAlignment.Left
@@ -3841,15 +3841,15 @@ NguyenTien:AddLabel("If you like script brutality V3\n please subscribe to my Yo
 NguyenTien:AddSeperator("Join Community")
 NguyenTien:AddButton("Discord Sever",function()
 setclipboard("https://discord.gg/medusascript")
-Notif.New("Copying To Clipboard DoneðŸŽ‰", 3)
+Notif.New("Copying To Clipboard Done", 3)
 end)
 NguyenTien:AddButton("YouTube Medusa Script",function()
 setclipboard("www.youtube.com/@medusascriptroblox")
-Notif.New("Copying To Clipboard DoneðŸŽ‰", 3)
+Notif.New("Copying To Clipboard Done", 3)
 end)
 NguyenTien:AddButton("Instagram Official Owner",function()
 setclipboard("https://www.instagram.com/medusafrzly/")
-Notif.New("Copying To Clipboard DoneðŸŽ‰", 3)
+Notif.New("Copying To Clipboard Done", 3)
 end)
 ---- Trang Chá»§
 Main:AddSeperator("Farm Settings")
@@ -3901,7 +3901,7 @@ task.spawn(function()
     end)
 
 local AttackList = {"0", "0.1", "0.15", "0.155", "0.16", "0.165", "0.17", "0.175", "0.18", "0.185"}
-_G.FastAttackDelay = "0.175"
+_G.FastAttackDelay = "0.15"
 Main:AddDropdown("Fast Attack Delay", AttackList,function(MakoGay)
     _G.FastAttackDelay = MakoGay
 end)
@@ -4058,7 +4058,7 @@ spawn(function()
   end
 end)
 
-Main:AddToggle("Fast Attack ",true,function(value)
+Main:AddToggle("Super Fast Attack ",true,function(value)
         _G.FastAttack = value
     end)      
 
@@ -4236,7 +4236,7 @@ spawn(function()
 	end
 end)
 
-Main:AddToggle("Farm Chest Bypass | Risk Kick",false,function(vu)
+Main:AddToggle("Farm Chest Bypass | 75% Kick",false,function(vu)
 	_G.ChestBypass = vu
 end)
 
@@ -4282,11 +4282,11 @@ end)
         while wait() do
             pcall(function()
                 if string.len(game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("CakePrinceSpawner")) == 88 then
-                    MobKilled:Set("Defeat : "..string.sub(game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("CakePrinceSpawner"),39,41))
+                    MobKilled:Set("Defeat Npc : "..string.sub(game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("CakePrinceSpawner"),39,41))
                 elseif string.len(game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("CakePrinceSpawner")) == 87 then
-                    MobKilled:Set("Defeat : "..string.sub(game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("CakePrinceSpawner"),39,40))
+                    MobKilled:Set("Defeat Npc : "..string.sub(game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("CakePrinceSpawner"),39,40))
                 elseif string.len(game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("CakePrinceSpawner")) == 86 then
-                    MobKilled:Set("Defeat : "..string.sub(game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("CakePrinceSpawner"),39,39))
+                    MobKilled:Set("Defeat Npc : "..string.sub(game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("CakePrinceSpawner"),39,39))
                 else
                     MobKilled:Set("Boss Is Spawning")
                 end
@@ -13172,7 +13172,7 @@ end)
 	setclipboard(tostring(game.JobId))
 	end)
 	
-    Misc:AddTextbox("Place Job Id", true, function(value)
+    Misc:AddTextbox("Paste Webhook Job Id", true, function(value)
 	_G.Job = value
 	end)
 
