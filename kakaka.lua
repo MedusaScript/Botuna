@@ -1,4 +1,4 @@
----Notif run sc
+-- ini notif run
 local SlayerzUI_Notify = loadstring(game:HttpGet("https://raw.githubusercontent.com/x2-Neptune/SlayerzUI/main/Notification.script"))()
 local NameHub = "Medusa Script"
 local Description = "Thanks For Using, maker from Indonesia!"
@@ -96,7 +96,7 @@ if start_anttis == true then
         end
     end)
 end
----[Diatas notif run))]
+---[Notif run sc diatas]
 local Notif = {}
 
 local CoreGUI = game:GetService("CoreGui")
@@ -10727,12 +10727,12 @@ Chest = Ss:AddLabel("Chest")
 
 Fruit = Ss:AddLabel("Fruit")
 
-  local Pointstat = Ss:AddLabel("✍:Stat Points")
+  local Pointstat = Ss:AddLabel("✍: Stat Points")
     
     spawn(function()
         while wait() do
             pcall(function()
-                Pointstat:Set("Stat Points : "..tostring(game:GetService("Players")["LocalPlayer"].Data.Points.Value))
+                Pointstat:Set("✍: Stat Points : "..tostring(game:GetService("Players")["LocalPlayer"].Data.Points.Value))
             end)
         end
     end)
