@@ -5496,7 +5496,6 @@ spawn(function()
 			end
         end
     end)
-    end)
     
     M:AddLine()
 
