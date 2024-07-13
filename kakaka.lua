@@ -5496,32 +5496,8 @@ spawn(function()
 			end
         end
     end)
+    end)
     
-    M:AddLine()
-
-    M:AddSeperator("Kitsune Island")
-
-    Section:Label("Kitsune Event")
-    Section:Toggle("TP to Kitsune Island",false,function(a)
-        _G.TPtoKisuneIs = a
-    end)
-    Section:Toggle("Auto Collect Azure",false,function(a)
-        _G.AutoCollectAzure = a
-    end)
-    spawn(function()
-        while wait() do
-            if _G.TPtoKisuneIs then
-                pcall(function()
-                    for i,v in pairs(game:GetService("Workspace").Map.KitsuneIsland:GetChildren()) do
-                        if v.Name == "Part" then
-                            getgenv().ToPos(v.CFrame * CFrame.new(2, 99, 2))
-                        end
-                    end
-                end)
-            end
-        end
-    end)
-
     M:AddLine()
 
     M:AddSeperator("Fighting Style")
