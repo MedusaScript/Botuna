@@ -11452,11 +11452,11 @@ end
     
     local TimeRaid = R:AddLabel("Wait For Dungeon")
     
-    local Island1 = R:AddLabel(": lsland 1")
-    local Island2 = R:AddLabel(": lsland 2")
-    local Island3 = R:AddLabel(": lsland 3")
-    local Island4 = R:AddLabel(": lsland 4")
-    local Island5 = R:AddLabel(": lsland 5")
+    local Island1 = R:AddLabel("✅: lsland 1")
+    local Island2 = R:AddLabel("✅: lsland 2")
+    local Island3 = R:AddLabel("✅: lsland 3")
+    local Island4 = R:AddLabel("✅: lsland 4")
+    local Island5 = R:AddLabel("✅: lsland 5")
     
     R:AddLine()
     
