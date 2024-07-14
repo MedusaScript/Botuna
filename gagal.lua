@@ -3819,13 +3819,13 @@ getgenv().HyperCahayas = function(p)
     
 
 local Library = Update:Window("Brutality Premium","",Enum.KeyCode.RightControl);
-
+AddSeperator()
 local NguyenTien = Library:AddTab("Developer","16058297648")
-local Main = Library:AddTab("Farming","18477473610")
+local Main = Library:AddTab("Farming","18477352665")
 local M = Library:AddTab("Quest Item","18477473610")
 local Ss = Library:AddTab("Statistic","18477368667")
 local RaceV4 = Library:AddTab("Trial V4","18477916271")
-local P = Library:AddTab("Bounty","18491944252")
+local P = Library:AddTab("Bounty","18492098759")
 local R = Library:AddTab("Auto Raid","18491947999")
 local T = Library:AddTab("Teleport","18477347703")
 local S = Library:AddTab("Shop Dealer","18477410455")
@@ -11668,7 +11668,7 @@ end)
         game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("RaidsNpc","Select",_G.SelectChip)
     end)
     
-    R:AddToggle("Auto Start Dungeon",_G.Auto_StartRaid,function(value)
+    R:AddToggle("Auto Start Raid,_G.Auto_StartRaid,function(value)
         _G.Auto_StartRaid = value
     end)
     
