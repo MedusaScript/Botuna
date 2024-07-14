@@ -18,7 +18,7 @@ frame.Parent = screenGui
 local headerLabel = Instance.new("TextLabel")
 headerLabel.Size = UDim2.new(1, 0, 0, 30)
 headerLabel.Position = UDim2.new(0, 0, 0, 0)
-headerLabel.Text = "Brutality Hub" -- ganti dengan nama script hub kamu
+headerLabel.Text = "Brutality Hub V3" -- ganti dengan nama script hub kamu
 headerLabel.Font = Enum.Font.SourceSansBold
 headerLabel.TextSize = 18
 headerLabel.TextColor3 = Color3.fromRGB(0, 255, 0)
@@ -92,7 +92,7 @@ checkKeyButton.Parent = frame
 local validationLabel = Instance.new("TextLabel")
 validationLabel.Size = UDim2.new(0.8, 0, 0, 30)
 validationLabel.Position = UDim2.new(0.1, 0, 0.575, 0)
-validationLabel.Text = ""
+validationLabel.Text = "Premium Script"
 validationLabel.Font = Enum.Font.SourceSansBold
 validationLabel.TextSize = 18
 validationLabel.TextColor3 = Color3.fromRGB(255, 0, 0)
@@ -111,7 +111,7 @@ end)
 -- Fungsi untuk Check Key
 checkKeyButton.MouseButton1Click:Connect(function()
 local enteredKey = textBox.Text
-    local currentKey = "HWID:687gG88H99hgf6Y777gHOI-77fu=O098gg`j0JO" -- ganti ini dengan key yang benar
+    local currentKey = "▌║█║▌│║▌│║▌║▌█║ ▌│║▌║▌│║║▌█║▌║█ █▓▒▒░░░░░▒▒▓█" -- ganti ini dengan key yang benar
     if enteredKey == currentKey then
         validationLabel.Text = "Checking Key..."
         validationLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
