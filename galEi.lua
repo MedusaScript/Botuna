@@ -102,7 +102,7 @@ validationLabel.Parent = frame
 -- Fungsi untuk Get Key
 getKeyButton.MouseButton1Click:Connect(function()
     -- Mengarahkan ke link untuk mendapatkan key
-    local getKeyLink = "https://www.medusascript.xyz/" -- ganti dengan link get key kamu
+    local getKeyLink = "https://link-center.net/1014902/key-premium-script" -- ganti dengan link get key kamu
     setclipboard(getKeyLink)
     validationLabel.Text = "Link copied!"
     validationLabel.TextColor3 = Color3.fromRGB(0, 255, 0)
@@ -111,7 +111,7 @@ end)
 -- Fungsi untuk Check Key
 checkKeyButton.MouseButton1Click:Connect(function()
 local enteredKey = textBox.Text
-    local currentKey = "▌║█║▌│║▌│║▌║▌█║ ▌│║▌║▌│║║▌█║▌║█ █▓▒▒░░░░░▒▒▓█" -- ganti ini dengan key yang benar
+    local currentKey = "sencored▌▒%░@║%░&░░█║sfe║░░░ui║░░░║▌█║e░░░█║║██▓▒▒░░░░" -- ganti ini dengan key yang benar
     if enteredKey == currentKey then
         validationLabel.Text = "Checking Key..."
         validationLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
@@ -119,7 +119,7 @@ local enteredKey = textBox.Text
         validationLabel.Text = "Key Is Valid!"
         validationLabel.TextColor3 = Color3.fromRGB(0, 255, 0)
         wait(2)
-        validationLabel.Text = "Validation Success"
+        validationLabel.Text = "Thanks For Use Sript"
         validationLabel.TextColor3 = Color3.fromRGB(0, 255, 0)
         wait(2)
         local tween = TweenService:Create(frame, TweenInfo.new(0.5), {Position = UDim2.new(0.5, -150, 1.5, -100)})
