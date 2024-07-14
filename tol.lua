@@ -367,7 +367,7 @@ function Update:Window(text,logo,keybind)
     Ping.Position = UDim2.new(0.28, 0,0.074, 0)
     Ping.Size = UDim2.new(0, 225, 0, 25)
     Ping.Font = Enum.Font.GothamSemibold
-    Ping.Text = "BRUTALITY V3 | By Medusa Script             [SCRIPT PREMIUM]"
+    Ping.Text = "BRUTALITY V3 | By Medusa Script                [SCRIPT PREMIUM]"
     Ping.TextColor3 = Color3.fromRGB(9, 255, 0)
     Ping.TextSize = 14.000
     Ping.TextXAlignment = Enum.TextXAlignment.Left
@@ -3821,14 +3821,14 @@ getgenv().HyperCahayas = function(p)
 local Library = Update:Window("Brutality Premium","",Enum.KeyCode.RightControl);
 
 local NguyenTien = Library:AddTab("Information","16058297648")
-local Main = Library:AddTab("Farm","18477352665")
-local M = Library:AddTab("Quest","18477473610")
-local Ss = Library:AddTab("Stats","18477368667")
+local Main = Library:AddTab("Auto Farm","18477352665")
+local M = Library:AddTab("Quest Item","18477473610")
+local Ss = Library:AddTab("Statsistic","18477368667")
 local RaceV4 = Library:AddTab("Trial V4","18477916271")
-local P = Library:AddTab("Bounty","18477350121")
+local P = Library:AddTab("Bounty Hunter","18477350121")
 local R = Library:AddTab("Auto Raid","18477546509")
 local T = Library:AddTab("Teleport","18477347703")
-local S = Library:AddTab("Shop","18477410455")
+local S = Library:AddTab("Dealer Shop","18477410455")
 local D = Library:AddTab("Devil Fruit","18477363100")
 local Misc = Library:AddTab("Setting","18477908150")
 --- diatas nama label
