@@ -1,15 +1,14 @@
-local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/ionlyusegithubformcmods/1-Line-Scripts/main/Mobile%20Friendly%20Orion')))() --This Will Load The Script Code
-local Player = game.Players.LocalPlayer --This Will Reveal The Player Name
+local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/ionlyusegithubformcmods/1-Line-Scripts/main/Mobile%20Friendly%20Orion')))() --Tempat ui script
   local Window = OrionLib:MakeWindow({
-		Name = "Tom Keysystem",
+		Name = "Brutality Key System",
 		HidePremium = false,
 		SaveConfig = true,
 		ConfigFolder = "OrionTest",
         IntroText = "Loading Keysystem"       
-}) --This Will Load The Script Hub
+}) --Ini code loading key
 
 function MakeScriptHub()
-         loadstring(game:HttpGet('https://raw.githubusercontent.com/GhostPlayer352/Test4/main/GhostHub'))() --Put The Script That Will Load If The Key Is Correct Here
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/MedusaScript/limitless-medusa/main/BrutalityV1"))() --Tempat sript disini
 end
 
 OrionLib:MakeNotification({
@@ -19,8 +18,8 @@ OrionLib:MakeNotification({
 	Time = 5
 }) --Notification
 
-getgenv().Key = "Tom-New3rranebe" --Put The Correct Key Here
-getgenv().KeyInput = "string" --Require For The Key To Work
+getgenv().Key = "1234" --Key disini
+getgenv().KeyInput = "" --Require For The Key To Work
 
 local Tab = Window:MakeTab({
 	Name = "Key",
@@ -30,7 +29,7 @@ local Tab = Window:MakeTab({
 
 Tab:AddTextbox({
 	Name = "Key",
-	Default = "Enter Key.",
+	Default = "",
 	TextDisappear = true,
 	Callback = function(Value)
 		getgenv().KeyInput = Value
@@ -49,7 +48,7 @@ Tab:AddButton({
             })
             wait(2)
             OrionLib:MakeNotification({
-                Name = "Correct Key!",
+                Name = "Valid Key!",
                 Content = "The key you entered is Correct.",
                 Image = "rbxassetid://4483345998",
                 Time = 5
@@ -79,7 +78,7 @@ Tab:AddButton({
 Tab:AddButton({
 	Name = "Copy Key",
 	Callback = function()
-      		setclipboard("https://pastefy.app/2DHgmGCV") --This Will Copy The Link Of The Key
+      		setclipboard("https://pastefy.app/2DHgmGCV") --Letakan link get key
   	end    
 }) 
     
