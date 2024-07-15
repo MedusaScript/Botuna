@@ -5,23 +5,23 @@ local Window = Rayfield:CreateWindow({
    LoadingTitle = "Nexus",
    LoadingSubtitle = "by v3rt3x",
    ConfigurationSaving = {
-      Enabled = false,
+      Enabled = true,
       FolderName = "Nexus",
       FileName = "Prison Life"
    },
    Discord = {
-      Enabled = false,
+      Enabled = true,
       Invite = "noinvitelink",
       RememberJoins = true
    },
-   KeySystem = false,
+   KeySystem = true,
    KeySettings = {
       Title = "Nexus | Key System",
       Subtitle = "",
       Note = "Nexus is currently keyless, so if you're seeing this there was an error and you must re-execute Nexus.",
       FileName = "Key",
       SaveKey = true,
-      GrabKeyFromSite = false, 
+      GrabKeyFromSite = true, 
       Key = {"NexusKey"}
    }
 })
