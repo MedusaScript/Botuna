@@ -1,6 +1,6 @@
 -- Script Blox FruiT UI Alchemy
 local SlayerzUI_MobileToggle = loadstring(game:HttpGet("https://raw.githubusercontent.com/MedusaScript/BrutalityV2/main/mtoggleUI.script"))()
-SlayerzUI_MobileToggle:Create("rbxassetid://16058297648") -- Inget Tuh Tai
+SlayerzUI_MobileToggle:Create("rbxassetid://16058297648") -- 
 repeat wait(1) until game:IsLoaded()
 local AlchemyHub_Version = "1.0 [ Free ]"
 local AlchemyHub_UserCalling = game.Players.LocalPlayer.Name
@@ -23,7 +23,7 @@ if not game:IsLoaded()then
 	print("Wait...")
 end
 UIThemeColorSave = Color3.fromRGB(0, 255, 145)
-LOGOAlchemyLOL = "http://www.roblox.com/asset/?id=14981376704"
+LOGOAlchemyLOL = "http://www.roblox.com/asset/?id=16058297648"
 _G.Config_AlchemyUI = {
     KeyBind = Enum.KeyCode.Delete
 }
@@ -141,7 +141,7 @@ KeyBox.ClearTextOnFocus = false
 KeyBox.Font = Enum.Font.Arial
 KeyBox.PlaceholderColor3 = Color3.fromRGB(70, 70, 70)
 KeyBox.PlaceholderText = "Type Key Here ..."
-KeyBox.Text = ""
+KeyBox.Text = "12345"
 KeyBox.TextColor3 = Color3.fromRGB(30, 30, 30)
 KeyBox.TextSize = 16.000
 BoxCorner.Name = "BoxCorner"
@@ -280,7 +280,7 @@ spawn(function()
 		while wait(1) do
             Name.Text = "MedusaScript"
             Description.Text = "Free Script Hub Support PC/Mobile with Many Function Smooth High Perfomance And Anit Detection !"
-            Credit.Text = " UI By x2Neptune"
+            Credit.Text = " UI By MedusaScript"
             Logo.Image = LOGOAlchemyLOL
 		end
 	end)
