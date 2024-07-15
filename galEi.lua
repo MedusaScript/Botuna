@@ -1,4 +1,4 @@
-local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
+local Rayfield = loadstring(game:HttpGet('https://raw.githubusercontent.com/MedusaScript/Botuna/main/gagal'))()
 
 local Window = Rayfield:CreateWindow({
    Name = "Brutality Hub | Blox Fruit",
