@@ -1,5 +1,5 @@
 getgenv().c = {
-    ["Team"] = "Marines", -- team select
+    ["Team"] = "Pirates", -- team select
     ["Buso"] = true, --allow buso
     ["Ken"] = true, --allow ken(observation)
     ["V3"] = true, --allow v3 race
