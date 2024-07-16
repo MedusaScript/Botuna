@@ -5609,7 +5609,7 @@ spawn(function()
                 end
             end
         end)
-    end)
+        end)
     
     M:AddToggle("Buy DeathStep",_G.AutoDeathStep,function(value)
         _G.AutoDeathStep = value
