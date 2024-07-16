@@ -49,7 +49,7 @@ end
 
 
 local themes = {
-    SchemeColor = Color3.fromRGB(74, 99, 135),
+    SchemeColor = Color3.fromRGB(255, 0, 0),
     Background = Color3.fromRGB(0, 0, 0),
     Header = Color3.fromRGB(28, 29, 34),
     TextColor = Color3.fromRGB(255,255,255),
@@ -171,7 +171,7 @@ function Kavo.CreateLib(kavName, themeList)
         themeList = themeStyles.Serpent
     else
         if themeList.SchemeColor == nil then
-            themeList.SchemeColor = Color3.fromRGB(74, 99, 135)
+            themeList.SchemeColor = Color3.fromRGB(255, 0, 0)
         elseif themeList.Background == nil then
             themeList.Background = Color3.fromRGB(36, 37, 43)
         elseif themeList.Header == nil then
@@ -1299,7 +1299,7 @@ function Kavo.CreateLib(kavName, themeList)
                 sliderDrag.Name = "sliderDrag"
                 sliderDrag.Parent = sliderBtn
                 sliderDrag.BackgroundColor3 = themeList.SchemeColor
-                sliderDrag.BorderColor3 = Color3.fromRGB(74, 99, 135)
+                sliderDrag.BorderColor3 = Color3.fromRGB(255, 0, 0)
                 sliderDrag.BorderSizePixel = 0
                 sliderDrag.Size = UDim2.new(-0.671140969, 100,1,0)
 
