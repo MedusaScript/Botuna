@@ -1,106 +1,117 @@
-local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
+if game.PlaceId == 155615604 then
 
-local Window = Rayfield:CreateWindow({
-   Name = "Brutality Hub | Blox Fruit",
-   LoadingTitle = "By Medusa Script",
-   LoadingSubtitle = "X BOTUNA,
-   ConfigurationSaving = {
-      Enabled = false,
-      FolderName = "Medusa",
-      FileName = "Blox Fruit"
-   },
-   Discord = {
-      Enabled = false,
-      Invite = "noinvitelink",
-      RememberJoins = true
-   },
-   KeySystem = false,
-   KeySettings = {
-      Title = "BRUTALITY HUB | Key System",
-      Subtitle = "",
-      Note = "Medusa is currently keyless, so if you're seeing this there was an error and you must re-execute Nexus.",
-      FileName = "Key",
-      SaveKey = true,
-      GrabKeyFromSite = false, 
-      Key = {"sencored▌▒%░@║%░&░░█║sfe║░░░ui║░░░║▌█║e░░░█║║██▓▒▒░░░░"}
-   }
+local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
+
+local Window = OrionLib:MakeWindow({Name = "MagmaX hub", HidePremium = false, SaveConfig = true, ConfigFolder = "Save Config", IntroEnabled = true, IntroText = "MagmaX | Best exploiting experience", IntroIcon = "18425155480"})
+
+local PlayerTab = Window:MakeTab({
+	Name = "Player",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
 })
 
-local Main = Window:CreateTab("Main", 4483362458)
-
-local RemoveDoors = Main:CreateButton({
-    Name = "Remove All Doors",
-    Callback = function()
-        for i,v in pairs(game.Workspace["Doors"]:GetChildren()) do
-            v.block:Destroy()
-        end
-        game.Workspace.Prison_Fences.Prison_Gate:Destroy()
-    end,
+local Section = PlayerTab:AddSection({
+	Name = "Section"
 })
 
-local Teleports = Main:CreateSection("Teleports")
-
-local CriminalBase = Main:CreateButton({
-    Name = "Criminal Base",
-    Callback = function()
-        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-943.4, 93.5, 2056, -1, 0, 0, 0, 1, 0, 0, 0, -1)
-    end,
+PlayerTab:AddSlider({
+	Name = "Walk Speed",
+	Min = 1,
+	Max = 500,
+	Default = 5,
+	Color = Color3.fromRGB(255,255,255),
+	Increment = 1,
+	ValueName = "Speed",
+	Callback = function(Value)
+		game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = Value
+	end    
 })
 
-local PrisonYard = Main:CreateButton({
-    Name = "Prison Yard",
-    Callback = function()
-        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(736.4, 98, 2517.5)
-    end,
+function Teleport()
+    while _G.Teleport == true do
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(794.146606, 97.9660797, 2475.97485, 0.863350809, 4.43120918e-08, -0.504604161, -1.25855282e-08, 1, 6.62823822e-08, 0.504604161, -5.08742382e-08, 0.863350809)
+    end
+end
+
+PlayerTab:AddSlider({
+	Name = "Jump Height",
+	Min = 1,
+	Max = 500,
+	Default = 5,
+	Color = Color3.fromRGB(255,255,255),
+	Increment = 1,
+	ValueName = "Height",
+	Callback = function(Value)
+		game.Players.LocalPlayer.Character.Humanoid.JumpPower = Value
+	end    
 })
 
-local PrisonCells = Main:CreateButton({
-    Name = "Prison Cells",
-    Callback = function()
-        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(919.5, 100, 2441.75, 1, 0, 0, 0, 1, 0, 0, 0, 1)
-    end,
+local MapTab = Window:MakeTab({
+	Name = "Prison",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
 })
 
-local PrisonGate = Main:CreateButton({
-    Name = "Prison Gate",
-    Callback = function()
-        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(450, 98, 2216.75, 0, 0, -1, 0, 1, 0, 1, 0, 0)
-    end,
+MapTab:AddButton({
+	Name = "Delete Doors",
+	Callback = function()
+      		game.Workspace.Doors:Destroy()
+  	end    
 })
 
-local GuardArmory = Main:CreateButton({
-    Name = "Guard Armory",
-    Callback = function()
-        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(837.25, 100, 2271, 1, 0, 0, 0, 1, 0, 0, 0, 1)
-    end,
+MapTab:AddButton({
+	Name = "Delete Cells",
+	Callback = function()
+      		game.Workspace.Prison_Cellblock.doors:Destroy()
+  	end    
 })
 
-local SurveilanceCams = Main:CreateButton({
-    Name = "Surveilance Cameras",
-    Callback = function()
-        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(790.660095, 97.8498306, 2319.90259, 0.707145631, 0, 0.707068145, 0, 1, 0, -0.707068145, 0, 0.707145631)
-    end,
+local TeleporTab = Window:MakeTab({
+	Name = "Teleport",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
 })
 
-local Cafeteria = Main:CreateButton({
-    Name = "Cafeteria",
-    Callback = function()
-        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(919, 100, 2325.75, 1, 0, 0, 0, 1, 0, 0, 0, 1)
-    end,
+TeleporTab:AddButton({
+	Name = "Teleport to Yard",
+	Callback = function()
+      		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(794.146606, 97.9660797, 2475.97485, 0.863350809, 4.43120918e-08, -0.504604161, -1.25855282e-08, 1, 6.62823822e-08, 0.504604161, -5.08742382e-08, 0.863350809)
+  	end    
 })
 
-local Kitchen = Main:CreateButton({
-    Name = "Kitchen",
-    Callback = function()
-        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(906.5, 100, 2237.75, -1, 0, 0, 0, 1, 0, 0, 0, -1)
-    end,
+TeleporTab:AddButton({
+	Name = "Leave the Prison",
+	Callback = function()
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(363.318146, 83.4960022, 2216.48364, 0.00793944765, -9.85636603e-08, 0.999968469, 2.47144936e-08, 1, 9.83705419e-08, -0.999968469, 2.39327065e-08, 0.00793944765)
+  	end    
 })
 
-local Settings = Window:CreateTab("Settings", 4483362458)
 
-local DestroyUI = Settings:CreateButton({
-    Name = "Destroy UI",
-    Callback = function()
-        Rayfield:Destroy()
-    end,
+TeleporTab:AddButton({
+	Name = "Teleport to Cafeteria",
+	Callback = function()
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(921.68988, 99.9899368, 2315.9729, 0.999993682, 3.10065751e-08, -0.00355175673, -3.12670032e-08, 1, -7.32688363e-08, 0.00355175673, 7.33794252e-08, 0.999993682)
+  	end    
 })
+
+TeleporTab:AddButton({
+	Name = "Teleport to Cells",
+	Callback = function()
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(914.983032, 99.9899673, 2445.30957, -0.999936998, -9.77497816e-09, -0.0112240836, -1.07340687e-08, 1, 8.53891819e-08, 0.0112240836, 8.55042828e-08, -0.999936998)
+  	end    
+})
+
+TeleporTab:AddButton({
+	Name = "Teleport to Police Room",
+	Callback = function()
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(828.7995, 99.9899826, 2314.81372, 0.995826721, 4.30496918e-08, -0.091264382, -4.88742771e-08, 1, -6.1586114e-08, 0.091264382, 6.57895782e-08, 0.995826721)
+  	end    
+})
+
+TeleporTab:AddButton({
+	Name = "Generate Car Place",
+	Callback = function()
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-490.847839, 53.9683342, 1795.66162, -0.845191419, 5.25890869e-08, -0.534463704, 3.34021273e-08, 1, 4.55744598e-08, 0.534463704, 2.06669188e-08, -0.845191419)
+  	end    
+})
+end
