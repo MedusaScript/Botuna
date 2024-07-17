@@ -265,7 +265,7 @@ function Kavo.CreateLib(kavName, themeList)
     title.Font = Enum.Font.Gotham
     title.RichText = true
     title.Text = kavName
-    title.TextColor3 = Color3.fromRGB(245, 245, 245)
+    title.TextColor3 = Color3.fromRGB(255, 255, 255)
     title.TextSize = 16.000
     title.TextXAlignment = Enum.TextXAlignment.Left
 
@@ -336,7 +336,7 @@ function Kavo.CreateLib(kavName, themeList)
     infoContainer.Parent = Main
     infoContainer.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
     infoContainer.BackgroundTransparency = 1.000
-    infoContainer.BorderColor3 = Color3.fromRGB(27, 42, 53)
+    infoContainer.BorderColor3 = Color3.fromRGB(16, 156, 3)
     infoContainer.ClipsDescendants = true
     infoContainer.Position = UDim2.new(0.299047619, 0, 0.874213815, 0)
     infoContainer.Size = UDim2.new(0, 368, 0, 33)
@@ -393,7 +393,7 @@ function Kavo.CreateLib(kavName, themeList)
         page.Size = UDim2.new(1, 0, 1, 0)
         page.ScrollBarThickness = 5
         page.Visible = false
-        page.ScrollBarImageColor3 = Color3.fromRGB(themeList.SchemeColor.r * 255 - 16, themeList.SchemeColor.g * 255 - 15, themeList.SchemeColor.b * 255 - 28)
+        page.ScrollBarImageColor3 = Color3.fromRGB(themeList.SchemeColor.r * 16-156-3, themeList.SchemeColor.g * 16-156-3, themeList.SchemeColor.b * 16-156-3)
 
         pageListing.Name = "pageListing"
         pageListing.Parent = page
@@ -525,7 +525,7 @@ function Kavo.CreateLib(kavName, themeList)
             sectionName.Parent = sectionHead
             sectionName.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
             sectionName.BackgroundTransparency = 1.000
-            sectionName.BorderColor3 = Color3.fromRGB(27, 42, 53)
+            sectionName.BorderColor3 = Color3.fromRGB(16, 156, 3)
             sectionName.Position = UDim2.new(0.0198863633, 0, 0, 0)
             sectionName.Size = UDim2.new(0.980113626, 0, 1, 0)
             sectionName.Font = Enum.Font.Gotham
@@ -651,7 +651,7 @@ function Kavo.CreateLib(kavName, themeList)
                 touch.Parent = buttonElement
                 touch.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
                 touch.BackgroundTransparency = 1.000
-                touch.BorderColor3 = Color3.fromRGB(27, 42, 53)
+                touch.BorderColor3 = Color3.fromRGB(16, 156, 3)
                 touch.Position = UDim2.new(0.0199999996, 0, 0.180000007, 0)
                 touch.Size = UDim2.new(0, 21, 0, 21)
                 touch.Image = "rbxassetid://3926305904"
@@ -816,7 +816,7 @@ function Kavo.CreateLib(kavName, themeList)
                 write.Parent = textboxElement
                 write.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
                 write.BackgroundTransparency = 1.000
-                write.BorderColor3 = Color3.fromRGB(27, 42, 53)
+                write.BorderColor3 = Color3.fromRGB(16, 156, 3)
                 write.Position = UDim2.new(0.0199999996, 0, 0.180000007, 0)
                 write.Size = UDim2.new(0, 21, 0, 21)
                 write.Image = "rbxassetid://3926305904"
@@ -1309,7 +1309,7 @@ function Kavo.CreateLib(kavName, themeList)
                 write.Parent = sliderElement
                 write.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
                 write.BackgroundTransparency = 1.000
-                write.BorderColor3 = Color3.fromRGB(27, 42, 53)
+                write.BorderColor3 = Color3.fromRGB(16, 156, 3)
                 write.Position = UDim2.new(0.0199999996, 0, 0.180000007, 0)
                 write.Size = UDim2.new(0, 21, 0, 21)
                 write.Image = "rbxassetid://3926307971"
@@ -1571,7 +1571,7 @@ function Kavo.CreateLib(kavName, themeList)
                 listImg.Parent = dropOpen
                 listImg.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
                 listImg.BackgroundTransparency = 1.000
-                listImg.BorderColor3 = Color3.fromRGB(27, 42, 53)
+                listImg.BorderColor3 = Color3.fromRGB(16, 156, 3)
                 listImg.Position = UDim2.new(0.0199999996, 0, 0.180000007, 0)
                 listImg.Size = UDim2.new(0, 21, 0, 21)
                 listImg.Image = "rbxassetid://3926305904"
@@ -2086,7 +2086,7 @@ function Kavo.CreateLib(kavName, themeList)
                 touch.Parent = keybindElement
                 touch.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
                 touch.BackgroundTransparency = 1.000
-                touch.BorderColor3 = Color3.fromRGB(27, 42, 53)
+                touch.BorderColor3 = Color3.fromRGB(16, 156, 3)
                 touch.Position = UDim2.new(0.0199999996, 0, 0.180000007, 0)
                 touch.Size = UDim2.new(0, 21, 0, 21)
                 touch.Image = "rbxassetid://3926305904"
@@ -2250,7 +2250,7 @@ function Kavo.CreateLib(kavName, themeList)
                 touch.Parent = colorHeader
                 touch.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
                 touch.BackgroundTransparency = 1.000
-                touch.BorderColor3 = Color3.fromRGB(27, 42, 53)
+                touch.BorderColor3 = Color3.fromRGB(16, 156, 3)
                 touch.Position = UDim2.new(0.0199999996, 0, 0.180000007, 0)
                 touch.Size = UDim2.new(0, 21, 0, 21)
                 touch.Image = "rbxassetid://3926305904"
