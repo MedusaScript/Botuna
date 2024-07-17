@@ -3945,7 +3945,7 @@ end)
                 if _G.AutoObservation then
                     if game:GetService("Players").LocalPlayer.VisionRadius.Value >= 3000 then
                         game:GetService("StarterGui"):SetCore("SendNotification", {
-                            Icon = "rbxassetid://16375477666";
+                            Icon = "rbxassetid://16058297648";
                             Title = "Status Observation:", 
                             Text = "You Have Max Points"
                         })
@@ -4674,7 +4674,7 @@ local Toggle = Tabs.Mt:AddToggle("MyToggle", {Title = "Auto Farm Ectoplasm", Def
        
     Tabs.De:AddParagraph({
         Title = "Fruit",
-        Content = "..."
+        Content = "get fruit spawn, dungeon, awaken"
     })
     
     local Toggle = Tabs.De:AddToggle("MyToggle", {Title = "Auto Random Fruit", Default = false })
@@ -4691,7 +4691,7 @@ local Toggle = Tabs.Mt:AddToggle("MyToggle", {Title = "Auto Farm Ectoplasm", Def
         end
 end)
     
-    local Toggle = Tabs.De:AddToggle("MyToggle", {Title = "Tự Động Cất Fruit", Default = false })
+    local Toggle = Tabs.De:AddToggle("MyToggle", {Title = "Auto Storage Fruit", Default = false })
 
     Toggle:OnChanged(function(Value)
         _G.AutoStoreFruit = Value
@@ -4846,11 +4846,12 @@ end)
   "Control-Control",
   "Soul-Soul",
   "Dragon-Dragon",
-  "Leopard-Leopard"
+  "Leopard-Leopard",
+  "Kitsune-Kitsune"
  }
     
     local Dropdown = Tabs.De:AddDropdown("Dropdown", {
-        Title = "Chọn Fruit Để Mua",
+        Title = "Dealer Fruit",
         Values = FruitList,
         Multi = false,
         Default = 1,
@@ -4862,7 +4863,7 @@ end)
         _G.SelectFruit = Value
     end)
     
-    local Toggle = Tabs.De:AddToggle("MyToggle", {Title = "Mua Fruit Đã Chọn", Default = false })
+    local Toggle = Tabs.De:AddToggle("MyToggle", {Title = "Auto Buy Fruit", Default = false })
 
     Toggle:OnChanged(function(Value)
         _G.AutoBuyFruitSniper = Value
@@ -4896,7 +4897,7 @@ end)
 	    end
     end)
     
-    local Toggle = Tabs.De:AddToggle("MyToggle", {Title = "Tele Đến Trái [Tween]", Default = false })
+    local Toggle = Tabs.De:AddToggle("MyToggle", {Title = "Get Fruit Spawn [Tween]", Default = false })
 
     Toggle:OnChanged(function(Value)
         Tween_Fruit = Value
@@ -4921,7 +4922,7 @@ end)
     })
     
     local Dropdown = Tabs.De:AddDropdown("Dropdown", {
-        Title = "Chọn Chip",
+        Title = "Select Chip",
         Values = {"Dark","Sand","Magma","Rumble","Flame","Ice","Light","Quake","Human: Buddha","Flame","Bird: Phoenix","Dough"},
         Multi = false,
         Default = 1,
@@ -4933,7 +4934,7 @@ end)
         _G.SelectChip = Value
     end)
     Tabs.De:AddButton({
-        Title = "Mua Chip Đã Chọn",
+        Title = "Auto Buy Chip",
         Description = "",
         Callback = function()
             game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("RaidsNpc","Select",_G.SelectChip)
@@ -4969,7 +4970,7 @@ end)
         end)
     end)
     
-    local Toggle = Tabs.De:AddToggle("MyToggle", {Title = "Next Island", Default = false })
+    local Toggle = Tabs.De:AddToggle("MyToggle", {Title = "Auto Next Island", Default = false })
     Toggle:OnChanged(function(Value)
    _G.Auto_Dungeon = Value
 		StopTween(_G.Auto_Dungeon)
@@ -4992,7 +4993,7 @@ spawn(function()
     end
 end)
 
-local Toggle = Tabs.De:AddToggle("MyToggle", {Title = "Kill Arua", Default = false })
+local Toggle = Tabs.De:AddToggle("MyToggle", {Title = "Auto Kill Npc (aura)", Default = false })
     Toggle:OnChanged(function(Value)
    _G.concubu = Value
 		end)
@@ -5056,7 +5057,7 @@ local Toggle = Tabs.De:AddToggle("MyToggle", {Title = "Awakener Fruit", Default 
     end)
     
     local Timekl = Tabs.St:AddParagraph({
-        Title = "Time Sever",
+        Title = "Time Server",
         Content = ""
     })
     
@@ -5077,7 +5078,7 @@ spawn(function()
  end)
     
 local BoneCheck = Tabs.St:AddParagraph({
-        Title = "Bone",
+        Title = "Total Bone",
         Content = ""
     })
     
@@ -5180,7 +5181,7 @@ end)
 end)
     
     local FM = Tabs.St:AddParagraph({
-        Title = "Moon",
+        Title = "Status Moon",
         Content = ""
     })
     
@@ -5188,24 +5189,24 @@ end)
             while task.wait() do
                 pcall(function()
                     if game:GetService("Lighting").Sky.MoonTextureId=="http://www.roblox.com/asset/?id=9709149431" then
-                        FM:SetDesc("Moon: 5/5")
+                        FM:SetDesc("Time Moon: 5/5")
                     elseif game:GetService("Lighting").Sky.MoonTextureId=="http://www.roblox.com/asset/?id=9709149052" then
-                        FM:SetDesc("Moon: 4/5")
+                        FM:SetDesc("Time Moon: 4/5")
                     elseif game:GetService("Lighting").Sky.MoonTextureId=="http://www.roblox.com/asset/?id=9709143733" then
-                        FM:SetDesc("Moon: 3/5")
+                        FM:SetDesc("Time Moon: 3/5")
                     elseif game:GetService("Lighting").Sky.MoonTextureId=="http://www.roblox.com/asset/?id=9709150401" then
-                        FM:SetDesc("Moon: 2/5")
+                        FM:SetDesc("Time Moon: 2/5")
                     elseif game:GetService("Lighting").Sky.MoonTextureId=="http://www.roblox.com/asset/?id=9709149680" then
-                        FM:SetDesc("Moon: 1/5")
+                        FM:SetDesc("Time Moon: 1/5")
                     else
-                        FM:SetDesc("Moon: 0/5")
+                        FM:SetDesc("Wait For Moon: 0/5")
                     end
                 end)
             end
     end)
     
     local Input = Tabs.St:AddInput("Input", {
-        Title = "Job Id",
+        Title = "Job Id Webhook",
         Default = "",
         Placeholder = "Paste Job Id",
         Numeric = false, -- Only allows numbers
@@ -5216,7 +5217,7 @@ end)
     })
     
     Tabs.St:AddButton({
-        Title = "Copy Job ID",
+        Title = "Copy Job ID (user)",
         Description = "",
         Callback = function()
             setclipboard(tostring(game.JobId))
@@ -5224,7 +5225,7 @@ end)
     })
     
     Tabs.St:AddButton({
-        Title = "Join Job ID",
+        Title = "Join Job ID Webhook",
         Description = "",
         Callback = function()
             game:GetService("TeleportService"):TeleportToPlaceInstance(game.placeId,_G.Job, game.Players.LocalPlayer)
@@ -5396,13 +5397,13 @@ end)
 		end)
 		
 		Tabs.Lc:AddParagraph({
-        Title = "Teleport",
+        Title = "Teleport Island",
         Content = ""
     })
     
     if World1 then
     local Dropdown = Tabs.Lc:AddDropdown("Dropdown", {
-        Title = "Chọn Đảo",
+        Title = "Select Island",
         Values = {"WindMill",
                       "Marine",
                       "Middle Town",
@@ -5432,7 +5433,7 @@ end)
     end
     if World2 then
     local Dropdown = Tabs.Lc:AddDropdown("Dropdown", {
-        Title = "Chọn Đảo",
+        Title = "Select Island",
         Values = {"The Cafe",
                                 "Frist Spot",
                                 "Dark Area",
@@ -5460,7 +5461,7 @@ end)
     end
     if World3 then
     local Dropdown = Tabs.Lc:AddDropdown("Dropdown", {
-        Title = "Chọn Đảo",
+        Title = "Select Island",
         Values = {"Mansion",
                                           "Port Town",
                                           "Great Tree",
@@ -5594,7 +5595,7 @@ end)
   
     if World1 then
     local Dropdown = Tabs.Lc:AddDropdown("Dropdown", {
-        Title = "Chọn Đảo",
+        Title = "Select Island",
         Values = {"WindMill",
                       "Marine",
                       "Middle Town",
@@ -5624,7 +5625,7 @@ end)
     end
     if World2 then
     local Dropdown = Tabs.Lc:AddDropdown("Dropdown", {
-        Title = "Chọn Đảo",
+        Title = "Select Island",
         Values = {"The Cafe",
                                 "Frist Spot",
                                 "Dark Area",
@@ -5652,7 +5653,7 @@ end)
     end
     if World3 then
     local Dropdown = Tabs.Lc:AddDropdown("Dropdown", {
-        Title = "Chọn Đảo",
+        Title = "Select Island",
         Values = {"Mansion",
                                           "Port Town",
                                           "Great Tree",
@@ -5677,7 +5678,7 @@ end)
     end)
     end
     Tabs.Lc:AddButton({
-        Title = "Tele Đến Đảo[Bp]",
+        Title = "Teleport Bypass (70% Kick)",
         Description = "",
         Callback = function()
             if _G.TeleportWarp == "Manslon" then
@@ -5997,7 +5998,7 @@ game.Players.LocalPlayer.Character.Head:Destroy()
     })
 
 Tabs.RC:AddButton({
-        Title = "Tele Đến Đền",
+        Title = "Teleport Timple Of Time",
         Description = "",
         Callback = function()            
              game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("requestEntrance",Vector3.new(28286.35546875, 14895.3017578125, 102.62469482421875))
@@ -6005,7 +6006,7 @@ Tabs.RC:AddButton({
     })
 
 Tabs.RC:AddButton({
-        Title = "TP Tele Đến Chỗ Gạt Cần",
+        Title = "Teleport Pull Lever",
         Description = "",
         Callback = function()            
              topos(CFrame.new(28575.181640625, 14936.6279296875, 72.31636810302734))
@@ -6013,16 +6014,16 @@ Tabs.RC:AddButton({
     })
 
 Tabs.RC:AddButton({
-        Title = "TP Acient One",
+        Title = "Teleport Npc Acient One",
         Description = "",
         Callback = function()            
              topos(CFrame.new(28981.552734375, 14888.4267578125, -120.245849609375))
         end
     })
     
-    Tabs.RC:AddSection("Quest Race/Complete Trail")
+    Tabs.RC:AddSection("Quest Race/Complete Trial")
 
-local Toggle = Tabs.RC:AddToggle("MyToggle", {Title = "Quest Buy Gear", Default = false })
+local Toggle = Tabs.RC:AddToggle("MyToggle", {Title = "Quest Buy Gear (train)", Default = false })
 
     Toggle:OnChanged(function(Value)
         _G.Auto_Farm_Bone4 = Value
@@ -6055,7 +6056,7 @@ local Toggle = Tabs.RC:AddToggle("MyToggle", {Title = "Disable Inf Stairs", Defa
     end)
 
 Tabs.RC:AddButton({
-        Title = "Tele Đến Cửa tộc",
+        Title = "Teleport to doors (all race)",
         Description = "",
         Callback = function()            
         for i = 1, 8 do
@@ -6089,7 +6090,7 @@ Tabs.RC:AddParagraph({
         Content = "RACE V4 TRIALS"
     })
 
-local Toggle = Tabs.RC:AddToggle("MyToggle", {Title = "Finish Trial V4", Default = false })
+local Toggle = Tabs.RC:AddToggle("MyToggle", {Title = "Finish Trial V4 (all race)", Default = false })
 
     Toggle:OnChanged(function(Value)
         _G.AutoQuestRace = Value
@@ -7579,7 +7580,7 @@ ImageButton1.BorderSizePixel = 0
 ImageButton1.Position = UDim2.new(0.120833337, 0, 0.0952890813, 0)
 ImageButton1.Size = UDim2.new(0, 50, 0, 50)
 ImageButton1.Draggable = true
-ImageButton1.Image = "rbxassetid://16375477666"
+ImageButton1.Image = "rbxassetid://16058297648"
 ImageButton1.MouseButton1Down:connect(function()
   game:GetService("VirtualInputManager"):SendKeyEvent(true,"LeftControl",false,game)
   game:GetService("VirtualInputManager"):SendKeyEvent(false,"LeftControl",false,game)
