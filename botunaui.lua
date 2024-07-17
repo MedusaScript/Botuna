@@ -5367,7 +5367,7 @@ end)
         end
     })
 		
-		local Toggle = Tabs.Lc:AddToggle("MyToggle", {Title = "Walk On Water", Default = false })
+		local Toggle = Tabs.Lc:AddToggle("MyToggle", {Title = "Walk On Water", Default = true })
     Toggle:OnChanged(function(Value)
   _G.WalkWater = Value
 		end)
@@ -6298,7 +6298,7 @@ spawn(function()
 end)
 
 Tabs.Se:AddButton({
-        Title = "Mua Thuyền",
+        Title = "Auto Buy Boat",
         Description = "",
         Callback = function()
         game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuyBoat","PirateBrigade")
@@ -6306,14 +6306,14 @@ Tabs.Se:AddButton({
     })
     
     Tabs.Se:AddButton({
-        Title = "Xóa Sương Mù",
+        Title = "Remove Fog",
         Description = "",
         Callback = function()
         game:GetService("Lighting").BaseAtmosphere:Destroy()
         end
     })
     
-    local Toggle = Tabs.Se:AddToggle("MyToggle", {Title = "Xóa Sương Mù [ Sea 1 And Sea 2]", Default = false })
+    local Toggle = Tabs.Se:AddToggle("MyToggle", {Title = "Remove Fog [ Sea 1 And Sea 2]", Default = false })
 
     Toggle:OnChanged(function(Value)
     RemoveFog = Value
@@ -6326,7 +6326,7 @@ Tabs.Se:AddButton({
         end
     end)
     
-    local Toggle = Tabs.Se:AddToggle("MyToggle", {Title = "Buye Boat + Zone 5", Default = false })
+    local Toggle = Tabs.Se:AddToggle("MyToggle", {Title = "Buy Boat + Auto Zone 5", Default = false })
 
     Toggle:OnChanged(function(state)
         _G.dao = state
@@ -7395,7 +7395,7 @@ spawn(function()
         end
     end)
 
-local Toggle = Tabs.Qs:AddToggle("MyToggle", {Title = "Plug Holy Torch", Default = false })
+local Toggle = Tabs.Qs:AddToggle("MyToggle", {Title = "Auto On Holy Torch", Default = false })
 
     Toggle:OnChanged(function(Value)
         _G.AutoHolyTorch = Value
@@ -7516,14 +7516,14 @@ local Toggle = Tabs.Qs:AddToggle("MyToggle", {Title = "Plug Holy Torch", Default
         end)
     
     Tabs.Qs:AddButton({
-        Title = "Xóa Sương Mù",
+        Title = "Remove Fog Mirage",
         Description = "",
         Callback = function()
         game.Lighting.Sky:Destroy()
         end
     })
     
-    local Toggle = Tabs.Qs:AddToggle("MyToggle", {Title = "Move Cam to Moon", Default = false })
+    local Toggle = Tabs.Qs:AddToggle("MyToggle", {Title = "Auto Lock Moon", Default = false })
 
     Toggle:OnChanged(function(Value)
         _G.AutoDooHee = Value
@@ -7541,7 +7541,7 @@ local Toggle = Tabs.Qs:AddToggle("MyToggle", {Title = "Plug Holy Torch", Default
     end
 end)
 
-local Toggle = Tabs.Qs:AddToggle("MyToggle", {Title = "Tween Gear", Default = false })
+local Toggle = Tabs.Qs:AddToggle("MyToggle", {Title = "Tween Blue Gear", Default = false })
 
     Toggle:OnChanged(function(Value)
         _G.TweenMGear = Value
