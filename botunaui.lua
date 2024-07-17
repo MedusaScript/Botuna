@@ -3767,7 +3767,7 @@ end)
     
     Tabs.Main:AddSection("Farm All Boss")
     
-    local Toggle = Tabs.Main:AddToggle("MyToggle", {Title = "Farm Boss Wait Spawn!!", Default = false })
+    local Toggle = Tabs.Main:AddToggle("MyToggle", {Title = "Auto Farm Boss ", Default = false })
 
     Toggle:OnChanged(function(Value)
         _G.AutoDoughtBoss = Value
@@ -3820,11 +3820,11 @@ end)
 	end)
         
     Tabs.Ms:AddParagraph({
-        Title = "Sự Kiện Game",
-        Content = "Đánh Nhà Máy Và Tập Kích Hải Tặc"
+        Title = "Misc And Farm",
+        Content = "Farm boss & get item"
     })
     
-    local Toggle = Tabs.Ms:AddToggle("MyToggle", {Title = "Đánh Nhà Máy", Default = false })
+    local Toggle = Tabs.Ms:AddToggle("MyToggle", {Title = "Auto Factory Sea 2", Default = false })
 
     Toggle:OnChanged(function(Value)
         _G.AutoFactory = Value
@@ -3855,7 +3855,7 @@ end)
             end
         end)
         
-        local Toggle = Tabs.Ms:AddToggle("MyToggle", {Title = "Tập Kích Hải Tặc [Beta]", Default = false })
+        local Toggle = Tabs.Ms:AddToggle("MyToggle", {Title = "Pirate Raid Sea 3", Default = false })
 
     Toggle:OnChanged(function(Value)
         _G.AutoRaidPirate = Value
@@ -3898,12 +3898,12 @@ end)
     end)
     
     Tabs.Ms:AddParagraph({
-        Title = "Farm Haki Quan Sát",
+        Title = "Farm Haki Observation",
         Content = ""
     })
     
  local ObservationRange = Tabs.Ms:AddParagraph({
-        Title = "Thông Tin Haki Quan Sát",
+        Title = "Statistic Observation",
         Content = ""
     })
     
@@ -3915,7 +3915,7 @@ end)
         end
     end)
     
-    local Toggle = Tabs.Ms:AddToggle("MyToggle", {Title = "Farm Điểm Của Haki Quan Sát", Default = false })
+    local Toggle = Tabs.Ms:AddToggle("MyToggle", {Title = "Farm Exp Observation", Default = false })
 
     Toggle:OnChanged(function(Value)
         _G.AutoObservation = Value
@@ -4012,7 +4012,7 @@ end)
         end)
     end)
     
-    local Toggle = Tabs.Ms:AddToggle("MyToggle", {Title = "Nhiệm Vụ Haki Quan Sát V2", Default = false })
+    local Toggle = Tabs.Ms:AddToggle("MyToggle", {Title = "Auto Quest Observation V2", Default = false })
 
     Toggle:OnChanged(function(Value)
         _G.AutoObservationHakiV2 = Value
@@ -4176,11 +4176,11 @@ end)
 	end)
    
 Tabs.Ms:AddParagraph({
-        Title = "Farm Rương",
-        Content = "Không Hoạt Động Ở Sever Vip"
+        Title = "Farm Chest",
+        Content = "Does not apply to private servers"
     })
  
- local Toggle = Tabs.Ms:AddToggle("MyToggle", {Title = "Farm Rương [Tween]", Default = false })
+ local Toggle = Tabs.Ms:AddToggle("MyToggle", {Title = "Farm Chest [Tween]", Default = false })
 
     Toggle:OnChanged(function(Value)
         AutoFarmChest = Value
@@ -4211,7 +4211,7 @@ spawn(function()
 	end
 end)
 
-local Toggle = Tabs.Ms:AddToggle("MyToggle", {Title = "Farm Rương [Bypass]", Default = false })
+local Toggle = Tabs.Ms:AddToggle("MyToggle", {Title = "Farm Chest [Bypass 70% Kick]", Default = false })
 
     Toggle:OnChanged(function(Value)
         _G.ChestBypass = Value
@@ -4252,11 +4252,11 @@ end
 end)
  
  Tabs.Ms:AddParagraph({
-        Title = "Chén Thánh Và Tư Lệnh Bột V2",
-        Content = "Boss Bí Ẩn, Dough King và Rip_Indra"
+        Title = "God Chalie & Rip Indra",
+        Content = "Rip_Indra, cake prince, dough king"
     })
  
- local Toggle = Tabs.Ms:AddToggle("MyToggle", {Title = "Auto Bí Ẩn", Default = false })
+ local Toggle = Tabs.Ms:AddToggle("MyToggle", {Title = "Auto Elite Hunter", Default = false })
 
     Toggle:OnChanged(function(Value)
         _G.AutoElitehunter = Value
@@ -4398,10 +4398,10 @@ end)
      
  Tabs.Ms:AddParagraph({
         Title = "Dark Fragment",
-        Content = ""
+        Content = "Need fish of darkness"
     })
  
- local Toggle = Tabs.Ms:AddToggle("MyToggle", {Title = "Auto Đánh Râu Đen", Default = false })
+ local Toggle = Tabs.Ms:AddToggle("MyToggle", {Title = "Auto Kill Blackbeard", Default = false })
 
     Toggle:OnChanged(function(Value)
         _G.Auto_DarkBoss = Value
@@ -4440,7 +4440,7 @@ end)
     
     Tabs.Ms:AddParagraph({
         Title = "Soul Reaper",
-        Content = ""
+        Content = "Boss hunted castle"
     })
     
     local Toggle = Tabs.Ms:AddToggle("MyToggle", {Title = "Auto Soul Reaper", Default = false })
@@ -4493,7 +4493,7 @@ end)
         end
     
     local Dropdown = Tabs.Mt:AddDropdown("Dropdown", {
-        Title = "Chọn Nguyên Liệu Để Farm",
+        Title = "Select Material",
         Values = MaterialList,
         Multi = false,
         Default = 1,
@@ -4505,7 +4505,7 @@ end)
         _G.SelectMaterial = Value
     end)
     
-    local Toggle = Tabs.Mt:AddToggle("MyToggle", {Title = "Farm Nguyên Liệu", Default = false })
+    local Toggle = Tabs.Mt:AddToggle("MyToggle", {Title = "Auto Farm Material", Default = false })
 
     Toggle:OnChanged(function(Value)
         _G.AutoFarmMaterial = Value
@@ -4610,7 +4610,7 @@ local Toggle = Tabs.Mt:AddToggle("MyToggle", {Title = "Auto Farm Ectoplasm", Def
     end)
     
     Tabs.Mt:AddParagraph({
-        Title = "Boss",
+        Title = "All Boss",
         Content = "Boss FARM"
     })
     
@@ -4623,7 +4623,7 @@ local Toggle = Tabs.Mt:AddToggle("MyToggle", {Title = "Auto Farm Ectoplasm", Def
 	end
 	
 	local Dropdown = Tabs.Mt:AddDropdown("Dropdown", {
-        Title = "Chọn Boss Để Farm",
+        Title = "Select Boss",
         Values = tableBoss,
         Multi = false,
         Default = 1,
