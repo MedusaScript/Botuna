@@ -1,6 +1,6 @@
 local Library = loadstring(Game:HttpGet("https://raw.githubusercontent.com/bloodball/-back-ups-for-libs/main/wizard"))()
 
-local PhantomForcesWindow = Library:NewWindow("Medusa Scipt")
+local PhantomForcesWindow = Library:NewWindow("Brutality Hub V2")
 
 local KillingCheats = PhantomForcesWindow:NewSection("Medusa")
 
@@ -147,10 +147,10 @@ task.spawn(function()
 end)
 
 local ParryCounter = 0
-local DetectSpamDistance = 0
+local DetectSpamDistance = 5
 
 local function GetBall(ball)
-  local Target = ""
+  local Target = "Ball"
   
   ball:GetPropertyChangedSignal("Position"):Connect(function()
     local PlayerPP = Player and Player.Character and Player.Character.PrimaryPart
@@ -198,12 +198,12 @@ Balls.ChildAdded:Connect(function(ball)
     return
   end
   
-  getgenv().SpamClickA = false
+  getgenv().SpamClickA = true
   ParryCounter = 0
   GetBall(ball)
 end)
 end)
 
-KillingCheats:CreateButton("Made by Medusa", function()
+KillingCheats:CreateButton("By Medusa Script", function()
 print("https://discord.gg/medusascript")
 end)
