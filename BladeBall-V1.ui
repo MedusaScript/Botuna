@@ -85,7 +85,7 @@ end
 end)
 
 KillingCheats:CreateButton("Auto Spam X", function()
-loadstring(game:HttpGet("https://raw.githubusercontent.com/Code4Zaaa/X7Project/main/Game/AutoParryOnly"))();
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Jaifhdusushd/Auto-Parry-Pilgram/main/Alright%20Auto%20Lololo"))();
 end)
 
 KillingCheats:CreateButton("Auto Detect Spam X", function()
