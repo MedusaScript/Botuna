@@ -14,6 +14,9 @@ end)
 AutoParry:CreateToggle("Auto Pary V2", function()loadstring(game:HttpGet("https://raw.githubusercontent.com/sirapobsriumang/Auto-Parrynogui/main/Beta",true))()
 end)
 
+AutoParry:CreateToggle("Auto Pary V3", function()loadstring(game:HttpGet("https://raw.githubusercontent.com/sirapobsriumang/Auto-Spam-Parry/main/Bladeballnew",true))()
+end)
+
 AutoParry:CreateToggle("Auto Clash", function()loadstring(game:HttpGet("https://raw.githubusercontent.com/datshort1/datmodhub/main/AutoClash",true))()
 end)
 --Toggle baru
