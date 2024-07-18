@@ -8,9 +8,9 @@ wait(1.5)
 
 game.StarterGui:SetCore("SendNotification", {
 
-Title = "Wellcome Back..."; -- the title (ofc)
+Title = "Salam Dari Botuna"; -- the title (ofc)
 
-Text = "Nice to Meet you 😊"; -- what the text says (ofc)
+Text = "Bocah Tua Nakal..."; -- what the text says (ofc)
 
 Icon = ""; -- the image if u want.
 
