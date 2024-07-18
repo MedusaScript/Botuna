@@ -104,7 +104,7 @@
 		
 		--Functions
 		
-		--[[
+		--[
 		local VisualCDFunction
 		
 		if getgc and debug and debug.getinfo and getfenv then
@@ -117,7 +117,7 @@
 				end
 			end
 		end
-		--]]
+		--]
 		
 		--Main
 		local Create = {}
