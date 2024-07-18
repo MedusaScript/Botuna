@@ -18,7 +18,7 @@ Duration = 5; -- how long the notification should in secounds
 
 })
 
-local Library = loadstring(Game:HttpGet("https://raw.githubusercontent.com/bloodball/-back-ups-for-libs/main/wizard"))()
+local Library = loadstring(Game:HttpGet("https://raw.githubusercontent.com/MedusaScript/Botuna/main/UI-Universal-Medusa.lua"))()
 
 --functions
 function Manual()
