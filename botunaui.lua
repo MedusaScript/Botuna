@@ -24,11 +24,11 @@ end)
 AutoParry:CreateToggle("Auto Clash", function()loadstring(game:HttpGet("https://raw.githubusercontent.com/datshort1/datmodhub/main/AutoClash",true))()
 end)
 --Toggle baru
-AutoDetectSpam:CreateToggle("Auto Detect Spam", function()loadstring(game:HttpGet("https://raw.githubusercontent.com/Hosvile/Refinement/main/MC%3ABlade%20Ball%20Spam",true))()
+AutoParry:CreateToggle("Auto Detect Spam", function()loadstring(game:HttpGet("https://raw.githubusercontent.com/Hosvile/Refinement/main/MC%3ABlade%20Ball%20Spam",true))()
 end)
 
-AutoDetectSpamV2:CreateToggle("Detect Spam V2", function()loadstring(game:HttpGet("https://pastebin.com/raw/t2391h1A",true))()
+AutoParry:CreateToggle("Detect Spam V2", function()loadstring(game:HttpGet("https://pastebin.com/raw/t2391h1A",true))()
 end)
 
-AutoDetectSpamV2:CreateToggle("Visualizer", function()loadstring(game:HttpGet("https://pastebin.com/raw/2RzCXHZH"))()
+AutoParry:CreateToggle("Visualizer", function()loadstring(game:HttpGet("https://pastebin.com/raw/2RzCXHZH"))()
 end)
