@@ -1,99 +1,3 @@
-local workspace = game:GetService("Workspace")
-local players = game:GetService("Players")
-local localPlayer = players.LocalPlayer
-local UserInputService = game:GetService("UserInputService")
-local replicatedStorage = game:GetService("ReplicatedStorage")
-local heartbeatConnection
-
-local function startAutoParry()
-    local player = game.Players.LocalPlayer
-    local character = player.Character or player.CharacterAdded:Wait()
-    local replicatedStorage = game:GetService("ReplicatedStorage")
-    local runService = game:GetService("RunService")
-    local parryButtonPress = replicatedStorage.Remotes.ParryButtonPress
-    local ballsFolder = workspace:WaitForChild("Balls")
-
-    print("Script successfully ran.")
-
-    local function onCharacterAdded(newCharacter)
-        character = newCharacter
-    end
-
-    player.CharacterAdded:Connect(onCharacterAdded)
-
-    local focusedBall = nil  
-
-    local function chooseNewFocusedBall()
-        local balls = ballsFolder:GetChildren()
-        focusedBall = nil
-        for _, ball in ipairs(balls) do
-            if ball:GetAttribute("realBall") == true then
-                focusedBall = ball
-                break
-            end
-        end
-    end
-
-    chooseNewFocusedBall()
-
-    local function timeUntilImpact(ballVelocity, distanceToPlayer, playerVelocity)
-        local directionToPlayer = (character.HumanoidRootPart.Position - focusedBall.Position).Unit
-        local velocityTowardsPlayer = ballVelocity:Dot(directionToPlayer) - playerVelocity:Dot(directionToPlayer)
-        
-        if velocityTowardsPlayer <= 0 then
-            return math.huge
-        end
-        
-        local distanceToBeCovered = distanceToPlayer - 40
-        return distanceToBeCovered / velocityTowardsPlayer
-    end
-
-    local BASE_THRESHOLD = 0.15
-    local VELOCITY_SCALING_FACTOR = 0.002
-
-    local function getDynamicThreshold(ballVelocityMagnitude)
-        local adjustedThreshold = BASE_THRESHOLD - (ballVelocityMagnitude * VELOCITY_SCALING_FACTOR)
-        return math.max(0.12, adjustedThreshold)
-    end
-
-    local function checkBallDistance()
-        if not character:FindFirstChild("Highlight") then return end
-        local charPos = character.PrimaryPart.Position
-        local charVel = character.PrimaryPart.Velocity
-
-        if focusedBall and not focusedBall.Parent then
-            chooseNewFocusedBall()
-        end
-
-        if not focusedBall then return end
-
-        local ball = focusedBall
-        local distanceToPlayer = (ball.Position - charPos).Magnitude
-
-        if distanceToPlayer < 10 then
-            parryButtonPress:Fire()
-            return
-        end
-
-        local timeToImpact = timeUntilImpact(ball.Velocity, distanceToPlayer, charVel)
-        local dynamicThreshold = getDynamicThreshold(ball.Velocity.Magnitude)
-
-        if timeToImpact < dynamicThreshold then
-            parryButtonPress:Fire()
-        end
-    end
-    heartbeatConnection = game:GetService("RunService").Heartbeat:Connect(function()
-        checkBallDistance()
-    end)
-end
-
-local function stopAutoParry()
-    if heartbeatConnection then
-        heartbeatConnection:Disconnect()
-        heartbeatConnection = nil
-    end
-end
-
 -- Gui to Lua
 -- Version: 3.2
 
@@ -102,87 +6,123 @@ end
 local ScreenGui = Instance.new("ScreenGui")
 local Frame = Instance.new("Frame")
 local TextLabel = Instance.new("TextLabel")
+local UICorner = Instance.new("UICorner")
+local AutoParry = Instance.new("TextButton")
+local UICorner_2 = Instance.new("UICorner")
+local ESP = Instance.new("TextButton")
+local UICorner_3 = Instance.new("UICorner")
+local UICorner_4 = Instance.new("UICorner")
 local TextButton = Instance.new("TextButton")
-local TextButton_2 = Instance.new("TextButton")
+local UICorner_5 = Instance.new("UICorner")
 
 --Properties:
 
 ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
 ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+ScreenGui.ReseOnSpawn = false
 
 Frame.Parent = ScreenGui
-Frame.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-Frame.Position = UDim2.new(0.0833889097, 0, 0.562569201, 0)
-Frame.Size = UDim2.new(0, 230, 0, 160)
+Frame.BackgroundColor3 = Color3.fromRGB(98, 98, 98)
+Frame.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Frame.BorderSizePixel = 0
+Frame.Position = UDim2.new(0.434779048, 0, 0.371485949, 0)
+Frame.Size = UDim2.new(0.312342584, 0, 0.182730928, 0)
+Frame.Draggable = true
 
 TextLabel.Parent = Frame
-TextLabel.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
-TextLabel.Position = UDim2.new(-0.00203830888, 0, -0.00307044992, 0)
-TextLabel.Size = UDim2.new(0, 230, 0, 25)
-TextLabel.Font = Enum.Font.SourceSans
-TextLabel.Text = "Blade Ball Skidded Auto Parry - nfpw"
-TextLabel.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel.BackgroundColor3 = Color3.fromRGB(72, 72, 72)
+TextLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel.BorderSizePixel = 0
+TextLabel.Size = UDim2.new(0.899193466, 0, 0.307692319, 0)
+TextLabel.Font = Enum.Font.FredokaOne
+TextLabel.Text = "Blade Ball Hub🎄 (by belb)"
+TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
 TextLabel.TextScaled = true
-TextLabel.TextSize = 14.000
+TextLabel.TextSize = 27.000
 TextLabel.TextWrapped = true
 
+UICorner.CornerRadius = UDim.new(0.200000003, 0)
+UICorner.Parent = TextLabel
+
+AutoParry.Name = "AutoParry"
+AutoParry.Parent = Frame
+AutoParry.BackgroundColor3 = Color3.fromRGB(79, 79, 79)
+AutoParry.BorderColor3 = Color3.fromRGB(85, 170, 255)
+AutoParry.BorderSizePixel = 0
+AutoParry.Position = UDim2.new(0.0564516112, 0, 0.448551387, 0)
+AutoParry.Size = UDim2.new(0.415322542, 0, 0.32967034, 0)
+AutoParry.Font = Enum.Font.FredokaOne
+AutoParry.Text = "Auto Parry🎄"
+AutoParry.TextColor3 = Color3.fromRGB(255, 255, 255)
+AutoParry.TextScaled = true
+AutoParry.TextSize = 18.000
+AutoParry.TextWrapped = true
+
+UICorner_2.Parent = AutoParry
+
+ESP.Name = "ESP"
+ESP.Parent = Frame
+ESP.BackgroundColor3 = Color3.fromRGB(79, 79, 79)
+ESP.BorderColor3 = Color3.fromRGB(85, 170, 255)
+ESP.BorderSizePixel = 0
+ESP.Position = UDim2.new(0.540322721, 0, 0.448551387, 0)
+ESP.Size = UDim2.new(0.415322542, 0, 0.32967034, 0)
+ESP.Font = Enum.Font.FredokaOne
+ESP.Text = "ESP🎄"
+ESP.TextColor3 = Color3.fromRGB(255, 255, 255)
+ESP.TextSize = 18.000
+ESP.TextWrapped = true
+
+UICorner_3.Parent = ESP
+
+UICorner_4.CornerRadius = UDim.new(0.100000001, 0)
+UICorner_4.Parent = Frame
+UICorner_4.Archivable = false
+
 TextButton.Parent = Frame
-TextButton.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
+TextButton.BackgroundColor3 = Color3.fromRGB(72, 72, 72)
 TextButton.BorderColor3 = Color3.fromRGB(0, 0, 0)
-TextButton.Position = UDim2.new(0.0700469762, 0, 0.358639956, 0)
-TextButton.Size = UDim2.new(0.321920365, 0, 0.275855243, 0)
+TextButton.BorderSizePixel = 0
+TextButton.Position = UDim2.new(0.87500006, 0, 0, 0)
+TextButton.Size = UDim2.new(0, 30, 0, 28)
 TextButton.Font = Enum.Font.SourceSans
-TextButton.Text = "Enable"
+TextButton.Text = "X"
 TextButton.TextColor3 = Color3.fromRGB(255, 255, 255)
-TextButton.TextScaled = true
-TextButton.TextSize = 14.000
-TextButton.TextStrokeTransparency = 0.000
+TextButton.TextSize = 27.000
 TextButton.TextWrapped = true
 
-TextButton_2.Parent = Frame
-TextButton_2.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
-TextButton_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
-TextButton_2.Position = UDim2.new(0.591082573, 0, 0.358639956, 0)
-TextButton_2.Size = UDim2.new(0.321920365, 0, 0.275855243, 0)
-TextButton_2.Font = Enum.Font.SourceSans
-TextButton_2.Text = "Disable"
-TextButton_2.TextColor3 = Color3.fromRGB(255, 255, 255)
-TextButton_2.TextScaled = true
-TextButton_2.TextSize = 14.000
-TextButton_2.TextStrokeTransparency = 0.000
-TextButton_2.TextWrapped = true
+UICorner_5.CornerRadius = UDim.new(0.200000003, 0)
+UICorner_5.Parent = TextButton
 
 -- Scripts:
 
-local function NHOVBS_fake_script() -- Frame.GuiDrag 
-	local script = Instance.new('LocalScript', Frame)
+local function FWUA_fake_script() -- AutoParry.LocalScript 
+	local script = Instance.new('LocalScript', AutoParry)
 
-	local 	Frame = script.Parent.Parent.Frame
+	local button = script.Parent
 	
-	Frame.Draggable = true
-	Frame.Active = true
-	
-	
+	button.MouseButton1Down:Connect(function()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/Hosvile/Refinement/main/MC%3ABlade%20Ball%20Parry",true))()
+	end)
 	
 end
-coroutine.wrap(NHOVBS_fake_script)()
-local function HTPDFXZ_fake_script() -- TextButton.LocalScript 
+coroutine.wrap(FWUA_fake_script)()
+local function WKFTERZ_fake_script() -- ESP.LocalScript 
+	local script = Instance.new('LocalScript', ESP)
+
+	local button = script.Parent
+	
+	button.MouseButton1Down:Connect(function()
+		loadstring(game:HttpGet('https://raw.githubusercontent.com/Lucasfin000/SpaceHub/main/UESP'))()
+	end)
+	
+end
+coroutine.wrap(WKFTERZ_fake_script)()
+local function KKUA_fake_script() -- TextButton.LocalScript 
 	local script = Instance.new('LocalScript', TextButton)
 
-	local startButton = script.Parent
-	
-	startButton.MouseButton1Click:Connect(function()
-		startAutoParry()
+	script.Parent.MouseButton1Down:Connect(function()
+		script.Parent.Parent.Visible = false
 	end)
 end
-coroutine.wrap(HTPDFXZ_fake_script)()
-local function ZDNHQM_fake_script() -- TextButton_2.LocalScript 
-	local script = Instance.new('LocalScript', TextButton_2)
-
-	local stopButton = script.Parent
-	
-	stopButton.MouseButton1Click:Connect(function()
-		stopAutoParry()
-	end)
-end
-coroutine.wrap(ZDNHQM_fake_script)()
+coroutine.wrap(KKUA_fake_script)()
