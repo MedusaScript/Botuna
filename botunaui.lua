@@ -1,128 +1,315 @@
--- Gui to Lua
--- Version: 3.2
+loadstring(game:HttpGet(("https://raw.githubusercontent.com/REDzHUB/LibraryV2/main/redzLib")))()
 
--- Instances:
+MakeWindow({
+  Hub = {
+    Title = "Tony hub",
+    Animation = "by : redz9999"
+  },
+  Key = {
+    KeySystem = true,
+    Title = "Key System",
+    Description = "",
+    KeyLink = "test",
+    Keys = {"test"},
+    Notifi = {
+      Notifications = true,
+      CorrectKey = "Running the Script...",
+      Incorrectkey = "The key is incorrect",
+      CopyKeyLink = "Copied to Clipboard"
+    }
+  }
+})
 
-local ScreenGui = Instance.new("ScreenGui")
-local Frame = Instance.new("Frame")
-local TextLabel = Instance.new("TextLabel")
-local UICorner = Instance.new("UICorner")
-local AutoParry = Instance.new("TextButton")
-local UICorner_2 = Instance.new("UICorner")
-local ESP = Instance.new("TextButton")
-local UICorner_3 = Instance.new("UICorner")
-local UICorner_4 = Instance.new("UICorner")
-local TextButton = Instance.new("TextButton")
-local UICorner_5 = Instance.new("UICorner")
+--[[
+  Hub = {
+    Title = "REDz HUB" -- <string> Titulo do seu script
+    Animation = "by : redz9999" -- <string> Adiciona um texto na animacão do seu HUB
+  },
+  Key = {
+    KeySystem = <bollean> Adiciona um sistema de chaves
+    Title = "Key System" <string> Adiciona um titulo ao seu sistema de chaves
+    Description = "" <string> Adiciona uma descrição ao seu sistema de chaves
+    KeyLink = "" <string> Adicina o Link onde pega a chave do HUB
+    Keys = {"1234"} <table> Adiciona as Chaves
+    Notifi = {
+      Notifications = true <boolean> Adicina notificações ao sistema de chaves
+      CorrectKey = "Running the Script..." <string> notificação quando a chave estiver correta
+      Incorrectkey = "The key is incorrect" <string> notificação quando a chave estiver incorreta
+      CopyKeyLink = "Copied to Clipboard" <string> notificação quando o link da chave fir copiado
+    }
+  }
+]]
 
---Properties:
+MinimizeButton({
+  Image = "",
+  Size = {40, 40},
+  Color = Color3.fromRGB(10, 10, 10),
+  Corner = true,
+  Stroke = false,
+  StrokeColor = Color3.fromRGB(255, 0, 0)
+})
 
-ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
-ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
-ScreenGui.ReseOnSpawn = false
+--[[
+  Image = "" <string> imagem do botão
+  Size = {40, 40} <table> tamanho do botão
+  Color = Color3.fromRGB(10, 10, 10) <Color3>  Cor do fundo do botäo
+  Corner = true -- <boolean> Adicina um UICorner
+  Stroke = false <boolean> Adiciona um UIStroke
+  StrokeColor = Color3.fromRGB(255, 0, 0) <Color3> Cor do UIStroke
+]]
 
-Frame.Parent = ScreenGui
-Frame.BackgroundColor3 = Color3.fromRGB(98, 98, 98)
-Frame.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Frame.BorderSizePixel = 0
-Frame.Position = UDim2.new(0.434779048, 0, 0.371485949, 0)
-Frame.Size = UDim2.new(0.312342584, 0, 0.182730928, 0)
-Frame.Draggable = true
+local Main = MakeTab({Name = "autoparry"})
 
-TextLabel.Parent = Frame
-TextLabel.BackgroundColor3 = Color3.fromRGB(72, 72, 72)
-TextLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
-TextLabel.BorderSizePixel = 0
-TextLabel.Size = UDim2.new(0.899193466, 0, 0.307692319, 0)
-TextLabel.Font = Enum.Font.FredokaOne
-TextLabel.Text = "Blade Ball Hub🎄 (by belb)"
-TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel.TextScaled = true
-TextLabel.TextSize = 27.000
-TextLabel.TextWrapped = true
+--[[
+  Name = "Main" <string> Nome da guia
+]]
 
-UICorner.CornerRadius = UDim.new(0.200000003, 0)
-UICorner.Parent = TextLabel
+local 3Main = MakeTab({Name = "adjustment"})
 
-AutoParry.Name = "AutoParry"
-AutoParry.Parent = Frame
-AutoParry.BackgroundColor3 = Color3.fromRGB(79, 79, 79)
-AutoParry.BorderColor3 = Color3.fromRGB(85, 170, 255)
-AutoParry.BorderSizePixel = 0
-AutoParry.Position = UDim2.new(0.0564516112, 0, 0.448551387, 0)
-AutoParry.Size = UDim2.new(0.415322542, 0, 0.32967034, 0)
-AutoParry.Font = Enum.Font.FredokaOne
-AutoParry.Text = "Auto Parry🎄"
-AutoParry.TextColor3 = Color3.fromRGB(255, 255, 255)
-AutoParry.TextScaled = true
-AutoParry.TextSize = 18.000
-AutoParry.TextWrapped = true
+--[[
+  Name = "Main" <string> Nome da guia
+]]
 
-UICorner_2.Parent = AutoParry
+local section = AddSection(Main, {"auto party + auto detect spam"})
+--[[
+  {"Teste"} <table> nome da janela
+]]
 
-ESP.Name = "ESP"
-ESP.Parent = Frame
-ESP.BackgroundColor3 = Color3.fromRGB(79, 79, 79)
-ESP.BorderColor3 = Color3.fromRGB(85, 170, 255)
-ESP.BorderSizePixel = 0
-ESP.Position = UDim2.new(0.540322721, 0, 0.448551387, 0)
-ESP.Size = UDim2.new(0.415322542, 0, 0.32967034, 0)
-ESP.Font = Enum.Font.FredokaOne
-ESP.Text = "ESP🎄"
-ESP.TextColor3 = Color3.fromRGB(255, 255, 255)
-ESP.TextSize = 18.000
-ESP.TextWrapped = true
+local section = AddSection(3Main, {"adjustment"})
+--[[
+  {"Teste"} <table> nome da janela
+]]
 
-UICorner_3.Parent = ESP
+AddButton(Main, {
+  Name = "auto parry v2",
+  Callback = function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/InfernoKarl/opensrc/main/BladeBall/Scripts/autoparry.lua", true))()
+  end
+})
 
-UICorner_4.CornerRadius = UDim.new(0.100000001, 0)
-UICorner_4.Parent = Frame
-UICorner_4.Archivable = false
+--[[
+  Name = "Botão teste" <string> nome do seu botão
+  Callback = function()
+    -- funcão do seu botão
+  end
+]]
 
-TextButton.Parent = Frame
-TextButton.BackgroundColor3 = Color3.fromRGB(72, 72, 72)
-TextButton.BorderColor3 = Color3.fromRGB(0, 0, 0)
-TextButton.BorderSizePixel = 0
-TextButton.Position = UDim2.new(0.87500006, 0, 0, 0)
-TextButton.Size = UDim2.new(0, 30, 0, 28)
-TextButton.Font = Enum.Font.SourceSans
-TextButton.Text = "X"
-TextButton.TextColor3 = Color3.fromRGB(255, 255, 255)
-TextButton.TextSize = 27.000
-TextButton.TextWrapped = true
+AddButton(Main, {
+  Name = "auto parry",
+  Callback = function()
+    getgenv().config = getgenv().config or { hit_time = 0.5, -- // recommended 0.25 to 0.75 \ -- mode = 'Always', -- // Hold , Toggle , Always \ -- deflect_type = 'Remote', -- // Key Press , Remote \ -- notifications = true, keybind = Enum.KeyCode.V } loadstring(game:HttpGet("https://raw.githubusercontent.com/Hosvile/Refinement/main/MC%3ABlade%20Ball%20Parry%20V4.0.0",true))()
+  end
+})
 
-UICorner_5.CornerRadius = UDim.new(0.200000003, 0)
-UICorner_5.Parent = TextButton
+--[[
+  Name = "Botão teste" <string> nome do seu botão
+  Callback = function()
+    -- funcão do seu botão
+  end
+]]
 
--- Scripts:
+AddButton(Main, {
+  Name = "ping bases parry",
+  Callback = function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Aegians/Bladez/main/Ping-Parry.lua"))()
+  end
+})
 
-local function FWUA_fake_script() -- AutoParry.LocalScript 
-	local script = Instance.new('LocalScript', AutoParry)
+--[[
+  Name = "Botão teste" <string> nome do seu botão
+  Callback = function()
+    -- funcão do seu botão
+  end
+]]
 
-	local button = script.Parent
-	
-	button.MouseButton1Down:Connect(function()
-		loadstring(game:HttpGet("https://raw.githubusercontent.com/Hosvile/Refinement/main/MC%3ABlade%20Ball%20Parry",true))()
-	end)
-	
-end
-coroutine.wrap(FWUA_fake_script)()
-local function WKFTERZ_fake_script() -- ESP.LocalScript 
-	local script = Instance.new('LocalScript', ESP)
+AddButton(Main, {
+  Name = "idk the name lol",
+  Callback = function()
+    local lp = game.Players.LocalPlayer 
 
-	local button = script.Parent
-	
-	button.MouseButton1Down:Connect(function()
-		loadstring(game:HttpGet('https://raw.githubusercontent.com/Lucasfin000/SpaceHub/main/UESP'))()
-	end)
-	
-end
-coroutine.wrap(WKFTERZ_fake_script)()
-local function KKUA_fake_script() -- TextButton.LocalScript 
-	local script = Instance.new('LocalScript', TextButton)
+ 
 
-	script.Parent.MouseButton1Down:Connect(function()
-		script.Parent.Parent.Visible = false
-	end)
-end
-coroutine.wrap(KKUA_fake_script)()
+local animationInfo = {} 
+
+ 
+
+function getInfo(id) 
+
+local success, info = pcall(function() 
+
+return game:GetService("MarketplaceService"):GetProductInfo(id) 
+
+end) 
+
+if success then 
+
+return info 
+
+end 
+
+return {Name=''} 
+
+end 
+
+function block(player) 
+
+keypress(0x46) 
+
+wait() 
+
+keyrelease(0x46) 
+
+end 
+
+ 
+
+local AnimNames = { 
+
+'Slash', 
+
+'Swing', 
+
+'Sword' 
+
+} 
+
+ 
+
+function playerAdded(v) 
+
+local function charadded(char) 
+
+local humanoid = char:WaitForChild("Humanoid", 5) 
+
+if humanoid then 
+
+humanoid.AnimationPlayed:Connect(function(track) 
+
+local info = animationInfo[track.Animation.AnimationId] 
+
+if not info then 
+
+info = getInfo(tonumber(track.Animation.AnimationId:match("%d+"))) 
+
+animationInfo[track.Animation.AnimationId] = info 
+
+end 
+
+ 
+
+if (lp.Character and lp.Character:FindFirstChild("Head") and v.Character:FindFirstChild("Head")) then 
+
+local mag = (v.Character.Head.Position - lp.Character.Head.Position).Magnitude 
+
+if mag < 14 then 
+
+ 
+
+for _, animName in pairs(AnimNames) do 
+
+if info.Name:match(animName) then 
+
+pcall(block, v) 
+
+end 
+
+end 
+
+ 
+
+end 
+
+end 
+
+end) 
+
+end 
+
+end 
+
+ 
+
+if v.Character then 
+
+charadded(v.Character) 
+
+end 
+
+v.CharacterAdded:Connect(charadded) 
+
+end 
+
+ 
+
+for i,v in pairs(game.Players:GetPlayers()) do 
+
+if v ~= lp then 
+
+playerAdded(v) 
+
+end 
+
+end 
+
+ 
+
+game.Players.PlayerAdded:Connect(playerAdded)
+  end
+})
+
+--[[
+  Name = "Botão teste" <string> nome do seu botão
+  Callback = function()
+    -- funcão do seu botão
+  end
+]]
+
+AddButton(Main, {
+  Name = "auto detect spam",
+  Callback = function()
+    getgenv().SpamSpeed = 1 loadstring(game:HttpGet("https://raw.githubusercontent.com/Hosvile/Refinement/main/MC%3ABlade%20Ball%20Spam",true))()
+  end
+})
+
+--[[
+  Name = "Botão teste" <string> nome do seu botão
+  Callback = function()
+    -- funcão do seu botão
+  end
+]]
+
+AddButton(Main, {
+  Name = "auto detect spam v2",
+  Callback = function()
+    loadstring(game:HttpGet("https://pastebin.com/raw/t2391h1A"))()
+  end
+})
+
+--[[
+  Name = "Botão teste" <string> nome do seu botão
+  Callback = function()
+    -- funcão do seu botão
+  end
+]]
+
+local Slider = AddSlider(3Main, {
+  Name = "ping bases parry",
+  MinValue = 10,
+  MaxValue = 100,
+  Default = 25,
+  Increase = 1,
+  Callback = function(Value)
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Aegians/Bladez/main/Adjustable%20Parry.lua"))()
+  end
+})
+
+--[[
+  Name = "Slider teste" <string> nome do controle deslizante
+  MinValue = 10 <number> valor minimo
+  MaxValue = 100 <number> valor maximo
+  Default = 25 <number> valor padrão
+  Increase = 1 <number> valor que almenta de acordo com a posição do 
+  Callback = function(Value)
+    função do controle deslizante
+  end
+]]
