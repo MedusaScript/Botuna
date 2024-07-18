@@ -36,5 +36,5 @@ end)
 
 local AutoParry = PhantomForcesWindow:NewSection("Shop")
 
-AutoParry:CreateToggle("Buy Sword Crate", function()loadstring(game:HttpGet("https://pastebin.com/raw/1RfvPdwX"))()
+AutoParry:CreateToggle("Buy Sword Crate", function()loadstring(game:HttpGet("https://raw.githubusercontent.com/MedusaScript/BrutalityV2/main/swordball1.lua"))()
 end)
