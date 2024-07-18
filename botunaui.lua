@@ -1,232 +1,325 @@
---// (600 in original) fixed have 200 lines only!
+--[[
+Credits to Me Of Development GuysModz Hub V1
 
+Follow me on Scriptblox for more detail updates scripts
+]]
+
+wait(1.5)
+
+game.StarterGui:SetCore("SendNotification", {
+
+Title = "Wellcome Back..."; -- the title (ofc)
+
+Text = "Nice to Meet you 😊"; -- what the text says (ofc)
+
+Icon = ""; -- the image if u want.
+
+Duration = 5; -- how long the notification should in secounds
+
+})
+
+local Library = loadstring(Game:HttpGet("https://raw.githubusercontent.com/bloodball/-back-ups-for-libs/main/wizard"))()
+
+--functions
+function Manual()
+local toggleState = false
+local ScreenGui = Instance.new("ScreenGui")
+ScreenGui.ResetOnSpawn = false
+ScreenGui.Name = "Button"
+
+local button = Instance.new("TextButton")
+button.Text = "Manual Parry"
+button.BackgroundTransparency = 0
+button.BackgroundColor3 = Color3.new(1, 1, 1)
+button.Size = UDim2.new(0, 150, 0, 70)
+button.Parent = ScreenGui
+button.Position = UDim2.new(0, 100, 0, 100)
+
+local topBar = Instance.new("Frame")
+topBar.Size = UDim2.new(1, 0, 0, 15)
+topBar.BackgroundColor3 = Color3.new(0, 0, 0)
+topBar.Parent = button
+
+local originalColor = button.BackgroundColor3
+local grayColor = Color3.new(0.7, 0.7, 0.7)
+
+local dragging = false
+local offset = Vector2.new()
+local player = game.Players.LocalPlayer
+
+topBar.InputBegan:Connect(function(input)
+    if input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch then
+        dragging = true
+        offset = button.Position - UDim2.new(0, input.Position.X, 0, input.Position.Y)
+        button.BackgroundColor3 = grayColor
+    end
+end)
+
+topBar.InputChanged:Connect(function(input)
+    if dragging and (input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch) then
+        local inputPosition = input.Position
+        local newPosition = UDim2.new(0, inputPosition.X, 0, inputPosition.Y) + offset
+        button.Position = newPosition
+    end
+end)
+
+topBar.InputEnded:Connect(function(input)
+    if input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch then
+        dragging = false
+        button.BackgroundColor3 = originalColor
+    end
+end)
+
+button.MouseButton1Click:Connect(function()
+    toggleState = not toggleState
+    button.Text = tostring(toggleState)
+    getgenv().Spam = toggleState
+    while getgenv().Spam do
+game.ReplicatedStorage.Remotes.ParryButtonPress:Fire()
+        wait(0.01)
+    end
+end)
+
+ScreenGui.Parent = player:FindFirstChild("PlayerGui")
+end
+
+function autoParry()
+local Debug = false -- Set this to true if you want my debug output.
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
-local CollectionService = game:GetService("CollectionService")
-local UserInputService = game:GetService("UserInputService")
-local HapticService = game:GetService("HapticService")
-local TweenService = game:GetService("TweenService")
-local StarterGui = game:GetService("StarterGui")
-game:GetService("RunService")
 local Players = game:GetService("Players")
-game:GetService("Debris")
 
-local PackageFolder = ReplicatedStorage.Packages:WaitForChild((string.gsub(game.JobId, "-", "")))
-task.spawn(function()
-    local services = { game:GetService("SocialService"), game:GetService("AdService") }
-    while true do
-        PackageFolder.Name = string.rep("\n", math.random(1, 10))
-        PackageFolder.Parent = services[math.random(1, #services)]
-        task.wait()
+local Player = Players.LocalPlayer or Players.PlayerAdded:Wait()
+local Remotes = ReplicatedStorage:WaitForChild("Remotes", 9e9) -- A second argument in waitforchild what could it mean?
+local Balls = workspace:WaitForChild("Balls", 9e9)
+local function print(...) -- Debug print.
+    if Debug then
+        warn(...)
     end
+end
+local function VerifyBall(Ball) -- Returns nil if the ball isn't a valid projectile; true if it's the right ball.
+    if typeof(Ball) == "Instance" and Ball:IsA("BasePart") and Ball:IsDescendantOf(Balls) and Ball:GetAttribute("realBall") == true then
+        return true
+    end
+end
+local function IsTarget() -- Returns true if we are the current target.
+    return (Player.Character and Player.Character:FindFirstChild("Highlight"))
+end
+local function Parry() -- Parries.
+    Remotes:WaitForChild("ParryButtonPress"):Fire()
+end
+Balls.ChildAdded:Connect(function(Ball)
+    if not VerifyBall(Ball) then
+        return
+    end
+    print(`Ball Spawned: {Ball}`)
+    local OldPosition = Ball.Position
+    local OldTick = tick()
+    Ball:GetPropertyChangedSignal("Position"):Connect(function()
+        if IsTarget() then -- No need to do the math if we're not being attacked.
+            local Distance = (Ball.Position - workspace.CurrentCamera.Focus.Position).Magnitude
+            local Velocity = (OldPosition - Ball.Position).Magnitude -- Fix for .Velocity not working. Yes I got the lowest possible grade in accuplacer math.
+            print(`Distance: {Distance}\nVelocity: {Velocity}\nTime: {Distance / Velocity}`)
+            if (Distance / Velocity) <= 10 then -- Sorry for the magic number. This just works. No, you don't get a slider for this because it's 2am.
+                Parry()
+            end
+        end
+        if (tick() - OldTick >= 1/60) then -- Don't want it to update too quickly because my velocity implementation is aids. Yes, I tried Ball.Velocity. No, it didn't work.
+            OldTick = tick()
+            OldPosition = Ball.Position
+        end
+    end)
+end)
+end
+
+function SwordCrateManual()
+game:GetService("ReplicatedStorage").Remote.RemoteFunction:InvokeServer("PromptPurchaseCrate", workspace.Spawn.Crates.NormalSwordCrate)
+end
+
+function ExplosionCrateManual()
+game:GetService("ReplicatedStorage").Remote.RemoteFunction:InvokeServer("PromptPurchaseCrate", workspace.Spawn.Crates.NormalExplosionCrate)
+end
+
+function SwordCrateAuto()
+while _G.AutoSword do
+game:GetService("ReplicatedStorage").Remote.RemoteFunction:InvokeServer("PromptPurchaseCrate", workspace.Spawn.Crates.NormalSwordCrate)
+wait(1)
+end
+end
+
+function ExplosionCrateAuto()
+while _G.AutoBoom do
+game:GetService("ReplicatedStorage").Remote.RemoteFunction:InvokeServer("PromptPurchaseCrate", workspace.Spawn.Crates.NormalExplosionCrate)
+wait(1)
+end
+end
+
+-- Start 
+local Window = Library:NewWindow("💸 GuysModz Hub V1 💸")
+local Section = Window:NewSection("⚔️ Main")
+
+Section:CreateToggle("Auto Parry", function(value)
+            getgenv().config = getgenv().config or {
+    hit_time = 0.5, -- // recommended 0.25 to 0.75 \ --
+    
+    mode = 'Always', -- // Hold , Toggle , Always \ --
+    deflect_type = 'Remote', -- // Key Press , Remote \ --
+    notifications = false,
+    keybind = Enum.KeyCode.V
+}  
+
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Hosvile/Refinement/main/MC%3ABlade%20Ball%20Parry%20V4.0.0",true))()
+print(value)
 end)
 
-local Replion = require(ReplicatedStorage.Packages.Replion)
-local Signal = require(ReplicatedStorage.Packages.Signal)
-require(ReplicatedStorage.Packages.Net)
-local ReplicatedInstancesSwords = require(ReplicatedStorage.Shared.ReplicatedInstances.Swords)
-local DebugFlags = require(ReplicatedStorage.Shared.DebugFlags)
-require(ReplicatedStorage.Common.BitsUtil)
-local UseBall2 = require(ReplicatedStorage.Shared.UseBall2)
-local AnimationController = require(ReplicatedStorage.Controllers.AnimationController)
-local AnalyticsController = require(ReplicatedStorage.Controllers.AnalyticsController)
-local SettingsController = require(ReplicatedStorage.Controllers.SettingsController)
-local EmoteController = require(ReplicatedStorage.Controllers.EmoteController)
-local VRService = require(ReplicatedStorage.Shared.VRService)
-local Observers = require(ReplicatedStorage.Packages.Observers)
-local FFlagClient = require(ReplicatedStorage.ClientGameModules.FFlagClient)
-local ServerInfo = require(ReplicatedStorage.ServerInfo)
-local SwordAPI = require(ReplicatedStorage.Shared.SwordAPI)
-local isSwordEnabled = true
-local localPlayer = Players.LocalPlayer
-local currentCamera = workspace.CurrentCamera
-local parryTarget = nil
-local isParryActive = false
-local isParryCooldown = false
-local isCurrentlyParrying = false
-local isParryDisabled = false
-local isGamepadActive = false
-local defaultSwordTime = 1.3
+Section:CreateToggle("Auto Parry long range", function(value)
+loadstring(game:HttpGet("https://raw.githubusercontent.com/1f0yt/community/main/RedCircleBlock"))()
+print(value)
+end)
 
-local swordHandler = {
-    CharacterSword = "Base Sword",
-    AnimationCollection = "Single",
-    SwordType = "Single",
-    OnCharacterSwordUpdate = Signal.new(),
-    _changeSwordMotorRightArm = function(self, c0, c1, duration)
-        local character = localPlayer.Character
-        local torso = character and character:FindFirstChild("Torso")
-        local rightArm = character and character:FindFirstChild("Right Arm")
-        if torso and rightArm and torso:FindFirstChild("Motor6D") then
-            torso.Motor6D.Enabled = false
-            local adjustment6D = torso.Motor6D.Part1:FindFirstChild("Adjustment6D")
-            if adjustment6D then
-                adjustment6D:Destroy()
+Section:CreateToggle("Auto Win", function(value)
+getgenv().god = true
+while getgenv().god and task.wait() do
+    for _,ball in next, workspace.Balls:GetChildren() do
+        if ball then
+            if game:GetService("Players").LocalPlayer.Character and game:GetService("Players").LocalPlayer.Character:FindFirstChild("HumanoidRootPart") then
+                game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.Position, ball.Position)
+                if game:GetService("Players").LocalPlayer.Character:FindFirstChild("Highlight") then
+                    game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = ball.CFrame * CFrame.new(0, 0, (ball.Velocity).Magnitude * -0.5)
+                    game:GetService("ReplicatedStorage").Remotes.ParryButtonPress:Fire()
+                end
             end
-            local motor6D = Instance.new("Motor6D")
-            motor6D.Name = "Adjustment6D"
-            motor6D.Parent = torso.Motor6D.Part1
-            motor6D.Part0 = rightArm
-            motor6D.Part1 = torso.Motor6D.Part1
-            motor6D.C0 = c0
-            motor6D.C1 = c1
-            task.delay(duration or 1, function()
-                if motor6D then
-                    motor6D:Destroy()
-                end
-                if torso:FindFirstChild("Motor6D") then
-                    torso.Motor6D.Enabled = true
-                end
-            end)
         end
     end
+end
+print(value)
+end)
+
+Section:CreateToggle("Auto Spam", function(value)
+loadstring(game:HttpGet("https://pastebin.com/raw/t2391h1A"))()
+print(value)
+end)
+
+Section:CreateToggle("Auto detect Spam", function(value)
+loadstring(game:HttpGet("https://pastebin.com/raw/N4yBrKuw"))()
+print(value)
+end)
+
+Section:CreateToggle("Hold to Spam", function(value)
+game:GetService("StarterGui"):SetCore("SendNotification",{
+    Title = "Script by GuysModz",
+    Text = "Hold Block button to Spam",
+    Duration = 5
+})
+
+getgenv().SpamSpeed = 25 -- 1-25
+
+if not getgenv().exeSpam then
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Hosvile/Refinement/main/Toggle%20Block%20Spam",true))()
+end
+
+getgenv().exeSpam = true
+print(value)
+end)
+
+Section:CreateToggle("Auto Clash", function(value)
+loadstring(game:HttpGet("https://raw.githubusercontent.com/datshort1/datmodhub/main/AutoClash"))()
+print(value)
+end)
+
+local Section = Window:NewSection("🛒 Shop")
+
+Section:CreateButton("Sword Crate", function()
+
+            SwordCrateManual()
+print("Clicked")
+end)
+
+Section:CreateButton("Explosion Crate", function()
+
+            ExplosionCrateManual()
+print("Clicked")
+end)
+
+local Section = Window:NewSection("Player")
+
+Section:CreateButton("Speed!", function()
+
+print("Clicked")
+end)
+
+Section:CreateButton("infjump", function()
+
+print("Clicked")
+end)
+
+Section:CreateButton("fly v3", function()
+
+print("Clicked")
+end)
+
+local Section = Window:NewSection("🎮 Misc")
+
+Section:CreateToggle("destroy all particles", function(value)
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Hosvile/Refinement/main/Destroy%20Particle%20Emitters",true))()
+print(value)
+end)
+
+Section:CreateToggle("Aiming Mechanism", function(value)
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Hosvile/Refinement/main/M%3ABlade%20Ball%20Mechanism",true))()
+print(value)
+end)
+
+Section:CreateToggle("AntiLag", function(value)
+-- Made by RIP#6666
+_G.Settings = {
+    Players = {
+        ["Ignore Me"] = true, -- Ignore your Character
+        ["Ignore Others"] = true -- Ignore other Characters
+    },
+    Meshes = {
+        Destroy = false, -- Destroy Meshes
+        LowDetail = true -- Low detail meshes (NOT SURE IT DOES ANYTHING)
+    },
+    Images = {
+        Invisible = true, -- Invisible Images
+        LowDetail = false, -- Low detail images (NOT SURE IT DOES ANYTHING)
+        Destroy = false, -- Destroy Images
+    },
+    ["No Particles"] = true, -- Disables all ParticleEmitter, Trail, Smoke, Fire and Sparkles
+    ["No Camera Effects"] = true, -- Disables all PostEffect's (Camera/Lighting Effects)
+    ["No Explosions"] = true, -- Makes Explosion's invisible
+    ["No Clothes"] = true, -- Removes Clothing from the game
+    ["Low Water Graphics"] = true, -- Removes Water Quality
+    ["No Shadows"] = true, -- Remove Shadows
+    ["Low Rendering"] = true, -- Lower Rendering
+    ["Low Quality Parts"] = true -- Lower quality parts
 }
-
-local lastParryTime = 0
-local isTraining = false
-
-function swordHandler:OnParrySuccess(parryData, shouldForceParry)
-    local currentSword = parryData.CharacterSword or "Base Sword"
-    local swordType = parryData.SwordType or "Single"
-    local animationCollection = parryData.AnimationCollection or "Single"
-    local character = localPlayer.Character
-    if character:IsDescendantOf(workspace) then
-        local humanoid = character:WaitForChild("Humanoid", 5)
-        if humanoid then
-            humanoid = humanoid:WaitForChild("Animator", 5)
-        end
-        if humanoid and character then
-            local currentTime = os.clock()
-            local timeSinceLastParry = currentTime - lastParryTime
-            lastParryTime = currentTime
-            for _, anim in AnimationController:GetPlayingAnimationTracks(humanoid) do
-                if anim:GetAttribute("GrabParry") or anim:GetAttribute("Parry") then
-                    anim:Stop(anim:GetAttribute("StopFadeTime"))
-                end
-            end
-            if not shouldForceParry then
-                for _, animData in SwordAPI:GetAnimations({ "Parry", "SuccessParry" }, swordHandler.AnimationCollection, swordHandler.SwordType) do
-                    local animation = AnimationController:LoadAnimation(humanoid, animData, true)
-                    if currentSword == "Serpent's Fang" then
-                        parryData:_changeSwordMotorRightArm(CFrame.new(0, -1.169, 0.036) * CFrame.Angles(1.5707963267948966, 3.141592653589793, 0), CFrame.new(0, -0.905, 0.169), animation.Length / 2)
-                    elseif currentSword == "Serpent's Lance" then
-                        parryData:_changeSwordMotorRightArm(CFrame.new(0, -1, 0.137) * CFrame.Angles(1.5707963267948966, 3.141592653589793, 0), CFrame.new(0, -1.637, 0), animation.Length)
-                    elseif currentSword == "Laser Twinblade" then
-                        animation.TimePosition = timeSinceLastParry < 0.5 and 0.25 or 0
-                    end
-                    animation:Play(animation:GetAttribute("PlayFadeTime"), animation:GetAttribute("PlayWeight"), animation:GetAttribute("PlaySpeed"))
-                end
-                if swordType == "Single" and isGamepadActive then
-                    HapticService:SetMotor(Enum.UserInputType.Gamepad1, Enum.VibrationMotor.Large, 1)
-                    task.delay(0.15, function()
-                        HapticService:SetMotor(Enum.UserInputType.Gamepad1, Enum.VibrationMotor.Large, 0)
-                    end)
-                end
-            end
-            isParryActive = false
-            isCurrentlyParrying = false
-            if not shouldForceParry then
-                local highlight = character:FindFirstChildWhichIsA("Highlight")
-                if highlight then
-                    highlight:Destroy()
-                end
-                local particle = character:FindFirstChild("ParticleShine")
-                if particle then
-                    particle:Destroy()
-                end
-            end
-            task.spawn(function()
-                isParryCooldown = true
-                task.wait(defaultSwordTime)
-                isParryCooldown = false
-            end)
-        end
-    else
-        return
-    end
-end
-
-local function parryEventHandler(_, _, _, forceParry)
-    if isCurrentlyParrying or isParryActive or isParryCooldown or localPlayer:GetAttribute("CurrentlyEquippedSword") == "COAL" then
-        return
-    else
-        local character = localPlayer.Character
-        local isLobbyTraining = localPlayer:GetAttribute("LobbyTraining")
-        if isLobbyTraining then
-            isLobbyTraining = character.Parent == workspace.Dead
-        end
-        if character and (character.Parent == workspace.Alive or DebugFlags.LobbyParry or localPlayer:GetAttribute("LobbyParry") or isLobbyTraining) and not character:GetAttribute("DoNotParry") and (not character:GetAttribute("ChargingAdrenaline") or localPlayer.Upgrades["Qi-Charge"].Value >= 2) then
-            local humanoid = character:WaitForChild("Humanoid", 5)
-            if humanoid then
-                humanoid = humanoid:WaitForChild("Animator", 5)
-            end
-            if humanoid then
-                local currentEmote = isSwordEnabled and EmoteController._currentEmote
-                if currentEmote then
-                    EmoteController:Stop()
-                    task.delay(0.5, function()
-                        EmoteController:Play(currentEmote)
-                    end)
-                end
-                isParryActive = true
-                isCurrentlyParrying = true
-                local parryDuration = 0.5
-                local swordDuration = 1.3
-                local isParrySpecial = false
-                local parryCount = parryTarget and parryTarget:Get("timesParried") or 0
-                if parryCount then
-                    if parryCount == 0 then
-                        isParrySpecial = true
-                        swordDuration = 1.5
-                        parryDuration = 1.5
-                    elseif parryCount == 1 then
-                        isParrySpecial = true
-                        swordDuration = 1.3
-                        parryDuration = 1.25
-                    elseif parryCount == 2 then
-                        isParrySpecial = true
-                        swordDuration = 1.3
-                        parryDuration = 1
-                    elseif parryCount == 3 then
-                        isParrySpecial = true
-                        parryDuration = 0.75
-                    elseif parryCount == 4 then
-                        isParrySpecial = true
-                        swordDuration = 1.3
-                        parryDuration = 1.25
-                    end
-                end
-                localPlayer:SetAttribute("CurrentlyEquippedSword", "CurrentlyParrying")
-                local isOldSystem = SettingsController:Get("Game") and SettingsController:Get("Game"):Get("OldSwordSystem")
-                local animationInfo = swordHandler:PlaySwordAnimation("Parry", {
-                    Loop = true,
-                    Old = isOldSystem,
-                    Speed = 1 / parryDuration,
-                    Start = swordHandler:UpdateSwordState(parryTarget, swordDuration),
-                    Keyframes = isParrySpecial and  { 0, 0.2, 0.5, 0.75, 1 } or { 0, 1 }
-                })
-                local animation = AnimationController:LoadAnimation(humanoid, animationInfo)
-                animation:Play()
-                if animationInfo.Attribute == "Old" then
-                    task.wait(animationInfo.Length)
-                else
-                    task.wait(parryDuration)
-                end
-                isParryActive = false
-                isCurrentlyParrying = false
-                parryTarget:Set("timesParried", parryCount + 1)
-                task.delay(0.5, function()
-                    localPlayer:SetAttribute("CurrentlyEquippedSword", "None")
-                end)
-            end
-        end
-    end
-end
-
-UserInputService.InputBegan:Connect(function(input)
-    if input.UserInputType == Enum.UserInputType.MouseButton2 or input.UserInputType == Enum.UserInputType.Touch or input.UserInputType == Enum.UserInputType.Gamepad1 then
-        if localPlayer:GetAttribute("CurrentlyEquippedSword") ~= "COAL" then
-            parryEventHandler(true, 0, localPlayer.Character, false)
-        end
-    end
+loadstring(game:HttpGet("https://raw.githubusercontent.com/CasperFlyModz/discord.gg-rips/main/FPSBooster.lua"))()
+print(value)
 end)
-return swordHandler
+
+Section:CreateToggle("AntiAfk", function(value)
+loadstring(game:HttpGet(('https://raw.githubusercontent.com/Proxylol/OtherScripts/main/AntiAfk.lua'),true))()
+print(value)
+end)
+
+local Section = Window:NewSection("⛹️‍♂️ Player Esp")
+
+Section:CreateToggle("Player Box Esp", function(value)
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Neoncat765/PinkEsp/main/MainEsp"))();
+print(value)
+end)
+
+local Section = Window:NewSection("Credits")
+
+Section:CreateButton("Youtube : @JustGuysServices", function()
+print("Clicked")
+end)
+
+Section:CreateButton("discord.gg/guysmodz", function()
+print("Clicked")
+end)
+
+Section:CreateButton("Thanks for GuysModz helping me functions", function()
+print("Clicked")
+end)
