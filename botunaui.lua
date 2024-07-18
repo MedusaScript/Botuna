@@ -30,11 +30,5 @@ end)
 AutoDetectSpamV2:CreateToggle("Detect Spam V2", function()loadstring(game:HttpGet("https://pastebin.com/raw/t2391h1A",true))()
 end)
 
-features:CreateToggle("Visualizer",function()
-	getgenv().disableVisualizer = false
-    getgenv().debugCurved = false
-    getgenv().disable = false
-    getgenv().disableVisualizer = false
-    getgenv().curveRestriction = 14.8
-    loadstring(game:HttpGet('https://pastebin.com/raw/2RzCXHZH'))()
+AutoDetectSpamV2:CreateToggle("Visualizer", function()loadstring(game:HttpGet("https://pastebin.com/raw/2RzCXHZH"))()
 end)
