@@ -8,13 +8,10 @@ local AutoParry = PhantomForcesWindow:NewSection("Main")
 AutoParry:CreateToggle("Parry+Visualizer", function()loadstring(game:HttpGet("https://scriptblox.com/raw/UPD-Blade-Ball-op-autoparry-with-visualizer-8652",true))()
 end) --done
 
-AutoParry:CreateToggle("Auto Pary V1", function()loadstring(game:HttpGet("https://raw.githubusercontent.com/MrDemonSkrtSkrt/Auto-Parry/main/Blade%20Ball",true))()
+AutoParry:CreateToggle("Auto Pary V1", function()loadstring(game:HttpGet("https://raw.githubusercontent.com/2VQuiet/AutoParryBladeBall/main/Auto%20Parry%20Script",true))()
 end)
 
-AutoParry:CreateToggle("Auto Pary V2", function()loadstring(game:HttpGet("https://raw.githubusercontent.com/2VQuiet/AutoParryBladeBall/main/Auto%20Parry%20Script",true))()
-end)
-
-AutoParry:CreateToggle("Auto Pary V3", function()loadstring(game:HttpGet("https://raw.githubusercontent.com/2VQuiet/AutoParryBladeBall/main/Auto%20Parry%20Script",true))()
+AutoParry:CreateToggle("Auto Pary V2", function()loadstring(game:HttpGet("https://raw.githubusercontent.com/sirapobsriumang/Auto-Parrynogui/main/Beta",true))()
 end)
 
 AutoParry:CreateToggle("Auto Clash", function()loadstring(game:HttpGet("https://raw.githubusercontent.com/datshort1/datmodhub/main/AutoClash",true))()
