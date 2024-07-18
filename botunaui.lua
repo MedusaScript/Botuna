@@ -1,5 +1,5 @@
 		-- main.lua check
-			--[[
+			--
 			local IsRaw = false
 			local Range = 1 or 14
 			for i, v in next, getconstants(Range) do
@@ -11,7 +11,7 @@
 			if not IsRaw then
 				warn("directly executed")
 			end
-			--]]
+			--
 		-- main.lua check
 		
 		local ArrayField = loadstring(game:HttpGet("https://raw.githubusercontent.com/Hosvile/Refinement/main/MC%3AArrayfield%20Library"))() --Documentation url: https://docs.sirius.menu/community/arrayfield
