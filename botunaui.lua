@@ -23,7 +23,7 @@ MainKillingCheats:CreateToggle("Auto Parry", function(value)
 end)
 
 MainKillingCheats:CreateToggle("Aura V2", function(value)
-    loadstring(game:HttpGet("https://pastebin.com/raw/1RfvPdwX"))()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/MedusaScript/BrutalityV2/main/aura-hentai.lua"))()
 end)
 
 MainKillingCheats:CreateToggle("Kill Effect", function(value)
