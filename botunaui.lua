@@ -203,6 +203,6 @@ MainSection:NewButton("Parry V2", function(value)
 local Main = Window:NewTab("Auto Parry")--tab kedua
 local MainSection = Main:NewSection("Setting Parry")
 
-MainSection:NewButton("Visualizer", "Visual", function()
+MainSection:CreateToggle("Visualizer", "Visual", function()
     loadstring(game:HttpGet("https://pastebin.com/raw/2RzCXHZH"))()
 end)
