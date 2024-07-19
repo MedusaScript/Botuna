@@ -176,24 +176,6 @@ MainSection:NewButton("Auto Parry V1", "Auto Parry V1", function()
     loadstring(game:HttpGet('https://raw.githubusercontent.com/2VQuiet/AutoParryBladeBall/main/Auto%20Parry%20Script'))()
 end)
 
-MainSection:NewButton("Parry V2", "Auto Parry V2", function(value)
-print ("Clicked")
-end)
-
-Section:CreateButton("Auto Parry V2", function(value)
-	getgenv().config = getgenv().config or {
-hit_time = 0.5, -- // recommended 0.25 to 0.75 \ --
-
-mode = 'Always', -- // Hold , Toggle , Always \ --
-deflect_type = 'Remote', -- // Key Press , Remote \ --
-notifications = false,
-keybind = Enum.KeyCode.V
-}  
-
-loadstring(game:HttpGet("https://raw.githubusercontent.com/Hosvile/Refinement/main/MC%3ABlade%20Ball%20Parry%20V4.0.0",true))()
-print(value)
-end)
-
 MainSection:NewButton("Parry V2", function(value)
 loadstring(game:HttpGet("https://pastebin.com/raw/2RzCXHZH"))()
 print ()
