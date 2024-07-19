@@ -27,17 +27,15 @@ MainKillingCheats:CreateToggle("Aura V2", function(value)
 end)
 
 MainKillingCheats:CreateToggle("AIM MECANISME", function(value)
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/Hosvile/Refinement/main/M%3ABlade%20Ball%20Mechanism"), true))()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Hosvile/Refinement/main/M%3ABlade%20Ball%20Mechanism"))()
 end)
 
-MiscKillingCheats:CreateButton("Buy Sword Crate", function(value)
-    loadstring(game:HttpGet(('https://raw.githubusercontent.com/MedusaScript/BrutalityV2/main/sword1.lua')))()
-    print("TrilleD")
+MainKillingCheats:CreateToggle("Sword Crate", function(value)
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/MedusaScript/BrutalityV2/main/sword1.lua"))()
 end)
 
-MiscKillingCheats:CreateButton("Buy Explosion Crate", function(value)
-    loadstring(game:HttpGet(('https://raw.githubusercontent.com/MedusaScript/BrutalityV2/main/Sword2.lua')))()
-    print("TrilleD")
+MainKillingCheats:CreateToggle("Explosion Crate", function(value)
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/MedusaScript/BrutalityV2/main/Sword2.lua"))()
 end)
 
 local MiscKillingCheats = PhantomForcesWindow:NewSection("Setting")
