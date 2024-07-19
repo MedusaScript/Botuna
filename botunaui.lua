@@ -1,31 +1,39 @@
 --// leaked by discord.gg/visualontop
+wait(1.5)
 
+game.StarterGui:SetCore("SendNotification", {
+
+Title = "Salam Dari BOTUNA"; -- teks notif atas
+
+Text = "Bocah Tua Nakal Dimari..."; -- teks notif bawah
+
+Icon = "rbxassetid://18551656195"; -- logo notif
+Duration = 5; -- how long the notification should in secounds
+
+})
+-- batas notify
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/bloodball/-back-ups-for-libs/main/wizard"))()
 
-local PhantomForcesWindow = Library:NewWindow("BRUTALITY HUB BETA")
+local PhantomForcesWindow = Library:NewWindow("BRUTALITY (BETA)")
 
 local MainKillingCheats = PhantomForcesWindow:NewSection("Main")
 
 MainKillingCheats:CreateToggle("Auto Parry", function(value)
-    loadstring(game:HttpGet("https://pastebin.com/raw/qqWZv6S7"))()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/2VQuiet/AutoParryBladeBall/main/Auto%20Parry%20Script"))()
 end)
 
-MainKillingCheats:CreateToggle("Manual Spam", function(value)
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/nqxlOfc/SlzAX17vGCub7iRKVmJid61Bg/main/KwKVzV5SgcFBd9fnpLr4lKCg6.lua"))()
+MainKillingCheats:CreateToggle("Aura Parry", function(value)
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/MedusaScript/BrutalityV2/main/aura-hentai.lua"))()
 end)
 
-MainKillingCheats:CreateToggle("Auto Long Range", function(value)
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/nqxlOfc/SlzAX17vGCub7iRKVmJid61Bg/main/KwKVzV5SgcFBd9fnpLr4lKCg6.lua"))()
-end)
-
-MainKillingCheats:CreateToggle("Auto Long Range", function(value)
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/nqxlOfc/SlzAX17vGCub7iRKVmJid61Bg/main/KwKVzV5SgcFBd9fnpLr4lKCg6.lua"))()
+MainKillingCheats:CreateToggle("Kill Effect", function(value)
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/MedusaScript/BrutalityV2/main/Sound.lua"))()
 end)
 
 local MiscKillingCheats = PhantomForcesWindow:NewSection("Setting")
 
 MiscKillingCheats:CreateButton("Anti Afk", function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/KazeOnTop/Rice-Anti-Afk/main/Wind", true))()
+    loadstring(game:HttpGet("https://pastebin.com/raw/1RfvPdwX", true))()
     print("TrilleD")
 end)
 
@@ -36,11 +44,6 @@ end)
 
 MiscKillingCheats:CreateButton("Fps Booster", function()
     loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-Fps-booster-9504", true))()
-    print("TrilleD")
-end)
-
-MiscKillingCheats:CreateButton("Fps Counter", function()
-    loadstring(game:HttpGet("https://rawscripts.net/raw/Baseplate-Fps-and-ping-Counter-Script-7186"))()
     print("TrilleD")
 end)
 
