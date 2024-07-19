@@ -273,9 +273,6 @@ end)
 
 local Section = Window:NewSection("Setting Parry")
 
-Section:CreateToggle("Hit Effect",function(toggled)
-    getgenv().hit_effect_Enabled = toggled
-end)
 Section:CreateToggle("Kill Effect",function(toggled)
     getgenv().kill_effect_Enabled = toggled
 end)
@@ -355,6 +352,23 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/Hosvile/Refinement/ma
 print(value)
 end)
 
+local Section = Window:NewSection("Setting Player")
+
+Section:CreateToggle("Player Box Esp", function(value)
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Neoncat765/PinkEsp/main/MainEsp"))();
+print(value)
+end)
+
+Section:CreateToggle("Super Jump (beta)", function(value)
+loadstring(game:HttpGet("https://raw.githubusercontent.com/MedusaScript/BrutalityV2/main/luhur.lua"))();
+print(value)
+end)
+
+Section:CreateToggle("Speed Run (beta)", function(value)
+loadstring(game:HttpGet("https://raw.githubusercontent.com/MedusaScript/BrutalityV2/main/lumpat.lua"))();
+print(value)
+end)
+
 Section:CreateToggle("Remove all particles", function(value)
 	loadstring(game:HttpGet("https://raw.githubusercontent.com/Hosvile/Refinement/main/Destroy%20Particle%20Emitters",true))()
 	print(value)
@@ -399,23 +413,6 @@ loadstring(game:HttpGet(('https://raw.githubusercontent.com/Proxylol/OtherScript
 print(value)
 end)
 
-local Section = Window:NewSection("Setting Player")
-
-Section:CreateToggle("Player Box Esp", function(value)
-loadstring(game:HttpGet("https://raw.githubusercontent.com/Neoncat765/PinkEsp/main/MainEsp"))();
-print(value)
-end)
-
-Section:CreateToggle("Super Jump (beta)", function(value)
-loadstring(game:HttpGet("https://raw.githubusercontent.com/MedusaScript/BrutalityV2/main/luhur.lua"))();
-print(value)
-end)
-
-Section:CreateToggle("Speed Run (beta)", function(value)
-loadstring(game:HttpGet("https://raw.githubusercontent.com/MedusaScript/BrutalityV2/main/lumpat.lua"))();
-print(value)
-end)
-
 local Section = Window:NewSection("Shop")
 
 Section:CreateButton("Sword Crate", function()
@@ -430,6 +427,6 @@ Section:CreateButton("Explosion Crate", function()
 print("Clicked")
 end)--batas
 
-section:CreateToggle("Spectate Ball", "World", function(toggled)
+section:CreateToggle("Spectate Ball", function(toggled)
 	getgenv().spectate_Enabled = toggled
 end)
