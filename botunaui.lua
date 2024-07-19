@@ -17,7 +17,6 @@ local Library = loadstring(Game:HttpGet("https://raw.githubusercontent.com/blood
 getgenv().aura_Enabled = false --sound effect kill
 getgenv().hit_sound_Enabled = true
 getgenv().hit_effect_Enabled = false
-getgenv().self_effect_Enabled = false
 getgenv().kill_effect_Enabled = true
 local Services = {
     game:GetService('AdService'),
@@ -206,12 +205,7 @@ end)
 ----batas kredit	
 local Section = Window:NewSection("Main")
 
-Section:CreateToggle("Auto Parry V1", function(value)
-	loadstring(game:HttpGet("https://raw.githubusercontent.com/2VQuiet/AutoParryBladeBall/main/Auto%20Parry%20Script"))()
-	print(value)
-	end)
-
-Section:CreateToggle("Auto Parry V2", function(value)
+Section:CreateToggle("Auto Parry", function(value)
             getgenv().config = getgenv().config or {
     hit_time = 0.5, -- // recommended 0.25 to 0.75 \ --
     
@@ -253,51 +247,10 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/datshort1/datmodhub/m
 print(value)
 end)
 
-local Section = Window:NewSection("Setting Parry")
-Section:CreateToggle("Hit Effect", function(toggled)
-    getgenv().kill_effect_Enabled = toggled
-end)
-
-Section:CreateToggle("Kill Effect", function(toggled)
-    getgenv().kill_effect_Enabled = toggled
-end)
-function play_kill_effect(toggled)
-    task.defer(function()
-        local bell = game:GetObjects("rbxassetid://17519762269")[1]
-
-        bell.Name = 'Yeat_BELL'
-        bell.Parent = workspace
-
-        bell.Position = Part.Position - Vector3.new(0, 20, 0)
-        bell:WaitForChild('Sound'):Play()
-
-        game:GetService("TweenService"):Create(bell, TweenInfo.new(0.85, Enum.EasingStyle.Exponential, Enum.EasingDirection.InOut), {
-            Position = Part.Position + Vector3.new(0, 10, 0)
-        }):Play()
-
-        task.delay(5, function()
-            game:GetService("TweenService"):Create(bell, TweenInfo.new(1.45, Enum.EasingStyle.Exponential, Enum.EasingDirection.InOut), {
-                Position = Part.Position + Vector3.new(0, 100, 0)
-            }):Play()
-        end)
-
-        task.delay(6, function()
-            bell:Destroy()
-        end)
+Section:CreateToggle("Anti Lag", function(value)
+    loadstring(game:HttpGet("https://pastebin.com/raw/1RfvPdwX",true))()
+    print(value)
     end)
-end
-
-task.defer(function()
-    workspace.Alive.ChildRemoved:Connect(function(child)
-        if not workspace.Dead:FindFirstChild(child.Name) then
-            return
-        end
-
-        if getgenv().kill_effect_Enabled then
-            play_kill_effect(child.HumanoidRootPart)
-        end
-    end)
-end) --batas sound kill
 
 Section:CreateToggle("Visualizer (ON)", function(value)
 	loadstring(game:HttpGet("https://pastebin.com/raw/2RzCXHZH"))()
@@ -306,29 +259,6 @@ Section:CreateToggle("Visualizer (ON)", function(value)
 
 Section:CreateToggle("Auto Spam (ON)", function(value)
 	loadstring(game:HttpGet("https://raw.githubusercontent.com/Hosvile/Refinement/main/MC%3ABlade%20Ball%20Spam"))()
-	print(value)
-	end)
-	
-	Section:CreateToggle("Detect Spam (ON)", function(value)
-	loadstring(game:HttpGet("https://pastebin.com/raw/t2391h1A"))()
-	print(value)
-	end)
-	
-	Section:CreateToggle("Hold to Spam", function(value)
-	game:GetService("StarterGui"):SetCore("SendNotification",{
-		Title = "By Medusa Script",
-		Text = "Hold F button to Spam",
-		Icon = "rbxassetid://18551656195",
-		Duration = 5
-	})
-	
-	getgenv().SpamSpeed = 25 -- 1-25
-	
-	if not getgenv().exeSpam then
-		loadstring(game:HttpGet("https://raw.githubusercontent.com/Hosvile/Refinement/main/Toggle%20Block%20Spam",true))()
-	end
-	
-	getgenv().exeSpam = true
 	print(value)
 	end)
 
@@ -351,50 +281,6 @@ end)
 
 Section:CreateToggle("Speed Run (beta)", function(value)
 loadstring(game:HttpGet("https://raw.githubusercontent.com/MedusaScript/BrutalityV2/main/lumpat.lua"))();
-print(value)
-end)
-
-Section:CreateToggle("Remove all particles", function(value)
-	loadstring(game:HttpGet("https://raw.githubusercontent.com/Hosvile/Refinement/main/Destroy%20Particle%20Emitters",true))()
-	print(value)
-	end)
-
-Section:CreateToggle("Anti Lag", function(value)
-loadstring(game:HttpGet("https://pastebin.com/raw/1RfvPdwX",true))()
-print(value)
-end)
-
-Section:CreateToggle("Fps Booster", function(value)
--- Made by RIP#6666
-_G.Settings = {
-    Players = {
-        ["Ignore Me"] = true, -- Ignore your Character
-        ["Ignore Others"] = true -- Ignore other Characters
-    },
-    Meshes = {
-        Destroy = false, -- Destroy Meshes
-        LowDetail = true -- Low detail meshes (NOT SURE IT DOES ANYTHING)
-    },
-    Images = {
-        Invisible = true, -- Invisible Images
-        LowDetail = false, -- Low detail images (NOT SURE IT DOES ANYTHING)
-        Destroy = false, -- Destroy Images
-    },
-    ["No Particles"] = true, -- Disables all ParticleEmitter, Trail, Smoke, Fire and Sparkles
-    ["No Camera Effects"] = true, -- Disables all PostEffect's (Camera/Lighting Effects)
-    ["No Explosions"] = true, -- Makes Explosion's invisible
-    ["No Clothes"] = true, -- Removes Clothing from the game
-    ["Low Water Graphics"] = true, -- Removes Water Quality
-    ["No Shadows"] = true, -- Remove Shadows
-    ["Low Rendering"] = true, -- Lower Rendering
-    ["Low Quality Parts"] = true -- Lower quality parts
-}
-loadstring(game:HttpGet("https://raw.githubusercontent.com/CasperFlyModz/discord.gg-rips/main/FPSBooster.lua"))()
-print(value)
-end)
-
-Section:CreateToggle("Anti Afk", function(value)
-loadstring(game:HttpGet(('https://raw.githubusercontent.com/Proxylol/OtherScripts/main/AntiAfk.lua'),true))()
 print(value)
 end)
 
