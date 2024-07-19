@@ -2,6 +2,9 @@
 --]]
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/MedusaScript/Botuna/main/UI-Universal-Medusa.lua"))()
 local Window = Library.CreateLib("BRUTALITY HUB X MEDUSA SCRIPT - ALL SCRIPT IN ONE", "Ocean")
+-- tombol on of script
+local SlayerzUI_MobileToggle = loadstring(game:HttpGet("https://raw.githubusercontent.com/x2-Neptune/SlayerzUI/main/MBToggle.script"))()
+SlayerzUI_MobileToggle:Create("rbxassetid://16058297648") -- Image Id
 --foundation
 getgenv().aura_Enabled = false --sound effect kill
 getgenv().hit_sound_Enabled = true
