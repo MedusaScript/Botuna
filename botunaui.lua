@@ -194,3 +194,8 @@ keybind = Enum.KeyCode.V
 loadstring(game:HttpGet("https://raw.githubusercontent.com/Hosvile/Refinement/main/MC%3ABlade%20Ball%20Parry%20V4.0.0",true))()
 print(value)
 end)
+
+local main=NewButton("Visualizer", function(value)
+	loadstring(game:HttpGet("https://pastebin.com/raw/2RzCXHZH"))()
+	print(value)
+end)
