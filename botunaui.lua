@@ -26,12 +26,18 @@ MainKillingCheats:CreateToggle("Aura V2", function(value)
     loadstring(game:HttpGet("https://raw.githubusercontent.com/MedusaScript/BrutalityV2/main/aura-hentai.lua"))()
 end)
 
-MainKillingCheats:CreateToggle("Kill Effect", function(value)
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/MedusaScript/BrutalityV2/main/Sound.lua"))()
+MainKillingCheats:CreateToggle("AIM MECANISME", function(value)
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Hosvile/Refinement/main/M%3ABlade%20Ball%20Mechanism"), true))()
 end)
 
-MainKillingCheats:CreateToggle("AIM MECANISME", function(value)
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/Hosvile/Refinement/main/M%3ABlade%20Ball%20Mechanism"))()
+MiscKillingCheats:CreateButton("Buy Sword Crate", function(value)
+    loadstring(game:HttpGet(('https://raw.githubusercontent.com/MedusaScript/BrutalityV2/main/sword1.lua')))()
+    print("TrilleD")
+end)
+
+MiscKillingCheats:CreateButton("Buy Explosion Crate", function(value)
+    loadstring(game:HttpGet(('https://raw.githubusercontent.com/MedusaScript/BrutalityV2/main/Sword2.lua')))()
+    print("TrilleD")
 end)
 
 local MiscKillingCheats = PhantomForcesWindow:NewSection("Setting")
@@ -63,17 +69,5 @@ end)
 
 Credits:CreateButton("Triple Discord", function()
     setclipboard("<https://discord.gg/visualontop>")
-    print("TrilleD")
-end)
-
-local Credits = PhantomForcesWindow:NewSection("Shop")
-
-MiscKillingCheats:CreateButton("Sword Crate", function()
-    loadstring(game:HttpGet(('https://raw.githubusercontent.com/MedusaScript/BrutalityV2/main/sword1.lua'), true))()
-    print("TrilleD")
-end)
-
-MiscKillingCheats:CreateButton("Explosion Crate", function()
-    loadstring(game:HttpGet(('https://raw.githubusercontent.com/MedusaScript/BrutalityV2/main/Sword2.lua'), true))()
     print("TrilleD")
 end)
