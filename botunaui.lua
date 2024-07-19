@@ -22,17 +22,17 @@ MainKillingCheats:CreateToggle("Auto Parry", function(value)
     loadstring(game:HttpGet("https://raw.githubusercontent.com/2VQuiet/AutoParryBladeBall/main/Auto%20Parry%20Script"))()
 end)
 
-MainKillingCheats:CreateToggle("Aura Parry", function(value)
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/MedusaScript/BrutalityV2/main/aura-hentai.lua"))()
+MainKillingCheats:CreateToggle("Aura V2", function(value)
+    loadstring(game:HttpGet("https://pastebin.com/raw/1RfvPdwX"))()
 end)
 
-MainKillingCheats:CreateToggle("MODE BRUTALITY", function(value)
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/MedusaScript/BrutalityV2/main/aura-hentai.lua"))()
+MainKillingCheats:CreateToggle("Kill Effect", function(value)
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/MedusaScript/BrutalityV2/main/Sound.lua"))()
 end)
 
 local MiscKillingCheats = PhantomForcesWindow:NewSection("Setting")
 
-MiscKillingCheats:CreateButton("Anti Afk", function()
+MiscKillingCheats:CreateButton("Anti Lag", function()
     loadstring(game:HttpGet("https://pastebin.com/raw/1RfvPdwX", true))()
     print("TrilleD")
 end)
