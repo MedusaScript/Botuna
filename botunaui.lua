@@ -273,7 +273,7 @@ end)
 
 local Section = Window:NewSection("Setting Parry")
 
-Section:CreateToggle("Kill Effect",function(toggled)
+Section:CreateToggle("Kill Effect", function(toggled)
     getgenv().kill_effect_Enabled = toggled
 end)
 function play_kill_effect(toggled)
