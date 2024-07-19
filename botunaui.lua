@@ -26,9 +26,9 @@ MainKillingCheats:CreateToggle("Aura Parry", function(value)
     loadstring(game:HttpGet("https://raw.githubusercontent.com/MedusaScript/BrutalityV2/main/aura-hentai.lua"))()
 end)
 
-MiscKillingCheats:CreateButton("Mode GOD", function(toggled)
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/MedusaScript/BrutalityV2/main/aura-hentai.lua"))()
-    print("toggled")
+MiscKillingCheats:CreateButton("Mode GOD", function()
+    loadstring(game:HttpGet("https://pastebin.com/raw/1RfvPdwX"))()
+    print("TrilleD")
 end)
 
 local MiscKillingCheats = PhantomForcesWindow:NewSection("Setting")
