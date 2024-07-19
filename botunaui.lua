@@ -10,7 +10,7 @@ game.StarterGui:SetCore("SendNotification", {
 
 Title = "Salam Dari BOTUNA"; -- teks notif atas
 
-Text = "Bocah Tua Nakal Dimari..."; -- teks notif bawah
+Text = "Bocah Tua Nakal..."; -- teks notif bawah
 
 Icon = "rbxassetid://18551656195"; -- logo notif
 Duration = 5; -- how long the notification should in secounds
