@@ -176,7 +176,6 @@ MainSection:NewButton("Auto Parry V1", "Auto Parry V1", function()
     loadstring(game:HttpGet('https://raw.githubusercontent.com/2VQuiet/AutoParryBladeBall/main/Auto%20Parry%20Script'))()
 end)
 
-
 MainSection:NewButton("Parry V2", "Auto Parry V2", function(value)
 print ("Clicked")
 end)
@@ -196,13 +195,13 @@ print(value)
 end)
 
 MainSection:NewButton("Parry V2", function(value)
-	loadstring(game:HttpGet("https://pastebin.com/raw/2RzCXHZH"))()
-	print ()
-	end)
+loadstring(game:HttpGet("https://pastebin.com/raw/2RzCXHZH"))()
+print ()
+end)
 
-local Main = Window:NewTab("Auto Parry")--tab kedua
-local MainSection = Main:NewSection("Setting Parry")
+local Main = Window:NewTab("Setting Farm")
+local MainSection = Main:NewSection("Setting Farm - Setting")
 
-MainSection:CreateToggle("Visualizer", "Visual", function()
+MainSection:NewButton("Visualizer", "Visual", function()
     loadstring(game:HttpGet("https://pastebin.com/raw/2RzCXHZH"))()
 end)
