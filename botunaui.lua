@@ -169,21 +169,96 @@ wait(1)
 end
 end
 --Mulai dari sini
-local Main = Window:NewTab("Auto Parry")
-local MainSection = Main:NewSection("AUTO FARM - BLADE BALL")
+--UTAMA
+local Main = Window:NewTab("Main Farm")
+local MainSection = Main:NewSection("Auto Farm - AUTO Parry")
 
-MainSection:NewButton("Auto Parry V1", "Auto Parry V1", function()
+
+MainSection:NewButton("Auto Parry", "AUTO PARRY", function()
     loadstring(game:HttpGet('https://raw.githubusercontent.com/2VQuiet/AutoParryBladeBall/main/Auto%20Parry%20Script'))()
 end)
 
-MainSection:NewButton("Parry V2", function(value)
-loadstring(game:HttpGet("https://pastebin.com/raw/2RzCXHZH"))()
-print ()
+
+MainSection:NewButton("Auto Spam", "SPAM HOLD V", function()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/Hosvile/Refinement/main/MC%3ABlade%20Ball%20Spam'))()
 end)
 
-local Main = Window:NewTab("Setting Farm")
-local MainSection = Main:NewSection("Setting Farm - Setting")
-
-MainSection:NewButton("Visualizer", "Visual", function()
-    loadstring(game:HttpGet("https://pastebin.com/raw/2RzCXHZH"))()
+MainSection:NewButton("Visualizer", "Visualizer", function()
+    loadstring(game:HttpGet('https://pastebin.com/raw/2RzCXHZH'))()
 end)
+
+
+MainSection:NewButton("Detect Spam", "Detect Spam", function()
+    loadstring(game:HttpGet('https://pastebin.com/raw/t2391h1A'))()
+end)
+
+
+MainSection:NewButton("FARM CHEST", "Blox Fruit", function()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/MedusaScript/Botuna/main/Chest.lua'))()
+end)
+
+
+MainSection:NewButton("Brutality Hub V1", "Blox Fruit", function()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/MedusaScript/limitless-medusa/main/BrutalityV1'))()
+end)
+
+
+MainSection:NewButton("Brutality Hub V2", "Blox Fruit", function()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/MedusaScript/Botuna/main/BrutalityV2.lua'))()
+end)
+
+
+MainSection:NewButton("Brutality Hub V3", "Blox Fruit", function()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/MedusaScript/Botuna/main/BrutalityV3.lua'))()
+end)
+
+--KEDUA
+local Main = Window:NewTab("Blade Ball")
+local MainSection = Main:NewSection("BLADE BALL - NO KEY")
+
+
+--TANDA --
+local MainSection = Main:NewSection("BLADE BALL - NO KEY")
+--TANDA --
+
+MainSection:NewButton("Nexum Hub", "Blade Ball", function()
+    loadstring(game:HttpGet('https://api.luarmor.net/files/v3/loaders/5ebefab5c68bfa67271dcbf6430d3c7d.lua'))()
+end)
+
+
+MainSection:NewButton("Bedol Hub", "Blade Ball", function()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/3345-c-a-t-s-u-s/SourceLua/main/Blade_Ball.lua'))()
+end)
+
+
+MainSection:NewButton("REDz Hub", "Blade Ball", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/REDzHUB/BladeBall/main/eng"))()
+end)
+
+
+MainSection:NewButton("Depth Hub", "Blade Ball", function()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/sirapobsriumang/Blade-ball/main/Blade-ball-free.lua'))()
+end)
+
+
+MainSection:NewButton("Tunx Hub", "Blade Ball", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/TunxDeveloper/BladeBall/main/main"))()
+end)
+
+--KETIGA
+local Main = Window:NewTab("CDID")
+local MainSection = Main:NewSection("CDID - NO KEY")
+
+
+MainSection:NewButton("Brutality Hub V3", "CDID", function()
+loadstring(game:HttpGet("LINK RAW GITHUB"))()
+end)
+
+--KEEMPAT
+local Main = Window:NewTab("ARSENAL")
+local MainSection = Main:NewSection("ARSENAL - NO - KEY")
+
+
+MainSection:NewButton("Brutality Hub V3", "ARSENAL", function()
+    loadstring(game:HttpGet("LINK RAW GITHUB"))()
+    end)
