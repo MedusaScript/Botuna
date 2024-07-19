@@ -20,21 +20,7 @@ Duration = 5; -- how long the notification should in secounds
 local Library = loadstring(Game:HttpGet("https://raw.githubusercontent.com/bloodball/-back-ups-for-libs/main/wizard"))()
 
 --functions --- folder awal src
-task.defer(function() --View ball spactate
-    RunService.RenderStepped:Connect(function()
-        if getgenv().spectate_Enabled then
-
-            local self = Nurysium_Util.getBall()
-
-            if not self then
-                return
-            end
-
-            workspace.CurrentCamera.CFrame = workspace.CurrentCamera.CFrame:Lerp(CFrame.new(workspace.CurrentCamera.CFrame.Position, self.Position), 1.5)
-        end
-    end)
-end) -- batas view ball
-
+getgenv().spectate_Enabled = false --View ball
 getgenv().aura_Enabled = false --sound effect kill
 getgenv().hit_sound_Enabled = false
 getgenv().hit_effect_Enabled = false
@@ -415,6 +401,24 @@ end)
 
 local Section = Window:NewSection("Shop")
 
+Section:CreateToggle("Spectate Ball", function(toggled)
+	getgenv().spectate_Enabled = toggled
+end)
+task.defer(function() --View ball spactate
+    RunService.RenderStepped:Connect(function()
+        if getgenv().spectate_Enabled then
+
+            local self = Nurysium_Util.getBall()
+
+            if not self then
+                return
+            end
+
+            workspace.CurrentCamera.CFrame = workspace.CurrentCamera.CFrame:Lerp(CFrame.new(workspace.CurrentCamera.CFrame.Position, self.Position), 1.5)
+        end
+    end)
+end) -- batas view ball
+
 Section:CreateButton("Sword Crate", function()
 
             SwordCrateManual()
@@ -426,7 +430,3 @@ Section:CreateButton("Explosion Crate", function()
             ExplosionCrateManual()
 print("Clicked")
 end)--batas
-
-section:CreateToggle("Spectate Ball", function(toggled)
-	getgenv().spectate_Enabled = toggled
-end)
