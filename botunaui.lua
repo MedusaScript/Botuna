@@ -124,3 +124,106 @@ else
         end
     )
 end
+
+--https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua--Mentahan Ui
+--]]
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/MedusaScript/Botuna/main/UI-Universal-Medusa.lua"))()
+local Window = Library.CreateLib("BRUTALITY HUB X MEDUSA SCRIPT - ALL SCRIPT IN ONE", "Ocean")
+
+--UTAMA
+local Main = Window:NewTab("FREE PREMIUM")
+local MainSection = Main:NewSection("BRUTALITY HUB - PRISON LIFE")
+
+
+MainSection:NewButton("Brutality Hub V1", "PRISON LIFE", function()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/MedusaScript/BrutalityV2/main/HackBf.lua'))()
+end)
+
+
+MainSection:NewButton("Brutality Hub V2", "PRISON LIFE", function()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/MedusaScript/BrutalityV2/main/HackBf.lua'))()
+end)
+
+--TANDA --
+local MainSection = Main:NewSection("BRUTALITY HUB - Blox Fruit")
+--TANDA --
+
+MainSection:NewButton("Simple Fitur", "Hack Game", function()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/MedusaScript/BrutalityV2/main/HackBf.lua'))()
+end)
+
+
+MainSection:NewButton("Kaitun", "Blox Fruit", function()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/MedusaScript/BrutalityV2/main/kaitun.lua'))()
+end)
+
+
+MainSection:NewButton("FARM CHEST", "Blox Fruit", function()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/MedusaScript/Botuna/main/Chest.lua'))()
+end)
+
+
+MainSection:NewButton("Brutality Hub V1", "Blox Fruit", function()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/MedusaScript/limitless-medusa/main/BrutalityV1'))()
+end)
+
+
+MainSection:NewButton("Brutality Hub V2", "Blox Fruit", function()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/MedusaScript/Botuna/main/BrutalityV2.lua'))()
+end)
+
+
+MainSection:NewButton("Brutality Hub V3", "Blox Fruit", function()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/MedusaScript/Botuna/main/BrutalityV3.lua'))()
+end)
+
+--KEDUA
+local Main = Window:NewTab("Blade Ball")
+local MainSection = Main:NewSection("BLADE BALL - NO KEY")
+
+
+--TANDA --
+local MainSection = Main:NewSection("BLADE BALL - NO KEY")
+--TANDA --
+
+MainSection:NewButton("Nexum Hub", "Blade Ball", function()
+    loadstring(game:HttpGet('https://api.luarmor.net/files/v3/loaders/5ebefab5c68bfa67271dcbf6430d3c7d.lua'))()
+end)
+
+
+MainSection:NewButton("Bedol Hub", "Blade Ball", function()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/3345-c-a-t-s-u-s/SourceLua/main/Blade_Ball.lua'))()
+end)
+
+
+MainSection:NewButton("REDz Hub", "Blade Ball", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/REDzHUB/BladeBall/main/eng"))()
+end)
+
+
+MainSection:NewButton("Depth Hub", "Blade Ball", function()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/sirapobsriumang/Blade-ball/main/Blade-ball-free.lua'))()
+end)
+
+
+MainSection:NewButton("Tunx Hub", "Blade Ball", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/TunxDeveloper/BladeBall/main/main"))()
+end)
+
+--KETIGA
+local Main = Window:NewTab("CDID")
+local MainSection = Main:NewSection("CDID - NO KEY")
+
+
+MainSection:NewButton("Brutality Hub V3", "CDID", function()
+loadstring(game:HttpGet("LINK RAW GITHUB"))()
+end)
+
+--KEEMPAT
+local Main = Window:NewTab("ARSENAL")
+local MainSection = Main:NewSection("ARSENAL - NO - KEY")
+
+
+MainSection:NewButton("Brutality Hub V3", "ARSENAL", function()
+    loadstring(game:HttpGet("LINK RAW GITHUB"))()
+    end)
