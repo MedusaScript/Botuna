@@ -102,7 +102,7 @@ else
             Data = {
                 HubName = "Brutality Hub"
             },
-            Discord = "https://discord.com/invite/ThHhY24N6T"
+            Discord = "https://discord.gg/medusa-script-1182005198206545941"
         }
     )
 
