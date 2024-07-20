@@ -221,7 +221,7 @@ Premium.Image = "rbxassetid://16058297648"
 -- Panda Authenticating System
 local LibVersion = "v2" -- ( v3 & v4 )
 local LibType = "roblox" -- Available ( FiveM or Roblox ) always use small letter
-local service_name = "_brutalityhub_"
+local service_name = "Brutality_Hub"
 --https://pandadevelopment.net/servicelib?service=alchemy_hub&core=roblox&param=v2
 local PandaAuth = loadstring(game:HttpGet('https://pandadevelopment.net/servicelib?service='..service_name..'&core='..LibType..'&param='..LibVersion))()
 local debugMode = true;
