@@ -13,7 +13,7 @@ local AlchemyNotify = function(Text_i,Duration_i)
 end
 loadstring(game:HttpGet("https://raw.githubusercontent.com/MedusaScript/Brutality-V2/main/InviteToDiscord.lua"))()
 _G.AlchemyHub_KeySystem = {
-	KeySaved = "7JF0Mui0kZ7F4Dud"
+	KeySaved = "bbZ3glN9IqsUBb3H"
 }
 local Plr = game.Players.LocalPlayer
 if not game:IsLoaded()then 
