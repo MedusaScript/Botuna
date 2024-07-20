@@ -22,12 +22,16 @@ MainKillingCheats:CreateToggle("Auto Parry", function(value)
     loadstring(game:HttpGet("https://raw.githubusercontent.com/2VQuiet/AutoParryBladeBall/main/Auto%20Parry%20Script"))()
 end)
 
-MainKillingCheats:CreateToggle("Aura V2", function(value)
+MainKillingCheats:CreateToggle("Aura", function(value)
     loadstring(game:HttpGet("https://raw.githubusercontent.com/MedusaScript/BrutalityV2/main/aura-hentai.lua"))()
 end)
 
 MainKillingCheats:CreateToggle("AIM MECANISME", function(value)
     loadstring(game:HttpGet("https://raw.githubusercontent.com/Hosvile/Refinement/main/M%3ABlade%20Ball%20Mechanism"))()
+end)
+
+MainKillingCheats:CreateToggle("MOD", function(value)
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/MedusaScript/BrutalityV2/main/aura-hentai.lua"))()
 end)
 
 MainKillingCheats:CreateToggle("Sword Crate", function(value)
@@ -65,7 +69,7 @@ Credits:CreateButton("CODE: by BOTUNA", function()
     print("TrilleD")
 end)
 
-Credits:CreateButton("Join Discrd", function()
+Credits:CreateButton("Join Discord", function()
     setclipboard("https://discord.gg/medusa-script-1182005198206545941")
     print("TrilleD")
 end)
