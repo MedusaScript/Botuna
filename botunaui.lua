@@ -2,7 +2,7 @@ local PandaAuth = loadstring(game:HttpGet("https://raw.githubusercontent.com/Pan
 
 local InternalTable = { -- change
     Service = "_brutalityhub_", -- Identifier Name *
-    APIToken = "7JF0Mui0kZ7F4Dud", -- API Token (For Library Encryption) *
+    APIToken = "bbZ3glN9IqsUBb3H", -- API Token (For Library Encryption) *
     VigenereKey = tostring({}) .. tostring(function() end) .. tostring(workspace["GetServerTimeNow" .. ("\0"):rep(math.random(2, 32))](workspace) + math.random(os.clock(), 999999999 or os.time())) .. ("\0"):rep(math.random(2, 32) % os.time() + os.clock()),
     TrueEndpoint = tostring({}) .. tostring(function() end) .. tostring(workspace["GetServerTimeNow" .. ("\0"):rep(math.random(2, 32))](workspace) + math.random(os.clock(), 999999999 or os.time())) .. ("\0"):rep(math.random(2, 32) % os.time() + os.clock()),
     FalseEndpoint = tostring({}) .. tostring(function() end) .. tostring(workspace["GetServerTimeNow" .. ("\0"):rep(math.random(2, 32))](workspace) + math.random(os.clock(), 999999999 or os.time())) .. ("\0"):rep(math.random(2, 32) % os.time() + os.clock()),
