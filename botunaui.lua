@@ -96,6 +96,7 @@ end
 
 if isfile("Pelinda Data/Infinix/Key.txt") and Validate(readfile("Pelinda Data/Infinix/Key.txt")) then
     print("Validated!")
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/MedusaScript/Botuna/main/asdftrw.lua"))()
 else
     local Window = KeySys:CreateGui(
         {
@@ -123,5 +124,4 @@ else
             end
         end
     )
-	loadstring(game:HttpGet("https://raw.githubusercontent.com/MedusaScript/Botuna/main/asdftrw.lua"))()
 end
