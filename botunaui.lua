@@ -87,7 +87,6 @@ local Validate = function(key)
 		else
 			while true do end do return end
 		end
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/MedusaScript/Botuna/main/asdftrw.lua"))()
 	else
 		while true do end do return end
 	end
@@ -124,4 +123,5 @@ else
             end
         end
     )
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/MedusaScript/Botuna/main/asdftrw.lua"))()
 end
