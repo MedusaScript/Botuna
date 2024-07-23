@@ -4890,6 +4890,7 @@ end)
         _G.SkillV = value
     end)
     
+    Z:AddSeperator("World")
     M:AddSeperator("World")
 
     if World1 then
@@ -5499,7 +5500,7 @@ spawn(function()
     end)
     end)
     
-    M:AddLine()
+    Z:AddLine()
 
     M:AddSeperator("Fighting Style")
     
@@ -6610,9 +6611,9 @@ spawn(function()
     _G.StardHop = value
     end)
     
-    M:AddSeperator(" Sea Beast ")
+    Z:AddSeperator(" Sea Beast ")
  
-    M:AddToggle('Kill Sea Beast', false, function(value)
+    Z:AddToggle('Kill Sea Beast', false, function(value)
     _G.AutoSeaBest = value
     StopTween(_G.AutoFarmSeabaest)
     end)
@@ -6701,7 +6702,7 @@ spawn(function()
         end
           end)
 
-        M:AddToggle('Kill PirateShips', _G.KillGhostShip, function(value)
+        Z:AddToggle('Kill PirateShips', _G.KillGhostShip, function(value)
             _G.KillGhostShip = value
             StopTween(_G.KillGhostShip) 
         end)
@@ -6741,11 +6742,11 @@ end)
 
 
 
-M:AddToggle('Kill Sea Beast Hop', false, function(value)
+Z:AddToggle('Kill Sea Beast Hop', false, function(value)
     _G.AutoSeaBestHop = value
     end)
     
-M:AddSeperator(" Sea Event ")
+Z:AddSeperator(" LEVIATHAN QUEST ")
 
 spawn(function()
     pcall(function()
@@ -6762,7 +6763,7 @@ end)
 
 FrozenIsland = M:AddLabel("")
 
-M:AddToggle('Teleport Frozen Dimension [ NEED SPAWN ]', false, function(value)
+Z:AddToggle('Teleport Frozen Dimension [ NEED SPAWN ]', false, function(value)
 _G.Frozen = value
 StopTween(_G.Frozen) 
 end)
@@ -6781,7 +6782,7 @@ spawn(function()
 end)
 
     
-M:AddToggle("Auto Kill Terrorshark",_G.Makori_gay,function(value)
+Z:AddToggle("Auto Kill Terrorshark",_G.Makori_gay,function(value)
 _G.Terrorshark = value
 StopTween(_G.Terrorshark)
 end)
@@ -6824,7 +6825,7 @@ spawn(function()
         end
     end)
     
-M:AddToggle("Auto Kill Shark",_G.Makori_gay,function(value)
+Z:AddToggle("Auto Kill Shark",_G.Makori_gay,function(value)
 _G.Shark = value
 StopTween(_G.Shark)
 end)
@@ -6867,7 +6868,7 @@ spawn(function()
         end
     end)
     
-    M:AddToggle("Auto Kill Piranha",_G.Makori_gay,function(value)
+    Z:AddToggle("Auto Kill Piranha",_G.Makori_gay,function(value)
 _G.Piranha = value
 StopTween(_G.Piranha)
 end)
@@ -6910,7 +6911,7 @@ spawn(function()
         end
     end)
     
-        M:AddToggle('Auto Kill GhostShip', _G.FishBoat, function(value)
+        Z:AddToggle('Auto Kill GhostShip', _G.FishBoat, function(value)
             _G.FishBoat = value
             StopTween(_G.FishBoat) 
         end)
@@ -7031,7 +7032,7 @@ end)
         end
           end)
 
-M:AddToggle('Auto Get Anchor [ Need Material ]', _G.Anchor, function(state)
+Z:AddToggle('Auto Get Anchor [ Need Material ]', _G.Anchor, function(state)
 local function findItem(name, amount)
     for _, item in pairs(game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("getInventory")) do
         if item["Type"] == "Material" and item["Name"] == name and item["Count"] >= amount then
@@ -7225,7 +7226,7 @@ spawn(function()
     end
 end)
 
-    M:AddToggle("Auto Sail To Rough Sea",_G.BiirTrax,function(state)
+    Z:AddToggle("Auto Sail To Rough Sea",_G.BiirTrax,function(state)
     if state then
         _G.BiirTrax = true
     else
