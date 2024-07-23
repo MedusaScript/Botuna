@@ -3822,7 +3822,7 @@ local Library = Update:Window("Brutality Premium","",Enum.KeyCode.RightControl);
 
 local NguyenTien = Library:AddTab("Information","16058297648")
 local Main = Library:AddTab("Farming","18477352665")
-local seaevent = Library:AddTab("Sea Event","18477352665")
+local Z = Library:AddTab("Sea Event","18477352665")
 local M = Library:AddTab("Quest Item","18477473610")
 local Ss = Library:AddTab("Statistic","18477368667")
 local RaceV4 = Library:AddTab("Trial V4","18477916271")
