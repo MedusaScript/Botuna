@@ -1,404 +1,203 @@
-_G.Settings = {
-    Players = {
-        ["Ignore Me"] = true, -- Ignore your Character
-        ["Ignore Others"] = false-- Ignore other Characters
-    },
-    Meshes = {
-        Destroy = false, -- Destroy Meshes
-        LowDetail = true -- Low detail meshes (NOT SURE IT DOES ANYTHING)
-    },
-    Images = {
-        Invisible = true, -- Invisible Images
-        LowDetail = true, -- Low detail images (NOT SURE IT DOES ANYTHING)
-        Destroy = false, -- Destroy Images
-    },
-    ["No Particles"] = true, -- Disables all ParticleEmitter, Trail, Smoke, Fire and Sparkles
-    ["No Camera Effects"] = true, -- Disables all PostEffect's (Camera/Lighting Effects)
-    ["No Explosions"] = true, -- Makes Explosion's invisible
-    ["No Clothes"] = true, -- Removes Clothing from the game
-    ["Low Water Graphics"] = true, -- Removes Water Quality
-    ["No Shadows"] = true, -- Remove Shadows
-    ["Low Rendering"] = true, -- Lower Rendering
-    ["Low Quality Parts"] = true -- Lower quality parts
-}
--- send issues or suggestions to my discord: discord.gg/rips
+-- Gui to Lua
+-- Version: 4.4
 
-if not _G.Ignore then
-    _G.Ignore = {} -- Add Instances to this table to ignore them (e.g. _G.Ignore = {workspace.Map, workspace.Map2})
-end
-if not _G.WaitPerAmount then
-    _G.WaitPerAmount = 500 -- Set Higher or Lower depending on your computer's performance
-end
-if _G.SendNotifications == nil then
-    _G.SendNotifications = false -- Set to false if you don't want notifications
-end
-if _G.ConsoleLogs == nil then
-    _G.ConsoleLogs = true -- Set to true if you want console logs (mainly for debugging)
-end
+-- Instances:
 
+local ScreenGui = Instance.new("ScreenGui")
+local SA = Instance.new("Frame")
+local UICorner = Instance.new("UICorner")
+local SAText = Instance.new("TextLabel")
+local SilentAim = Instance.new("TextButton")
+local UICorner_2 = Instance.new("UICorner")
+local MadeBy = Instance.new("TextLabel")
+local PlayerCount = Instance.new("TextLabel")
+local UICorner_3 = Instance.new("UICorner")
 
+-- Properties:
 
-if not game:IsLoaded() then
-    repeat
-        task.wait()
-    until game:IsLoaded()
-end
-if not _G.Settings then
-    _G.Settings = {
-        Players = {
-            ["Ignore Me"] = true,
-            ["Ignore Others"] = false,
-            ["Ignore Tools"] = false
-        },
-        Meshes = {
-            NoMesh = false,
-            NoTexture = true,
-            Destroy = false
-        },
-        Images = {
-            Invisible = true,
-            Destroy = false
-        },
-        Explosions = {
-            Smaller = true,
-            Invisible = true, -- Not recommended for PVP games
-            Destroy = false -- Not recommended for PVP games
-        },
-        Particles = {
-            Invisible = true,
-            Destroy = true
-        },
-        TextLabels = {
-            LowerQuality = true,
-            Invisible = false,
-            Destroy = false
-        },
-        MeshParts = {
-            LowerQuality = true,
-            Invisible = false,
-            NoTexture = true,
-            NoMesh = false,
-            Destroy = false
-        },
-        Other = {
-            ["FPS Cap"] = 9999, -- Set this true to uncap FPS
-            ["No Camera Effects"] = true,
-            ["No Clothes"] = true,
-            ["Low Water Graphics"] = true,
-            ["No Shadows"] = true,
-            ["Low Rendering"] = true,
-            ["Low Quality Parts"] = true,
-            ["Low Quality Models"] = true,
-            ["Reset Materials"] = true,
-            ["Lower Quality MeshParts"] = true
-        }
-    }
-end
-local Players, Lighting, StarterGui, MaterialService = game:GetService("Players"), game:GetService("Lighting"), game:GetService("StarterGui"), game:GetService("MaterialService")
-local ME, CanBeEnabled = Players.LocalPlayer, {"ParticleEmitter", "Trail", "Smoke", "Fire", "Sparkles"}
-local function PartOfCharacter(Instance)
-    for i, v in pairs(Players:GetPlayers()) do
-        if v ~= ME and v.Character and Instance:IsDescendantOf(v.Character) then
-            return true
-        end
+ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+SA.Name = "SA"
+SA.Parent = ScreenGui
+SA.BackgroundColor3 = Color3.fromRGB(60, 60, 60)
+SA.BorderColor3 = Color3.fromRGB(30, 30, 30)  -- Darker outline color
+SA.BorderSizePixel = 2  -- Increase border thickness for a visible outline
+SA.Position = UDim2.new(0.390139997, 0, 0.307328612, 0)
+SA.Size = UDim2.new(0, 360, 0, 326)
+
+UICorner.Parent = SA
+
+SAText.Name = "SA Text"
+SAText.Parent = SA
+SAText.BackgroundColor3 = Color3.fromRGB(24, 24, 24)
+SAText.BorderColor3 = Color3.fromRGB(255, 255, 255)
+SAText.BorderSizePixel = 0
+SAText.Size = UDim2.new(0, 360, 0, 44)
+SAText.Font = Enum.Font.Bangers
+SAText.Text = "Made By Yuuki!"
+SAText.TextColor3 = Color3.fromRGB(255, 255, 255)
+SAText.TextSize = 38.000
+
+SilentAim.Name = "Silent Aim"
+SilentAim.Parent = SA
+SilentAim.BackgroundColor3 = Color3.fromRGB(200, 0, 0)  -- Red button color
+SilentAim.BorderColor3 = Color3.fromRGB(150, 0, 0)  -- Darker red border color
+SilentAim.BorderSizePixel = 2  -- Increase border thickness for a visible outline
+SilentAim.Position = UDim2.new(0.222222224, 0, 0.205521479, 0)
+SilentAim.Size = UDim2.new(0, 213, 0, 79)
+SilentAim.Font = Enum.Font.Bangers
+SilentAim.Text = "Enable Silent Aim"
+SilentAim.TextColor3 = Color3.fromRGB(255, 255, 255)
+SilentAim.TextSize = 30.000
+SilentAim.TextStrokeTransparency = 0.000
+
+UICorner_2.Parent = SilentAim
+
+MadeBy.Name = "Made By"
+MadeBy.Parent = SA
+MadeBy.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+MadeBy.BackgroundTransparency = 1.000
+MadeBy.BorderColor3 = Color3.fromRGB(0, 0, 0)
+MadeBy.BorderSizePixel = 0
+MadeBy.Position = UDim2.new(0, 0, 0.846625745, 0)
+MadeBy.Size = UDim2.new(0, 360, 0, 50)
+MadeBy.Font = Enum.Font.Bangers
+MadeBy.Text = "P To Toggle On/Off"
+MadeBy.TextColor3 = Color3.fromRGB(255, 255, 255)
+MadeBy.TextSize = 30.000
+
+PlayerCount.Name = "Player Count"
+PlayerCount.Parent = SA
+PlayerCount.BackgroundColor3 = Color3.fromRGB(200, 0, 0)  -- Red button color
+PlayerCount.BorderColor3 = Color3.fromRGB(150, 0, 0)  -- Darker red border color
+PlayerCount.BorderSizePixel = 2  -- Increase border thickness for a visible outline
+PlayerCount.Position = UDim2.new(0.222222224, 0, 0.604294479, 0)
+PlayerCount.Size = UDim2.new(0, 213, 0, 79)
+PlayerCount.Font = Enum.Font.Bangers
+PlayerCount.Text = "Player Count:"
+PlayerCount.TextColor3 = Color3.fromRGB(255, 255, 255)
+PlayerCount.TextSize = 27.000
+
+UICorner_3.Parent = PlayerCount
+
+-- Scripts:
+
+local function MCITIJ_fake_script() -- SA.Draggable 
+    local script = Instance.new('LocalScript', SA)
+
+    local UIS = game:GetService('UserInputService')
+    local frame = script.Parent
+    local dragToggle = nil
+    local dragSpeed = 0.25
+    local dragStart = nil
+    local startPos = nil
+
+    local function updateInput(input)
+        local delta = input.Position - dragStart
+        local position = UDim2.new(startPos.X.Scale, startPos.X.Offset + delta.X,
+            startPos.Y.Scale, startPos.Y.Offset + delta.Y)
+        game:GetService('TweenService'):Create(frame, TweenInfo.new(dragSpeed), {Position = position}):Play()
     end
-    return false
-end
-local function DescendantOfIgnore(Instance)
-    for i, v in pairs(_G.Ignore) do
-        if Instance:IsDescendantOf(v) then
-            return true
-        end
-    end
-    return false
-end
-local function CheckIfBad(Instance)
-    if not Instance:IsDescendantOf(Players) and (_G.Settings.Players["Ignore Others"] and not PartOfCharacter(Instance) or not _G.Settings.Players["Ignore Others"]) and (_G.Settings.Players["Ignore Me"] and ME.Character and not Instance:IsDescendantOf(ME.Character) or not _G.Settings.Players["Ignore Me"]) and (_G.Settings.Players["Ignore Tools"] and not Instance:IsA("BackpackItem") and not Instance:FindFirstAncestorWhichIsA("BackpackItem") or not _G.Settings.Players["Ignore Tools"])--[[not PartOfCharacter(Instance)]] and (_G.Ignore and not table.find(_G.Ignore, Instance) and not DescendantOfIgnore(Instance) or (not _G.Ignore or type(_G.Ignore) ~= "table" or #_G.Ignore <= 0)) then
-        if Instance:IsA("DataModelMesh") then
-            if _G.Settings.Meshes.NoMesh and Instance:IsA("SpecialMesh") then
-                Instance.MeshId = ""
-            end
-            if _G.Settings.Meshes.NoTexture and Instance:IsA("SpecialMesh") then
-                Instance.TextureId = ""
-            end
-            if _G.Settings.Meshes.Destroy or _G.Settings["No Meshes"] then
-                Instance:Destroy()
-            end
-        elseif Instance:IsA("FaceInstance") then
-            if _G.Settings.Images.Invisible then
-                Instance.Transparency = 1
-                Instance.Shiny = 1
-            end
-            if _G.Settings.Images.LowDetail then
-                Instance.Shiny = 1
-            end
-            if _G.Settings.Images.Destroy then
-                Instance:Destroy()
-            end
-        elseif Instance:IsA("ShirtGraphic") then
-            if _G.Settings.Images.Invisible then
-                Instance.Graphic = ""
-            end
-            if _G.Settings.Images.Destroy then
-                Instance:Destroy()
-            end
-        elseif table.find(CanBeEnabled, Instance.ClassName) then
-            if _G.Settings["Invisible Particles"] or _G.Settings["No Particles"] or (_G.Settings.Other and _G.Settings.Other["Invisible Particles"]) or (_G.Settings.Particles and _G.Settings.Particles.Invisible) then
-                Instance.Enabled = false
-            end
-            if (_G.Settings.Other and _G.Settings.Other["No Particles"]) or (_G.Settings.Particles and _G.Settings.Particles.Destroy) then
-                Instance:Destroy()
-            end
-        elseif Instance:IsA("PostEffect") and (_G.Settings["No Camera Effects"] or (_G.Settings.Other and _G.Settings.Other["No Camera Effects"])) then
-            Instance.Enabled = false
-        elseif Instance:IsA("Explosion") then
-            if _G.Settings["Smaller Explosions"] or (_G.Settings.Other and _G.Settings.Other["Smaller Explosions"]) or (_G.Settings.Explosions and _G.Settings.Explosions.Smaller) then
-                Instance.BlastPressure = 1
-                Instance.BlastRadius = 1
-            end
-            if _G.Settings["Invisible Explosions"] or (_G.Settings.Other and _G.Settings.Other["Invisible Explosions"]) or (_G.Settings.Explosions and _G.Settings.Explosions.Invisible) then
-                Instance.BlastPressure = 1
-                Instance.BlastRadius = 1
-                Instance.Visible = false
-            end
-            if _G.Settings["No Explosions"] or (_G.Settings.Other and _G.Settings.Other["No Explosions"]) or (_G.Settings.Explosions and _G.Settings.Explosions.Destroy) then
-                Instance:Destroy()
-            end
-        elseif Instance:IsA("Clothing") or Instance:IsA("SurfaceAppearance") or Instance:IsA("BaseWrap") then
-            if _G.Settings["No Clothes"] or (_G.Settings.Other and _G.Settings.Other["No Clothes"]) then
-                Instance:Destroy()
-            end
-        elseif Instance:IsA("BasePart") and not Instance:IsA("MeshPart") then
-            if _G.Settings["Low Quality Parts"] or (_G.Settings.Other and _G.Settings.Other["Low Quality Parts"]) then
-                Instance.Material = Enum.Material.Plastic
-                Instance.Reflectance = 0
-            end
-        elseif Instance:IsA("TextLabel") and Instance:IsDescendantOf(workspace) then
-            if _G.Settings["Lower Quality TextLabels"] or (_G.Settings.Other and _G.Settings.Other["Lower Quality TextLabels"]) or (_G.Settings.TextLabels and _G.Settings.TextLabels.LowerQuality) then
-                Instance.Font = Enum.Font.SourceSans
-                Instance.TextScaled = false
-                Instance.RichText = false
-                Instance.TextSize = 14
-            end
-            if _G.Settings["Invisible TextLabels"] or (_G.Settings.Other and _G.Settings.Other["Invisible TextLabels"]) or (_G.Settings.TextLabels and _G.Settings.TextLabels.Invisible) then
-                Instance.Visible = false
-            end
-            if _G.Settings["No TextLabels"] or (_G.Settings.Other and _G.Settings.Other["No TextLabels"]) or (_G.Settings.TextLabels and _G.Settings.TextLabels.Destroy) then
-                Instance:Destroy()
-            end
-        elseif Instance:IsA("Model") then
-            if _G.Settings["Low Quality Models"] or (_G.Settings.Other and _G.Settings.Other["Low Quality Models"]) then
-                Instance.LevelOfDetail = 1
-            end
-        elseif Instance:IsA("MeshPart") then
-            if _G.Settings["Low Quality MeshParts"] or (_G.Settings.Other and _G.Settings.Other["Low Quality MeshParts"]) or (_G.Settings.MeshParts and _G.Settings.MeshParts.LowerQuality) then
-                Instance.RenderFidelity = 2
-                Instance.Reflectance = 0
-                Instance.Material = Enum.Material.Plastic
-            end
-            if _G.Settings["Invisible MeshParts"] or (_G.Settings.Other and _G.Settings.Other["Invisible MeshParts"]) or (_G.Settings.MeshParts and _G.Settings.MeshParts.Invisible) then
-                Instance.Transparency = 1
-                Instance.RenderFidelity = 2
-                Instance.Reflectance = 0
-                Instance.Material = Enum.Material.Plastic
-            end
-            if _G.Settings.MeshParts and _G.Settings.MeshParts.NoTexture then
-                Instance.TextureID = ""
-            end
-            if _G.Settings.MeshParts and _G.Settings.MeshParts.NoMesh then
-                Instance.MeshId = ""
-            end
-            if _G.Settings["No MeshParts"] or (_G.Settings.Other and _G.Settings.Other["No MeshParts"]) or (_G.Settings.MeshParts and _G.Settings.MeshParts.Destroy) then
-                Instance:Destroy()
-            end
-        end
-    end
-end
-if _G.SendNotifications then
-    StarterGui:SetCore("SendNotification", {
-        Title = "by ripbozo",
-        Text = "Loading FPS Booster...",
-        Duration = math.huge,
-        Button1 = "Okay"
-    })
-end
-coroutine.wrap(pcall)(function()
-    if (_G.Settings["Low Water Graphics"] or (_G.Settings.Other and _G.Settings.Other["Low Water Graphics"])) then
-        if not workspace:FindFirstChildOfClass("Terrain") then
-            repeat
-                task.wait()
-            until workspace:FindFirstChildOfClass("Terrain")
-        end
-        workspace:FindFirstChildOfClass("Terrain").WaterWaveSize = 0
-        workspace:FindFirstChildOfClass("Terrain").WaterWaveSpeed = 0
-        workspace:FindFirstChildOfClass("Terrain").WaterReflectance = 0
-        workspace:FindFirstChildOfClass("Terrain").WaterTransparency = 0
-        if sethiddenproperty then
-            sethiddenproperty(workspace:FindFirstChildOfClass("Terrain"), "Decoration", false)
-        else
-            StarterGui:SetCore("SendNotification", {
-                Title = "discord.gg/riphangout",
-                Text = "Your exploit does not support sethiddenproperty, please use a different exploit.",
-                Duration = 5,
-                Button1 = "Okay"
-            })
-            warn("Your exploit does not support sethiddenproperty, please use a different exploit.")
-        end
-        if _G.SendNotifications then
-            StarterGui:SetCore("SendNotification", {
-                Title = "discord.gg/riphangout",
-                Text = "Low Water Graphics Enabled",
-                Duration = 5,
-                Button1 = "Okay"
-            })
-        end
-        if _G.ConsoleLogs then
-            warn("Low Water Graphics Enabled")
-        end
-    end
-end)
-coroutine.wrap(pcall)(function()
-    if _G.Settings["No Shadows"] or (_G.Settings.Other and _G.Settings.Other["No Shadows"]) then
-        Lighting.GlobalShadows = false
-        Lighting.FogEnd = 9e9
-        Lighting.ShadowSoftness = 0
-        if sethiddenproperty then
-            sethiddenproperty(Lighting, "Technology", 2)
-        else
-            StarterGui:SetCore("SendNotification", {
-                Title = "discord.gg/bozohangout",
-                Text = "Your exploit does not support sethiddenproperty, please use a different exploit.",
-                Duration = 5,
-                Button1 = "Okay"
-            })
-            warn("Your exploit does not support sethiddenproperty, please use a different exploit.")
-        end
-        if _G.SendNotifications then
-            StarterGui:SetCore("SendNotification", {
-                Title = "discord.gg/bozohangout",
-                Text = "No Shadows Enabled",
-                Duration = 5,
-                Button1 = "Okay"
-            })
-        end
-        if _G.ConsoleLogs then
-            warn("No Shadows Enabled")
-        end
-    end
-end)
-coroutine.wrap(pcall)(function()
-    if _G.Settings["Low Rendering"] or (_G.Settings.Other and _G.Settings.Other["Low Rendering"]) then
-        settings().Rendering.QualityLevel = 1
-        settings().Rendering.MeshPartDetailLevel = Enum.MeshPartDetailLevel.Level04
-        if _G.SendNotifications then
-            StarterGui:SetCore("SendNotification", {
-                Title = "discord.gg/bozohangout",
-                Text = "Low Rendering Enabled",
-                Duration = 5,
-                Button1 = "Okay"
-            })
-        end
-        if _G.ConsoleLogs then
-            warn("Low Rendering Enabled")
-        end
-    end
-end)
-coroutine.wrap(pcall)(function()
-    if _G.Settings["Reset Materials"] or (_G.Settings.Other and _G.Settings.Other["Reset Materials"]) then
-        for i, v in pairs(MaterialService:GetChildren()) do
-            v:Destroy()
-        end
-        MaterialService.Use2022Materials = false
-        if _G.SendNotifications then
-            StarterGui:SetCore("SendNotification", {
-                Title = "discord.gg/bozohangout",
-                Text = "Reset Materials Enabled",
-                Duration = 5,
-                Button1 = "Okay"
-            })
-        end
-        if _G.ConsoleLogs then
-            warn("Reset Materials Enabled")
-        end
-    end
-end)
-coroutine.wrap(pcall)(function()
-    if _G.Settings["FPS Cap"] or (_G.Settings.Other and _G.Settings.Other["FPS Cap"]) then
-        if setfpscap then
-            if type(_G.Settings["FPS Cap"] or (_G.Settings.Other and _G.Settings.Other["FPS Cap"])) == "string" or type(_G.Settings["FPS Cap"] or (_G.Settings.Other and _G.Settings.Other["FPS Cap"])) == "number" then
-                setfpscap(tonumber(_G.Settings["FPS Cap"] or (_G.Settings.Other and _G.Settings.Other["FPS Cap"])))
-                if _G.SendNotifications then
-                    StarterGui:SetCore("SendNotification", {
-                        Title = "by realfailed#0",
-                        Text = "FPS Capped to " .. tostring(_G.Settings["FPS Cap"] or (_G.Settings.Other and _G.Settings.Other["FPS Cap"])),
-                        Duration = 10,
-                        Button1 = "Ya Yeet"
-                    })
+
+    frame.InputBegan:Connect(function(input)
+        if (input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch) then 
+            dragToggle = true
+            dragStart = input.Position
+            startPos = frame.Position
+            input.Changed:Connect(function()
+                if input.UserInputState == Enum.UserInputState.End then
+                    dragToggle = false
                 end
-                if _G.ConsoleLogs then
-                    warn("FPS Capped to " .. tostring(_G.Settings["FPS Cap"] or (_G.Settings.Other and _G.Settings.Other["FPS Cap"])))
-                end
-            elseif _G.Settings["FPS Cap"] or (_G.Settings.Other and _G.Settings.Other["FPS Cap"]) == true then
-                setfpscap(1e6)
-                if _G.SendNotifications then
-                    StarterGui:SetCore("SendNotification", {
-                        Title = "by ripbozo",
-                        Text = "FPS Uncapped",
-                        Duration = 10,
-                        Button1 = "ok"
-                    })
-                end
-                if _G.ConsoleLogs then
-                    warn("FPS Uncapped")
-                end
+            end)
+        end
+    end)
+
+    UIS.InputChanged:Connect(function(input)
+        if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
+            if dragToggle then
+                updateInput(input)
             end
-        else
-            StarterGui:SetCore("SendNotification", {
-                Title = "by ripbozo",
-                Text = "FPS Cap Failed",
-                Duration = math.huge,
-                Button1 = "Okay"
-            })
-            warn("FPS Cap Failed")
+        end
+    end)
+end
+coroutine.wrap(MCITIJ_fake_script)()
+
+local function TGYL_fake_script() -- PlayerCount.LocalScript 
+    local script = Instance.new('LocalScript', PlayerCount)
+
+    local playerCountLabel = script.Parent -- Assumes the script is a child of a TextLabel
+
+    -- Function to update the player count
+    local function updatePlayerCount()
+        local players = game.Players:GetPlayers()
+        playerCountLabel.Text = "Player Count: " .. #players
+    end
+
+    -- Initially update the player count
+    updatePlayerCount()
+
+    -- Connect a function to fire whenever a player joins or leaves
+    game.Players.PlayerAdded:Connect(updatePlayerCount)
+    game.Players.PlayerRemoving:Connect(updatePlayerCount)
+
+end
+coroutine.wrap(TGYL_fake_script)()
+
+local function BNQNGFT_fake_script() -- ScreenGui.Toggle 
+    local script = Instance.new('LocalScript', ScreenGui)
+
+    local Player = game:GetService("Players").LocalPlayer
+    local Mouse = Player:GetMouse()
+    local MainFrame = script.Parent.SA
+    local keybind = "p"
+
+    Mouse.KeyDown:Connect(function(key)
+        if key == keybind then
+            if MainFrame.Visible == false then
+                MainFrame.Visible = true
+            else
+                MainFrame.Visible = false
+            end
+        end
+    end)
+end
+coroutine.wrap(BNQNGFT_fake_script)()
+
+SilentAim.MouseButton1Down:connect(function()
+    function getplrsname()
+        for i,v in pairs(game:GetChildren()) do
+            if v.ClassName == "Players" then
+                return v.Name
+            end
         end
     end
-end)
-game.DescendantAdded:Connect(function(value)
-    wait(_G.LoadedWait or 1)
-    CheckIfBad(value)
-end)
-local Descendants = game:GetDescendants()
-local StartNumber = _G.WaitPerAmount or 500
-local WaitNumber = _G.WaitPerAmount or 500
-if _G.SendNotifications then
-    StarterGui:SetCore("SendNotification", {
-        Title = "by ripbozo",
-        Text = "Checking " .. #Descendants .. " Instances...",
-        Duration = 15,
-        Button1 = "Okay"
-    })
-end
-if _G.ConsoleLogs then
-    warn("Checking " .. #Descendants .. " Instances...")
-end
-for i, v in pairs(Descendants) do
-    CheckIfBad(v)
-    if i == WaitNumber then
-        task.wait()
-        if _G.ConsoleLogs then
-            print("Loaded " .. i .. "/" .. #Descendants)
+    local players = getplrsname()
+    local plr = game[players].LocalPlayer
+    coroutine.resume(coroutine.create(function()
+        while  wait(1) do
+            coroutine.resume(coroutine.create(function()
+                for _,v in pairs(game[players]:GetPlayers()) do
+                    if v.Name ~= plr.Name and v.Character then
+                        v.Character.RightUpperLeg.CanCollide = false
+                        v.Character.RightUpperLeg.Transparency = 10
+                        v.Character.RightUpperLeg.Size = Vector3.new(13,13,13)
+
+                        v.Character.LeftUpperLeg.CanCollide = false
+                        v.Character.LeftUpperLeg.Transparency = 10
+                        v.Character.LeftUpperLeg.Size = Vector3.new(13,13,13)
+
+                        v.Character.HeadHB.CanCollide = false
+                        v.Character.HeadHB.Transparency = 10
+                        v.Character.HeadHB.Size = Vector3.new(13,13,13)
+
+                        v.Character.HumanoidRootPart.CanCollide = false
+                        v.Character.HumanoidRootPart.Transparency = 10
+                        v.Character.HumanoidRootPart.Size = Vector3.new(13,13,13)
+
+                    end
+                end
+            end))
         end
-        WaitNumber = WaitNumber + StartNumber
-    end
-end
-StarterGui:SetCore("SendNotification", {
-    Title = "by ripbozo",
-    Text = "FPS Booster Loaded!",
-    Duration = math.huge,
-    Button1 = "Okay"
-})
-warn("FPS Booster Loaded!")
---game.DescendantAdded:Connect(CheckIfBad)
---[[game.DescendantAdded:Connect(function(value)
-    CheckIfBad(value)
-end)]]
+    end))
+end)
