@@ -6620,14 +6620,14 @@ spawn(function()
     spawn(function()
         pcall(function()
             while wait() do
-    if game:GetService("Workspace").Map:FindFirstChild("KitsuneIsland") then
-    Kitsunecheck:Set('Kitsune ISland Spawn: ✅')
-    else
-    Kitsunecheck:Set('Kitsune Not Spawn: ❌' )
+                if game.Workspace._WorldOrigin.Locations:FindFirstChild('KituneIsland') then
+                    KitsuneIsland:Set('Kitsune Spawning: ✅')
+                else
+                    KitsuneIsland:Set('Kitsune Not Found: ❌')
+                end
             end
-               end
         end)
-end)
+    end)
 
     Z:AddToggle("TP to Kitsune Island", false, function(value)
         _G.TPtoKisuneIs = value
