@@ -5288,9 +5288,9 @@ end)
         pcall(function()
             while wait() do
     if game.Workspace._WorldOrigin.Locations:FindFirstChild('Mirage Island') then
-    Mirragecheck:Set('✅: Mystic Island Spawning')
+    Mirragecheck:Set('Mystic Island Spawning: ✅')
     else
-      Mirragecheck:Set('❌: Mystic Island Not Found ' )end
+      Mirragecheck:Set('Mystic Island Not Found: ❌ ' )end
             end
         end)
 end)
@@ -6615,8 +6615,19 @@ spawn(function()
     _G.StardHop = value
     end)
     
-    Z:AddLine()
     Z:AddSeperator(" Kitsune Island ")
+
+    spawn(function()
+        pcall(function()
+            while wait() do
+    if game:GetService("Workspace").Map:FindFirstChild("KitsuneIsland") then
+    Kitsunecheck:Set('Kitsune ISland Spawn: ✅')
+    else
+    Kitsunecheck:Set('Kitsune Not Spawn: ❌' )
+            end
+               end
+        end)
+end)
 
     Z:AddToggle("TP to Kitsune Island", false, function(value)
         _G.TPtoKisuneIs = value
@@ -6794,9 +6805,9 @@ spawn(function()
     pcall(function()
         while wait() do
             if game.Workspace._WorldOrigin.Locations:FindFirstChild('Frozen Dimension') then
-                FrozenIsland:Set('🏔️: Frozen Dimension Spawning')
+                FrozenIsland:Set('Frozen Spawning: ✅')
             else
-                FrozenIsland:Set('❌: Frozen Dimension Not Found')
+                FrozenIsland:Set('Frozen Not Found: ❌')
             end
         end
     end)
