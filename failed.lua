@@ -6616,7 +6616,6 @@ spawn(function()
     end)
     
     Z:AddSeperator(" Kitsune Island ")
-
     spawn(function()
         pcall(function()
             while wait() do
