@@ -45,7 +45,7 @@ Blur.ImageTransparency = 0.550
 
 UICorner_2.Parent = Blur
 
-Shivamloader.Name = "Shivamloader"
+Shivamloader.Name = "Brutalityloader"
 Shivamloader.Parent = Loader
 Shivamloader.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Shivamloader.BackgroundTransparency = 1.000
@@ -54,7 +54,7 @@ Shivamloader.BorderSizePixel = 0
 Shivamloader.Position = UDim2.new(0.123442277, 0, 0.157894731, 0)
 Shivamloader.Size = UDim2.new(0, 154, 0, 39)
 Shivamloader.Font = Enum.Font.JosefinSans
-Shivamloader.Text = "\"Shivam hub\""
+Shivamloader.Text = "\"Brutality Hub\""
 Shivamloader.TextColor3 = Color3.fromRGB(255, 255, 255)
 Shivamloader.TextSize = 20.000
 Shivamloader.TextWrapped = true
@@ -250,7 +250,7 @@ Shivamname.BorderSizePixel = 0
 Shivamname.Position = UDim2.new(0, 0, -0.000333150238, 0)
 Shivamname.Size = UDim2.new(0, 329, 0, 25)
 Shivamname.Font = Enum.Font.JosefinSans
-Shivamname.Text = "\"Shivam hub\""
+Shivamname.Text = "\"Brutality Hub\""
 Shivamname.TextColor3 = Color3.fromRGB(255, 255, 255)
 Shivamname.TextSize = 14.000
 Shivamname.TextWrapped = true
