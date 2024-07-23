@@ -4891,7 +4891,6 @@ end)
     end)
     
     Z:AddSeperator("World")
-    M:AddSeperator("World")
 
     if World1 then
         M:AddToggle("Quest Second Sea",_G.AutoSecondSea,function(value)
@@ -5317,6 +5316,11 @@ Z:AddToggle("Teleport Mystic Island",_G.AutoMysticIsland,function(value)
                 end)
             end
 
+            Z:AddButton("Remove Fog",function(qww)
+                game:GetService("Lighting").LightingLayers:Destroy()
+                game:GetService("Lighting").Sky:Destroy()
+            end)
+
             Z:AddButton("Teleport Advanced Fruit Dealer", function()
                 TweenNpc()
                 end)
@@ -5499,7 +5503,7 @@ spawn(function()
         end
     end)
     end)
-    
+
     Z:AddLine()
 
     M:AddSeperator("Fighting Style")
@@ -6761,7 +6765,7 @@ spawn(function()
 end)
 
 
-FrozenIsland = M:AddLabel("")
+FrozenIsland = Z:AddLabel("")
 
 Z:AddToggle('Teleport Frozen Dimension [ NEED SPAWN ]', false, function(value)
 _G.Frozen = value
@@ -7370,11 +7374,11 @@ spawn(function()
                     local targetModel = workspace:FindFirstChild(targetModelName)
 
                     if targetModel then
-                        local speed = 10.5
+                        local speed = 15
                         local forwardDirection = targetModel.PrimaryPart.CFrame.lookVector
-                        local targetPosition = targetModel.PrimaryPart.Position + forwardDirection * 10
+                        local targetPosition = targetModel.PrimaryPart.Position + forwardDirection * 15
                         
-                        while (targetModel.PrimaryPart.Position - targetPosition).Magnitude > 0.1 do
+                        while (targetModel.PrimaryPart.Position - targetPosition).Magnitude > 0.17 do
                             targetModel:SetPrimaryPartCFrame(targetModel.PrimaryPart.CFrame + forwardDirection * speed)
                             task.wait()
                             if not _G.BiirTrax then
@@ -7388,8 +7392,10 @@ spawn(function()
     end
 end)
 
-
-
+Z:AddButton("Remove Fog",function(qww)
+    game:GetService("Lighting").LightingLayers:Destroy()
+    game:GetService("Lighting").Sky:Destroy()
+end)
 
 
    M:AddSeperator("Misc Mastery")
@@ -8655,7 +8661,7 @@ end)
     spawn(function()
         pcall(function()
             while wait() do
-                EliteProgress:Set("Elite Progress : "..game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("EliteHunter","Progress"))
+                EliteProgress:Set("Elite Progress:"..game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("EliteHunter","Progress"))
             end
         end)
     end)
