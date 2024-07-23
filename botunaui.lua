@@ -1,203 +1,218 @@
--- Gui to Lua
--- Version: 4.4
-
--- Instances:
-
-local ScreenGui = Instance.new("ScreenGui")
-local SA = Instance.new("Frame")
-local UICorner = Instance.new("UICorner")
-local SAText = Instance.new("TextLabel")
-local SilentAim = Instance.new("TextButton")
-local UICorner_2 = Instance.new("UICorner")
-local MadeBy = Instance.new("TextLabel")
-local PlayerCount = Instance.new("TextLabel")
-local UICorner_3 = Instance.new("UICorner")
+local LF_AIMBOT_GUI = Instance.new("ScreenGui")
+local Frame = Instance.new("Frame")
+local PlrToAimAt = Instance.new("TextBox")
+local StartAiming = Instance.new("TextButton")
+local StopAiming = Instance.new("TextButton")
+local Border1 = Instance.new("Frame")
+local Border2 = Instance.new("Frame")
+local Border3 = Instance.new("Frame")
+local Border4 = Instance.new("Frame")
+local FixCamera = Instance.new("TextButton")
 
 -- Properties:
+LF_AIMBOT_GUI.Name = "LF_AIMBOT_GUI"
+LF_AIMBOT_GUI.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+LF_AIMBOT_GUI.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 
-ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
-ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+Frame.Parent = LF_AIMBOT_GUI
+Frame.Active = true
+Frame.BackgroundColor3 = Color3.new(0, 0, 0)
+Frame.BackgroundTransparency = 0.7
+Frame.BorderSizePixel = 5
+Frame.Position = UDim2.new(0.15, 0, 0.65, 0)
+Frame.Size = UDim2.new(0, 233, 0, 132)
 
-SA.Name = "SA"
-SA.Parent = ScreenGui
-SA.BackgroundColor3 = Color3.fromRGB(60, 60, 60)
-SA.BorderColor3 = Color3.fromRGB(30, 30, 30)  -- Darker outline color
-SA.BorderSizePixel = 2  -- Increase border thickness for a visible outline
-SA.Position = UDim2.new(0.390139997, 0, 0.307328612, 0)
-SA.Size = UDim2.new(0, 360, 0, 326)
+PlrToAimAt.Name = "PlrToAimAt"
+PlrToAimAt.Parent = Frame
+PlrToAimAt.BackgroundColor3 = Color3.new(0.57, 0.57, 0.57)
+PlrToAimAt.BackgroundTransparency = 0.3
+PlrToAimAt.Position = UDim2.new(0.07, 0, 0.06, 0)
+PlrToAimAt.Size = UDim2.new(0, 200, 0, 30)
+PlrToAimAt.Font = Enum.Font.SourceSans
+PlrToAimAt.PlaceholderText = "Player Name"
+PlrToAimAt.TextColor3 = Color3.new(0, 0, 0)
+PlrToAimAt.TextSize = 14
 
-UICorner.Parent = SA
+StartAiming.Name = "StartAiming"
+StartAiming.Parent = Frame
+StartAiming.BackgroundColor3 = Color3.new(0, 0, 0)
+StartAiming.Position = UDim2.new(0.03, 0, 0.35, 0)
+StartAiming.Size = UDim2.new(0, 200, 0, 30)
+StartAiming.Font = Enum.Font.SourceSans
+StartAiming.Text = "Turn Aimbot ON"
+StartAiming.TextColor3 = Color3.new(0, 1, 1)
+StartAiming.TextSize = 14
 
-SAText.Name = "SA Text"
-SAText.Parent = SA
-SAText.BackgroundColor3 = Color3.fromRGB(24, 24, 24)
-SAText.BorderColor3 = Color3.fromRGB(255, 255, 255)
-SAText.BorderSizePixel = 0
-SAText.Size = UDim2.new(0, 360, 0, 44)
-SAText.Font = Enum.Font.Bangers
-SAText.Text = "Made By Yuuki!"
-SAText.TextColor3 = Color3.fromRGB(255, 255, 255)
-SAText.TextSize = 38.000
+StopAiming.Name = "StopAiming"
+StopAiming.Parent = Frame
+StopAiming.BackgroundColor3 = Color3.new(0, 0, 0)
+StopAiming.Position = UDim2.new(0.03, 0, 0.52, 0)
+StopAiming.Size = UDim2.new(0, 200, 0, 30)
+StopAiming.Font = Enum.Font.SourceSans
+StopAiming.Text = "Turn Aimbot OFF"
+StopAiming.TextColor3 = Color3.new(0, 1, 1)
+StopAiming.TextSize = 14
 
-SilentAim.Name = "Silent Aim"
-SilentAim.Parent = SA
-SilentAim.BackgroundColor3 = Color3.fromRGB(200, 0, 0)  -- Red button color
-SilentAim.BorderColor3 = Color3.fromRGB(150, 0, 0)  -- Darker red border color
-SilentAim.BorderSizePixel = 2  -- Increase border thickness for a visible outline
-SilentAim.Position = UDim2.new(0.222222224, 0, 0.205521479, 0)
-SilentAim.Size = UDim2.new(0, 213, 0, 79)
-SilentAim.Font = Enum.Font.Bangers
-SilentAim.Text = "Enable Silent Aim"
-SilentAim.TextColor3 = Color3.fromRGB(255, 255, 255)
-SilentAim.TextSize = 30.000
-SilentAim.TextStrokeTransparency = 0.000
+FixCamera.Name = "FixCamera"
+FixCamera.Parent = Frame
+FixCamera.BackgroundColor3 = Color3.new(0, 0, 0)
+FixCamera.Position = UDim2.new(0.54, 0, 0.77, 0)
+FixCamera.Size = UDim2.new(0, 90, 0, 30)
+FixCamera.Font = Enum.Font.SourceSans
+FixCamera.Text = "Fix Camera"
+FixCamera.TextColor3 = Color3.new(0, 1, 1)
+FixCamera.TextSize = 14
 
-UICorner_2.Parent = SilentAim
+Border1.Name = "Border1"
+Border1.Parent = Frame
+Border1.BackgroundColor3 = Color3.new(1, 1, 1)
+Border1.BorderSizePixel = 0
+Border1.Position = UDim2.new(-0.03, 0, 0, 0)
+Border1.Size = UDim2.new(0, 6, 0, 132)
 
-MadeBy.Name = "Made By"
-MadeBy.Parent = SA
-MadeBy.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-MadeBy.BackgroundTransparency = 1.000
-MadeBy.BorderColor3 = Color3.fromRGB(0, 0, 0)
-MadeBy.BorderSizePixel = 0
-MadeBy.Position = UDim2.new(0, 0, 0.846625745, 0)
-MadeBy.Size = UDim2.new(0, 360, 0, 50)
-MadeBy.Font = Enum.Font.Bangers
-MadeBy.Text = "P To Toggle On/Off"
-MadeBy.TextColor3 = Color3.fromRGB(255, 255, 255)
-MadeBy.TextSize = 30.000
+Border2.Name = "Border2"
+Border2.Parent = Frame
+Border2.BackgroundColor3 = Color3.new(1, 1, 1)
+Border2.BorderSizePixel = 0
+Border2.Position = UDim2.new(1, 0, 0, 0)
+Border2.Size = UDim2.new(0, 6, 0, 132)
 
-PlayerCount.Name = "Player Count"
-PlayerCount.Parent = SA
-PlayerCount.BackgroundColor3 = Color3.fromRGB(200, 0, 0)  -- Red button color
-PlayerCount.BorderColor3 = Color3.fromRGB(150, 0, 0)  -- Darker red border color
-PlayerCount.BorderSizePixel = 2  -- Increase border thickness for a visible outline
-PlayerCount.Position = UDim2.new(0.222222224, 0, 0.604294479, 0)
-PlayerCount.Size = UDim2.new(0, 213, 0, 79)
-PlayerCount.Font = Enum.Font.Bangers
-PlayerCount.Text = "Player Count:"
-PlayerCount.TextColor3 = Color3.fromRGB(255, 255, 255)
-PlayerCount.TextSize = 27.000
+Border3.Name = "Border3"
+Border3.Parent = Frame
+Border3.BackgroundColor3 = Color3.new(1, 1, 1)
+Border3.BorderSizePixel = 0
+Border3.Position = UDim2.new(-0.03, 0, -0.05, 0)
+Border3.Size = UDim2.new(0, 245, 0, 6)
 
-UICorner_3.Parent = PlayerCount
+Border4.Name = "Border4"
+Border4.Parent = Frame
+Border4.BackgroundColor3 = Color3.new(1, 1, 1)
+Border4.BorderSizePixel = 0
+Border4.Position = UDim2.new(-0.03, 0, 1, 0)
+Border4.Size = UDim2.new(0, 245, 0, 6)
 
--- Scripts:
+-- Functions:
 
-local function MCITIJ_fake_script() -- SA.Draggable 
-    local script = Instance.new('LocalScript', SA)
-
-    local UIS = game:GetService('UserInputService')
-    local frame = script.Parent
-    local dragToggle = nil
-    local dragSpeed = 0.25
-    local dragStart = nil
-    local startPos = nil
-
-    local function updateInput(input)
-        local delta = input.Position - dragStart
-        local position = UDim2.new(startPos.X.Scale, startPos.X.Offset + delta.X,
-            startPos.Y.Scale, startPos.Y.Offset + delta.Y)
-        game:GetService('TweenService'):Create(frame, TweenInfo.new(dragSpeed), {Position = position}):Play()
-    end
-
-    frame.InputBegan:Connect(function(input)
-        if (input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch) then 
-            dragToggle = true
-            dragStart = input.Position
-            startPos = frame.Position
-            input.Changed:Connect(function()
-                if input.UserInputState == Enum.UserInputState.End then
-                    dragToggle = false
-                end
-            end)
-        end
-    end)
-
-    UIS.InputChanged:Connect(function(input)
-        if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
-            if dragToggle then
-                updateInput(input)
-            end
-        end
-    end)
+function makeAimPart(name)
+    local SetParent = game.Workspace[name]
+    local AimPart_1 = Instance.new("Part")
+    AimPart_1.Size = Vector3.new(1, 1, 1)
+    AimPart_1.Material = Enum.Material.Plastic
+    AimPart_1.CFrame = CFrame.new(2, 8, 7)
+    AimPart_1.BrickColor = BrickColor.new("Medium stone grey")
+    AimPart_1.Locked = false
+    AimPart_1.CastShadow = true
+    AimPart_1.Transparency = 1
+    AimPart_1.Reflectance = 0
+    AimPart_1.Name = "AimPart"
+    AimPart_1.Anchored = true
+    AimPart_1.Archivable = true
+    AimPart_1.CanCollide = false
+    AimPart_1.CollisionGroupId = 0
+    AimPart_1.Massless = false
+    AimPart_1.Shape = Enum.PartType.Block
+    AimPart_1.TopSurface = Enum.SurfaceType.Smooth
+    AimPart_1.BottomSurface = Enum.SurfaceType.Smooth
+    AimPart_1.RightSurface = Enum.SurfaceType.Smooth
+    AimPart_1.LeftSurface = Enum.SurfaceType.Smooth
+    AimPart_1.FrontSurface = Enum.SurfaceType.Smooth
+    AimPart_1.BackSurface = Enum.SurfaceType.Smooth
+    AimPart_1.Parent = SetParent
+    return game.Workspace[name]:WaitForChild("AimPart")
 end
-coroutine.wrap(MCITIJ_fake_script)()
 
-local function TGYL_fake_script() -- PlayerCount.LocalScript 
-    local script = Instance.new('LocalScript', PlayerCount)
+-- Draggable Frame Logic:
+local UIS = game:GetService("UserInputService")
+local dragging
+local dragInput
+local dragStart
+local startPos
 
-    local playerCountLabel = script.Parent -- Assumes the script is a child of a TextLabel
-
-    -- Function to update the player count
-    local function updatePlayerCount()
-        local players = game.Players:GetPlayers()
-        playerCountLabel.Text = "Player Count: " .. #players
-    end
-
-    -- Initially update the player count
-    updatePlayerCount()
-
-    -- Connect a function to fire whenever a player joins or leaves
-    game.Players.PlayerAdded:Connect(updatePlayerCount)
-    game.Players.PlayerRemoving:Connect(updatePlayerCount)
-
+local function update(input)
+    local delta = input.Position - dragStart
+    Frame.Position = UDim2.new(startPos.X.Scale, startPos.X.Offset + delta.X, startPos.Y.Scale, startPos.Y.Offset + delta.Y)
 end
-coroutine.wrap(TGYL_fake_script)()
 
-local function BNQNGFT_fake_script() -- ScreenGui.Toggle 
-    local script = Instance.new('LocalScript', ScreenGui)
+Frame.InputBegan:Connect(function(input)
+    if input.UserInputType == Enum.UserInputType.MouseButton1 then
+        dragging = true
+        dragStart = input.Position
+        startPos = Frame.Position
 
-    local Player = game:GetService("Players").LocalPlayer
-    local Mouse = Player:GetMouse()
-    local MainFrame = script.Parent.SA
-    local keybind = "p"
-
-    Mouse.KeyDown:Connect(function(key)
-        if key == keybind then
-            if MainFrame.Visible == false then
-                MainFrame.Visible = true
-            else
-                MainFrame.Visible = false
+        input.Changed:Connect(function()
+            if input.UserInputState == Enum.UserInputState.End then
+                dragging = false
             end
-        end
-    end)
-end
-coroutine.wrap(BNQNGFT_fake_script)()
-
-SilentAim.MouseButton1Down:connect(function()
-    function getplrsname()
-        for i,v in pairs(game:GetChildren()) do
-            if v.ClassName == "Players" then
-                return v.Name
-            end
-        end
+        end)
     end
-    local players = getplrsname()
-    local plr = game[players].LocalPlayer
-    coroutine.resume(coroutine.create(function()
-        while  wait(1) do
-            coroutine.resume(coroutine.create(function()
-                for _,v in pairs(game[players]:GetPlayers()) do
-                    if v.Name ~= plr.Name and v.Character then
-                        v.Character.RightUpperLeg.CanCollide = false
-                        v.Character.RightUpperLeg.Transparency = 10
-                        v.Character.RightUpperLeg.Size = Vector3.new(13,13,13)
+end)
 
-                        v.Character.LeftUpperLeg.CanCollide = false
-                        v.Character.LeftUpperLeg.Transparency = 10
-                        v.Character.LeftUpperLeg.Size = Vector3.new(13,13,13)
+Frame.InputChanged:Connect(function(input)
+    if input.UserInputType == Enum.UserInputType.MouseMovement then
+        dragInput = input
+    end
+end)
 
-                        v.Character.HeadHB.CanCollide = false
-                        v.Character.HeadHB.Transparency = 10
-                        v.Character.HeadHB.Size = Vector3.new(13,13,13)
+UIS.InputChanged:Connect(function(input)
+    if input == dragInput and dragging then
+        update(input)
+    end
+end)
 
-                        v.Character.HumanoidRootPart.CanCollide = false
-                        v.Character.HumanoidRootPart.Transparency = 10
-                        v.Character.HumanoidRootPart.Size = Vector3.new(13,13,13)
+-- Event connections:
 
-                    end
-                end
-            end))
+StartAiming.MouseButton1Click:Connect(function()
+    local username = PlrToAimAt.Text
+    if username == "" then
+        return -- Don't proceed if the player name field is empty
+    end
+    local CC = game.Workspace.CurrentCamera
+    local AimAt = makeAimPart(username)
+    CC.CameraType = Enum.CameraType.Scriptable
+    local fixedCam = false
+    
+    while true do
+        if not fixedCam then
+            local player = game.Players.LocalPlayer
+            if player.Character and player.Character:FindFirstChild("Humanoid") then
+                local cam = workspace.CurrentCamera
+                cam.CameraSubject = player.Character.Humanoid
+                cam.CameraType = Enum.CameraType.Custom
+            end
+            fixedCam = true
+        else
+            CC.CFrame = CFrame.new(CC.CFrame.p, AimAt.CFrame.p)
+            local aimPart = game.Workspace[username].AimPart
+            local qb = game.Players.LocalPlayer.Character
+            local wr = game.Workspace[username]
+            local mag = (qb.HumanoidRootPart.Position - wr.HumanoidRootPart.Position).magnitude
+            local set = mag / 6
+            local x = wr.Head.Position.X
+            local y = wr.Head.Position.Y + set
+            local z = wr.Head.Position.Z
+            aimPart.Position = Vector3.new(x, y, z)
         end
-    end))
+        wait()
+    end
+end)
+
+StopAiming.MouseButton1Click:Connect(function()
+    local CC = game.Workspace.CurrentCamera
+    CC:Destroy()
+    wait(0.1)
+    local player = game.Players.LocalPlayer
+    if player.Character and player.Character:FindFirstChild("Humanoid") then
+        local cam = workspace.CurrentCamera
+        cam.CameraSubject = player.Character.Humanoid
+        cam.CameraType = Enum.CameraType.Custom
+    end
+end)
+
+FixCamera.MouseButton1Click:Connect(function()
+    local player = game.Players.LocalPlayer
+    if player.Character and player.Character:FindFirstChild("Humanoid") then
+        local cam = workspace.CurrentCamera
+        cam.CameraSubject = player.Character.Humanoid
+        cam.CameraType = Enum.CameraType.Custom
+    end
 end)
