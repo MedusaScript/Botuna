@@ -3821,7 +3821,7 @@ getgenv().HyperCahayas = function(p)
 local Library = Update:Window("Brutality Premium","",Enum.KeyCode.RightControl);
 
 local NguyenTien = Library:AddTab("Information","16058297648")
-local Main = Library:AddTab("Farming","18477352665")
+local Main = Library:AddTab("Farm-Set","18477352665")
 local Z = Library:AddTab("Sea Event","18477352665")
 local M = Library:AddTab("Quest Item","18477473610")
 local Ss = Library:AddTab("Statistic","18477368667")
@@ -5295,8 +5295,8 @@ end)
         end)
 end)
 
-Mirragecheck = M:AddLabel("")
-M:AddToggle("Teleport Mystic Island",_G.AutoMysticIsland,function(value)
+Mirragecheck = Z:AddLabel("")
+Z:AddToggle("Teleport Mystic Island",_G.AutoMysticIsland,function(value)
         _G.AutoMysticIsland = value
         StopTween(_G.AutoMysticIsland)
         end)
@@ -5316,7 +5316,7 @@ M:AddToggle("Teleport Mystic Island",_G.AutoMysticIsland,function(value)
                 end)
             end
 
-            M:AddButton("Teleport Advanced Fruit Dealer", function()
+            Z:AddButton("Teleport Advanced Fruit Dealer", function()
                 TweenNpc()
                 end)
 
@@ -5338,7 +5338,7 @@ M:AddToggle("Teleport Mystic Island",_G.AutoMysticIsland,function(value)
                     end
 
 
-    M:AddToggle("Summon Mystic Island",_G.dao,function(state)
+    Z:AddToggle("Summon Mystic Island",_G.dao,function(state)
     if state then
         _G.dao = true
     else
@@ -5476,7 +5476,7 @@ spawn(function()
 end)
 
 
-M:AddToggle("Teleport Blue Gear",_G.TweenMGear,function(value)
+Z:AddToggle("Teleport Blue Gear",_G.TweenMGear,function(value)
 _G.TweenMGear = value
 StopTween(_G.TweenMGear)
 end)
