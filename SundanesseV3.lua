@@ -7773,11 +7773,11 @@ spawn(function()
                     local targetModel = workspace:FindFirstChild(targetModelName)
 
                     if targetModel then
-                        local speed = 100
+                        local speed = 0.15
                         local forwardDirection = targetModel.PrimaryPart.CFrame.lookVector
                         local targetPosition = targetModel.PrimaryPart.Position + forwardDirection * 10
                         
-                        while (targetModel.PrimaryPart.Position - targetPosition).Magnitude > 10 do
+                        while (targetModel.PrimaryPart.Position - targetPosition).Magnitude > 100 do
                             targetModel:SetPrimaryPartCFrame(targetModel.PrimaryPart.CFrame + forwardDirection * speed)
                             task.wait()
                             if not _G.BiirTrax then
@@ -13230,14 +13230,13 @@ end)
     game:GetService("TeleportService"):TeleportToPlaceInstance(game.placeId,_G.Job, game.Players.LocalPlayer)
     end)
 
-
-    NguyenTien:AddSeperator("JOIN WEBHOOK NOTIFY")
-    NguyenTien:AddButton("Discord Server",function()
+    Misc:AddSeperator("JOIN WEBHOOK NOTIFY")
+    Misc:AddButton("Discord Server",function()
     setclipboard("https://discord.gg/medusa-script-1182005198206545941")
     Notif.New("Copying To Clipboard Done", 3)
 end)
 	
-	
+
     Misc:AddSeperator("Misc")
     
     Misc:AddButton("Open Devil Shop",function()
