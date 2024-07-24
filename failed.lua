@@ -300,7 +300,7 @@ function Update:Window(text,logo,keybind)
     local yoo = string.gsub(tostring(keybind),"Enum.KeyCode.","")
 
     local THUNDERZHUB = Instance.new("ScreenGui")
-    THUNDERZHUB.Name = "BrutalityHUB"
+    THUNDERZHUB.Name = "THUNDERZHUB"
     THUNDERZHUB.Parent = game.CoreGui
     THUNDERZHUB.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 
@@ -367,7 +367,7 @@ function Update:Window(text,logo,keybind)
     Ping.Position = UDim2.new(0.28, 0,0.074, 0)
     Ping.Size = UDim2.new(0, 225, 0, 25)
     Ping.Font = Enum.Font.GothamSemibold
-    Ping.Text = "BRUTALITY V3 | By Medusa Script                 [SCRIPT PREMIUM]"
+    Ping.Text = "BRUTALITY V3| Made By Medusa Script         [SCRIPT PREMIUM]"
     Ping.TextColor3 = Color3.fromRGB(9, 255, 0)
     Ping.TextSize = 14.000
     Ping.TextXAlignment = Enum.TextXAlignment.Left
@@ -3713,7 +3713,7 @@ getgenv().HyperCahayas = function(p)
     
     spawn(function()
     game:GetService("RunService").Heartbeat:Connect(function()
-        if _G.AutoAdvanceDungeon or _G.AutoDoughtBoss or _G.Auto_DungeonMobAura or _G.AutoFarmChest or _G.AutoFarmBossHallow or _G.AutoFarmSwanGlasses or _G.AutoLongSword or _G.AutoBlackSpikeycoat or _G.AutoElectricClaw or _G.AutoFarmGunMastery or _G.AutoHolyTorch or _G.AutoLawRaid or _G.AutoFarmBoss or _G.AutoTwinHooks or _G.AutoOpenSwanDoor or _G.AutoDragon_Trident or _G.AutoSaber or _G.NOCLIP or _G.AutoFarmFruitMastery or _G.AutoFarmGunMastery or _G.TeleportIsland or _G.Auto_EvoRace or _G.AutoFarmAllMsBypassType or _G.AutoObservationv2 or _G.AutoMusketeerHat or _G.AutoEctoplasm or _G.AutoRengoku or _G.Auto_Rainbow_Haki or _G.AutoObservation or _G.AutoDarkDagger or _G.AutoSpawnRip or _G.Safe_Mode or _G.MasteryFruit or _G.AutoBudySword or _G.AutoOderSword or _G.AutoBounty or _G.AutoAllBoss or _G.Auto_Bounty or _G.AutoSharkman or _G.Auto_Mastery_Fruit or _G.Auto_Mastery_Gun or _G.Auto_Dungeon or _G.Auto_Cavender or _G.Auto_Pole or _G.Auto_Kill_Ply or _G.Auto_Factory or _G.AutoSecondSea or _G.TeleportPly or _G.AutoBartilo or _G.Auto_DarkBoss or _G.GrabChest or _G.AutoFarmBounty or _G.Holy_Torch or _G.AutoFarm or _G.Clip or _G.AutoElitehunter or _G.AutoThirdSea or _G.Auto_Bone or _G.Autoheart or _G.Autodoughking or _G.AutoFarmMaterial or _G.AutoNevaSoulGuitar or _G.Auto_Dragon_Trident or _G.Autotushita or _G.d or _G.Autowaden or _G.Autogay or _G.Autopole or _G.Autosaw or _G.AutoObservationHakiV2 or _G.AutoFarmNearest or AutoFarmChest or _G.AutoCarvender or _G.AutoTwinHook or AutoMobAura or _G.Tweenfruit or _G.AutoKai or _G.TeleportNPC or _G.Leather or _G.Auto_Wing or _G.Umm or _G.Terrorshark or _G.Piranha or _G.Shark or _G.Makori_gay or Radioactive or Fish or Gunpowder or Dragon_Scale or Cocoafarm or Scrap or MiniHee or _G.AutoFarmSeabaest or Auto_Cursed_Dual_Katana or _G.AutoFarmMob or _G.AutoMysticIsland or _G.AutoFarmDungeon or _G.AutoRaidPirate or _G.AutoQuestRace or _G.TweenMGear or getgenv().AutoFarm or _G.AutoPlayerHunter or _G.AutoFactory or Grab_Chest or _G.KillAfterTrials or _G.FishBoat then
+        if _G.AutoAdvanceDungeon or _G.AutoDoughtBoss or _G.Auto_DungeonMobAura or _G.AutoFarmChest or _G.AutoFarmBossHallow or _G.AutoFarmSwanGlasses or _G.AutoLongSword or _G.AutoBlackSpikeycoat or _G.AutoElectricClaw or _G.AutoFarmGunMastery or _G.AutoHolyTorch or _G.AutoLawRaid or _G.AutoFarmBoss or _G.AutoTwinHooks or _G.AutoOpenSwanDoor or _G.AutoDragon_Trident or _G.AutoSaber or _G.NOCLIP or _G.AutoFarmFruitMastery or _G.AutoFarmGunMastery or _G.TeleportIsland or _G.Auto_EvoRace or _G.AutoFarmAllMsBypassType or _G.AutoObservationv2 or _G.AutoMusketeerHat or _G.AutoEctoplasm or _G.AutoRengoku or _G.Auto_Rainbow_Haki or _G.AutoObservation or _G.AutoDarkDagger or _G.AutoSpawnRip or _G.Safe_Mode or _G.MasteryFruit or _G.AutoBudySword or _G.AutoOderSword or _G.AutoBounty or _G.AutoAllBoss or _G.Auto_Bounty or _G.AutoSharkman or _G.Auto_Mastery_Fruit or _G.Auto_Mastery_Gun or _G.Auto_Dungeon or _G.Auto_Cavender or _G.Auto_Pole or _G.Auto_Kill_Ply or _G.Auto_Factory or _G.AutoSecondSea or _G.TeleportPly or _G.AutoBartilo or _G.Auto_DarkBoss or _G.GrabChest or _G.AutoFarmBounty or _G.Holy_Torch or _G.AutoFarm or _G.Clip or _G.AutoElitehunter or _G.AutoThirdSea or _G.Auto_Bone or _G.Autoheart or _G.Autodoughking or _G.AutoFarmMaterial or _G.AutoNevaSoulGuitar or _G.Auto_Dragon_Trident or _G.Autotushita or _G.d or _G.Autowaden or _G.Autogay or _G.Autopole or _G.Autosaw or _G.AutoObservationHakiV2 or _G.AutoFarmNearest or AutoFarmChest or _G.AutoCarvender or _G.AutoTwinHook or AutoMobAura or _G.Tweenfruit or _G.AutoKai or _G.TeleportNPC or _G.Leather or _G.Auto_Wing or _G.Umm or _G.bjirTerrorshark or _G.bjirPiranha or _G.bjirShark or _G.Makori_gay or Radioactive or Fish or Gunpowder or Dragon_Scale or Cocoafarm or Scrap or MiniHee or _G.AutoFarmSeabaest or Auto_Cursed_Dual_Katana or _G.AutoFarmMob or _G.AutoMysticIsland or _G.AutoFarmDungeon or _G.AutoRaidPirate or _G.AutoQuestRace or _G.TweenMGear or getgenv().AutoFarm or _G.AutoPlayerHunter or _G.AutoFactory or Grab_Chest or _G.KillAfterTrials or _G.bjirFishBoat then
             if not game:GetService("Workspace"):FindFirstChild("LOL") then
                 local LOL = Instance.new("Part")
                 LOL.Name = "LOL"
@@ -3735,7 +3735,7 @@ getgenv().HyperCahayas = function(p)
     spawn(function()
         pcall(function()
             while wait() do
-                if _G.AutoAdvanceDungeon or _G.AutoDoughtBoss or _G.Auto_DungeonMobAura or _G.AutoFarmChest or _G.AutoFarmBossHallow or _G.AutoFarmSwanGlasses or _G.AutoLongSword or _G.AutoBlackSpikeycoat or _G.AutoElectricClaw or _G.AutoFarmGunMastery or _G.AutoHolyTorch or _G.AutoLawRaid or _G.AutoFarmBoss or _G.AutoTwinHooks or _G.AutoOpenSwanDoor or _G.AutoDragon_Trident or _G.AutoSaber or _G.AutoFarmFruitMastery or _G.AutoFarmGunMastery or _G.TeleportIsland or _G.Auto_EvoRace or _G.AutoFarmAllMsBypassType or _G.AutoObservationv2 or _G.AutoMusketeerHat or _G.AutoEctoplasm or _G.AutoRengoku or _G.Auto_Rainbow_Haki or _G.AutoObservation or _G.AutoSpawnRip or _G.AutoDarkDagger or _G.Safe_Mode or _G.MasteryFruit or _G.AutoBudySword or _G.AutoOderSword or _G.AutoBounty or _G.AutoAllBoss or _G.Auto_Bounty or _G.AutoSharkman or _G.Auto_Mastery_Fruit or _G.Auto_Mastery_Gun or _G.Auto_Dungeon or _G.Auto_Cavender or _G.Auto_Pole or _G.Auto_Kill_Ply or _G.Auto_Factory or _G.AutoSecondSea or _G.TeleportPly or _G.AutoBartilo or _G.Auto_DarkBoss or _G.GrabChest or _G.AutoFarmBounty or _G.Holy_Torch or _G.AutoFarm or _G.Clip or FarmBoss or _G.AutoElitehunter or _G.AutoThirdSea or _G.Auto_Bone or _G.Autoheart or _G.Autodoughking or _G.AutoFarmMaterial or _G.AutoNevaSoulGuitar or _G.Auto_Dragon_Trident or _G.Autotushita or _G.d or _G.Autowaden or _G.Autogay or _G.Autopole or _G.Autosaw or _G.AutoObservationHakiV2 or _G.AutoFarmNearest or AutoFarmChest or _G.AutoCarvender or _G.AutoTwinHook or AutoMobAura or _G.Tweenfruit or _G.TeleportNPC or _G.Leather or _G.Auto_Wing or _G.Umm or _G.Terrorshark or _G.Piranha or _G.Shark or _G.Makori_gay or Radioactive or Fish or Gunpowder or Dragon_Scale or Cocoafarm or Scrap or MiniHee or _G.AutoFarmSeabaest or Auto_Cursed_Dual_Katana or _G.AutoFarmMob or _G.AutoMysticIsland or _G.AutoFarmDungeon or _G.AutoRaidPirate or _G.AutoQuestRace or _G.TweenMGear or getgenv().AutoFarm or _G.AutoPlayerHunter or _G.AutoFactory or Grab_Chest == true or _G.KillAfterTrials or _G.AutoSeaBest or _G.KillGhostShip or _G.AutoAlternatif or _G.dao or _G.FishBoat or _G.GhostShipRaidbruh or _G.BiirTrax or _G.BiirAnchor or _G.Anchor or _G.AutoFarm then
+                if _G.AutoAdvanceDungeon or _G.AutoDoughtBoss or _G.Auto_DungeonMobAura or _G.AutoFarmChest or _G.AutoFarmBossHallow or _G.AutoFarmSwanGlasses or _G.AutoLongSword or _G.AutoBlackSpikeycoat or _G.AutoElectricClaw or _G.AutoFarmGunMastery or _G.AutoHolyTorch or _G.AutoLawRaid or _G.AutoFarmBoss or _G.AutoTwinHooks or _G.AutoOpenSwanDoor or _G.AutoDragon_Trident or _G.AutoSaber or _G.AutoFarmFruitMastery or _G.AutoFarmGunMastery or _G.TeleportIsland or _G.Auto_EvoRace or _G.AutoFarmAllMsBypassType or _G.AutoObservationv2 or _G.AutoMusketeerHat or _G.AutoEctoplasm or _G.AutoRengoku or _G.Auto_Rainbow_Haki or _G.AutoObservation or _G.AutoSpawnRip or _G.AutoDarkDagger or _G.Safe_Mode or _G.MasteryFruit or _G.AutoBudySword or _G.AutoOderSword or _G.AutoBounty or _G.AutoAllBoss or _G.Auto_Bounty or _G.AutoSharkman or _G.Auto_Mastery_Fruit or _G.Auto_Mastery_Gun or _G.Auto_Dungeon or _G.Auto_Cavender or _G.Auto_Pole or _G.Auto_Kill_Ply or _G.Auto_Factory or _G.AutoSecondSea or _G.TeleportPly or _G.AutoBartilo or _G.Auto_DarkBoss or _G.GrabChest or _G.AutoFarmBounty or _G.Holy_Torch or _G.AutoFarm or _G.Clip or FarmBoss or _G.AutoElitehunter or _G.AutoThirdSea or _G.Auto_Bone or _G.Autoheart or _G.Autodoughking or _G.AutoFarmMaterial or _G.AutoNevaSoulGuitar or _G.Auto_Dragon_Trident or _G.Autotushita or _G.d or _G.Autowaden or _G.Autogay or _G.Autopole or _G.Autosaw or _G.AutoObservationHakiV2 or _G.AutoFarmNearest or AutoFarmChest or _G.AutoCarvender or _G.AutoTwinHook or AutoMobAura or _G.Tweenfruit or _G.TeleportNPC or _G.Leather or _G.Auto_Wing or _G.Umm or _G.bjirTerrorshark or _G.bjirPiranha or _G.bjirShark or _G.Makori_gay or Radioactive or Fish or Gunpowder or Dragon_Scale or Cocoafarm or Scrap or MiniHee or _G.AutoFarmSeabaest or Auto_Cursed_Dual_Katana or _G.AutoFarmMob or _G.AutoMysticIsland or _G.AutoFarmDungeon or _G.AutoRaidPirate or _G.AutoQuestRace or _G.TweenMGear or getgenv().AutoFarm or _G.AutoPlayerHunter or _G.AutoFactory or Grab_Chest == true or _G.KillAfterTrials or _G.AutoSeaBest or _G.KillGhostShip or _G.AutoAlternatif or _G.dao or _G.bjirFishBoat or _G.bjirGhostShipRaidbruh or _G.BiirTrax or _G.BiirAnchor or _G.BjirAnchorCuy or _G.AutoFarm then
                     if not game:GetService("Players").LocalPlayer.Character.HumanoidRootPart:FindFirstChild("BodyClip") then
                         local Noclip = Instance.new("BodyVelocity")
                         Noclip.Name = "BodyClip"
@@ -3751,7 +3751,7 @@ getgenv().HyperCahayas = function(p)
     spawn(function()
         pcall(function()
             game:GetService("RunService").Stepped:Connect(function()
-                if _G.AutoAdvanceDungeon or _G.AutoDoughtBoss or _G.Auto_DungeonMobAura or _G.AutoFarmChest or _G.AutoFarmBossHallow or _G.AutoFarmSwanGlasses or _G.AutoLongSword or _G.AutoBlackSpikeycoat or _G.AutoElectricClaw or _G.AutoFarmGunMastery or _G.AutoHolyTorch or _G.AutoLawRaid or _G.AutoFarmBoss or _G.AutoTwinHooks or _G.AutoOpenSwanDoor or _G.AutoDragon_Trident or _G.AutoSaber or _G.NOCLIP or _G.AutoFarmFruitMastery or _G.AutoFarmGunMastery or _G.TeleportIsland or _G.Auto_EvoRace or _G.AutoFarmAllMsBypassType or _G.AutoObservationv2 or _G.AutoMusketeerHat or _G.AutoEctoplasm or _G.AutoRengoku or _G.Auto_Rainbow_Haki or _G.AutoObservation or _G.AutoSpawnRip or _G.AutoDarkDagger or _G.Safe_Mode or _G.MasteryFruit or _G.AutoBudySword or _G.AutoOderSword or _G.AutoBounty or _G.AutoAllBoss or _G.Auto_Bounty or _G.AutoSharkman or _G.Auto_Mastery_Fruit or _G.Auto_Mastery_Gun or _G.Auto_Dungeon or _G.Auto_Cavender or _G.Auto_Pole or _G.Auto_Kill_Ply or _G.Auto_Factory or _G.AutoSecondSea or _G.TeleportPly or _G.AutoBartilo or _G.Auto_DarkBoss or _G.GrabChest or _G.AutoFarmBounty or _G.Holy_Torch or _G.AutoFarm or _G.Clip or _G.AutoElitehunter or _G.AutoThirdSea or _G.Auto_Bone or _G.Autoheart or _G.Autodoughking or _G.AutoFarmMaterial or _G.AutoNevaSoulGuitar or _G.Auto_Dragon_Trident or _G.Autotushita or _G.Autowaden or _G.Autogay or _G.Autopole or _G.Autosaw or _G.AutoObservationHakiV2 or _G.AutoFarmNearest or AutoFarmChest or _G.AutoCarvender or _G.AutoTwinHook or AutoMobAura or _G.Tweenfruit or _G.TeleportNPC or _G.AutoKai or _G.Leather or _G.Auto_Wing or _G.Umm or _G.Terrorshark or _G.Piranha or _G.Shark or _G.Makori_gay or Radioactive or Fish or Gunpowder or Dragon_Scale or Cocoafarm or Scrap or MiniHee or _G.AutoFarmSeabaest or Auto_Cursed_Dual_Katana or _G.AutoFarmMob or _G.AutoMysticIsland or _G.AutoFarmDungeon or _G.AutoRaidPirate or _G.AutoQuestRace or _G.TweenMGear or getgenv().AutoFarm or _G.AutoPlayerHunter or _G.AutoFactory or Grab_Chest == true or _G.KillAfterTrials or _G.AutoSeaBest or _G.KillGhostShip or _G.AutoAlternatif or _G.dao or _G.FishBoat or _G.GhostShipRaidbruh or _G.BiirTrax or _G.BiirAnchor or _G.Anchor or _G.AutoFarm then
+                if _G.AutoAdvanceDungeon or _G.AutoDoughtBoss or _G.Auto_DungeonMobAura or _G.AutoFarmChest or _G.AutoFarmBossHallow or _G.AutoFarmSwanGlasses or _G.AutoLongSword or _G.AutoBlackSpikeycoat or _G.AutoElectricClaw or _G.AutoFarmGunMastery or _G.AutoHolyTorch or _G.AutoLawRaid or _G.AutoFarmBoss or _G.AutoTwinHooks or _G.AutoOpenSwanDoor or _G.AutoDragon_Trident or _G.AutoSaber or _G.NOCLIP or _G.AutoFarmFruitMastery or _G.AutoFarmGunMastery or _G.TeleportIsland or _G.Auto_EvoRace or _G.AutoFarmAllMsBypassType or _G.AutoObservationv2 or _G.AutoMusketeerHat or _G.AutoEctoplasm or _G.AutoRengoku or _G.Auto_Rainbow_Haki or _G.AutoObservation or _G.AutoSpawnRip or _G.AutoDarkDagger or _G.Safe_Mode or _G.MasteryFruit or _G.AutoBudySword or _G.AutoOderSword or _G.AutoBounty or _G.AutoAllBoss or _G.Auto_Bounty or _G.AutoSharkman or _G.Auto_Mastery_Fruit or _G.Auto_Mastery_Gun or _G.Auto_Dungeon or _G.Auto_Cavender or _G.Auto_Pole or _G.Auto_Kill_Ply or _G.Auto_Factory or _G.AutoSecondSea or _G.TeleportPly or _G.AutoBartilo or _G.Auto_DarkBoss or _G.GrabChest or _G.AutoFarmBounty or _G.Holy_Torch or _G.AutoFarm or _G.Clip or _G.AutoElitehunter or _G.AutoThirdSea or _G.Auto_Bone or _G.Autoheart or _G.Autodoughking or _G.AutoFarmMaterial or _G.AutoNevaSoulGuitar or _G.Auto_Dragon_Trident or _G.Autotushita or _G.Autowaden or _G.Autogay or _G.Autopole or _G.Autosaw or _G.AutoObservationHakiV2 or _G.AutoFarmNearest or AutoFarmChest or _G.AutoCarvender or _G.AutoTwinHook or AutoMobAura or _G.Tweenfruit or _G.TeleportNPC or _G.AutoKai or _G.Leather or _G.Auto_Wing or _G.Umm or _G.bjirTerrorshark or _G.bjirPiranha or _G.bjirShark or _G.Makori_gay or Radioactive or Fish or Gunpowder or Dragon_Scale or Cocoafarm or Scrap or MiniHee or _G.AutoFarmSeabaest or Auto_Cursed_Dual_Katana or _G.AutoFarmMob or _G.AutoMysticIsland or _G.AutoFarmDungeon or _G.AutoRaidPirate or _G.AutoQuestRace or _G.TweenMGear or getgenv().AutoFarm or _G.AutoPlayerHunter or _G.AutoFactory or Grab_Chest == true or _G.KillAfterTrials or _G.AutoSeaBest or _G.KillGhostShip or _G.AutoAlternatif or _G.dao or _G.bjirFishBoat or _G.bjirGhostShipRaidbruh or _G.BiirTrax or _G.BiirAnchor or _G.BjirAnchorCuy or _G.AutoFarm then
                     for _, v in pairs(game:GetService("Players").LocalPlayer.Character:GetDescendants()) do
                         if v:IsA("BasePart") then
                             v.CanCollide = false    
@@ -3764,7 +3764,7 @@ getgenv().HyperCahayas = function(p)
     
     spawn(function()
         while wait() do
-            if _G.AutoDoughtBoss or _G.Auto_DungeonMobAura or _G.AutoFarmChest or _G.AutoFarmBossHallow or _G.AutoFarmSwanGlasses or _G.AutoLongSword or _G.AutoBlackSpikeycoat or _G.AutoElectricClaw or _G.AutoFarmGunMastery or _G.AutoHolyTorch or _G.AutoLawRaid or _G.AutoFarmBoss or _G.AutoTwinHooks or _G.AutoOpenSwanDoor or _G.AutoDragon_Trident or _G.AutoSaber or _G.NOCLIP or _G.AutoFarmFruitMastery or _G.AutoFarmGunMastery or _G.TeleportIsland or _G.Auto_EvoRace or _G.AutoFarmAllMsBypassType or _G.AutoObservationv2 or _G.AutoMusketeerHat or _G.AutoEctoplasm or _G.AutoRengoku or _G.Auto_Rainbow_Haki or _G.AutoObservation or _G.AutoSpawnRip or _G.AutoDarkDagger or _G.Safe_Mode or _G.MasteryFruit or _G.AutoBudySword or _G.AutoOderSword or _G.AutoAllBoss or _G.Auto_Bounty or _G.AutoSharkman or _G.Auto_Mastery_Fruit or _G.Auto_Mastery_Gun or _G.Auto_Dungeon or _G.Auto_Cavender or _G.Auto_Pole or _G.Auto_Kill_Ply or _G.Auto_Factory or _G.AutoSecondSea or _G.TeleportPly or _G.AutoBartilo or _G.Auto_DarkBoss or _G.AutoFarm or _G.Clip or _G.AutoElitehunter or _G.AutoThirdSea or _G.Auto_Bone or _G.Autoheart or _G.Autodoughking or _G.d or _G.Autowaden or _G.Autogay or _G.AutoObservationHakiV2 or _G.AutoFarmMaterial or _G.AutoFarmNearest or _G.AutoCarvender or _G.AutoTwinHook or AutoMobAura or _G.Leather or _G.Auto_Wing or _G.Umm or _G.Terrorshark or _G.Piranha or _G.Shark or _G.Makori_gay or Radioactive or Fish or Gunpowder or Dragon_Scale or Cocoafarm or Scrap or MiniHee or _G.AutoFarmSeabaest or Auto_Cursed_Dual_Katana or _G.AutoFarmMob or _G.AutoRaidPirate or getgenv().AutoFarm or _G.AutoPlayerHunter or _G.AutoFactory == true or _G.AutoSeaBest or _G.KillGhostShip or _G.AutoAlternatif or _G.dao or _G.FishBoat or _G.GhostShipRaidbruh or _G.BiirTrax or _G.BiirAnchor or _G.Anchor or _G.AutoFarm then
+            if _G.AutoDoughtBoss or _G.Auto_DungeonMobAura or _G.AutoFarmChest or _G.AutoFarmBossHallow or _G.AutoFarmSwanGlasses or _G.AutoLongSword or _G.AutoBlackSpikeycoat or _G.AutoElectricClaw or _G.AutoFarmGunMastery or _G.AutoHolyTorch or _G.AutoLawRaid or _G.AutoFarmBoss or _G.AutoTwinHooks or _G.AutoOpenSwanDoor or _G.AutoDragon_Trident or _G.AutoSaber or _G.NOCLIP or _G.AutoFarmFruitMastery or _G.AutoFarmGunMastery or _G.TeleportIsland or _G.Auto_EvoRace or _G.AutoFarmAllMsBypassType or _G.AutoObservationv2 or _G.AutoMusketeerHat or _G.AutoEctoplasm or _G.AutoRengoku or _G.Auto_Rainbow_Haki or _G.AutoObservation or _G.AutoSpawnRip or _G.AutoDarkDagger or _G.Safe_Mode or _G.MasteryFruit or _G.AutoBudySword or _G.AutoOderSword or _G.AutoAllBoss or _G.Auto_Bounty or _G.AutoSharkman or _G.Auto_Mastery_Fruit or _G.Auto_Mastery_Gun or _G.Auto_Dungeon or _G.Auto_Cavender or _G.Auto_Pole or _G.Auto_Kill_Ply or _G.Auto_Factory or _G.AutoSecondSea or _G.TeleportPly or _G.AutoBartilo or _G.Auto_DarkBoss or _G.AutoFarm or _G.Clip or _G.AutoElitehunter or _G.AutoThirdSea or _G.Auto_Bone or _G.Autoheart or _G.Autodoughking or _G.d or _G.Autowaden or _G.Autogay or _G.AutoObservationHakiV2 or _G.AutoFarmMaterial or _G.AutoFarmNearest or _G.AutoCarvender or _G.AutoTwinHook or AutoMobAura or _G.Leather or _G.Auto_Wing or _G.Umm or _G.bjirTerrorshark or _G.bjirPiranha or _G.bjirShark or _G.Makori_gay or Radioactive or Fish or Gunpowder or Dragon_Scale or Cocoafarm or Scrap or MiniHee or _G.AutoFarmSeabaest or Auto_Cursed_Dual_Katana or _G.AutoFarmMob or _G.AutoRaidPirate or getgenv().AutoFarm or _G.AutoPlayerHunter or _G.AutoFactory == true or _G.AutoSeaBest or _G.KillGhostShip or _G.AutoAlternatif or _G.dao or _G.bjirFishBoat or _G.bjirGhostShipRaidbruh or _G.BiirTrax or _G.BiirAnchor or _G.BjirAnchorCuy or _G.AutoFarm then
                 pcall(function()
                     game:GetService("ReplicatedStorage").Remotes.CommE:FireServer("Ken",true)
                 end)
@@ -3818,41 +3818,40 @@ getgenv().HyperCahayas = function(p)
     end)
     
 
-local Library = Update:Window("Brutality Premium","",Enum.KeyCode.RightControl);
+local Library = Update:Window("Bstory Premium","",Enum.KeyCode.RightControl);
 
-local NguyenTien = Library:AddTab("Information","16058297648")
-local Main = Library:AddTab("Farming","18477352665")
-local M = Library:AddTab("Quest Item","18477473610")
-local Ss = Library:AddTab("Statistic","18477368667")
-local RaceV4 = Library:AddTab("Trial V4","18477916271")
-local P = Library:AddTab("Bounty","18492098759")
-local R = Library:AddTab("Auto Raid","18491947999")
-local T = Library:AddTab("Teleport","18477347703")
-local S = Library:AddTab("Shop Dealer","18477410455")
-local D = Library:AddTab("Devil Fruit","18477363100")
-local Misc = Library:AddTab("Setting","18477908150")
---- Nama toggle ui
+local NguyenTien = Library:AddTab("Information","4483345998")
+local Main = Library:AddTab("Main","4483345998")
+local M = Library:AddTab("Item","4483345998")
+local Ss = Library:AddTab("Stats","4483345998")
+local RaceV4 = Library:AddTab("Race V4","4483345998")
+local P = Library:AddTab("PVP","4483345998")
+local R = Library:AddTab("Dungeon","4483345998")
+local T = Library:AddTab("Teleport","4483345998")
+local S = Library:AddTab("Shop","4483345998")
+local D = Library:AddTab("Devil Fruit","4483345998")
+local Misc = Library:AddTab("Misc","4483345998")
+--- ThÃ´ng Tin
 NguyenTien:AddSeperator("Information Developer")
 NguyenTien:AddLabel("Owner: Medusa Script")
 NguyenTien:AddLabel("Support Code: BOTUNA ")
-NguyenTien:AddLabel("Design: Bocah Tua Nakal")
-NguyenTien:AddLabel("Language: English")
+NguyenTien:AddLabel("Ui: Bocah Tua Nakal")
 NguyenTien:AddLabel("If you like script brutality V3\n please subscribe to my YouTube channel")
 
 NguyenTien:AddSeperator("Join Community")
 NguyenTien:AddButton("Discord Sever",function()
-setclipboard("https://discord.gg/medusa-script-1182005198206545941")
-Notif.New("Copying To Clipboard Done", 3)
+setclipboard("https://discord.gg/medusascript")
+Notif.New("Copying To Clipboard DoneðŸŽ‰", 3)
 end)
 NguyenTien:AddButton("YouTube Medusa Script",function()
 setclipboard("www.youtube.com/@medusascriptroblox")
-Notif.New("Copying To Clipboard Done", 3)
+Notif.New("Copying To Clipboard DoneðŸŽ‰", 3)
 end)
 NguyenTien:AddButton("Instagram Official Owner",function()
 setclipboard("https://www.instagram.com/medusafrzly/")
-Notif.New("Copying To Clipboard Done", 3)
+Notif.New("Copying To Clipboard DoneðŸŽ‰", 3)
 end)
----- Teks halaman utama
+---- Trang Chá»§
 Main:AddSeperator("Farm Settings")
 
 local WeaponList = {"Melee","Sword","Fruit","Gun"}
@@ -3902,7 +3901,7 @@ task.spawn(function()
     end)
 
 local AttackList = {"0", "0.1", "0.15", "0.155", "0.16", "0.165", "0.17", "0.175", "0.18", "0.185"}
-_G.FastAttackDelay = "0.1"
+_G.FastAttackDelay = "0.175"
 Main:AddDropdown("Fast Attack Delay", AttackList,function(MakoGay)
     _G.FastAttackDelay = MakoGay
 end)
@@ -4059,7 +4058,7 @@ spawn(function()
   end
 end)
 
-Main:AddToggle("Super Fast Attack ",true,function(value)
+Main:AddToggle("Fast Attack ",true,function(value)
         _G.FastAttack = value
     end)      
 
@@ -4108,7 +4107,7 @@ Main:AddToggle("Super Fast Attack ",true,function(value)
                                                 PosMon = v.HumanoidRootPart.CFrame
                                                 TP1(v.HumanoidRootPart.CFrame * CFrame.new(PosX,PosY,PosZ))
                                                 v.HumanoidRootPart.CanCollide = false
-                                                v.Humanoid.WalkSpeed = 2
+                                                v.Humanoid.WalkSpeed = 0
                                                 v.Head.CanCollide = false
                                                 v.HumanoidRootPart.Size = Vector3.new(70,70,70)
                                                 StartMagnet = true
@@ -4141,7 +4140,7 @@ Main:AddToggle("Super Fast Attack ",true,function(value)
                                                     PosMon = v.HumanoidRootPart.CFrame
                                                     TP1(v.HumanoidRootPart.CFrame * CFrame.new(PosX,PosY,PosZ))
                                                     v.HumanoidRootPart.CanCollide = false
-                                                    v.Humanoid.WalkSpeed = 2
+                                                    v.Humanoid.WalkSpeed = 0
                                                     v.Head.CanCollide = false
                                                     v.HumanoidRootPart.Size = Vector3.new(70,70,70)
                                                     StartMagnet = true
@@ -4237,7 +4236,7 @@ spawn(function()
 	end
 end)
 
-Main:AddToggle("Farm Chest Bypass | 75% Kick",false,function(vu)
+Main:AddToggle("Farm Chest Bypass | Risk Kick",false,function(vu)
 	_G.ChestBypass = vu
 end)
 
@@ -4283,11 +4282,11 @@ end)
         while wait() do
             pcall(function()
                 if string.len(game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("CakePrinceSpawner")) == 88 then
-                    MobKilled:Set("Defeat Npc : "..string.sub(game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("CakePrinceSpawner"),39,41))
+                    MobKilled:Set("Defeat : "..string.sub(game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("CakePrinceSpawner"),39,41))
                 elseif string.len(game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("CakePrinceSpawner")) == 87 then
-                    MobKilled:Set("Defeat Npc : "..string.sub(game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("CakePrinceSpawner"),39,40))
+                    MobKilled:Set("Defeat : "..string.sub(game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("CakePrinceSpawner"),39,40))
                 elseif string.len(game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("CakePrinceSpawner")) == 86 then
-                    MobKilled:Set("Defeat Npc : "..string.sub(game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("CakePrinceSpawner"),39,39))
+                    MobKilled:Set("Defeat : "..string.sub(game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("CakePrinceSpawner"),39,39))
                 else
                     MobKilled:Set("Boss Is Spawning")
                 end
@@ -4339,7 +4338,7 @@ end)
                                         AutoHaki()
                                         EquipWeapon(_G.SelectWeapon)
                                         v.HumanoidRootPart.CanCollide = false
-                                        v.Humanoid.WalkSpeed = 2
+                                        v.Humanoid.WalkSpeed = 0
                                         v.HumanoidRootPart.Size = Vector3.new(50,50,50)
                                         HyperCahaya(v.HumanoidRootPart.CFrame * CFrame.new(PosX,PosY,PosZ))
                                         game:GetService("VirtualUser"):CaptureController()
@@ -4364,7 +4363,7 @@ end)
                                                     AutoHaki()
                                                     EquipWeapon(_G.SelectWeapon)
                                                     v.HumanoidRootPart.CanCollide = false
-                                                    v.Humanoid.WalkSpeed = 2
+                                                    v.Humanoid.WalkSpeed = 0
                                                     v.Head.CanCollide = false 
                                                     v.HumanoidRootPart.Size = Vector3.new(50,50,50)
                                                     MagnetDought = true
@@ -4436,7 +4435,7 @@ end)
                                         AutoHaki()
                                         EquipWeapon(_G.SelectWeapon)
                                         v.HumanoidRootPart.CanCollide = false
-                                        v.Humanoid.WalkSpeed = 2
+                                        v.Humanoid.WalkSpeed = 0
                                         v.HumanoidRootPart.Size = Vector3.new(50,50,50)
                                         HyperCahaya(v.HumanoidRootPart.CFrame * CFrame.new(PosX,PosY,PosZ))
                                         game:GetService("VirtualUser"):CaptureController()
@@ -4536,7 +4535,7 @@ end)
                                         AutoHaki()
                                         EquipWeapon(_G.SelectWeapon)
                                         v.HumanoidRootPart.CanCollide = false
-                                        v.Humanoid.WalkSpeed = 2
+                                        v.Humanoid.WalkSpeed = 0
                                         v.HumanoidRootPart.Size = Vector3.new(80,80,80)                             
                                         HyperCahaya(v.HumanoidRootPart.CFrame * CFrame.new(PosX,PosY,PosZ))
                                         game:GetService("VirtualUser"):CaptureController()
@@ -4583,7 +4582,7 @@ spawn(function()
                                 task.wait()
                                 AutoHaki()
                                 EquipWeapon(_G.SelectWeapon)
-                                v.Humanoid.WalkSpeed = 2
+                                v.Humanoid.WalkSpeed = 0
                                 v.HumanoidRootPart.CanCollide = false
                                 v.Head.CanCollide = false
                                 v.HumanoidRootPart.Size = Vector3.new(80,80,80)
@@ -4924,7 +4923,7 @@ end)
                                                             AutoHaki()
                                                             EquipWeapon(_G.SelectWeapon)
                                                             v.HumanoidRootPart.CanCollide = false
-                                                            v.Humanoid.WalkSpeed = 2
+                                                            v.Humanoid.WalkSpeed = 0
                                                             v.Head.CanCollide = false
                                                             v.HumanoidRootPart.Size = Vector3.new(50,50,50)
                                                             v.HumanoidRootPart.CFrame = OldCFrameSecond
@@ -5001,7 +5000,7 @@ end)
                                                                                 v.HumanoidRootPart.Size = Vector3.new(80, 80, 80)
                                                                                 v.Humanoid.JumpPower = 0
                                                                                 v.HumanoidRootPart.CanCollide = false
-                                                                                v.Humanoid.WalkSpeed = 2
+                                                                                v.Humanoid.WalkSpeed = 0
                                                                                 v.Humanoid:ChangeState(11)
                                                                                 v.Humanoid:ChangeState(14)
                                                                                 v.Humanoid:ChangeState(16)
@@ -5053,7 +5052,7 @@ end)
                                                                                 v.HumanoidRootPart.Size = Vector3.new(80, 80, 80)
                                                                                 v.Humanoid.JumpPower = 0
                                                                                 v.HumanoidRootPart.CanCollide = false
-                                                                                v.Humanoid.WalkSpeed = 2
+                                                                                v.Humanoid.WalkSpeed = 0
                                                                                 v.Humanoid:ChangeState(14)
                                                                                 v.Humanoid:ChangeState(16)
                                                                                 v.Humanoid:ChangeState(11)
@@ -5144,7 +5143,7 @@ end)
                                                                                     v.HumanoidRootPart.Size = Vector3.new(80, 80, 80)
                                                                                     v.Humanoid.JumpPower = 0
                                                                                     v.HumanoidRootPart.CanCollide = false
-                                                                                    v.Humanoid.WalkSpeed = 2
+                                                                                    v.Humanoid.WalkSpeed = 0
                                                                                     v.Humanoid:ChangeState(11)
                                                                                     v.Humanoid:ChangeState(14)
                                                                                     v.Humanoid:ChangeState(16)
@@ -5202,7 +5201,7 @@ end)
                                                                             end
                                                                             v.HumanoidRootPart.Size = Vector3.new(80, 80, 80)
                                                                             v.Humanoid.JumpPower = 0
-                                                                            v.Humanoid.WalkSpeed = 2
+                                                                            v.Humanoid.WalkSpeed = 0
                                                                             v.HumanoidRootPart.CanCollide = false
                                                                             v.Humanoid:ChangeState(11)
                                                                             v.Humanoid:ChangeState(14)
@@ -5287,15 +5286,15 @@ end)
         pcall(function()
             while wait() do
     if game.Workspace._WorldOrigin.Locations:FindFirstChild('Mirage Island') then
-    Mirragecheck:Set('✅: Mystic Island Spawning')
+    Mirragecheck:Set('🌖: Mystic Island Spawning')
     else
-      Mirragecheck:Set('❌: Mystic Island Not Found ' )end
+      Mirragecheck:Set('🌏: Mystic Island Not Found ' )end
             end
         end)
 end)
 
 Mirragecheck = M:AddLabel("")
-M:AddToggle("Teleport Mystic Island",_G.AutoMysticIsland,function(value)
+M:AddToggle("Tween Mystic Island",_G.AutoMysticIsland,function(value)
         _G.AutoMysticIsland = value
         StopTween(_G.AutoMysticIsland)
         end)
@@ -5475,7 +5474,7 @@ spawn(function()
 end)
 
 
-M:AddToggle("Teleport Blue Gear",_G.TweenMGear,function(value)
+M:AddToggle("Tween Gear",_G.TweenMGear,function(value)
 _G.TweenMGear = value
 StopTween(_G.TweenMGear)
 end)
@@ -5502,7 +5501,7 @@ spawn(function()
 
     M:AddSeperator("Fighting Style")
     
-    M:AddToggle("Buy Superhuman",_G.AutoSuperhuman,function(value)
+    M:AddToggle("Taken Superhuman",_G.AutoSuperhuman,function(value)
         _G.AutoSuperhuman = value
     end)
     
@@ -5579,7 +5578,7 @@ spawn(function()
         end)
     end)
     
-    M:AddToggle("Buy DeathStep",_G.AutoDeathStep,function(value)
+    M:AddToggle("Taken DeathStep",_G.AutoDeathStep,function(value)
         _G.AutoDeathStep = value
     end)
     
@@ -5605,7 +5604,7 @@ spawn(function()
         end
     end)
     
-    M:AddToggle("Buy Sharkman Karate",_G.AutoSharkman,function(value)
+    M:AddToggle("Taken Sharkman Karate",_G.AutoSharkman,function(value)
         _G.AutoSharkman = value
     end)
     
@@ -5629,7 +5628,7 @@ spawn(function()
                                             AutoHaki()
                                             EquipWeapon(_G.SelectWeapon)
                                             v.Head.CanCollide = false
-                                            v.Humanoid.WalkSpeed = 2
+                                            v.Humanoid.WalkSpeed = 0
                                             v.HumanoidRootPart.CanCollide = false
                                             v.HumanoidRootPart.Size = Vector3.new(50,50,50)
                                             v.HumanoidRootPart.CFrame = OldCFrameShark
@@ -5653,7 +5652,7 @@ spawn(function()
         end)
     end)
     
-    M:AddToggle("Buy Electric Claw",_G.AutoElectricClaw,function(value)
+    M:AddToggle("Taken Electric Claw",_G.AutoElectricClaw,function(value)
         _G.AutoElectricClaw = value
         StopTween(_G.AutoElectricClaw)
     end)
@@ -5724,7 +5723,7 @@ spawn(function()
         end)
     end)
     
-    M:AddToggle("Buy Dragon Talon",_G.AutoDragonTalon,function(value)
+    M:AddToggle("Taken Dragon Talon",_G.AutoDragonTalon,function(value)
         _G.AutoDragonTalon = value
     end)
     
@@ -5750,7 +5749,7 @@ spawn(function()
         end
     end)
     
-    M:AddToggle("Buy GodHuman",_G.Auto_God_Human,function(value)
+    M:AddToggle("Taken GodHuman",_G.Auto_God_Human,function(value)
  _G.Auto_God_Human = value
 end)
 spawn(function()
@@ -5854,7 +5853,7 @@ spawn(function()
                                         AutoHaki()
                                         EquipWeapon(_G.SelectWeapon)
                                         v.HumanoidRootPart.CanCollide = false
-                                        v.Humanoid.WalkSpeed = 2
+                                        v.Humanoid.WalkSpeed = 0
                                         v.Head.CanCollide = false 
                                         MakoriGayMag = true
                                         PosGay = v.HumanoidRootPart.CFrame
@@ -5882,13 +5881,13 @@ spawn(function()
     end)
     
 M:AddToggle("Farm Vampire Fang",false,function(value)
-Vampire = value
-StopTween(Vampire)
+BjirVampire = value
+StopTween(BjirVampire)
 end)
 
 spawn(function()
         while wait() do
-            if Vampire and World2 then
+            if BjirVampire and World2 then
                 pcall(function()
                     if game:GetService("Workspace").Enemies:FindFirstChild("Vampire") then
                         for i,v in pairs(game:GetService("Workspace").Enemies:GetChildren()) do
@@ -5898,14 +5897,14 @@ spawn(function()
                                         AutoHaki()
                                         EquipWeapon(_G.SelectWeapon)
                                         v.HumanoidRootPart.CanCollide = false
-                                        v.Humanoid.WalkSpeed = 2
+                                        v.Humanoid.WalkSpeed = 0
                                         v.Head.CanCollide = false 
                                         MakoriGayMag = true
                                         PosGay = v.HumanoidRootPart.CFrame
                                         HyperCahaya(v.HumanoidRootPart.CFrame * CFrame.new(PosX,PosY,PosZ))
                                         game:GetService("VirtualUser"):CaptureController()
                                         game:GetService("VirtualUser"):Button1Down(Vector2.new(1280,672))
-                                    until not Vampire or not v.Parent or v.Humanoid.Health <= 0
+                                    until not BjirVampire or not v.Parent or v.Humanoid.Health <= 0
                                     MakoriGayMag = false
                                 end
                             end
@@ -5943,7 +5942,7 @@ spawn(function()
                                         AutoHaki()
                                         EquipWeapon(_G.SelectWeapon)
                                         v.HumanoidRootPart.CanCollide = false
-                                        v.Humanoid.WalkSpeed = 2
+                                        v.Humanoid.WalkSpeed = 0
                                         v.Head.CanCollide = false 
                                         StartEctoplasmMagnet = true
                                         EctoplasmMon = v.HumanoidRootPart.CFrame
@@ -5985,7 +5984,7 @@ spawn(function()
                                         AutoHaki()
                                         EquipWeapon(_G.SelectWeapon)
                                         v.HumanoidRootPart.CanCollide = false
-                                        v.Humanoid.WalkSpeed = 2
+                                        v.Humanoid.WalkSpeed = 0
                                         v.Head.CanCollide = false 
                                         MakoriGayMag = true
                                         PosGay = v.HumanoidRootPart.CFrame
@@ -6030,7 +6029,7 @@ spawn(function()
                                         AutoHaki()
                                         EquipWeapon(_G.SelectWeapon)
                                         v.HumanoidRootPart.CanCollide = false
-                                        v.Humanoid.WalkSpeed = 2
+                                        v.Humanoid.WalkSpeed = 0
                                         v.Head.CanCollide = false 
                                         MakoriGayMag = true
                                         PosGay = v.HumanoidRootPart.CFrame
@@ -6070,7 +6069,7 @@ spawn(function()
                                         AutoHaki()
                                         EquipWeapon(_G.SelectWeapon)
                                         v.HumanoidRootPart.CanCollide = false
-                                        v.Humanoid.WalkSpeed = 2
+                                        v.Humanoid.WalkSpeed = 0
                                         v.Head.CanCollide = false 
                                         MakoriGayMag = true
                                         PosGay = v.HumanoidRootPart.CFrame
@@ -6114,7 +6113,7 @@ spawn(function()
                                         AutoHaki()
                                         EquipWeapon(_G.SelectWeapon)
                                         v.HumanoidRootPart.CanCollide = false
-                                        v.Humanoid.WalkSpeed = 2
+                                        v.Humanoid.WalkSpeed = 0
                                         v.Head.CanCollide = false 
                                         MakoriGayMag = true
                                         PosGay = v.HumanoidRootPart.CFrame
@@ -6158,7 +6157,7 @@ spawn(function()
                                         AutoHaki()
                                         EquipWeapon(_G.SelectWeapon)
                                         v.HumanoidRootPart.CanCollide = false
-                                        v.Humanoid.WalkSpeed = 2
+                                        v.Humanoid.WalkSpeed = 0
                                         v.Head.CanCollide = false 
                                         MakoriGayMag = true
                                         PosGay = v.HumanoidRootPart.CFrame
@@ -6197,7 +6196,7 @@ spawn(function()
                                         AutoHaki()
                                         EquipWeapon(_G.SelectWeapon)
                                         v.HumanoidRootPart.CanCollide = false
-                                        v.Humanoid.WalkSpeed = 2
+                                        v.Humanoid.WalkSpeed = 0
                                         v.Head.CanCollide = false 
                                         MakoriGayMag = true
                                         PosGay = v.HumanoidRootPart.CFrame
@@ -6236,7 +6235,7 @@ spawn(function()
                                         AutoHaki()
                                         EquipWeapon(_G.SelectWeapon)
                                         v.HumanoidRootPart.CanCollide = false
-                                        v.Humanoid.WalkSpeed = 2
+                                        v.Humanoid.WalkSpeed = 0
                                         v.Head.CanCollide = false 
                                         MakoriGayMag = true
                                         PosGay = v.HumanoidRootPart.CFrame
@@ -6280,7 +6279,7 @@ spawn(function()
                                         AutoHaki()
                                         EquipWeapon(_G.SelectWeapon)
                                         v.HumanoidRootPart.CanCollide = false
-                                        v.Humanoid.WalkSpeed = 2
+                                        v.Humanoid.WalkSpeed = 0
                                         v.Head.CanCollide = false 
                                         MakoriGayMag = true
                                         PosGay = v.HumanoidRootPart.CFrame
@@ -6319,7 +6318,7 @@ spawn(function()
                                         AutoHaki()
                                         EquipWeapon(_G.SelectWeapon)
                                         v.HumanoidRootPart.CanCollide = false
-                                        v.Humanoid.WalkSpeed = 2
+                                        v.Humanoid.WalkSpeed = 0
                                         v.Head.CanCollide = false 
                                         MakoriGayMag = true
                                         PosGay = v.HumanoidRootPart.CFrame
@@ -6358,7 +6357,7 @@ spawn(function()
                                         AutoHaki()
                                         EquipWeapon(_G.SelectWeapon)
                                         v.HumanoidRootPart.CanCollide = false
-                                        v.Humanoid.WalkSpeed = 2
+                                        v.Humanoid.WalkSpeed = 0
                                         v.Head.CanCollide = false 
                                         MakoriGayMag = true
                                         PosGay = v.HumanoidRootPart.CFrame
@@ -6402,7 +6401,7 @@ spawn(function()
                                         AutoHaki()
                                         EquipWeapon(_G.SelectWeapon)
                                         v.HumanoidRootPart.CanCollide = false
-                                        v.Humanoid.WalkSpeed = 2
+                                        v.Humanoid.WalkSpeed = 0
                                         v.Head.CanCollide = false 
                                         MakoriGayMag = true
                                         PosGay = v.HumanoidRootPart.CFrame
@@ -6446,7 +6445,7 @@ spawn(function()
                                         AutoHaki()
                                         EquipWeapon(_G.SelectWeapon)
                                         v.HumanoidRootPart.CanCollide = false
-                                        v.Humanoid.WalkSpeed = 2
+                                        v.Humanoid.WalkSpeed = 0
                                         v.Head.CanCollide = false 
                                         MakoriGayMag = true
                                         PosGay = v.HumanoidRootPart.CFrame
@@ -6490,7 +6489,7 @@ spawn(function()
                                         AutoHaki()
                                         EquipWeapon(_G.SelectWeapon)
                                         v.HumanoidRootPart.CanCollide = false
-                                        v.Humanoid.WalkSpeed = 2
+                                        v.Humanoid.WalkSpeed = 0
                                         v.Head.CanCollide = false 
                                         MakoriGayMag = true
                                         PosGay = v.HumanoidRootPart.CFrame
@@ -6534,7 +6533,7 @@ spawn(function()
                                         AutoHaki()
                                         EquipWeapon(_G.SelectWeapon)
                                         v.HumanoidRootPart.CanCollide = false
-                                        v.Humanoid.WalkSpeed = 2
+                                        v.Humanoid.WalkSpeed = 0
                                         v.Head.CanCollide = false 
                                         MakoriGayMag = true
                                         PosGay = v.HumanoidRootPart.CFrame
@@ -6578,7 +6577,7 @@ spawn(function()
                                         AutoHaki()
                                         EquipWeapon(_G.SelectWeapon)
                                         v.HumanoidRootPart.CanCollide = false
-                                        v.Humanoid.WalkSpeed = 2
+                                        v.Humanoid.WalkSpeed = 0
                                         v.Head.CanCollide = false 
                                         MakoriGayMag = true
                                         PosGay = v.HumanoidRootPart.CFrame
@@ -6752,7 +6751,7 @@ spawn(function()
             if game.Workspace._WorldOrigin.Locations:FindFirstChild('Frozen Dimension') then
                 FrozenIsland:Set('🏔️: Frozen Dimension Spawning')
             else
-                FrozenIsland:Set('❌: Frozen Dimension Not Found')
+                FrozenIsland:Set('🌏: Frozen Dimension Not Found')
             end
         end
     end)
@@ -6762,14 +6761,14 @@ end)
 FrozenIsland = M:AddLabel("")
 
 M:AddToggle('Teleport Frozen Dimension [ NEED SPAWN ]', false, function(value)
-_G.Frozen = value
-StopTween(_G.Frozen) 
+_G.BjirFrozenCuy = value
+StopTween(_G.BjirFrozenCuy) 
 end)
 
 spawn(function()
     while wait() do
         pcall(function()
-            if _G.Frozen then
+            if _G.BjirFrozenCuy then
                 local teleportLocation = game.Workspace._WorldOrigin.Locations:FindFirstChild('Frozen Dimension')
                 if teleportLocation then
                     HyperCahaya(teleportLocation)
@@ -6781,13 +6780,13 @@ end)
 
     
 M:AddToggle("Auto Kill Terrorshark",_G.Makori_gay,function(value)
-_G.Terrorshark = value
-StopTween(_G.Terrorshark)
+_G.bjirTerrorshark = value
+StopTween(_G.bjirTerrorshark)
 end)
 
 spawn(function()
         while wait() do
-            if _G.Terrorshark and World3 then
+            if _G.bjirTerrorshark and World3 then
                 pcall(function()
                     if game:GetService("Workspace").Enemies:FindFirstChild("Terrorshark") then
                         for i,v in pairs(game:GetService("Workspace").Enemies:GetChildren()) do
@@ -6797,14 +6796,14 @@ spawn(function()
                                         AutoHaki()
                                         EquipWeapon(_G.SelectWeapon)
                                         v.HumanoidRootPart.CanCollide = false
-                                        v.Humanoid.WalkSpeed = 2
+                                        v.Humanoid.WalkSpeed = 0
                                         v.Head.CanCollide = false 
                                         MakoriGayMag = false
                                         PosGay = v.HumanoidRootPart.CFrame
                                         HyperCahaya(v.HumanoidRootPart.CFrame * CFrame.new(2,63,2))
                                         game:GetService("VirtualUser"):CaptureController()
                                         game:GetService("VirtualUser"):Button1Down(Vector2.new(1280,672))
-                                    until not _G.Terrorshark or not v.Parent or v.Humanoid.Health <= 0
+                                    until not _G.bjirTerrorshark or not v.Parent or v.Humanoid.Health <= 0
                                     MakoriGayMag = false
                                 end
                             end
@@ -6824,13 +6823,13 @@ spawn(function()
     end)
     
 M:AddToggle("Auto Kill Shark",_G.Makori_gay,function(value)
-_G.Shark = value
-StopTween(_G.Shark)
+_G.bjirShark = value
+StopTween(_G.bjirShark)
 end)
 
 spawn(function()
         while wait() do
-            if _G.Shark and World3 then
+            if _G.bjirShark and World3 then
                 pcall(function()
                     if game:GetService("Workspace").Enemies:FindFirstChild("Shark") then
                         for i,v in pairs(game:GetService("Workspace").Enemies:GetChildren()) do
@@ -6840,14 +6839,14 @@ spawn(function()
                                         AutoHaki()
                                         EquipWeapon(_G.SelectWeapon)
                                         v.HumanoidRootPart.CanCollide = false
-                                        v.Humanoid.WalkSpeed = 2
+                                        v.Humanoid.WalkSpeed = 0
                                         v.Head.CanCollide = false 
                                         MakoriGayMag = false
                                         PosGay = v.HumanoidRootPart.CFrame
                                         HyperCahaya(v.HumanoidRootPart.CFrame * CFrame.new(2,60,2))
                                         game:GetService("VirtualUser"):CaptureController()
                                         game:GetService("VirtualUser"):Button1Down(Vector2.new(1280,672))
-                                    until not _G.Shark or not v.Parent or v.Humanoid.Health <= 0
+                                    until not _G.bjirShark or not v.Parent or v.Humanoid.Health <= 0
                                     MakoriGayMag = false
                                 end
                             end
@@ -6867,13 +6866,13 @@ spawn(function()
     end)
     
     M:AddToggle("Auto Kill Piranha",_G.Makori_gay,function(value)
-_G.Piranha = value
-StopTween(_G.Piranha)
+_G.bjirPiranha = value
+StopTween(_G.bjirPiranha)
 end)
 
 spawn(function()
         while wait() do
-            if _G.Piranha and World3 then
+            if _G.bjirPiranha and World3 then
                 pcall(function()
                     if game:GetService("Workspace").Enemies:FindFirstChild("Piranha") then
                         for i,v in pairs(game:GetService("Workspace").Enemies:GetChildren()) do
@@ -6883,14 +6882,14 @@ spawn(function()
                                         AutoHaki()
                                         EquipWeapon(_G.SelectWeapon)
                                         v.HumanoidRootPart.CanCollide = false
-                                        v.Humanoid.WalkSpeed = 2
+                                        v.Humanoid.WalkSpeed = 0
                                         v.Head.CanCollide = false 
                                         MakoriGayMag = false
                                         PosGay = v.HumanoidRootPart.CFrame
                                         HyperCahaya(v.HumanoidRootPart.CFrame * CFrame.new(2,60,2))
                                         game:GetService("VirtualUser"):CaptureController()
                                         game:GetService("VirtualUser"):Button1Down(Vector2.new(1280,672))
-                                    until not _G.Piranha or not v.Parent or v.Humanoid.Health <= 0
+                                    until not _G.bjirPiranha or not v.Parent or v.Humanoid.Health <= 0
                                     MakoriGayMag = false
                                 end
                             end
@@ -6909,9 +6908,9 @@ spawn(function()
         end
     end)
     
-        M:AddToggle('Auto Kill GhostShip', _G.FishBoat, function(value)
-            _G.FishBoat = value
-            StopTween(_G.FishBoat) 
+        M:AddToggle('Auto Kill GhostShip', _G.bjirFishBoat, function(value)
+            _G.bjirFishBoat = value
+            StopTween(_G.bjirFishBoat) 
         end)
 
         function CheckPirateBoat()
@@ -6925,7 +6924,7 @@ spawn(function()
 spawn(function()
     while wait() do
         pcall(function()
-            if _G.FishBoat then
+            if _G.bjirFishBoat then
                 if CheckPirateBoat() then
                     game:GetService("VirtualInputManager"):SendKeyEvent(true, 32, false, game)
                     wait(0.5)
@@ -6936,11 +6935,11 @@ spawn(function()
                         spawn(HyperCahaya(v.Engine.CFrame * CFrame.new(0, -20, 0), 1))
                         matquyenkiemsoat = true
                         getgenv().noclip = true
-                        FullPower = true
+                        bjirFullPower = true
                         getgenv().psskill = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame * CFrame.new(0, -5, 0)
                     until v.Parent or v.Health.Value <= 0 or not CheckPirateBoat()
                     getgenv().psskill = nil
-                    FullPower = false
+                    bjirFullPower = false
                     matquyenkiemsoat = false
                     getgenv().noclip = false
                 end
@@ -6951,7 +6950,7 @@ end)
 
     spawn(function()
         while wait() do
-            if _G.FishBoat then
+            if _G.bjirFishBoat then
                    pcall(function()
 						if CheckPirateBoat() then
 						    AutoHaki()
@@ -7030,7 +7029,7 @@ end)
         end
           end)
 
-M:AddToggle('Auto Get Anchor [ Need Material ]', _G.Anchor, function(state)
+M:AddToggle('Auto Get Anchor [ Need Material ]', _G.BjirAnchorCuy, function(state)
 local function findItem(name, amount)
     for _, item in pairs(game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("getInventory")) do
         if item["Type"] == "Material" and item["Name"] == name and item["Count"] >= amount then
@@ -7041,7 +7040,7 @@ local function findItem(name, amount)
 end
 
 if state and findItem("Monster Magnet", 1) then
-    _G.Anchor = true
+    _G.BjirAnchorCuy = true
 elseif state and findItem("Terror Eyes", 2) and findItem("Electric Wing", 8) and findItem("Fool's Gold", 20) and findItem("Shark Tooth", 10) then
     local args = {
     [1] = "CraftItem",
@@ -7058,20 +7057,20 @@ local args = {
 
 game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
 wait(0.5) 
-    _G.Anchor = true
+    _G.BjirAnchorCuy = true
 elseif state and (not findItem("Monster Magnet", 1) or not findItem("Terror Eyes", 2) and not findItem("Electric Wing", 8) and not findItem("Fool's Gold", 20) and not findItem("Shark Tooth", 10)) then
-    _G.Anchor = false
+    _G.BjirAnchorCuy = false
     game.StarterGui:SetCore("SendNotification", {
         Icon = "rbxassetid://16058297648",
         Title = "! WARNING !", 
         Text = "You need more materials \nto buy a Monster Magnet."
     })
 else
-    _G.Anchor = false
+    _G.BjirAnchorCuy = false
 end
 
 
-if _G.Anchor then
+if _G.BjirAnchorCuy then
 
 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-16921.853515625, 9.0863618850708, 433.9601135253906) 
 wait(0.5) 
@@ -7120,7 +7119,7 @@ end)
 spawn(function()
     while wait() do
         pcall(function()
-            if _G.Anchor then
+            if _G.BjirAnchorCuy then
                 for _, v in next, workspace.Boats.PirateBrigade:GetDescendants() do
                     if v.Name:find("VehicleSeat") then
                         wait(5) 
@@ -7131,10 +7130,10 @@ spawn(function()
 
                 local vehicleSeat = nil
                 local enemyTypes = {
-                    {name = "Terrorshark", variable = "Terrorshark"},
-                    {name = "Shark", variable = "Shark"},
-                    {name = "Piranha", variable = "Piranha"},
-                    {name = "FishBoat", variable = "FishBoat"},
+                    {name = "Terrorshark", variable = "bjirTerrorshark"},
+                    {name = "Shark", variable = "bjirShark"},
+                    {name = "Piranha", variable = "bjirPiranha"},
+                    {name = "FishBoat", variable = "bjirFishBoat"},
                 }
 
 
@@ -7163,11 +7162,11 @@ spawn(function()
                         end
 
                         if game.Workspace._WorldOrigin.Locations:FindFirstChild('Frozen Dimension') then
-                            _G.Anchor = false
+                            _G.BjirAnchorCuy = false
                             wait(0.5)
                             game.Players.LocalPlayer.Character.Humanoid.Sit = false
                             wait(0.5)
-                            _G.Frozen = true
+                            _G.BjirFrozenCuy = true
                         end
                     end
                 end
@@ -7179,7 +7178,7 @@ end)
 spawn(function()
     while wait() do
         pcall(function()
-            if _G.Anchor then
+            if _G.BjirAnchorCuy then
                 local batuLaut = {"SmallGroup", "SmallCluster", "MediumGroup", "MediumFlat", "Large", "Largest"}
 
                 for _, v in pairs(workspace:GetChildren()) do
@@ -7292,10 +7291,10 @@ spawn(function()
 
                 local vehicleSeat = nil
                 local enemyTypes = {
-                    {name = "Terrorshark", variable = "Terrorshark"},
-                    {name = "Shark", variable = "Shark"},
-                    {name = "Piranha", variable = "Piranha"},
-                    {name = "FishBoat", variable = "FishBoat"}, 
+                    {name = "Terrorshark", variable = "bjirTerrorshark"},
+                    {name = "Shark", variable = "bjirShark"},
+                    {name = "Piranha", variable = "bjirPiranha"},
+                    {name = "FishBoat", variable = "bjirFishBoat"}, 
                 }
 
                 for _, v in next, workspace.Boats.PirateBrigade:GetDescendants() do
@@ -7327,7 +7326,7 @@ spawn(function()
                             wait(0.5)
                             game.Players.LocalPlayer.Character.Humanoid.Sit = false
                             wait(0.5)
-                            _G.Frozen = true
+                            _G.BjirFrozenCuy = true
                         end
                     end
                 end
@@ -7437,7 +7436,7 @@ end)
                                                     TP1(v.HumanoidRootPart.CFrame * CFrame.new(0,10,0))
                                                     v.HumanoidRootPart.CanCollide = false
                                                     PosMonMasteryFruit = v.HumanoidRootPart.CFrame
-                                                    v.Humanoid.WalkSpeed = 2
+                                                    v.Humanoid.WalkSpeed = 0
                                                     v.Head.CanCollide = false
                                                     UseSkill = true
                                                 else           
@@ -7448,7 +7447,7 @@ end)
                                                     v.HumanoidRootPart.CanCollide = false
                                                     v.HumanoidRootPart.Size = Vector3.new(50,50,50)
                                                     PosMonMasteryFruit = v.HumanoidRootPart.CFrame
-                                                    v.Humanoid.WalkSpeed = 2
+                                                    v.Humanoid.WalkSpeed = 0
                                                     v.Head.CanCollide = false
                                                 end
                                                 StartMasteryFruitMagnet = true
@@ -7694,7 +7693,7 @@ end)
                                                 if v.Humanoid.Health <= HealthMin then                                                
                                                     EquipWeapon(SelectWeaponGun)
                                                     TP1(v.HumanoidRootPart.CFrame * CFrame.new(0,0,10))
-                                                    v.Humanoid.WalkSpeed = 2
+                                                    v.Humanoid.WalkSpeed = 0
                                                     v.HumanoidRootPart.CanCollide = false
                                                     v.HumanoidRootPart.Size = Vector3.new(2,2,1)
                                                     v.Head.CanCollide = false                                 
@@ -7706,7 +7705,7 @@ end)
                                                 else
                                                     AutoHaki()
                                                     EquipWeapon(_G.SelectWeapon)
-                                                    v.Humanoid.WalkSpeed = 2
+                                                    v.Humanoid.WalkSpeed = 0
                                                     v.HumanoidRootPart.CanCollide = false
                                                     v.Head.CanCollide = false               
                                                     v.HumanoidRootPart.Size = Vector3.new(60,60,60)
@@ -7768,7 +7767,7 @@ end)
                                         AutoHaki()
                                         EquipWeapon(_G.SelectWeapon)
                                         v.HumanoidRootPart.CanCollide = false
-                                        v.Humanoid.WalkSpeed = 2
+                                        v.Humanoid.WalkSpeed = 0
                                         v.HumanoidRootPart.Size = Vector3.new(50,50,50)
                                         HyperCahaya(v.HumanoidRootPart.CFrame * CFrame.new(PosX,PosY,PosZ))
                                         game:GetService("VirtualUser"):CaptureController()
@@ -7816,7 +7815,7 @@ end)
                                         AutoHaki()
                                         EquipWeapon(_G.SelectWeapon)
                                         v.HumanoidRootPart.CanCollide = false
-                                        v.Humanoid.WalkSpeed = 2
+                                        v.Humanoid.WalkSpeed = 0
                                         v.HumanoidRootPart.Size = Vector3.new(50,50,50)
                                         HyperCahaya(v.HumanoidRootPart.CFrame * CFrame.new(5,40,5))
                                         game:GetService("VirtualUser"):CaptureController()
@@ -7863,17 +7862,17 @@ end)
             while task.wait() do
                 pcall(function()
                     if game:GetService("Lighting").Sky.MoonTextureId=="http://www.roblox.com/asset/?id=9709149431" then
-                        FM:Set("Time Full Moon: 100%")
+                        FM:Set("ðŸŒ‘: Full Moon 100%")
                     elseif game:GetService("Lighting").Sky.MoonTextureId=="http://www.roblox.com/asset/?id=9709149052" then
-                        FM:Set("Time Full Moon: 75%")
+                        FM:Set("ðŸŒ’: Full Moon 75%")
                     elseif game:GetService("Lighting").Sky.MoonTextureId=="http://www.roblox.com/asset/?id=9709143733" then
-                        FM:Set("Time Full Moon: 50%")
+                        FM:Set("ðŸŒ“: Full Moon 50%")
                     elseif game:GetService("Lighting").Sky.MoonTextureId=="http://www.roblox.com/asset/?id=9709150401" then
-                        FM:Set("Time Full Moon: 25%")
+                        FM:Set("ðŸŒ”: Full Moon 25%")
                     elseif game:GetService("Lighting").Sky.MoonTextureId=="http://www.roblox.com/asset/?id=9709149680" then
-                        FM:Set("Time Full Moon: 15%")
+                        FM:Set("ðŸŒ–: Full Moon 15%")
                     else
-                        FM:Set("Wait For Moon")
+                        FM:Set("🌒: Wait For Moon")
                     end
                 end)
             end
@@ -7967,7 +7966,7 @@ spawn(function()
 														v.HumanoidRootPart.Size = Vector3.new(60,60,60)
 														v.HumanoidRootPart.Transparency = 1
 														v.Humanoid.JumpPower = 0
-														v.Humanoid.WalkSpeed = 2
+														v.Humanoid.WalkSpeed = 0
 														v.HumanoidRootPart.CanCollide = false
 														v.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame * CFrame.new(0,20,0)
 														HyperCahaya(CFrame.new(-10160.787109375, 138.6616973876953, 5955.03076171875))
@@ -8209,7 +8208,7 @@ spawn(function()
 										v.HumanoidRootPart.Transparency = 1
 									end
 									v.Humanoid.JumpPower = 0
-									v.Humanoid.WalkSpeed = 2
+									v.Humanoid.WalkSpeed = 0
 									v.HumanoidRootPart.CanCollide = false
 									v.Humanoid:ChangeState(11)
 									HyperCahaya(v.HumanoidRootPart.CFrame * CFrame.new(0,20,0))								
@@ -8269,7 +8268,7 @@ spawn(function()
 													v.HumanoidRootPart.Transparency = 1
 												end
 												v.Humanoid.JumpPower = 0
-												v.Humanoid.WalkSpeed = 2
+												v.Humanoid.WalkSpeed = 0
 												v.HumanoidRootPart.CanCollide = false
 												v.Humanoid:ChangeState(11)
 												HyperCahaya(v.HumanoidRootPart.CFrame * CFrame.new(0,50,0))
@@ -8395,7 +8394,7 @@ spawn(function()
 												v.HumanoidRootPart.Transparency = 1
 											end
 											v.Humanoid.JumpPower = 0
-											v.Humanoid.WalkSpeed = 2
+											v.Humanoid.WalkSpeed = 0
 											v.HumanoidRootPart.CanCollide = false
 											v.Humanoid:ChangeState(11)
 											HyperCahaya(v.HumanoidRootPart.CFrame * CFrame.new(0,50,0))
@@ -8433,7 +8432,7 @@ spawn(function()
 													v.HumanoidRootPart.Transparency = 1
 												end
 												v.Humanoid.JumpPower = 0
-												v.Humanoid.WalkSpeed = 2
+												v.Humanoid.WalkSpeed = 0
 												v.HumanoidRootPart.CanCollide = false
 												v.Humanoid:ChangeState(11)
 											until v.Humanoid.Health <= 0 or not v.Parent or Auto_Quest_Tushita_3 == false
@@ -8488,7 +8487,7 @@ M:AddToggle("Taken Tushita", _G.Autotushita,function(value)
                                         AutoHaki()
                                         EquipWeapon(_G.SelectWeapon)
                                         v.HumanoidRootPart.CanCollide = false
-                                        v.Humanoid.WalkSpeed = 2
+                                        v.Humanoid.WalkSpeed = 0
                                         v.HumanoidRootPart.Size = Vector3.new(50,50,50)
                                         HyperCahaya(v.HumanoidRootPart.CFrame * CFrame.new(PosX,PosY,PosZ))
                                         game:GetService("VirtualUser"):CaptureController()
@@ -8536,7 +8535,7 @@ M:AddToggle("Taken Tushita", _G.Autotushita,function(value)
                                         AutoHaki()
                                         EquipWeapon(_G.SelectWeapon)
                                         v.HumanoidRootPart.CanCollide = false
-                                        v.Humanoid.WalkSpeed = 2
+                                        v.Humanoid.WalkSpeed = 0
                                         v.HumanoidRootPart.Size = Vector3.new(50,50,50)
                                         HyperCahaya(v.HumanoidRootPart.CFrame * CFrame.new(PosX,PosY,PosZ))
                                         game:GetService("VirtualUser"):CaptureController()
@@ -8621,7 +8620,7 @@ end)
                                         AutoHaki()
                                         EquipWeapon(_G.SelectWeapon)
                                         v.HumanoidRootPart.CanCollide = false
-                                        v.Humanoid.WalkSpeed = 2
+                                        v.Humanoid.WalkSpeed = 0
                                         v.HumanoidRootPart.Size = Vector3.new(50,50,50)
                                         HyperCahaya(v.HumanoidRootPart.CFrame * CFrame.new(PosX,PosY,PosZ))
                                         game:GetService("VirtualUser"):CaptureController()
@@ -8665,9 +8664,9 @@ end)
 		while wait() do
 			pcall(function()
 				if game:GetService("ReplicatedStorage"):FindFirstChild("Diablo") or game:GetService("ReplicatedStorage"):FindFirstChild("Deandre") or game:GetService("ReplicatedStorage"):FindFirstChild("Urban") or game:GetService("Workspace").Enemies:FindFirstChild("Diablo") or game:GetService("Workspace").Enemies:FindFirstChild("Deandre") or game:GetService("Workspace").Enemies:FindFirstChild("Urban") then
-					Elite_Hunter_Status:Set("Elite Spawn!")	
+					Elite_Hunter_Status:Set("👻: Elite Spawn!")	
 				else
-					Elite_Hunter_Status:Set("Elite Not Spawn")	
+					Elite_Hunter_Status:Set("😭: Elite Not Spawn")	
 				end
 			end)
 		end
@@ -8693,7 +8692,7 @@ end)
 												AutoHaki()
                                                 EquipWeapon(_G.SelectWeapon)
                                                 v.HumanoidRootPart.CanCollide = false
-                                                v.Humanoid.WalkSpeed = 2
+                                                v.Humanoid.WalkSpeed = 0
                                                 v.HumanoidRootPart.Size = Vector3.new(50,50,50)
                                                 HyperCahaya(v.HumanoidRootPart.CFrame * CFrame.new(PosX,PosY,PosZ))
                                                 game:GetService("VirtualUser"):CaptureController()
@@ -8888,7 +8887,7 @@ end)
                                         AutoHaki()
                                         EquipWeapon(_G.SelectWeapon)
                                         v.HumanoidRootPart.CanCollide = false
-                                        v.Humanoid.WalkSpeed = 2
+                                        v.Humanoid.WalkSpeed = 0
                                         v.HumanoidRootPart.Size = Vector3.new(50,50,50)
                                         HyperCahaya(v.HumanoidRootPart.CFrame * CFrame.new(PosX,PosY,PosZ))
                                         game:GetService("VirtualUser"):CaptureController()
@@ -8937,7 +8936,7 @@ end)
                                         AutoHaki()
                                         EquipWeapon(_G.SelectWeapon)
                                         v.HumanoidRootPart.CanCollide = false
-                                        v.Humanoid.WalkSpeed = 2
+                                        v.Humanoid.WalkSpeed = 0
                                         v.HumanoidRootPart.Size = Vector3.new(50,50,50)
                                         HyperCahaya(v.HumanoidRootPart.CFrame * CFrame.new(PosX,PosY,PosZ))
                                         game:GetService("VirtualUser"):CaptureController()
@@ -8985,7 +8984,7 @@ end)
                                         AutoHaki()
                                         EquipWeapon(_G.SelectWeapon)
                                         v.HumanoidRootPart.CanCollide = false
-                                        v.Humanoid.WalkSpeed = 2
+                                        v.Humanoid.WalkSpeed = 0
                                         v.HumanoidRootPart.Size = Vector3.new(50,50,50)
                                         HyperCahaya(v.HumanoidRootPart.CFrame * CFrame.new(PosX,PosY,PosZ))
                                         game:GetService("VirtualUser"):CaptureController()
@@ -9033,7 +9032,7 @@ end)
                                         AutoHaki()
                                         EquipWeapon(_G.SelectWeapon)
                                         v.HumanoidRootPart.CanCollide = false
-                                        v.Humanoid.WalkSpeed = 2
+                                        v.Humanoid.WalkSpeed = 0
                                         v.HumanoidRootPart.Size = Vector3.new(50,50,50)
                                         HyperCahaya(v.HumanoidRootPart.CFrame * CFrame.new(PosX,PosY,PosZ))
                                         game:GetService("VirtualUser"):CaptureController()
@@ -9123,7 +9122,7 @@ end)
                                         AutoHaki()
                                         EquipWeapon(_G.SelectWeapon)
                                         v.HumanoidRootPart.CanCollide = false
-                                        v.Humanoid.WalkSpeed = 2
+                                        v.Humanoid.WalkSpeed = 0
                                         v.HumanoidRootPart.Size = Vector3.new(50,50,50)
                                         HyperCahaya(v.HumanoidRootPart.CFrame * CFrame.new(PosX,PosY,PosZ))
                                         game:GetService("VirtualUser"):CaptureController()
@@ -9198,15 +9197,15 @@ end)
                         wait(.1) 
                         TP1(boneframe)
                     end
-                    if game:GetService("Workspace").Enemies:FindFirstChild("Kowi") or game:GetService("Workspace").Enemies:FindFirstChild("Reborn Skeleton") or game:GetService("Workspace").Enemies:FindFirstChild("Living Zombie") or game:GetService("Workspace").Enemies:FindFirstChild("Demonic Soul") or game:GetService("Workspace").Enemies:FindFirstChild("Posessed Mummy") then
+                    if game:GetService("Workspace").Enemies:FindFirstChild("BjirKowi") or game:GetService("Workspace").Enemies:FindFirstChild("Reborn Skeleton") or game:GetService("Workspace").Enemies:FindFirstChild("Living Zombie") or game:GetService("Workspace").Enemies:FindFirstChild("Demonic Soul") or game:GetService("Workspace").Enemies:FindFirstChild("Posessed Mummy") then
                         for i,v in pairs(game:GetService("Workspace").Enemies:GetChildren()) do
-                            if v.Name == "Kowi" or v.Name == "Reborn Skeleton" or v.Name == "Living Zombie" or v.Name == "Demonic Soul" or v.Name == "Posessed Mummy" then
+                            if v.Name == "BjirKowi" or v.Name == "Reborn Skeleton" or v.Name == "Living Zombie" or v.Name == "Demonic Soul" or v.Name == "Posessed Mummy" then
                                 if v:FindFirstChild("Humanoid") and v:FindFirstChild("HumanoidRootPart") and v.Humanoid.Health > 0 then
                                     repeat task.wait()
                                         AutoHaki()
                                         EquipWeapon(_G.SelectWeapon)
                                         v.HumanoidRootPart.CanCollide = false
-                                        v.Humanoid.WalkSpeed = 2
+                                        v.Humanoid.WalkSpeed = 0
                                         v.Head.CanCollide = false 
                                         StartMagnetBoneMon = true
                                         PosMonBone = v.HumanoidRootPart.CFrame
@@ -9221,7 +9220,7 @@ end)
                         StartMagnetBoneMon = false
     					HyperCahaya(CFrame.new(-9506.234375, 172.130615234375, 6117.0771484375))
                         for i,v in pairs(game:GetService("ReplicatedStorage"):GetChildren()) do 
-                            if v.Name == "Kowi" then
+                            if v.Name == "BjirKowi" then
                                 HyperCahaya(v.HumanoidRootPart.CFrame * CFrame.new(2,20,2))
                             elseif v.Name == "Reborn Skeleton" then
                                 HyperCahaya(v.HumanoidRootPart.CFrame * CFrame.new(2,20,2))
@@ -10540,7 +10539,7 @@ task.spawn(function()
 						if InMyNetWork(v.HumanoidRootPart) then
 							v.HumanoidRootPart.CFrame = PosGay
 							v.Humanoid.JumpPower = 0
-							v.Humanoid.WalkSpeed = 2
+							v.Humanoid.WalkSpeed = 0
 							v.HumanoidRootPart.Size = Vector3.new(60,60,60)
 							v.HumanoidRootPart.Transparency = 1
 							v.HumanoidRootPart.CanCollide = false
@@ -10579,7 +10578,7 @@ task.spawn(function()
 						if InMyNetWork(v.HumanoidRootPart) then
 							v.HumanoidRootPart.CFrame = PosMon
 							v.Humanoid.JumpPower = 0
-							v.Humanoid.WalkSpeed = 2
+							v.Humanoid.WalkSpeed = 0
 							v.HumanoidRootPart.Size = Vector3.new(60,60,60)
 							v.HumanoidRootPart.Transparency = 1
 							v.HumanoidRootPart.CanCollide = false
@@ -10619,8 +10618,8 @@ spawn(function()
 				end
 			end
 		end
-		Fruit:Set("Fruit Spawn: "..count)
-		Chest:Set("Chest Server: "..count10)
+		Fruit:Set("Fruit : "..count)
+		Chest:Set("Chest : "..count10)
 		wait(5)
 	end
 end)
@@ -10639,16 +10638,16 @@ Fruit = Ss:AddLabel("Fruit")
         end
     end)
     
-local Melee = Ss:AddLabel("Exp Melee : ")
-local Defense = Ss:AddLabel("Exp Deff : ")
-local Sword = Ss:AddLabel("Use Sword : ")
-local Gun = Ss:AddLabel("Use Gun : ")
-local Fruit = Ss:AddLabel("Exp Fruit : ")
+local Melee = Ss:AddLabel("Melee : ")
+local Defense = Ss:AddLabel("Defense : ")
+local Sword = Ss:AddLabel("Sword : ")
+local Gun = Ss:AddLabel("Gun : ")
+local Fruit = Ss:AddLabel("Fruit : ")
 
     spawn(function()
         while wait() do
             pcall(function()
-                Melee:Set("Exp Melee : "..game.Players.localPlayer.Data.Stats.Melee.Level.Value)
+                Melee:Set("Melee : "..game.Players.localPlayer.Data.Stats.Melee.Level.Value)
             end)
         end
     end)
@@ -10656,7 +10655,7 @@ local Fruit = Ss:AddLabel("Exp Fruit : ")
     spawn(function()
         while wait() do
             pcall(function()
-                Defense:Set("Exp Deff : "..game.Players.localPlayer.Data.Stats.Defense.Level.Value)
+                Defense:Set("Defense : "..game.Players.localPlayer.Data.Stats.Defense.Level.Value)
             end)
         end
     end)
@@ -10664,7 +10663,7 @@ local Fruit = Ss:AddLabel("Exp Fruit : ")
     spawn(function()
         while wait() do
             pcall(function()
-                Sword:Set("Use Sword : "..game.Players.localPlayer.Data.Stats.Sword.Level.Value)
+                Sword:Set("Sword : "..game.Players.localPlayer.Data.Stats.Sword.Level.Value)
             end)
         end
     end)
@@ -10672,7 +10671,7 @@ local Fruit = Ss:AddLabel("Exp Fruit : ")
     spawn(function()
         while wait() do
             pcall(function()
-                Gun:Set("Use Gun : "..game.Players.localPlayer.Data.Stats.Gun.Level.Value)
+                Gun:Set("Gun : "..game.Players.localPlayer.Data.Stats.Gun.Level.Value)
             end)
         end
     end)
@@ -10680,7 +10679,7 @@ local Fruit = Ss:AddLabel("Exp Fruit : ")
     spawn(function()
         while wait() do
             pcall(function()
-                Fruit:Set("Exp Fruit : "..game.Players.localPlayer.Data.Stats["Demon Fruit"].Level.Value)
+                Fruit:Set("Fruit : "..game.Players.localPlayer.Data.Stats["Demon Fruit"].Level.Value)
             end)
         end
     end)
@@ -10814,7 +10813,7 @@ RaceV4:AddButton("Teleport Acient One (Must Be Temple Of Time!)",function()
   HyperCahaya(CFrame.new(28981.552734375, 14888.4267578125, -120.245849609375))
 end)
    
-   RaceV4:AddButton("Unlock Lever", function()
+   RaceV4:AddButton("Unlock Lever.", function()
 venyx:Notify("Unlocked")
 if game:GetService("Workspace").Map["Temple of Time"].Lever.Prompt:FindFirstChild("ProximityPrompt") then
     game:GetService("Workspace").Map["Temple of Time"].Lever.Prompt:FindFirstChild("ProximityPrompt"):Remove()
@@ -11214,7 +11213,7 @@ end
         game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("PlayerHunter")
     end)
     
-    P:AddToggle("Player Hunt er[Wait Update]",false,function(value)
+    P:AddToggle("Player Hunter [Wait Updated]",false,function(value)
         _G.AutoPlayerHunter = value
     StopTween(_G.AutoPlayerHunter)
     end)
@@ -11475,9 +11474,9 @@ end
         pcall(function()
             while wait() do
     if game.Workspace._WorldOrigin.Locations:FindFirstChild('Island 1') then
-    Island1:Set(': Island 1')
+    Island1:Set('🌴: Island 1')
     else
-      Island1:Set(': Island 1' )end
+      Island1:Set('🌴: Island 1' )end
             end
         end)
 end)
@@ -11486,9 +11485,9 @@ spawn(function()
         pcall(function()
             while wait() do
     if game.Workspace._WorldOrigin.Locations:FindFirstChild('Island 2') then
-    Island2:Set(': Island 2')
+    Island2:Set('🌴: Island 2')
     else
-      Island2:Set(': Island 2' )end
+      Island2:Set('🌴: Island 2' )end
             end
         end)
 end)
@@ -11497,9 +11496,9 @@ spawn(function()
         pcall(function()
             while wait() do
     if game.Workspace._WorldOrigin.Locations:FindFirstChild('Island 3') then
-    Island3:Set(': Island 3')
+    Island3:Set('🌴: Island 3')
     else
-      Island3:Set(': Island 3' )end
+      Island3:Set('🌴: Island 3' )end
             end
         end)
 end)
@@ -11508,9 +11507,9 @@ spawn(function()
         pcall(function()
             while wait() do
     if game.Workspace._WorldOrigin.Locations:FindFirstChild('Island 4') then
-    Island4:Set(': Island 4')
+    Island4:Set('🌴: Island 4')
     else
-      Island4:Set(': Island 4' )end
+      Island4:Set('🌴: Island 4' )end
             end
         end)
 end)
@@ -11519,9 +11518,9 @@ spawn(function()
         pcall(function()
             while wait() do
     if game.Workspace._WorldOrigin.Locations:FindFirstChild('Island 5') then
-    Island5:Set(': Island 5')
+    Island5:Set('🌴: Island 5')
     else
-      Island5:Set(': Island 5' )end
+      Island5:Set('🌴: Island 5' )end
             end
         end)
 end)
@@ -11758,7 +11757,7 @@ end)
                                         AutoHaki()
                                         EquipWeapon(_G.SelectWeapon)
                                         v.HumanoidRootPart.CanCollide = false
-                                        v.Humanoid.WalkSpeed = 2
+                                        v.Humanoid.WalkSpeed = 0
                                         v.HumanoidRootPart.Size = Vector3.new(50,50,50)
                                         HyperCahaya(v.HumanoidRootPart.CFrame * CFrame.new(PosX,PosY,PosZ))
                                         game:GetService("VirtualUser"):CaptureController()
@@ -12700,7 +12699,7 @@ end)
 		game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
 	end)
 	
-    D:AddSeperator("Fruit Dealer")
+    D:AddSeperator("Sniper")
     
     FruitList = {
         "Rocket-Rocket",
@@ -12752,11 +12751,11 @@ end)
 	end
 	
     _G.SelectFruit = ""
-    D:AddDropdown("Select Fruits Dealer",Table_DevilFruitSniper,function(value)
+    D:AddDropdown("Select Fruits Sniper",Table_DevilFruitSniper,function(value)
         _G.SelectFruit = value
     end)
     
-    D:AddToggle("Auto Buy Fruit Dealer",_G.AutoBuyFruitSniper,function(value)
+    D:AddToggle("Auto Buy Fruit Sniper",_G.AutoBuyFruitSniper,function(value)
         _G.AutoBuyFruitSniper = value
     end)
     
@@ -12982,7 +12981,7 @@ closeButton.MouseButton1Click:Connect(closeGUI)
         end)
     end)
     
-    D:AddToggle("Auto Gacha Fruit",_G.Random_Auto,function(value)
+    D:AddToggle("Auto Random Fruit",_G.Random_Auto,function(value)
         _G.Random_Auto = value
     end)
     
@@ -12996,7 +12995,7 @@ closeButton.MouseButton1Click:Connect(closeGUI)
         end)
     end)
     
-    D:AddButton("Gacha Fruit",function()
+    D:AddButton("Random Fruit",function()
         game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("Cousin","Buy")
     end)
     
@@ -13062,7 +13061,7 @@ spawn(function()
 end)
 
 
-    D:AddToggle("Bring Fruit Spawn",_G.Grabfruit,function(value)
+    D:AddToggle("Bring to Fruit",_G.Grabfruit,function(value)
     _G.Grabfruit = value
     end)
     spawn(function()
@@ -13077,7 +13076,7 @@ end)
     end
     end)
     
-    D:AddToggle("Teleport to Fruit",_G.Tweenfruit,function(value)
+    D:AddToggle("Tween to Fruit",_G.Tweenfruit,function(value)
     _G.Tweenfruit = value
     StopTween(_G.Tweenfruit)
     end)
@@ -13173,11 +13172,11 @@ end)
 	setclipboard(tostring(game.JobId))
 	end)
 	
-    Misc:AddTextbox("Paste Webhook Job Id", true, function(value)
+    Misc:AddTextbox("Place Job Id", true, function(value)
 	_G.Job = value
 	end)
 
-	Misc:AddButton("Join Webhook Job Id",function()
+	Misc:AddButton("Join Sever [BETA]",function()
 	game:GetService("TeleportService"):TeleportToPlaceInstance(game.placeId,_G.Job, game.Players.LocalPlayer)
 	end)
 	
@@ -13923,7 +13922,7 @@ end)
 	local l = g.Lighting
 	local t = w.Terrain
 	t.WaterWaveSize = 0
-	t.WaterWaveSpeed = 2
+	t.WaterWaveSpeed = 0
 	t.WaterReflectance = 0
 	t.WaterTransparency = 0
 	l.GlobalShadows = false
@@ -14086,7 +14085,7 @@ end)
 			end
 		end)
     
-    Misc:AddToggle("No Clip And Fly",_G.NOCLIP,function(value)
+    Misc:AddToggle("NoClip",_G.NOCLIP,function(value)
         _G.NOCLIP = value
     end)
 	
