@@ -7791,11 +7791,9 @@ spawn(function()
     end
 end)
 
-Z:AddButton("Speed Boat",
-Z:OnChanged(function(Value)
+Z:AddButton("Speed Boat",function(Value)
     _G.Speed = Value
 end)
-
 spawn(function()
 game:GetService("RunService").RenderStepped:Connect(function()
 if _G.Speed then
@@ -7809,7 +7807,7 @@ if v.Name:find("VehicleSeat") then
 end
 end)
 end)
-end)
+
     
 
     
