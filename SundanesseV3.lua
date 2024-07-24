@@ -7705,7 +7705,7 @@ spawn(function()
 
                 for _, v in next, workspace.Boats.PirateBrigade:GetDescendants() do
                     if v.Name:find("VehicleSeat") then
-                        vehicleSeat = v.maxspeed = 300
+                        vehicleSeat = v
                         wait(0.2) 
 
                         for _, enemyType in pairs(enemyTypes) do
