@@ -3820,7 +3820,6 @@ getgenv().HyperCahayas = function(p)
 
 local Library = Update:Window("Brutality Premium","Brutality Premium",Enum.KeyCode.RightControl);
 
-NguyenTien:addline()
 local NguyenTien = Library:AddTab("Information","16058297648")
 local Main = Library:AddTab("Main Menu","18477352665")
 local M = Library:AddTab("Quest","18477473610")
