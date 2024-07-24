@@ -7705,7 +7705,7 @@ spawn(function()
 
                 for _, v in next, workspace.Boats.PirateBrigade:GetDescendants() do
                     if v.Name:find("VehicleSeat") then
-                        vehicleSeat = v
+                        vehicleSeat = v.maxspeed = 300
                         wait(0.2) 
 
                         for _, enemyType in pairs(enemyTypes) do
@@ -7773,7 +7773,7 @@ spawn(function()
                     local targetModel = workspace:FindFirstChild(targetModelName)
 
                     if targetModel then
-                        local speed = 10.5
+                        local speed = 300 -- diubah yang awalnya 10.5
                         local forwardDirection = targetModel.PrimaryPart.CFrame.lookVector
                         local targetPosition = targetModel.PrimaryPart.Position + forwardDirection * 10 --10
                         
