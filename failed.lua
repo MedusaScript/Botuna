@@ -3818,7 +3818,7 @@ getgenv().HyperCahayas = function(p)
     end)
     
 
-local Library = Update:Window("Bstory Premium","",Enum.KeyCode.RightControl);
+local Library = Update:Window("Brutality Premium","Brutality Premium",Enum.KeyCode.RightControl);
 
 local NguyenTien = Library:AddTab("Information","16058297648")
 local Main = Library:AddTab("Main Menu","18477352665")
@@ -3831,7 +3831,7 @@ local R = Library:AddTab("Dungeon","18493471457")
 local T = Library:AddTab("Teleport","18477347703")
 local S = Library:AddTab("Shop","18477410455")
 local D = Library:AddTab("Devil Fruit","18477363100")
-local Misc = Library:AddTab("Misc","18477908150")
+local Misc = Library:AddTab("Setting","18477908150")
 --- ThÃ´ng Tin
 NguyenTien:AddSeperator("Information Developer")
 NguyenTien:AddLabel("Owner: Medusa Script")
@@ -4889,7 +4889,6 @@ end)
         _G.SkillV = value
     end)
     
-    M:AddSeperator("World")
     Z:AddSeperator("World")
 
     if World1 then
