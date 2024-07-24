@@ -1,126 +1,142 @@
-local PandaAuth = loadstring(game:HttpGet("https://raw.githubusercontent.com/Panda-Repositories/PandaKS_Libraries/main/library/LuaLib/ROBLOX/VAL", true))()
+local Players = game:GetService("Players")
+local LocalPlayer = Players.LocalPlayer
+local TweenService = game:GetService("TweenService")
 
-local InternalTable = { -- change
-    Service = "_brutalityhub_", -- Identifier Name *
-    APIToken = "5BaOyPNLsvZTju75", -- API Token (For Library Encryption) *
-    VigenereKey = tostring({}) .. tostring(function() end) .. tostring(workspace["GetServerTimeNow" .. ("\0"):rep(math.random(2, 32))](workspace) + math.random(os.clock(), 999999999 or os.time())) .. ("\0"):rep(math.random(2, 32) % os.time() + os.clock()),
-    TrueEndpoint = tostring({}) .. tostring(function() end) .. tostring(workspace["GetServerTimeNow" .. ("\0"):rep(math.random(2, 32))](workspace) + math.random(os.clock(), 999999999 or os.time())) .. ("\0"):rep(math.random(2, 32) % os.time() + os.clock()),
-    FalseEndpoint = tostring({}) .. tostring(function() end) .. tostring(workspace["GetServerTimeNow" .. ("\0"):rep(math.random(2, 32))](workspace) + math.random(os.clock(), 999999999 or os.time())) .. ("\0"):rep(math.random(2, 32) % os.time() + os.clock()),
-    Webhook = nil,
-    Debug = false 
-}
+local screenGui = Instance.new("ScreenGui")
+screenGui.Parent = LocalPlayer:WaitForChild("PlayerGui")
 
-local Internal = setmetatable({}, {
-	__index = function(self, key)
-		return rawget(InternalTable, key)
-	end;
-	__newindex = function(self, key, value)
-		while true do end; repeat until false; print(debug.traceback()) return
-	end;
-	__tostring = function(self)
-		while true do end; repeat until false; print(debug.traceback()) return
-	end;
-})
+local frame = Instance.new("Frame")
+frame.Size = UDim2.new(0, 300, 0, 200)
+frame.Position = UDim2.new(0.5, -150, -0.5, -100) -- Start position off-screen
+frame.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+frame.BorderSizePixel = 2
+frame.BorderColor3 = Color3.fromRGB(0, 255, 0)
+frame.Active = true
+frame.Draggable = true
+frame.Parent = screenGui
 
-local SetInternal = PandaAuth.SetInternal; PandaAuth:SetInternal(Internal)
+local headerLabel = Instance.new("TextLabel")
+headerLabel.Size = UDim2.new(1, 0, 0, 30)
+headerLabel.Position = UDim2.new(0, 0, 0, 0)
+headerLabel.Text = "BRUTALITY HUB" -- ganti dengan nama script hub kamu
+headerLabel.Font = Enum.Font.SourceSansBold
+headerLabel.TextSize = 18
+headerLabel.TextColor3 = Color3.fromRGB(0, 255, 0)
+headerLabel.BackgroundTransparency = 1
+headerLabel.TextWrapped = true
+headerLabel.Parent = frame
 
-local Type = "Key"
-local UI = "MaggixV2"
-local KeySys =
-    loadstring(
-    game:HttpGet(
-        "https://raw.githubusercontent.com/KrypDeveloper/EZ-KeySystem/main/V5/UIS/" .. Type .. "/" .. UI .. ".lua"
-    )
-)()
+-- Buat tombol close (X)
+local closeButton = Instance.new("TextButton")
+closeButton.Size = UDim2.new(0, 30, 0, 30)
+closeButton.Position = UDim2.new(1, -30, 0, 0)
+closeButton.Text = "X"
+closeButton.Font = Enum.Font.SourceSansBold
+closeButton.TextSize = 18
+closeButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+closeButton.BackgroundTransparency = 1
+closeButton.Parent = frame
 
-local Validate = function(key)
-	local result = PandaAuth:ValidateKey(key)
-	
-	local Crypt = PandaAuth:GetInternal().Crypt
-	
-	local SHA256 = Crypt:SHA256(Internal.TrueEndpoint, Internal.VigenereKey, nil, nil)
-	
-	local SyncTrue = Crypt:EncryptC(SHA256, Internal.VigenereKey, nil)
-	
-	local IteratedTables = {}
-	
-	local ValueSpoofed; ValueSpoofed = function(val, tbl)
-		local ret = nil
-		
-		for i, v in pairs(tbl) do
-			if v == val then
-				print(i, v, val)
-				
-				ret = true 
-				
-				break
-			elseif type(tbl) == "table" and not IteratedTables[tbl] then
-				IteratedTables[tbl] = true
-				
-				ret = ValueSpoofed(val, tbl)
-				
-				break
-			end
-		end
-		
-		table.clear(IteratedTables)
-		
-		return ret
-	end
-	
-	if ValueSpoofed(result["KEY"], {result, SHA256, SyncTrue}) 
-	or ValueSpoofed(result["Encrypted"], {result}) then
-		while true do end do return end
-	end
-	
-	if getmetatable(getfenv(PandaAuth.SetInternal)["getrenv\0"])["__newindex"]() == SetInternal and PandaAuth.SetInternal ~= SetInternal and getmetatable(getfenv(select(2, PandaAuth:SetInternal(Internal)))["getrenv\0"])["__newindex"]() == SetInternal and PandaAuth:SetInternal(Internal) == SetInternal then
-		if result and result["KEY"] and type(result["ENV"]) == type(getfenv(1)) and result["Raw"] == Internal.TrueEndpoint and result["Encrypted"] == SyncTrue and type(result["Premium"]) == "boolean" and PandaAuth.Validated[1] == Internal.TrueEndpoint and PandaAuth.Validated[2] == true then
-			print("Key is valid:")
-			
-			print("Is key premium:", result["Premium"])
-			
-			return true
-		elseif result and result["Raw"] == Internal.FalseEndpoint and PandaAuth.Validated[1] == Internal.FalseEndpoint and PandaAuth.Validated[2] == false then
-			print("Key is invalid.")
-			loadstring(game:HttpGet("https://raw.githubusercontent.com/MedusaScript/Botuna/main/BrutalityHubV3.lua"))()
-			return false
-		else
-			while true do end do return end
-		end
-	else
-		while true do end do return end
-	end
-	
-	return true
-end
+-- Fungsi untuk close UI
+closeButton.MouseButton1Click:Connect(function()
+    local tween = TweenService:Create(frame, TweenInfo.new(0.5), {Position = UDim2.new(0.5, -150, -0.5, -100)})
+    tween:Play()
+    tween.Completed:Connect(function()
+        screenGui:Destroy()
+    end)
+end)
 
-if isfile("Pelinda Data/Infinix/Key.txt") and Validate(readfile("Pelinda Data/Infinix/Key.txt")) then
-    print("Validated!")
+local label = Instance.new("TextLabel")
+label.Size = UDim2.new(1, 0, 0, 50)
+label.Position = UDim2.new(0, 0, 0, 30)
+label.Text = "Key System"
+label.Font = Enum.Font.SourceSansBold
+label.TextSize = 24
+label.TextColor3 = Color3.fromRGB(0, 255, 0)
+label.BackgroundTransparency = 1
+label.TextWrapped = true
+label.Parent = frame
+
+local textBox = Instance.new("TextBox")
+textBox.Size = UDim2.new(0.8, 0, 0, 30)
+textBox.Position = UDim2.new(0.1, 0, 0.4, 0)
+textBox.Text = "Enter Key"
+textBox.Font = Enum.Font.SourceSans
+textBox.TextSize = 18
+textBox.TextColor3 = Color3.fromRGB(0, 0, 0)
+textBox.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+textBox.TextWrapped = true -- supaya teks tetap di dalam text box
+textBox.Parent = frame
+
+local getKeyButton = Instance.new("TextButton")
+getKeyButton.Size = UDim2.new(0.4, 0, 0, 30)
+getKeyButton.Position = UDim2.new(0.1, 0, 0.7, 0)
+getKeyButton.Text = "Get Key"
+getKeyButton.Font = Enum.Font.SourceSansBold
+getKeyButton.TextSize = 18
+getKeyButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+getKeyButton.BackgroundColor3 = Color3.fromRGB(0, 170, 0)
+getKeyButton.Parent = frame
+
+local checkKeyButton = Instance.new("TextButton")
+checkKeyButton.Size = UDim2.new(0.4, 0, 0, 30)
+checkKeyButton.Position = UDim2.new(0.5, 0, 0.7, 0)
+checkKeyButton.Text = "Check Key"
+checkKeyButton.Font = Enum.Font.SourceSansBold
+checkKeyButton.TextSize = 18
+checkKeyButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+checkKeyButton.BackgroundColor3 = Color3.fromRGB(0, 170, 0)
+checkKeyButton.Parent = frame
+
+-- Label untuk pesan "Link copied!" dan validasi key
+local validationLabel = Instance.new("TextLabel")
+validationLabel.Size = UDim2.new(0.8, 0, 0, 30)
+validationLabel.Position = UDim2.new(0.1, 0, 0.575, 0)
+validationLabel.Text = "Premium Script"
+validationLabel.Font = Enum.Font.SourceSansBold
+validationLabel.TextSize = 18
+validationLabel.TextColor3 = Color3.fromRGB(255, 0, 0)
+validationLabel.BackgroundTransparency = 1
+validationLabel.Parent = frame
+
+-- Fungsi untuk Get Key
+getKeyButton.MouseButton1Click:Connect(function()
+    -- Mengarahkan ke link untuk mendapatkan key
+    local getKeyLink = "https://bit.ly/key-hwid" -- ganti dengan link get key kamu
+    setclipboard(getKeyLink)
+    validationLabel.Text = "Link copied!"
+    validationLabel.TextColor3 = Color3.fromRGB(0, 255, 0)
+end)
+
+-- Fungsi untuk Check Key
+checkKeyButton.MouseButton1Click:Connect(function()
+local enteredKey = textBox.Text
+    local currentKey = "HWID-key:c2ef7cf6acde2fe557f4cffba241c69af8723f6a1b3fe60b820147ec46ffe13e" -- ganti ini dengan key yang benar
+    if enteredKey == currentKey then
+        validationLabel.Text = "Checking Key..."
+        validationLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+            wait(1.7)
+        validationLabel.Text = "Key Is Valid!"
+        validationLabel.TextColor3 = Color3.fromRGB(0, 255, 0)
+        wait(2)
+        validationLabel.Text = "Thanks For Use Sript"
+        validationLabel.TextColor3 = Color3.fromRGB(0, 255, 0)
+        wait(2)
+        local tween = TweenService:Create(frame, TweenInfo.new(0.5), {Position = UDim2.new(0.5, -150, 1.5, -100)})
+        tween:Play()
+        tween.Completed:Connect(function()
+            screenGui:Destroy()
+        end)
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/MedusaScript/limitless-medusa/main/1-2-3-4-5-6-7-8-9-1.lua"))()
 else
-    local Window = KeySys:CreateGui(
-        {
-            Data = {
-                HubName = "Brutality Hub"
-            },
-            Discord = "https://discord.gg/medusa-script-1182005198206545941"
-        }
-    )
+        validationLabel.Text = "Checking Key..."
+        validationLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+            wait(1.7)    
+        validationLabel.Text = "Key Is Not Valid!"
+        validationLabel.TextColor3 = Color3.fromRGB(255, 0, 0)
+    end
+end)
 
-    Window:SetGetKey(
-        function()
-            setclipboard(PandaAuth:GetKey())
-        end
-    )
-
-    Window:SetCheckKey(
-        function(key)
-            if Validate(key) then
-                print("Whitelisted")
-                
-                writefile("Pelinda Data/Infinix/Key.txt", key)
-                
-                Window:DestroyGui()
-            end
-        end
-    )
-end
+wait(3)
+local tween = TweenService:Create(frame, TweenInfo.new(0.5), {Position = UDim2.new(0.5, -150, 0.5, -100)})
+tween:Play()
