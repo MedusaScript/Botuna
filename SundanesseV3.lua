@@ -12710,16 +12710,14 @@ end)
     
     S:AddSeperator("Fragments")
 
-S:AddButton("Buy Race Ghoul", 
-        Callback = function()            
+S:AddButton("Buy Race Ghoul (wait fix)", function()            
         local S = {[1] = "Ectoplasm", [2] = "BuyCheck", [3] = 4}
                     game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(S))
                 local S = {[1] = "Ectoplasm", [2] = "Change", [3] = 4}
                     game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(S))
                 end)
 
-S:AddButton("Buy Race Cyborg", 
-    Callback = function()
+S:AddButton("Buy Race Cyborg (Wait Fix)", function()
     local S = {[1] = "CyborgTrainer", [2] = "Buy"}
     game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(S))
 end)
