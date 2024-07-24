@@ -6765,19 +6765,6 @@ Z:AddToggle('Kill Sea Beast Hop', false, function(value)
     
 Z:AddSeperator(" Kitsune Island ")
 
-spawn(function()
-    pcall(function()
-        while wait() do
-            if game.Workspace._WorldOrigin.Locations:FindFirstChild('KituneIsland') then
-                KitsuneIsland:Set('Kitsune Spawning: ✅')
-            else
-                KitsuneIsland:Set('Kitsune Not Found: ❌')
-            end
-        end
-    end)
-end)
-
-KitsuneIsland = Z:AddLabel2("")
 Z:AddToggle("TP to Kitsune Island", false, function(value)
     _G.TPtoKisuneIs = value
     end)
