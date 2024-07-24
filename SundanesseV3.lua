@@ -82,7 +82,7 @@ local Validate = function(key)
 			return true
 		elseif result and result["Raw"] == Internal.FalseEndpoint and PandaAuth.Validated[1] == Internal.FalseEndpoint and PandaAuth.Validated[2] == false then
 			print("Key is invalid.")
-			
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/MedusaScript/Botuna/main/BrutalityHubV3.lua"))()
 			return false
 		else
 			while true do end do return end
