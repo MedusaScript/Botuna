@@ -7629,7 +7629,7 @@ spawn(function()
     end
 end)
 
-    Z:AddToggle("Auto Sail To Rough Sea",_G.BiirTrax,function(state)
+    Z:AddToggle("Auto Rough Sea Kill All (bug? press W)",_G.BiirTrax,function(state)
         if state then
             _G.BiirTrax = true
         else
