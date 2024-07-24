@@ -12710,20 +12710,17 @@ end)
     
     S:AddSeperator("Fragments")
 
-S:AddButton("Buy Race Ghoul", function()
-    Callback = function()            
-        local S = {[1] = "Ectoplasm", [2] = "BuyCheck", [3] = 4}
+S:AddButton("Buy Race Ghoul", function()            
+        local args = {[1] = "Ectoplasm", [2] = "BuyCheck", [3] = 4}
                     game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
                 local S = {[1] = "Ectoplasm", [2] = "Change", [3] = 4}
                     game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
                 end)
 
 S:AddButton("Buy Race Ghoul", function()
-    Callback = function()
     local args = {[1] = "CyborgTrainer", [2] = "Buy"}
     game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
 end)
-
 
 S:AddButton("Reset Stats (Use 2.5K Fragments)", function()
     game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BlackbeardReward","Refund","1")
