@@ -6746,6 +6746,54 @@ Z:AddToggle('Kill Sea Beast Hop', false, function(value)
     _G.AutoSeaBestHop = value
     end)
     
+Z:AddSeperator(" Kitsune Island ")
+
+spawn(function()
+    pcall(function()
+        while wait() do
+            if game.Workspace._WorldOrigin.Locations:FindFirstChild('KituneIsland') then
+                KitsuneIsland:Set('Kitsune Spawning: ✅')
+            else
+                KitsuneIsland:Set('Kitsune Not Found: ❌')
+            end
+        end
+    end)
+end)
+
+Mirragecheck = Z:AddLabel("")
+Z:AddToggle("TP to Kitsune Island", false, function(value)
+    _G.TPtoKisuneIs = value
+    end)
+Z:AddToggle("Auto Collect Azure", false , function(value)
+    _G.AutoCollectAzure = value
+    end)
+    spawn(function()
+        while wait() do
+            if _G.TPtoKisuneIs then
+                pcall(function()
+                    for i,v in pairs(game:GetService("Workspace").Map.KitsuneIsland:GetChildren()) do
+                        if v.Name == "Part" then
+                            getgenv().ToPos(v.CFrame * CFrame.new(2, 99, 2))
+                        end
+                    end
+                end)
+            end
+        end
+    end)
+    spawn(function()
+        while wait() do
+            if _G.AutoCollectAzure then
+                pcall(function()
+                    for _,v in next, game:GetService("Workspace").EmberTemplate:GetDescendants() do
+                        if v.Name == "Part" then
+                            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.CFrame
+                        end
+                    end
+                end)
+            end
+        end
+    end)--tambahan fitur kitsune
+
 Z:AddSeperator(" Sea Event ")
 
 spawn(function()
