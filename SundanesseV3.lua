@@ -7791,22 +7791,6 @@ spawn(function()
     end
 end)
 
-Z:AddToggle('Speed Boat', false, function(value)
-    _G.Speed = Value
-end)
-spawn(function()
-game:GetService("RunService").RenderStepped:Connect(function()
-if _G.Speed then
-     pcall(function()
-for _,v in next, game.Workspace.Boats.PirateBrigade:GetDescendants() do
-if v.Name:find("VehicleSeat") then
-                v.MaxSpeed = 300
-                end
-             end
-    end)
-end
-end)
-end)
 
     
 
