@@ -7633,7 +7633,7 @@ end)
     if state then
         _G.BiirTrax = true
     else
-        _G.BiirTrax = false
+        _G.BiirTrax = true
     end
 
 
@@ -7705,7 +7705,7 @@ spawn(function()
 
                 for _, v in next, workspace.Boats.PirateBrigade:GetDescendants() do
                     if v.Name:find("VehicleSeat") then
-                        vehicleSeat = v
+                        vehicleSeat = v.maxspeed = 300
                         wait(0.2) 
 
                         for _, enemyType in pairs(enemyTypes) do
@@ -7777,7 +7777,7 @@ spawn(function()
                         local forwardDirection = targetModel.PrimaryPart.CFrame.lookVector
                         local targetPosition = targetModel.PrimaryPart.Position + forwardDirection * 10 --10
                         
-                        while (targetModel.PrimaryPart.Position - targetPosition).Magnitude > 300 do --0.1
+                        while (targetModel.PrimaryPart.Position - targetPosition).Magnitude > 0.1 do --0.1
                             targetModel:SetPrimaryPartCFrame(targetModel.PrimaryPart.CFrame + forwardDirection * speed)
                             task.wait()
                             if not _G.BiirTrax then
@@ -7791,7 +7791,7 @@ spawn(function()
     end
 end)
 
-Z:AddButton("Speed Boat",function(Value)
+Z:AddToggle('Speed Boat', false, function(value)
     _G.Speed = Value
 end)
 spawn(function()
