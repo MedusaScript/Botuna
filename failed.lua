@@ -1,4 +1,4 @@
----[Notify Má»›i LÃ m:))]
+---[Notify MEDUSA))]
 local Notif = {}
 
 local CoreGUI = game:GetService("CoreGui")
