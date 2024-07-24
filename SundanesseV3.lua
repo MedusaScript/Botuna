@@ -7271,6 +7271,7 @@ two(CFrame.new(-30939.830078125, 3.729933261871338, 9256.4208984375))
 
 for _,v in next, workspace.Boats.PirateBrigade:GetDescendants() do
     if v.Name:find("VehicleSeat") then
+        v.MaxSpeed = 300
     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.CFrame
     end
 end
@@ -7299,7 +7300,7 @@ spawn(function()
 
                 for _, v in next, workspace.Boats.PirateBrigade:GetDescendants() do
                     if v.Name:find("VehicleSeat") then
-                        vehicleSeat = v
+                        vehicleSeat = v.MaxSpeed = 300
                         wait(0.2) 
 
                         for _, enemyType in pairs(enemyTypes) do
