@@ -7791,7 +7791,7 @@ spawn(function()
     end
 end)
 
-Z:AddButton("Buy Microchip Oder Boss",
+Z:AddButton("Speed Boat",
 Z:OnChanged(function(Value)
     _G.Speed = Value
 end)
@@ -7808,7 +7808,8 @@ if v.Name:find("VehicleSeat") then
     end)
 end
 end)
-end))
+end)
+end)
     
 
     
