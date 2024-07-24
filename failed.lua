@@ -5294,6 +5294,17 @@ end)
             end
         end)
 end)
+elseif World3 then
+    spawn(function()
+        pcall(function()
+            while wait() do
+    if game.Workspace._WorldOrigin.Locations:FindFirstChild('Kitsune Island') then
+    Kitsunecheck:Set('✅: Kitsune Island Spawning')
+    else
+      Kitsunecheck:Set('❌: Kitsune Island Not Found')end
+            end
+        end)
+end)
 
 
 Mirragecheck = Z:AddLabel("")
@@ -7388,19 +7399,8 @@ spawn(function()
     end
 end)
 
+Z:AddLine()
 Z:AddSeperator("Kitsune Island")
-
-elseif World3 then
-    spawn(function()
-        pcall(function()
-            while wait() do
-    if game.Workspace._WorldOrigin.Locations:FindFirstChild('Kitsune Island') then
-    Kitsunecheck:Set('✅: Kitsune Island Spawning')
-    else
-      Kitsunecheck:Set('❌: Kitsune Island Not Found')end
-            end
-        end)
-end)
 
 Kitsunecheck = Z:AddLabel("")
 Z:AddToggle("TP to Kitsune Island", false, function(value)
