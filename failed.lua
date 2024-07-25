@@ -1,4 +1,4 @@
-local lib = loadstring(game:HttpGet("https://raw.githubusercontent.com/Sidhsksjsjsh/VAPE-UI-MODDED/main/.lua"))()
+local lib = loadstring(game:HttpGet("https://raw.githubusercontent.com/MedusaScript/limitless-medusa/main/2.lua"))()
 local wndw = lib:Window("Brutality Hub")
 local T1 = wndw:Tab("Main",true)
 local T2 = wndw:Tab("Hatch")
