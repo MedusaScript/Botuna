@@ -1964,3 +1964,10 @@ NguyenTien:AddButton("Instagram Official Owner",function()
 setclipboard("https://www.instagram.com/medusafrzly/")
 Notif.New("Copying To Clipboard Done", 3)
 end)
+
+--mulai 
+main::AddSeperator("testing")
+main:AddButton("testing",function()
+setclipboard("testing")
+notif.new("copying to clipboard done", 3)
+end)
