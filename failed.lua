@@ -110,7 +110,7 @@ local function hatch()
   end)
 end
 
-local function raidEvents()
+--[[local function raidEvents()
   var.fraid = true
   lib:runtime(function()
       if var.fraid == false then break end
@@ -133,7 +133,7 @@ local function raidEvents()
         end)
       end
   end)
-end
+end]]
 
 T7:Dropdown("Select machine",var.machine.table,function(value)
     var.machine.s = value
