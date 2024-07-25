@@ -82,7 +82,7 @@ local var = {
   alre = false
 }
 
-
+--[[
 local args = {
     [1] = {
         ["harmIndex"] = 2,
@@ -94,7 +94,7 @@ local args = {
 
 game:GetService("ReplicatedStorage")["Remotes"]["HeroSkillHarm"]:FireServer(unpack(args))
 lib:CustomTeleport("tween",str,"position")
-
+]]
 
 local function getChildren(path,funct)
   for i,v in pairs(path:GetChildren()) do
@@ -110,7 +110,7 @@ local function hatch()
   end)
 end
 
-local function raidEvents()
+--[[local function raidEvents()
   var.fraid = true
   lib:runtime(function()
       if var.fraid == false then break end
@@ -133,7 +133,7 @@ local function raidEvents()
         end)
       end
   end)
-end
+end]]
 
 T7:Dropdown("Select machine",var.machine.table,function(value)
     var.machine.s = value
@@ -250,7 +250,7 @@ T6:Button("Raid lobby",function()
     game:GetService("ReplicatedStorage")["Remotes"]["LocalPlayerTeleport"]:FireServer({["mapId"] = 50201})
 end)
 
-T6:Button("Start raid",function()
+--[[T6:Button("Start raid",function()
     lib:notify(lib:ColorFonts("Dont move, auto kill is enabled. u will lose all reward if u move","Green"),10)
     game:GetService("ReplicatedStorage")["Remotes"]["EnterRaidRoom"]:FireServer(var.raid.s)
     wait(0.1)
@@ -260,7 +260,7 @@ T6:Button("Start raid",function()
     wait(0.1)
     raidEvents()
 end)
-
+]]
 
 T6:Toggle("Start raid + Auto kill",false,function(value)
     var.fraid = value
@@ -687,7 +687,7 @@ Iris:Connect(function()
 end)
 end)
 
-T99:Button("Run LS Decompiler [ Vanguard ]",function()
+--[[T99:Button("Run LS Decompiler [ Vanguard ]",function()
       lib:notify(lib:ColorFonts("You're not developer or staff.","Red"),30)
 end)
 
@@ -766,7 +766,7 @@ lib:CheckServers(3,function(vuln)
 end
 end)
 lib:rejoin() 
-  
+  ]]
 T99:Button("Teleport to lower server",function()
       lib:CheckServers(4,function(vuln)
           if vuln == true then
@@ -818,7 +818,7 @@ end)
 
 end
 
--T3:Toggle("Receive task - TESTING",false,function(value)
+--[[T3:Toggle("Receive task - TESTING",false,function(value)
     var.task.ach = value
     while wait() do
       if var.task.ach == false then break end
@@ -826,9 +826,9 @@ end
     end
 end)
 (string.sub(string.lower(v.Name),1,string.len(value))) == string.lower(value)
+]]
 
-
-
+--[[
 local args = {
     [1] = {
         ["harmIndex"] = 2,
@@ -851,7 +851,7 @@ local args = {
 
 game:GetService("ReplicatedStorage")["Remotes"]["EquipWeapon"]:FireServer(unpack(args))
 
-
+]]
 
 --game:GetService("ReplicatedStorage")["Remotes"]["FinishTask"]:FireServer(unpack(args))
 lib:HookFunction(function(method,self,args)
