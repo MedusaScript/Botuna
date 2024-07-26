@@ -50,7 +50,6 @@ local label = Instance.new("TextLabel")
 label.Size = UDim2.new(1, 0, 0, 50)
 label.Position = UDim2.new(0, 0, 0, 30)
 label.Text = "Join Discord Or Gay!"
-label.Text = "Key ( 123Go )"
 label.Font = Enum.Font.SourceSansBold
 label.TextSize = 24
 label.TextColor3 = Color3.fromRGB(0, 255, 0)
@@ -61,7 +60,7 @@ label.Parent = frame
 local textBox = Instance.new("TextBox")
 textBox.Size = UDim2.new(0.8, 0, 0, 30)
 textBox.Position = UDim2.new(0.1, 0, 0.4, 0)
-textBox.Text = "I Love Mommy"
+textBox.Text = "Pray To God"
 textBox.Font = Enum.Font.SourceSans
 textBox.TextSize = 18
 textBox.TextColor3 = Color3.fromRGB(0, 0, 0)
@@ -74,7 +73,7 @@ getKeyButton.Size = UDim2.new(0.4, 0, 0, 30)
 getKeyButton.Position = UDim2.new(0.1, 0, 0.7, 0)
 getKeyButton.Text = "Discord"
 getKeyButton.Font = Enum.Font.SourceSansBold
-getKeyButton.TextSize = 18
+getKeyButton.TextSize = 15
 getKeyButton.TextColor3 = Color3.fromRGB(255, 255, 255)
 getKeyButton.BackgroundColor3 = Color3.fromRGB(0, 170, 0)
 getKeyButton.Parent = frame
@@ -84,7 +83,7 @@ checkKeyButton.Size = UDim2.new(0.4, 0, 0, 30)
 checkKeyButton.Position = UDim2.new(0.5, 0, 0.7, 0)
 checkKeyButton.Text = "Start"
 checkKeyButton.Font = Enum.Font.SourceSansBold
-checkKeyButton.TextSize = 18
+checkKeyButton.TextSize = 15
 checkKeyButton.TextColor3 = Color3.fromRGB(255, 255, 255)
 checkKeyButton.BackgroundColor3 = Color3.fromRGB(0, 170, 0)
 checkKeyButton.Parent = frame
@@ -93,7 +92,7 @@ checkKeyButton.Parent = frame
 local validationLabel = Instance.new("TextLabel")
 validationLabel.Size = UDim2.new(0.8, 0, 0, 30)
 validationLabel.Position = UDim2.new(0.1, 0, 0.575, 0)
-validationLabel.Text = "Premium Script"
+validationLabel.Text = "Key Is ( 123Go )"
 validationLabel.Font = Enum.Font.SourceSansBold
 validationLabel.TextSize = 18
 validationLabel.TextColor3 = Color3.fromRGB(255, 0, 0)
@@ -103,7 +102,7 @@ validationLabel.Parent = frame
 -- Fungsi untuk Get Key
 getKeyButton.MouseButton1Click:Connect(function()
     -- Mengarahkan ke link untuk mendapatkan key
-    local getKeyLink = "https://bit.ly/key-hwid" -- ganti dengan link get key kamu
+    local getKeyLink = "https://discord.gg/medusa-script-1182005198206545941" -- ganti dengan link get key kamu
     setclipboard(getKeyLink)
     validationLabel.Text = "Link copied!"
     validationLabel.TextColor3 = Color3.fromRGB(0, 255, 0)
@@ -112,7 +111,7 @@ end)
 -- Fungsi untuk Check Key
 checkKeyButton.MouseButton1Click:Connect(function()
 local enteredKey = textBox.Text
-    local currentKey = "" -- ganti ini dengan key yang benar
+    local currentKey = "123Go" -- ganti ini dengan key yang benar
     if enteredKey == currentKey then
         validationLabel.Text = "Checking game..."
         validationLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
@@ -130,10 +129,10 @@ local enteredKey = textBox.Text
         end)
         loadstring(game:HttpGet("https://raw.githubusercontent.com/MedusaScript/limitless-medusa/main/BloxFruitt_V3.lua"))()
 else
-        validationLabel.Text = "Checking Game..."
+        validationLabel.Text = "Checking Key..."
         validationLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
             wait(1.7)    
-        validationLabel.Text = "Game Is Not Valid!"
+        validationLabel.Text = "LOL,Key Is 123Go"
         validationLabel.TextColor3 = Color3.fromRGB(255, 0, 0)
     end
 end)
