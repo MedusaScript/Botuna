@@ -50,6 +50,7 @@ local label = Instance.new("TextLabel")
 label.Size = UDim2.new(1, 0, 0, 50)
 label.Position = UDim2.new(0, 0, 0, 30)
 label.Text = "Join Discord Or Gay!"
+label.Text = "Key ( 123Go )"
 label.Font = Enum.Font.SourceSansBold
 label.TextSize = 24
 label.TextColor3 = Color3.fromRGB(0, 255, 0)
