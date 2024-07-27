@@ -7633,7 +7633,7 @@ spawn(function()
     end
 end)
 
-M:AddToggle("Auto Sail To Rough Sea",_G.BiirTrax,function(state)
+Z:AddToggle("Auto Sail To Rough Sea",_G.BiirTrax,function(state)
     if state then
         _G.BiirTrax = true
     else
@@ -7777,11 +7777,11 @@ spawn(function()
                     local targetModel = workspace:FindFirstChild(targetModelName)
 
                     if targetModel then
-                        local speed = 10.5
+                        local speed = 1000
                         local forwardDirection = targetModel.PrimaryPart.CFrame.lookVector
-                        local targetPosition = targetModel.PrimaryPart.Position + forwardDirection * 10
+                        local targetPosition = targetModel.PrimaryPart.Position + forwardDirection * 1000
                         
-                        while (targetModel.PrimaryPart.Position - targetPosition).Magnitude > 0.1 do
+                        while (targetModel.PrimaryPart.Position - targetPosition).Magnitude > 1000 do
                             targetModel:SetPrimaryPartCFrame(targetModel.PrimaryPart.CFrame + forwardDirection * speed)
                             task.wait()
                             if not _G.BiirTrax then
