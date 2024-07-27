@@ -2194,14 +2194,14 @@ end
     TabWidth = 120,
     Size = UDim2.fromOffset(480, 320),
     Acrylic = false, -- The blur may be detectable, setting this to false disables blur entirely
-    Theme = "Amethyst",
+    Theme = "Aqua",
     MinimizeKey = Enum.KeyCode.LeftControl -- Used when theres no MinimizeKeybind
 })
 
 --Fluent provides Lucide Icons https://lucide.dev/icons/ for the tabs, icons are optional
 local Tabs = {
-    Main = Window:AddTab({ Title = "Farm", Icon = "home" }),
-	Settings = Window:AddTab({ Title = "Setting Farm", Icon = "settings" }),    
+    Settings = Window:AddTab({ Title = "Setting Farm", Icon = "settings" }),
+    Main = Window:AddTab({ Title = "Farm Level", Icon = "home" }),    
     Mt = Window:AddTab({ Title = "Item And Boss", Icon = "air-vent" }),    
     De = Window:AddTab({ Title = "Fruit & Raid", Icon = "banana" }),   
     Qs = Window:AddTab({ Title = "Quest Race V4", Icon = "arrow-up-down" }),        
