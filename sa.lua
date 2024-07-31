@@ -1,3 +1,15 @@
+Highlight(Plr)
+wait(0.1)
+AlchemyNotify("Thanks for using Medusa Script!",5)
+wait(0.1)
+AlchemyNotify("https://discord.gg/brutalityhub",5)
+wait(0.5)
+local Notification = require(game:GetService("ReplicatedStorage").Notification)
+Notification.new("<Color=Cyan>Brutality V 1.0<Color=/>"):Display()
+wait(0.5)
+Notification.new("<Color=Yellow>Please Subscribe Medusa Script<Color=/>"):Display()
+wait(1)
+local SlayerzLibrary = loadstring(game:HttpGet("https://raw.githubusercontent.com/x2-Neptune/SlayerzUI/main/Library.script"))()
 --https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua--Mentahan Ui
 --]]
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/MedusaScript/Botuna/main/UI-Universal-Medusa.lua"))()
