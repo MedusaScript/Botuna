@@ -851,25 +851,25 @@ if _G.PMT_Key == "PMTKAITUN" then
         Q.Parent = P
         R.Color =
             ColorSequence.new {
-            ColorSequenceKeypoint.new(0.00, Color3.fromRGB(255, 0, 255)),
-            ColorSequenceKeypoint.new(0.06, Color3.fromRGB(255, 0, 255)),
-            ColorSequenceKeypoint.new(0.11, Color3.fromRGB(255, 0, 255)),
-            ColorSequenceKeypoint.new(0.17, Color3.fromRGB(255, 0, 255)),
-            ColorSequenceKeypoint.new(0.22, Color3.fromRGB(255, 0, 255)),
-            ColorSequenceKeypoint.new(0.28, Color3.fromRGB(255, 0, 255)),
-            ColorSequenceKeypoint.new(0.33, Color3.fromRGB(255, 0, 255)),
-            ColorSequenceKeypoint.new(0.39, Color3.fromRGB(255, 0, 255)),
-            ColorSequenceKeypoint.new(0.45, Color3.fromRGB(255, 0, 255)),
-            ColorSequenceKeypoint.new(0.50, Color3.fromRGB(255, 0, 255)),
-            ColorSequenceKeypoint.new(0.56, Color3.fromRGB(255, 0, 255)),
-            ColorSequenceKeypoint.new(0.61, Color3.fromRGB(255, 0, 255)),
-            ColorSequenceKeypoint.new(0.67, Color3.fromRGB(255, 0, 255)),
-            ColorSequenceKeypoint.new(0.72, Color3.fromRGB(255, 0, 255)),
-            ColorSequenceKeypoint.new(0.78, Color3.fromRGB(255, 0, 255)),
-            ColorSequenceKeypoint.new(0.84, Color3.fromRGB(255, 0, 255)),
-            ColorSequenceKeypoint.new(0.89, Color3.fromRGB(255, 0, 255)),
-            ColorSequenceKeypoint.new(0.95, Color3.fromRGB(255, 0, 255)),
-            ColorSequenceKeypoint.new(1.00, Color3.fromRGB(255, 0, 255))
+            ColorSequenceKeypoint.new(0.00, Color3.fromRGB(7, 237, 7)),
+            ColorSequenceKeypoint.new(0.06, Color3.fromRGB(7, 237, 7)),
+            ColorSequenceKeypoint.new(0.11, Color3.fromRGB(7, 237, 7)),
+            ColorSequenceKeypoint.new(0.17, Color3.fromRGB(7, 237, 7)),
+            ColorSequenceKeypoint.new(0.22, Color3.fromRGB(7, 237, 7)),
+            ColorSequenceKeypoint.new(0.28, Color3.fromRGB(7, 237, 7)),
+            ColorSequenceKeypoint.new(0.33, Color3.fromRGB(7, 237, 7)),
+            ColorSequenceKeypoint.new(0.39, Color3.fromRGB(7, 237, 7)),
+            ColorSequenceKeypoint.new(0.45, Color3.fromRGB(7, 237, 7)),
+            ColorSequenceKeypoint.new(0.50, Color3.fromRGB(7, 237, 7)),
+            ColorSequenceKeypoint.new(0.56, Color3.fromRGB(7, 237, 7)),
+            ColorSequenceKeypoint.new(0.61, Color3.fromRGB(7, 237, 7)),
+            ColorSequenceKeypoint.new(0.67, Color3.fromRGB(7, 237, 7)),
+            ColorSequenceKeypoint.new(0.72, Color3.fromRGB(7, 237, 7)),
+            ColorSequenceKeypoint.new(0.78, Color3.fromRGB(7, 237, 7)),
+            ColorSequenceKeypoint.new(0.84, Color3.fromRGB(7, 237, 7)),
+            ColorSequenceKeypoint.new(0.89, Color3.fromRGB(7, 237, 7)),
+            ColorSequenceKeypoint.new(0.95, Color3.fromRGB(7, 237, 7)),
+            ColorSequenceKeypoint.new(1.00, Color3.fromRGB(7, 237, 7))
         }
         R.Name = "StrokeGradient"
         R.Parent = Q
@@ -886,7 +886,7 @@ if _G.PMT_Key == "PMTKAITUN" then
         T.Size = UDim2.new(0, 435, 0, 36)
         T.Font = Enum.Font.Unknown
         T.Text = "Auto Farm:"
-        T.TextColor3 = Color3.fromRGB(255, 0, 255)
+        T.TextColor3 = Color3.fromRGB(7, 237, 7)
         T.TextSize = 18.000
         U.Color =
             ColorSequence.new {
