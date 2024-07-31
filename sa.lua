@@ -37,30 +37,30 @@ MainSection:NewButton("Brutality Hub V3", "Blox Fruit", function()
     loadstring(game:HttpGet('https://raw.githubusercontent.com/MedusaScript/Botuna/main/BrutalityV3.lua'))()
 end)
 
-local Main = Window:NewTab("BLOX FRUIT")
-local MainSection = Main:NewSection("BLOX FRUIT - No Key") --TANDA --
+local AA = Window:NewTab("BLOX FRUIT")
+local AASection = AA:NewSection("BLOX FRUIT - No Key") --TANDA --
 
-MainSection:NewButton("Redz Hub", "Blox Fruit", function()
+AASection:NewButton("Redz Hub", "Blox Fruit", function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/REDzHUB/BloxFruits/main/redz9999"))()
 end)
 
-MainSection:NewButton("Vector Hub", "Blox Fruit", function()
+AASection:NewButton("Vector Hub", "Blox Fruit", function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/AAwful/VectorHub/main/uh.lua"))()
 end)
 
-MainSection:NewButton("Unknow Hub", "Blox Fruit", function()
+AASection:NewButton("Unknow Hub", "Blox Fruit", function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/BestScriptEverr/Main-/main/UnknownHubV3"))()
 end)
 
-MainSection:NewButton("Fai Fao Hub", "Blox Fruit", function()
+AASection:NewButton("Fai Fao Hub", "Blox Fruit", function()
     loadstring(game:HttpGet"https://raw.githubusercontent.com/PNguyen0199/Script/main/Fai-Fao-Ver2.lua")()
 end)
 
-MainSection:NewButton("ScriptBlox Hub", "Blox Fruit", function()
+AASection:NewButton("ScriptBlox Hub", "Blox Fruit", function()
     loadstring(game:HttpGet('https://raw.githubusercontent.com/Script-Blox/Script/main/Script-Blox'))()
 end)
 
-MainSection:NewButton("Ganteng Hub", "Blox Fruit", function()
+AASection:NewButton("Ganteng Hub", "Blox Fruit", function()
     loadstring(game:HttpGet("https://isnahamzahpastebin.tech/gantenghubv1_new"))()
 end)
 
