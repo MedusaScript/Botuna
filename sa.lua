@@ -1,4 +1,3 @@
-Highlight(Plr)
 wait(0.1)
 AlchemyNotify("Thanks for using Medusa Script!",5)
 wait(0.1)
