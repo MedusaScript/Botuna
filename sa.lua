@@ -44,12 +44,12 @@ AASection:NewButton("Redz Hub", "Blox Fruit", function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/REDzHUB/BloxFruits/main/redz9999"))()
 end)
 
-AASection:NewButton("W-Azure V2", "Blox Fruit", function()
-    loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/3b2169cf53bc6104dabe8e19562e5cc2.lua"))()
+AASection:NewButton("W-Azure V1", "Blox Fruit", function()
+    loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/b6b36cec473a0dd48eab35b8272b2384.lua"))()
 end)
 
-AASection:NewButton("Vector Hub", "Blox Fruit", function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/AAwful/VectorHub/main/uh.lua"))()
+AASection:NewButton("W-Azure V2", "Blox Fruit", function()
+    loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/3b2169cf53bc6104dabe8e19562e5cc2.lua"))()
 end)
 
 AASection:NewButton("Vector Hub", "Blox Fruit", function()
@@ -72,17 +72,47 @@ AASection:NewButton("Ganteng Hub", "Blox Fruit", function()
     loadstring(game:HttpGet("https://isnahamzahpastebin.tech/gantenghubv1_new"))()
 end)
 
+local AASection = AA:NewSection("FARM CHEST - No Key") --TANDA --
+
+AASection:NewButton("Zen Hub", "Farm Chest", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/ZenHubTheBest/Main/main/ChestFarm"))()
+end)
+
+AASection:NewButton("Mtriet Hub", "Farm Chest", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Minhtriettt/Free-Script/main/Chest-Farm.lua"))()
+end)
+
+AASection:NewButton("Daki Hub", "Farm Chest", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/m1M-Plqer819/dakiiuem/main/main/autochest.lua"))()
+end)
+
 local BB = Window:NewTab("KING LEGACY")
-local CCSection = BB:NewSection("KING LEGACY - No Key") --TANDA --
+local BBSection = BB:NewSection("KING LEGACY - No Key") --TANDA --
+
+BBSection:NewButton("Brutality Hub", "King Legacy", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Strikehubv2z/StormSKz/main/All_in_one"))()
+end)
+
+BBSection:NewButton("Strike Hub", "King Legacy", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Strikehubv2z/StormSKz/main/All_in_one"))()
+end)
+
+BBSection:NewButton("Ganteng Hub", "King Legacy", function()
+loadstring(game:HttpGet("http://hexasptr.my.id/script/KingLegacy.lua"))()
+end)
+
+BBSection:NewButton("SHAREHACK HUB", "King Legacy", function()
+loadstring(game:HttpGet('https://raw.githubusercontent.com/SHAREHACK/script/main/kl'))()
+end)
 
 local CC = Window:NewTab("BLADE BALL")
-local CCSection = BB:NewSection("BLADE BALL - No Key") --TANDA --
+local CCSection = CC:NewSection("BLADE BALL - No Key") --TANDA --
 
 local DD = Window:NewTab("PRISON LIFE")
-local DDSection = BB:NewSection("PRISON LIFE - No Key") --TANDA --
+local DDSection = DD:NewSection("PRISON LIFE - No Key") --TANDA --
 
 local EE = Window:NewTab("CDID")
-local EESection = BB:NewSection("CDID - No Key") --TANDA --
+local EESection = EE:NewSection("CDID - No Key") --TANDA --
 
 local FF = Window:NewTab("PETSIM")
-local FFSection = BB:NewSection("PETSIM - No Key") --TANDA --
+local FFSection = FF:NewSection("PETSIM - No Key") --TANDA --
