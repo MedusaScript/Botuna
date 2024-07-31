@@ -7,6 +7,36 @@ local Window = Library.CreateLib("BRUTALITY HUB X MEDUSA SCRIPT - ALL SCRIPT IN 
 local Main = Window:NewTab("THE BEST")
 local MainSection = Main:NewSection("PRISON LIFE - No Key") --TANDA --
 
+MainSection:NewButton("Brutality Hub", "ARSENAL", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/MedusaScript/Botuna/main/ArsenalV1.lua"))()
+end)
+
+local MainSection = Main:NewSection("Blox Fruit - No Key") --TANDA --
+
+MainSection:NewButton("Hack Blox Fruit", "Hack Game", function()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/MedusaScript/BrutalityV2/main/HackBf.lua'))()
+end)
+
+MainSection:NewButton("Kaitun (beta)", "Blox Fruit", function()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/MedusaScript/Botuna/main/KaitunV1.lua'))()
+end)
+
+MainSection:NewButton("FARM CHEST", "Blox Fruit", function()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/MedusaScript/Botuna/main/Chest.lua'))()
+end)
+
+MainSection:NewButton("Brutality Hub V1", "Blox Fruit", function()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/MedusaScript/limitless-medusa/main/BrutalityV1'))()
+end)
+
+MainSection:NewButton("Brutality Hub V2", "Blox Fruit", function()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/MedusaScript/Botuna/main/BrutalityV2.lua'))()
+end)
+
+MainSection:NewButton("Brutality Hub V3", "Blox Fruit", function()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/MedusaScript/Botuna/main/BrutalityV3.lua'))()
+end)
+
 local Main = Window:NewTab("BLOX FRUIT")
 local MainSection = Main:NewSection("BLOX FRUIT - No Key") --TANDA --
 
