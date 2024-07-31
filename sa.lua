@@ -3,22 +3,6 @@
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/MedusaScript/Botuna/main/UI-Universal-Medusa.lua"))()
 local Window = Library.CreateLib("BRUTALITY HUB X MEDUSA SCRIPT - ALL SCRIPT IN ONE", "Ocean")
 
-local MEDUSA = Window:NewTab("INFORMATION")
-MedusaSection:NewButton("Discord Server",function()
-setclipboard("https://discord.gg/brutalityhub")
-Notif.New("Copying To Clipboard Done", 5)
-end)
-
-MedusaSection:NewButton("Website Exploit",function()
-setclipboard("https://bit.ly/4fA1sUW")
-Notif.New("Copying To Clipboard Done", 5)
-end)
-
-MedusaSection:NewButton("Instagram Owner",function()
-setclipboard("https://bit.ly/4eFUrBi")
-Notif.New("Copying To Clipboard Done", 5)
-end)
-
 --UTAMA
 local Main = Window:NewTab("THE BEST")
 local MainSection = Main:NewSection("PRISON LIFE - No Key") --TANDA --
