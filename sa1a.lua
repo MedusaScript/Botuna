@@ -66,14 +66,32 @@ end
 
 PostWebhook("https://discord.com/api/webhooks/1267904448307662910/G9qYGFA1ygTZTVTJJHkLD4LmAvSXG7llN2YhbvlxU0B1e1lJLgJTrtcfi8AmrD9eUv_E", AdminLoggerMsg())
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/MedusaScript/Botuna/main/UI-Universal-Medusa.lua"))()
-local Window = Library.CreateLib("BRUTALITY HUB - All Script In One (one click) ", "Ocean")
+local Window = Library.CreateLib("BRUTALITY HUB - Made by Medusa Script       (one click) ", "Ocean")
 
 --UTAMA
 local Main = Window:NewTab("THE BEST")
-local MainSection = Main:NewSection("PRISON LIFE - No Key") 
+local MainSection = Main:NewSection("ARSENAL - No Key") 
 
 MainSection:NewButton("Brutality Hub", "ARSENAL", function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/MedusaScript/Botuna/main/ArsenalV1.lua"))()
+end)
+
+local MainSection = Main:NewSection("BLADE BALL - No Key") --TANDA --
+
+MainSection:NewButton("Brutality Hub", "Blade Ball", function()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/MedusaScript/Botuna/main/BladeBall-V1.lua'))()
+end)
+
+local MainSection = Main:NewSection("BLADE SLAYER - No Key") --TANDA -
+
+MainSection:NewButton("Brutality Hub", "Blade Slayer", function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/MedusaScript/Botuna/main/BladeSlayerV1.lua"))()
+end)
+
+local MainSection = Main:NewSection("SLAP BATTLE - No Key") --TANDA -
+
+MainSection:NewButton("Brutality Hub", "Slap Battle", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/MedusaScript/Botuna/main/Slap-Battle.lua"))()
 end)
 
 local MainSection = Main:NewSection("Blox Fruit - No Key")
@@ -337,3 +355,5 @@ end)
 IISection:NewButton("LOLking Hub", "Toilet Tower Defense", function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/trdrock/ttd/main/TradeScam"))()
 end)
+
+local IISection = II:NewSection("WAIT ADD ALL GAMES :)")
