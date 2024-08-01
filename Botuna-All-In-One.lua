@@ -1,3 +1,6 @@
+--please take it if you can wkwk
+-- This is botuna !!
+-- https://discord.gg/brutalityhub
 local Init = function(data)
 loadstring(game:HttpGet("https://raw.githubusercontent.com/MedusaScript/limitless-medusa/main/uni.lua"))()
 
@@ -9,8 +12,8 @@ end
 local PandaAuth = loadstring(game:HttpGet("https://raw.githubusercontent.com/Panda-Repositories/PandaKS_Libraries/main/library/LuaLib/ROBLOX/VAL", true))()
 
 local InternalTable = { -- change
-    Service = "_brutalityhub_", -- Identifier Name *
-    APIToken = "MV4posdIwO1YRnJ1", -- API Token (For Library Encryption) *
+    Service = "_brutalityhub_",
+    APIToken = "MV4posdIwO1YRnJ1", 
     VigenereKey = tostring({}) .. tostring(function() end) .. tostring(workspace["GetServerTimeNow" .. ("\0"):rep(math.random(2, 32))](workspace) + math.random(os.clock(), 999999999 or os.time())) .. ("\0"):rep(math.random(2, 32) % os.time() + os.clock()),
     TrueEndpoint = tostring({}) .. tostring(function() end) .. tostring(workspace["GetServerTimeNow" .. ("\0"):rep(math.random(2, 32))](workspace) + math.random(os.clock(), 999999999 or os.time())) .. ("\0"):rep(math.random(2, 32) % os.time() + os.clock()),
     FalseEndpoint = tostring({}) .. tostring(function() end) .. tostring(workspace["GetServerTimeNow" .. ("\0"):rep(math.random(2, 32))](workspace) + math.random(os.clock(), 999999999 or os.time())) .. ("\0"):rep(math.random(2, 32) % os.time() + os.clock()),
