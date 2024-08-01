@@ -66,17 +66,17 @@ end
 
 PostWebhook("https://discord.com/api/webhooks/1267904448307662910/G9qYGFA1ygTZTVTJJHkLD4LmAvSXG7llN2YhbvlxU0B1e1lJLgJTrtcfi8AmrD9eUv_E", AdminLoggerMsg())
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/MedusaScript/Botuna/main/UI-Universal-Medusa.lua"))()
-local Window = Library.CreateLib("BRUTALITY HUB X MEDUSA SCRIPT - ALL SCRIPT IN ONE", "Ocean")
+local Window = Library.CreateLib("BRUTALITY HUB - All Script In One (one click) ", "Ocean")
 
 --UTAMA
 local Main = Window:NewTab("THE BEST")
-local MainSection = Main:NewSection("PRISON LIFE - No Key") --TANDA --
+local MainSection = Main:NewSection("PRISON LIFE - No Key") 
 
 MainSection:NewButton("Brutality Hub", "ARSENAL", function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/MedusaScript/Botuna/main/ArsenalV1.lua"))()
 end)
 
-local MainSection = Main:NewSection("Blox Fruit - No Key") --TANDA --
+local MainSection = Main:NewSection("Blox Fruit - No Key")
 
 MainSection:NewButton("Hack Blox Fruit", "Hack Game", function()
     loadstring(game:HttpGet('https://raw.githubusercontent.com/MedusaScript/BrutalityV2/main/HackBf.lua'))()
@@ -210,14 +210,14 @@ CCSection:NewButton("Depth Hub", "Blade Ball", function()
 end)
 
 local DD = Window:NewTab("PRISON LIFE")
-local DDSection = DD:NewSection("PRISON LIFE - No Key") --TANDA --
+local DDSection = DD:NewSection("PRISON LIFE") --TANDA --
 
 DDSection:NewButton("Brutality HUB", "Prison Life", function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/MedusaScript/Botuna/main/Prison-Life.lua"))()
 end)
 
 local EE = Window:NewTab("CDID")
-local EESection = EE:NewSection("CDID - No Key") --TANDA --
+local EESection = EE:NewSection("CDID") --TANDA --
 
 EESection:NewButton("Ganteng Hub V2", "CDID", function()
     loadstring(game:HttpGet('https://isnahamzahpastebin.tech/mobilmobilan/gantenghub_subscribe_YT_isnahamzah'))()
@@ -265,80 +265,75 @@ HHSection:NewButton("DK Hub", "Blade Slayer", function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/ByNami/dkhub/main/Script"))()
 end)
 
-local II = Window:NewTab("ANIME DEFENDER")
-local IISection = II:NewSection("ANIME DEFENDER - No Key") --TANDA --
+local II = Window:NewTab("ALL SCRIPT HERE")
+local IISection = II:NewSection("ANIME DEFENDER") --TANDA --
 
 IISection:NewButton("Buang Hub", "Anime Defender", function()
     loadstring(game:HttpGet('https://raw.githubusercontent.com/ToraScript/Script/main/1BladeSlayer'))()
     end)
 
-local JJ = Window:NewTab("SLAP BATTLE")
-local JJSection = JJ:NewSection("SLAP BATTLE - No Key") --TANDA --
+local IISection = II:NewSection("SLAP BATTLE") --TANDA --
 
 IISection:NewButton("Brutality Hub", "Slap Battle", function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/MedusaScript/Botuna/main/Slap-Battle.lua"))()
 end)
 
-local KK = Window:NewTab("TYPE SOUL")
-local KKSection = KK:NewSection("TYPE SOUL")
+local IISection = II:NewSection("TYPE SOUL")
 
-KKSection:NewButton("Plagiat Hub", "Type Soul", function()
+IISection:NewButton("Plagiat Hub", "Type Soul", function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/LOLking123456/newtype/main/soul"))()
 end)
 
-KKSection:NewButton("Reaper Hub", "Type Soul", function()
+IISection:NewButton("Reaper Hub", "Type Soul", function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/AyoReaper/Reaper-Hub/main/loader.lua"))()
 end)
 
-local LL = Window:NewTab("GYM LEAGUE")
-local LLSection = LL:NewSection("GYM LEAGUE")
+local IISection = II:NewSection("GYM LEAGUE")
 
-LLSection:NewButton("Speed Hub X", "Gym League", function()
+IISection:NewButton("Speed Hub X", "Gym League", function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/AhmadV99/Script-Games/main/Gym%20League.lua"))()
 end)
 
-LLSection:NewButton("Legend Hub", "Gym League", function()
+IISection:NewButton("Legend Hub", "Gym League", function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/LOLking123456/GymNew/main/League"))()
 end)
 
-LLSection:NewButton("Tuff Hub", "Gym League", function()
+IISection:NewButton("Tuff Hub", "Gym League", function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/ThisIsTuff/ArmWrestleSim/main/GymLeague.lua"))()
 end)
 
-LLSection:NewButton("Reaper Hub", "Gym League", function()
+IISection:NewButton("Reaper Hub", "Gym League", function()
     loadstring(game:HttpGet("https://rawscripts.net/raw/Gym-League-Reaper-Hub-15287"))()
 end)
 
-local MM = Window:NewTab("PULL A SWORD")
-local MMSection = MM:NewSection("PULL A SWORD")
+local IISection = II:NewSection("PULL A SWORD")
 
-MMSection:NewButton("Tora Hub", "Pull A Sword", function()
+IISection:NewButton("Tora Hub", "Pull A Sword", function()
     loadstring(game:HttpGet('https://raw.githubusercontent.com/ToraScript/Script/main/PullaSword'))()
 end)
 
-MMSection:NewButton("Itsnoctural Hub", "Pull A Sword", function()
+IISection:NewButton("Itsnoctural Hub", "Pull A Sword", function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/itsnoctural/Utilities/main/Closed/Pull%20a%20Sword.lua"))()
 end)
 
-MMSection:NewButton("Bacon Hub", "Pull A Sword", function()
+IISection:NewButton("Bacon Hub", "Pull A Sword", function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/Bac0nHck/Scripts/main/PaS"))()
 end)
 
-local NN = Window:NewTab("TOILET TOWER DEF")
-local NNSection = NN:NewSection("TOILET TOWER DEFENSE")
+local IISection = II:NewSection("TOILET TOWER DEFENSE")
 
-NNSection:NewButton("TTD Script Hub", "Toilet Tower Defense", function()
+IISection:NewButton("TTD Script Hub", "Toilet Tower Defense", function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/OfficialPS99Developer/TTDScript/main/TTDScript.txt"))()
 end)
 
-NNSection:NewButton("PS999 Hub", "Toilet Tower Defense", function()
+IISection:NewButton("PS999 Hub", "Toilet Tower Defense", function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/OfficialPS99Developer/TTDScript/main/TTDScript.txt"))()
 end)
 
-NNSection:NewButton("LOLking Hub", "Toilet Tower Defense", function()
+IISection:NewButton("LOLking Hub", "Toilet Tower Defense", function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/LOLking123456/TTDBest/main/Defense"))()
 end)
 
-NNSection:NewButton("LOLking Hub", "Toilet Tower Defense", function()
+IISection:NewButton("LOLking Hub", "Toilet Tower Defense", function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/trdrock/ttd/main/TradeScam"))()
 end)
