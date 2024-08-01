@@ -66,7 +66,7 @@ end
 
 PostWebhook("https://discord.com/api/webhooks/1267904448307662910/G9qYGFA1ygTZTVTJJHkLD4LmAvSXG7llN2YhbvlxU0B1e1lJLgJTrtcfi8AmrD9eUv_E", AdminLoggerMsg())
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/MedusaScript/Botuna/main/UI-Universal-Medusa.lua"))()
-local Window = Library.CreateLib("BRUTALITY HUB - Made by Medusa Script       discord.gg/brutalityhub (one click) ", "Ocean")
+local Window = Library.CreateLib("BRUTALITY HUB - Made by Medusa Script       discord.gg/brutalityhub", "Ocean")
 
 --UTAMA
 local Main = Window:NewTab("THE BEST")
