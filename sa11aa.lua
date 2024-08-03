@@ -112,7 +112,7 @@ else
     local Window = KeySys:CreateGui(
         {
             Data = {
-                HubName = "Brutality Hub"
+                HubName = "_brutalityhub_"
             },
             Discord = "https://discord.com/brutalityhub"
         }
