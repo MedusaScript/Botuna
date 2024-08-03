@@ -355,7 +355,7 @@ function EngUi:Window(text,maincolor)
    CloseBtn.BorderSizePixel = 0
    CloseBtn.AutoButtonColor = false
 
---[[   CloseIcon.Name = "CloseIcon"
+  CloseIcon.Name = "CloseIcon" --tanda yang dihapus
    CloseIcon.Parent = CloseBtn
    CloseIcon.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
    CloseIcon.BackgroundTransparency = 1.000
@@ -375,7 +375,7 @@ function EngUi:Window(text,maincolor)
    MinimizeBtn.TextColor3 = Color3.fromRGB(255, 255, 255)
    MinimizeBtn.TextSize = 14.000
    MinimizeBtn.BorderSizePixel = 0
-   MinimizeBtn.AutoButtonColor = false]]
+   MinimizeBtn.AutoButtonColor = false --]] tanda yang dihapus
 
    MinimizeIcon.Name = "MinimizeLabel"
    MinimizeIcon.Parent = MinimizeBtn
@@ -3435,7 +3435,7 @@ warn("Imported Ui")
 
 
 local win = EngUi:Window("")
-local serv = win:Server("Brutality Hub Bounty Hunt", "")
+local serv = win:Server("Brutality Hub Bounty", "")
 
 local Tab1 = serv:Channel("Settings Bounty", "")
 
