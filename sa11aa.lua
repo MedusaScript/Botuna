@@ -19,9 +19,13 @@ local Window = Rayfield:CreateWindow({
 	}
 })
 
-Rayfield:Notify("Title Example", "Content/Description Example", 4483362458) -- Notfication -- Title, Content, Image
+Rayfield:Notify("Brutality Hub Universal", "Testing notif text", 4483362458) -- Notfication -- Title, Content, Image
 
 local Tab = Window:CreateTab("Tab Example", 4483362458) -- Title, Image
+local Tab1 = Window:CreateTab("Tab Example", 4483362458)
+local Tab2 = Window:CreateTab("Tab Example", 4483362458)
+local Tab3 = Window:CreateTab("Tab Example", 4483362458)
+local Tab4 = Window:CreateTab("Tab Example", 4483362458)
 
 local Section = Tab:CreateSection("Section Example")
 
