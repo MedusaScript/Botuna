@@ -2349,7 +2349,7 @@ function RedeemCode(value)
         end
     })
     
-    Tabs.Sh:AddButton({
+    Tabs.Lc:AddButton({
         Title = "Teleport To Sea 1",
         Description = "",
         Callback = function()            
@@ -2357,7 +2357,7 @@ game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("TravelMain")
         end
     })
     
-    Tabs.Sh:AddButton({
+    Tabs.Lc:AddButton({
         Title = "Teleport To Sea 2",
         Description = "",
         Callback = function()            
@@ -2365,7 +2365,7 @@ game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("TravelDressros
         end
     })
     
-    Tabs.Sh:AddButton({
+    Tabs.Lc:AddButton({
         Title = "Teleport To Sea 3",
         Description = "",
         Callback = function()            
@@ -2607,7 +2607,7 @@ task.spawn(function()
         Default = 1,
     })
 
-    Dropdown:SetValue("0.15")
+    Dropdown:SetValue("0.185")
 
     Dropdown:OnChanged(function(Value)
         _G.FastAttackDelay = Value
@@ -3171,7 +3171,7 @@ task.spawn(function()
     local Slider = Tabs.Settings:AddSlider("Slider", {
         Title = "Setting % Healt Npc",
         Description = "",
-        Default = 70,
+        Default = 80,
         Min = 0,
         Max = 100,
         Rounding = 5,
@@ -3911,9 +3911,25 @@ end)
         Content = ""
     })
 
-    Tabs.Ms:AddButton({
-        Title = "Server Discord",
-        Description = "Use Bypass In Discord",
+    Tabs.If:AddButton({
+        Title = "Join Discord",
+        Description = "Use bypass In Discord, Click for copy link",
+        Callback = function()
+            setclipboard("https://discord.gg/brutalityhub")
+        end
+    })
+
+    Tabs.If:AddButton({
+        Title = "YouTube",
+        Description = "Subscribe to get update notifications",
+        Callback = function()
+            setclipboard("https://discord.gg/brutalityhub")
+        end
+    })
+
+    Tabs.If:AddButton({
+        Title = "Website Medusa Script",
+        Description = "Executor update & all script roblox",
         Callback = function()
             setclipboard("https://discord.gg/brutalityhub")
         end
@@ -5473,7 +5489,7 @@ Tabs.Ms:AddButton({
     end
 })
     
-    local Toggle = Tabs.Lc:AddToggle("MyToggle", {Title = "Walk On Water", Default = true })
+    local Toggle = Tabs.Ms:AddToggle("MyToggle", {Title = "Walk On Water", Default = true })
 Toggle:OnChanged(function(Value)
 _G.WalkWater = Value
     end)
@@ -5490,7 +5506,7 @@ _G.WalkWater = Value
         end
     end)
     
-    local Toggle = Tabs.Lc:AddToggle("MyToggle", {Title = "Anti Afk", Default = true })
+    local Toggle = Tabs.Ms:AddToggle("MyToggle", {Title = "Anti Afk", Default = true })
 Toggle:OnChanged(function(Value)
 local Value = game:GetService("VirtualUser")
     repeat wait() until game:IsLoaded() 
