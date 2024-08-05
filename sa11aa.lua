@@ -2275,7 +2275,7 @@ function getAllBladeHitsPlayers(Sizes)
 end
 
     local Window = Fluent:CreateWindow({
-    Title = "BRUTALITY HUB V3" ,
+    Title = "⭐ BRUTALITY HUB V3 ⭐" ,
     SubTitle = "Made By Medusa Script",
     TabWidth = 120,
     Size = UDim2.fromOffset(480, 320),
@@ -2286,6 +2286,7 @@ end
 
 --Fluent provides Lucide Icons https://lucide.dev/icons/ for the tabs, icons are optional
 local Tabs = {
+    If = Window:AddTab({ Title = "Home", Icon = "home" }),
     Main = Window:AddTab({ Title = "Main Farm", Icon = "gamepad-2" }),   
     Settings = Window:AddTab({ Title = "Setting Farm", Icon = "settings" }), 
     Mt = Window:AddTab({ Title = "Quest Item", Icon = "puzzle" }),       
@@ -3905,6 +3906,20 @@ end)
 		end
 	end)
         
+    Tabs.If:AddParagraph({
+        Title = "Information",
+        Content = ""
+    })
+
+    Tabs.Ms:AddButton({
+        Title = "Server Discord",
+        Description = "Use Bypass In Discord",
+        Callback = function()
+            setclipboard("https://discord.gg/brutalityhub")
+        end
+    })
+
+
     Tabs.Mt:AddParagraph({
         Title = "Farm & Get Item",
         Content = "Farm boss & get item"
@@ -5178,7 +5193,7 @@ local BoneCheck = Tabs.St:AddParagraph({
     
     local MobKilled = Tabs.St:AddParagraph({
         Title = "Dough Boss Status",
-        Content = ""
+        Content = "Status Npc & Boss"
     })
     
     
