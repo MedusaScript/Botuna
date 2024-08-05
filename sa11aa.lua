@@ -2287,7 +2287,7 @@ end
 --Fluent provides Lucide Icons https://lucide.dev/icons/ for the tabs, icons are optional
 local Tabs = {
     Settings = Window:AddTab({ Title = "Setting Farm", Icon = "settings" }),
-    Main = Window:AddTab({ Title = "Main", Icon = "gamepad-2" }),    
+    Main = Window:AddTab({ Title = "Main Farm", Icon = "gamepad-2" }),    
     Mt = Window:AddTab({ Title = "Quest Item", Icon = "puzzle" }),       
     Qs = Window:AddTab({ Title = "Quest Race V4", Icon = "arrow-up-down" }),           
     Se = Window:AddTab({ Title = "Sea Event", Icon = "anchor" }),    
@@ -3906,7 +3906,7 @@ end)
 	end)
         
     Tabs.Mt:AddParagraph({
-        Title = "Misc And Farm",
+        Title = "Farm & Get Item",
         Content = "Farm boss & get item"
     })
     
@@ -5291,7 +5291,7 @@ end)
             end
     end)
     
-    local Input = Tabs.St:AddInput("Input", {
+    local Input = Tabs.Ms:AddInput("Input", {
         Title = "Job Id Webhook",
         Default = "",
         Placeholder = "Paste Job Id",
@@ -5301,16 +5301,8 @@ end)
             _G.Job = Value
         end
     })
-    
-    Tabs.St:AddButton({
-        Title = "Copy Job ID (user)",
-        Description = "",
-        Callback = function()
-            setclipboard(tostring(game.JobId))
-        end
-    })
-    
-    Tabs.St:AddButton({
+
+    Tabs.Ms:AddButton({
         Title = "Join Job ID Webhook",
         Description = "",
         Callback = function()
@@ -5318,7 +5310,15 @@ end)
         end
     })
     
-    local Toggle = Tabs.St:AddToggle("MyToggle", {Title = "Spam Join Job Id", Default = false })
+    Tabs.Ms:AddButton({
+        Title = "Copy Job ID (user)",
+        Description = "",
+        Callback = function()
+            setclipboard(tostring(game.JobId))
+        end
+    })
+    
+    local Toggle = Tabs.Ms:AddToggle("MyToggle", {Title = "Spam Join Job Id", Default = false })
     Toggle:OnChanged(function(Value)
   _G.Join = Value
 		end)
