@@ -2295,7 +2295,7 @@ local Tabs = {
     Lc = Window:AddTab({ Title = "Teleport", Icon = "map-pin" }),
     De = Window:AddTab({ Title = "Fruit & Raid", Icon = "cherry" }),
     Sh = Window:AddTab({ Title = "Shop", Icon = "shopping-cart" }),  
-    St = Window:AddTab({ Title = "Status Server", Icon = "chart-pie" }),
+    St = Window:AddTab({ Title = "Status Server", Icon = "activity" }),
     Ms = Window:AddTab({ Title = "Misc", Icon = "align-vertical-distribute-center" }),
 }
 
@@ -2506,7 +2506,7 @@ game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuyHaki","Soru
         end
     })
     
-    Tabs.Sh:AddSection("Misc")
+    Tabs.Sh:AddSection("Reset & Buy Race")
     
     Tabs.Sh:AddButton({
         Title = "Buy Race Ghoul",
@@ -3905,12 +3905,12 @@ end)
 		end
 	end)
         
-    Tabs.Ms:AddParagraph({
+    Tabs.Mt:AddParagraph({
         Title = "Misc And Farm",
         Content = "Farm boss & get item"
     })
     
-    local Toggle = Tabs.Ms:AddToggle("MyToggle", {Title = "Auto Factory Sea 2", Default = false })
+    local Toggle = Tabs.Mt:AddToggle("MyToggle", {Title = "Auto Factory Sea 2", Default = false })
 
     Toggle:OnChanged(function(Value)
         _G.AutoFactory = Value
@@ -3941,7 +3941,7 @@ end)
             end
         end)
         
-        local Toggle = Tabs.Ms:AddToggle("MyToggle", {Title = "Pirate Raid Sea 3", Default = false })
+        local Toggle = Tabs.Mt:AddToggle("MyToggle", {Title = "Pirate Raid Sea 3", Default = false })
 
     Toggle:OnChanged(function(Value)
         _G.AutoRaidPirate = Value
@@ -3983,12 +3983,12 @@ end)
 	end
     end)
     
-    Tabs.Ms:AddParagraph({
+    Tabs.Mt:AddParagraph({
         Title = "Farm Haki Observation",
         Content = ""
     })
     
- local ObservationRange = Tabs.Ms:AddParagraph({
+ local ObservationRange = Tabs.Mt:AddParagraph({
         Title = "Statistic Observation",
         Content = ""
     })
@@ -4001,7 +4001,7 @@ end)
         end
     end)
     
-    local Toggle = Tabs.Ms:AddToggle("MyToggle", {Title = "Farm Exp Observation", Default = false })
+    local Toggle = Tabs.Mt:AddToggle("MyToggle", {Title = "Farm Exp Observation", Default = false })
 
     Toggle:OnChanged(function(Value)
         _G.AutoObservation = Value
@@ -4098,7 +4098,7 @@ end)
         end)
     end)
     
-    local Toggle = Tabs.Ms:AddToggle("MyToggle", {Title = "Auto Quest Observation V2", Default = false })
+    local Toggle = Tabs.Mt:AddToggle("MyToggle", {Title = "Auto Quest Observation V2", Default = false })
 
     Toggle:OnChanged(function(Value)
         _G.AutoObservationHakiV2 = Value
@@ -4261,7 +4261,7 @@ end)
 		end)
 	end)
    
-Tabs.Ms:AddParagraph({
+Tabs.Mt:AddParagraph({ --baru edit sampai sini
         Title = "Farm Chest",
         Content = "Does not apply to private servers"
     })
