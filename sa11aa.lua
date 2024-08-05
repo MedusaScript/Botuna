@@ -2276,7 +2276,7 @@ end
 
     local Window = Fluent:CreateWindow({
     Title = "BRUTALITY HUB V3" ,
-    SubTitle = "By Medusa Script",
+    SubTitle = "Made By Medusa Script",
     TabWidth = 120,
     Size = UDim2.fromOffset(480, 320),
     Acrylic = false, -- The blur may be detectable, setting this to false disables blur entirely
@@ -2286,8 +2286,8 @@ end
 
 --Fluent provides Lucide Icons https://lucide.dev/icons/ for the tabs, icons are optional
 local Tabs = {
-    Settings = Window:AddTab({ Title = "Setting Farm", Icon = "settings" }),
-    Main = Window:AddTab({ Title = "Main Farm", Icon = "gamepad-2" }),    
+    Main = Window:AddTab({ Title = "Main Farm", Icon = "gamepad-2" }),   
+    Settings = Window:AddTab({ Title = "Setting Farm", Icon = "settings" }), 
     Mt = Window:AddTab({ Title = "Quest Item", Icon = "puzzle" }),       
     Qs = Window:AddTab({ Title = "Quest Race V4", Icon = "arrow-up-down" }),           
     Se = Window:AddTab({ Title = "Sea Event", Icon = "anchor" }),    
@@ -5330,157 +5330,162 @@ game:GetService("TeleportService"):TeleportToPlaceInstance(game.placeId,_G.Job, 
 end
 end
 end)
-		
-		Tabs.Lc:AddButton({
-        Title = "Open Devil Fruit Shop",
-        Description = "",
-        Callback = function()
-            game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("GetFruits")
-      	game:GetService("Players").LocalPlayer.PlayerGui.Main.FruitShop.Visible = true
+
+Tabs.Ms:AddParagraph({
+    Title = "Open Gui",
+    Content = "Open Inventory,haki,title"
+})
+
+Tabs.Ms:AddButton({
+    Title = "Open Devil Fruit Shop",
+    Description = "",
+    Callback = function()
+        game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("GetFruits")
+      game:GetService("Players").LocalPlayer.PlayerGui.Main.FruitShop.Visible = true
+    end
+})
+
+Tabs.Ms:AddButton({
+    Title = "Open Haki",
+    Description = "",
+    Callback = function()
+        game.Players.localPlayer.PlayerGui.Main.Colors.Visible = true
+    end
+})
+
+Tabs.Ms:AddButton({
+    Title = "Open Title Name",
+    Description = "",
+    Callback = function()
+        local args = {
+    [1] = "getTitles"
+    }
+    game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+      game.Players.localPlayer.PlayerGui.Main.Titles.Visible = true
+    end
+})
+
+function fpsboost()
+    pcall(function()
+    local decalsyeeted = true -- Leaving this on makes games look shitty but the fps goes up by at least 20.
+    local g = game
+    local w = g.Workspace
+    local l = g.Lighting
+    local t = w.Terrain
+    t.WaterWaveSize = 0
+    t.WaterWaveSpeed = 0
+    t.WaterReflectance = 0
+    t.WaterTransparency = 0
+    l.GlobalShadows = false
+    l.FogEnd = 9e9
+    l.Brightness = 0
+    settings().Rendering.QualityLevel = "Level01"
+    for i, v in pairs(g:GetDescendants()) do
+        if v:IsA("Part") or v:IsA("Union") or v:IsA("CornerWedgePart") or v:IsA("TrussPart") then 
+                v.Material = "Plastic"
+                v.Reflectance = 0
+                --v.CanCollide = false
+        elseif v:IsA("Decal") or v:IsA("Texture") and decalsyeeted then
+                v.Transparency = 1
+        elseif v:IsA("ParticleEmitter") or v:IsA("Trail") then
+                v.Lifetime = NumberRange.new(0)
+        elseif v:IsA("Explosion") then
+                v.BlastPressure = 1
+                v.BlastRadius = 1
+        elseif v:IsA("Fire") or v:IsA("SpotLight") or v:IsA("Smoke") or v:IsA("Sparkles") then
+                v.Enabled = false
+        elseif v:IsA("MeshPart") then
+                v.Material = "Plastic"
+                v.Reflectance = 0
+                v.TextureID = 10385902758728957    
         end
-    })
+    end
+    for i, e in pairs(l:GetChildren()) do
+        if e:IsA("BlurEffect") or e:IsA("SunRaysEffect") or e:IsA("ColorCorrectionEffect") or e:IsA("BloomEffect") or e:IsA("DepthOfFieldEffect") then
+                e.Enabled = false
+        end
+    end
+    for i, v in pairs(game:GetService("Workspace").Camera:GetDescendants()) do
+        if v.Name == ("Water;") then
+            v.Transparency = 1
+            v.Material = "Plastic"
+        end
+    end
+    end)
+    pcall(function()
+        if not game:IsLoaded() then repeat wait() until game:IsLoaded() end
+        if hookfunction and setreadonly then
+        local mt = getrawmetatable(game)
+        local old = mt.__newindex
+        setreadonly(mt, false)
+        local sda
+        sda = hookfunction(old, function(t, k, v)
+            if k == "Material" then
+                if v ~= Enum.Material.Neon and v ~= Enum.Material.Plastic and v ~= Enum.Material.ForceField then v = Enum.Material.Plastic end
+            elseif k == "TopSurface" then v = "Smooth"
+            elseif k == "Reflectance" or k == "WaterWaveSize" or k == "WaterWaveSpeed" or k == "WaterReflectance" then v = 0
+            elseif k == "WaterTransparency" then v = 1
+            elseif k == "GlobalShadows" then v = false end
+            return sda(t, k, v)
+        end)
+        setreadonly(mt, true)
+        end
+        local g = game
+        local w = g.Workspace
+        local l = g:GetService"Lighting"
+        local t = w:WaitForChild"Terrain"
+        t.WaterWaveSize = 0
+        t.WaterWaveSpeed = 0
+        t.WaterReflectance = 0
+        t.WaterTransparency = 1
+        l.GlobalShadows = false
+    end)
+end
+
+Tabs.Ms:AddButton({
+    Title = "Boost FPS",
+    Description = "",
+    Callback = function()
+        fpsboost()
+    end
+})
     
-    Tabs.Lc:AddButton({
-        Title = "Open Haki",
-        Description = "",
-        Callback = function()
-            game.Players.localPlayer.PlayerGui.Main.Colors.Visible = true
-        end
-    })
+    Tabs.Ms:AddButton({
+    Title = "Rejoin Server",
+    Description = "",
+    Callback = function()
+        game:GetService("TeleportService"):Teleport(game.PlaceId, game:GetService("Players").LocalPlayer)
+    end
+})
     
-    Tabs.Lc:AddButton({
-        Title = "Open Title Name",
-        Description = "",
-        Callback = function()
-            local args = {
-        [1] = "getTitles"
-        }
-        game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
-      	game.Players.localPlayer.PlayerGui.Main.Titles.Visible = true
-        end
-    })
+    local Toggle = Tabs.Lc:AddToggle("MyToggle", {Title = "Walk On Water", Default = true })
+Toggle:OnChanged(function(Value)
+_G.WalkWater = Value
+    end)
     
-    function fpsboost()
-		pcall(function()
-		local decalsyeeted = true -- Leaving this on makes games look shitty but the fps goes up by at least 20.
-		local g = game
-		local w = g.Workspace
-		local l = g.Lighting
-		local t = w.Terrain
-		t.WaterWaveSize = 0
-		t.WaterWaveSpeed = 0
-		t.WaterReflectance = 0
-		t.WaterTransparency = 0
-		l.GlobalShadows = false
-		l.FogEnd = 9e9
-		l.Brightness = 0
-		settings().Rendering.QualityLevel = "Level01"
-		for i, v in pairs(g:GetDescendants()) do
-			if v:IsA("Part") or v:IsA("Union") or v:IsA("CornerWedgePart") or v:IsA("TrussPart") then 
-					v.Material = "Plastic"
-					v.Reflectance = 0
-					--v.CanCollide = false
-			elseif v:IsA("Decal") or v:IsA("Texture") and decalsyeeted then
-					v.Transparency = 1
-			elseif v:IsA("ParticleEmitter") or v:IsA("Trail") then
-					v.Lifetime = NumberRange.new(0)
-			elseif v:IsA("Explosion") then
-					v.BlastPressure = 1
-					v.BlastRadius = 1
-			elseif v:IsA("Fire") or v:IsA("SpotLight") or v:IsA("Smoke") or v:IsA("Sparkles") then
-					v.Enabled = false
-			elseif v:IsA("MeshPart") then
-					v.Material = "Plastic"
-					v.Reflectance = 0
-					v.TextureID = 10385902758728957    
-			end
-		end
-		for i, e in pairs(l:GetChildren()) do
-			if e:IsA("BlurEffect") or e:IsA("SunRaysEffect") or e:IsA("ColorCorrectionEffect") or e:IsA("BloomEffect") or e:IsA("DepthOfFieldEffect") then
-					e.Enabled = false
-			end
-		end
-		for i, v in pairs(game:GetService("Workspace").Camera:GetDescendants()) do
-			if v.Name == ("Water;") then
-				v.Transparency = 1
-				v.Material = "Plastic"
-			end
-		end
-		end)
-		pcall(function()
-			if not game:IsLoaded() then repeat wait() until game:IsLoaded() end
-			if hookfunction and setreadonly then
-			local mt = getrawmetatable(game)
-			local old = mt.__newindex
-			setreadonly(mt, false)
-			local sda
-			sda = hookfunction(old, function(t, k, v)
-				if k == "Material" then
-					if v ~= Enum.Material.Neon and v ~= Enum.Material.Plastic and v ~= Enum.Material.ForceField then v = Enum.Material.Plastic end
-				elseif k == "TopSurface" then v = "Smooth"
-				elseif k == "Reflectance" or k == "WaterWaveSize" or k == "WaterWaveSpeed" or k == "WaterReflectance" then v = 0
-				elseif k == "WaterTransparency" then v = 1
-				elseif k == "GlobalShadows" then v = false end
-				return sda(t, k, v)
-			end)
-			setreadonly(mt, true)
-			end
-			local g = game
-			local w = g.Workspace
-			local l = g:GetService"Lighting"
-			local t = w:WaitForChild"Terrain"
-			t.WaterWaveSize = 0
-			t.WaterWaveSpeed = 0
-			t.WaterReflectance = 0
-			t.WaterTransparency = 1
-			l.GlobalShadows = false
-		end)
-	end
-	
-    Tabs.Lc:AddButton({
-        Title = "Boost FPS",
-        Description = "",
-        Callback = function()
-            fpsboost()
+    spawn(function()
+        while task.wait() do
+            pcall(function()
+                if _G.WalkWater then
+                    game:GetService("Workspace").Map["WaterBase-Plane"].Size = Vector3.new(1000,112,1000)
+                else
+                    game:GetService("Workspace").Map["WaterBase-Plane"].Size = Vector3.new(1000,80,1000)
+                end
+            end)
         end
-    })
-		
-		Tabs.Lc:AddButton({
-        Title = "Rejoin Server",
-        Description = "",
-        Callback = function()
-            game:GetService("TeleportService"):Teleport(game.PlaceId, game:GetService("Players").LocalPlayer)
-        end
-    })
-		
-		local Toggle = Tabs.Lc:AddToggle("MyToggle", {Title = "Walk On Water", Default = true })
-    Toggle:OnChanged(function(Value)
-  _G.WalkWater = Value
-		end)
-		
-		spawn(function()
-			while task.wait() do
-				pcall(function()
-					if _G.WalkWater then
-						game:GetService("Workspace").Map["WaterBase-Plane"].Size = Vector3.new(1000,112,1000)
-					else
-						game:GetService("Workspace").Map["WaterBase-Plane"].Size = Vector3.new(1000,80,1000)
-					end
-				end)
-			end
-		end)
-		
-		local Toggle = Tabs.Lc:AddToggle("MyToggle", {Title = "Anti Afk", Default = true })
-    Toggle:OnChanged(function(Value)
-  local Value = game:GetService("VirtualUser")
-		repeat wait() until game:IsLoaded() 
-			game:GetService("Players").LocalPlayer.Idled:connect(function()
-		    game:GetService("VirtualUser"):ClickButton2(Vector2.new())
-				vu:Button2Down(Vector2.new(0,0),workspace.CurrentCamera.CFrame)
-				wait(1)
-				vu:Button2Up(Vector2.new(0,0),workspace.CurrentCamera.CFrame)
-		   end)
-		end)
+    end)
+    
+    local Toggle = Tabs.Lc:AddToggle("MyToggle", {Title = "Anti Afk", Default = true })
+Toggle:OnChanged(function(Value)
+local Value = game:GetService("VirtualUser")
+    repeat wait() until game:IsLoaded() 
+        game:GetService("Players").LocalPlayer.Idled:connect(function()
+        game:GetService("VirtualUser"):ClickButton2(Vector2.new())
+            vu:Button2Down(Vector2.new(0,0),workspace.CurrentCamera.CFrame)
+            wait(1)
+            vu:Button2Up(Vector2.new(0,0),workspace.CurrentCamera.CFrame)
+       end)
+    end)
 		
 		Tabs.Lc:AddParagraph({
         Title = "Teleport Island",
@@ -6399,7 +6404,7 @@ Tabs.Se:AddButton({
         end
     })
     
-    local Toggle = Tabs.Se:AddToggle("MyToggle", {Title = "Remove Fog [ Sea 1 And Sea 2]", Default = false })
+    local Toggle = Tabs.Se:AddToggle("MyToggle", {Title = "Remove Fog [For Sea 1 And Sea 2]", Default = false })
 
     Toggle:OnChanged(function(Value)
     RemoveFog = Value
@@ -7511,9 +7516,9 @@ local Toggle = Tabs.Qs:AddToggle("MyToggle", {Title = "Auto On Holy Torch", Defa
         end
     end)
     
-    Tabs.Qs:AddSection("Mirage Island")
+    Tabs.Se:AddSection("Mirage Island")
     
-    local Toggle = Tabs.Qs:AddToggle("MyToggle", {Title = "Summon Mystic Island", Default = false })
+    local Toggle = Tabs.Se:AddToggle("MyToggle", {Title = "Summon Mystic Island", Default = false })
 
     Toggle:OnChanged(function(stati)
         _G.da = stati
@@ -7582,7 +7587,7 @@ local Toggle = Tabs.Qs:AddToggle("MyToggle", {Title = "Auto On Holy Torch", Defa
 		end
         end)
         
-        local Toggle = Tabs.Qs:AddToggle("MyToggle", {Title = "Tween Mystic Island", Default = false })
+        local Toggle = Tabs.Se:AddToggle("MyToggle", {Title = "Tween Mystic Island", Default = false })
 
     Toggle:OnChanged(function(Value)
         _G.AutoMysticIsland = Value
@@ -7601,7 +7606,7 @@ local Toggle = Tabs.Qs:AddToggle("MyToggle", {Title = "Auto On Holy Torch", Defa
             end)
         end)
     
-    Tabs.Qs:AddButton({
+    Tabs.Se:AddButton({
         Title = "Remove Fog Mirage",
         Description = "",
         Callback = function()
@@ -7609,7 +7614,7 @@ local Toggle = Tabs.Qs:AddToggle("MyToggle", {Title = "Auto On Holy Torch", Defa
         end
     })
     
-    local Toggle = Tabs.Qs:AddToggle("MyToggle", {Title = "Auto Lock Moon", Default = false })
+    local Toggle = Tabs.Se:AddToggle("MyToggle", {Title = "Auto Lock Moon", Default = false })
 
     Toggle:OnChanged(function(Value)
         _G.AutoDooHee = Value
@@ -7627,7 +7632,7 @@ local Toggle = Tabs.Qs:AddToggle("MyToggle", {Title = "Auto On Holy Torch", Defa
     end
 end)
 
-local Toggle = Tabs.Qs:AddToggle("MyToggle", {Title = "Tween Blue Gear", Default = false })
+local Toggle = Tabs.Se:AddToggle("MyToggle", {Title = "Tween Blue Gear", Default = false })
 
     Toggle:OnChanged(function(Value)
         _G.TweenMGear = Value
