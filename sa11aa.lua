@@ -6343,7 +6343,7 @@ Tabs.RC:AddButton({
              game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer('UpgradeRace','Buy')
         end
     })
-
+--[[
 Tabs.RC:AddButton({
         Title = "Teleport Clock Get Gear",
         Description = "Use done trial!!",
@@ -6353,8 +6353,8 @@ Tabs.RC:AddButton({
             elseif (game.Players.LocalPlayer.Character.HumanoidRootPart.Position - PosTemplete.Position).Magnitude < 1000 then
                 wait(1)
                 Tween(CFrame.new(29551.9941, 15069.002, -85.5179291))
-            end
-})
+            end})
+            ]]
 
 local Toggle = Tabs.RC:AddToggle("MyToggle", {Title = "Kill Player When Trial Complete", Default = false })
 
