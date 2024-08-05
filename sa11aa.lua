@@ -6346,8 +6346,7 @@ Tabs.RC:AddButton({
 
     Tabs.RC:AddButton({
         Title = "Teleport Clock Gear",
-        Description = "",
-        Callback = function()            
+        Description = "",            
             if World3 then
                 if (game.Players.LocalPlayer.Character.HumanoidRootPart.Position - PosTemplete.Position).Magnitude > 1000 then
                     TweenTemplete()
