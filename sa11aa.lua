@@ -7565,13 +7565,13 @@ local Toggle = Tabs.Qs:AddToggle("MyToggle", {Title = "Auto On Holy Torch", Defa
     Tabs.Se:AddSection("Kitsune Island")
 
     local Toggle = Tabs.Se:AddToggle("MyToggle", {Title = "Kitsune Island (beta)", Default = false })
-    Toggle:OnChanged(function(a)
-        _G.TPtoKisuneIs = a
+    Toggle:OnChanged(function(value)
+        _G.TPtoKisuneIs = value
     end)
 
     local Toggle = Tabs.Se:AddToggle("MyToggle", {Title = "Collect Azure (beta)", Default = false })
-    Toggle:OnChanged(function(a)
-    _G.AutoCollectAzure = a
+    Toggle:OnChanged(function(value)
+    _G.AutoCollectAzure = value
         spawn(function()
             while wait() do
                 if _G.TPtoKisuneIs then
@@ -7598,7 +7598,7 @@ local Toggle = Tabs.Qs:AddToggle("MyToggle", {Title = "Auto On Holy Torch", Defa
                 end
             end
         end)
-    )
+    end)
     Tabs.Se:AddSection("Mirage Island")
     
     local Toggle = Tabs.Se:AddToggle("MyToggle", {Title = "Summon Mystic Island", Default = false })
