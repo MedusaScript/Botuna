@@ -7561,7 +7561,7 @@ local Toggle = Tabs.Qs:AddToggle("MyToggle", {Title = "Auto On Holy Torch", Defa
             end
         end
     end)
-
+--[[
     Tabs.Se:AddSection("Kitsune Island")
 
     local Toggle = Tabs.Se:AddToggle("MyToggle", {Title = "Kitsune Island (beta)", Default = false })
@@ -7599,6 +7599,7 @@ local Toggle = Tabs.Qs:AddToggle("MyToggle", {Title = "Auto On Holy Torch", Defa
             end
         end)
     end)
+    ]]
     Tabs.Se:AddSection("Mirage Island")
     
     local Toggle = Tabs.Se:AddToggle("MyToggle", {Title = "Summon Mystic Island", Default = false })
