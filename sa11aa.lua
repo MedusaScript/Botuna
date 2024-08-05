@@ -4261,12 +4261,12 @@ end)
 		end)
 	end)
    
-Tabs.Mt:AddParagraph({ --baru edit sampai sini
+Tabs.Mt:AddParagraph({ 
         Title = "Farm Chest",
         Content = "Does not apply to private servers"
     })
  
- local Toggle = Tabs.Ms:AddToggle("MyToggle", {Title = "Farm Chest [Tween]", Default = false })
+ local Toggle = Tabs.Mt:AddToggle("MyToggle", {Title = "Farm Chest [Tween]", Default = false })
 
     Toggle:OnChanged(function(Value)
         AutoFarmChest = Value
@@ -4297,7 +4297,7 @@ spawn(function()
 	end
 end)
 
-local Toggle = Tabs.Ms:AddToggle("MyToggle", {Title = "Farm Chest [Bypass 70% Kick]", Default = false })
+local Toggle = Tabs.Mt:AddToggle("MyToggle", {Title = "Farm Chest [Bypass 70% Kick]", Default = false })
 
     Toggle:OnChanged(function(Value)
         _G.ChestBypass = Value
@@ -4337,12 +4337,12 @@ if _G.ChestBypass then
 end
 end)
  
- Tabs.Ms:AddParagraph({
+ Tabs.Mt:AddParagraph({
         Title = "God Chalie & Rip Indra",
         Content = "Rip_Indra, cake prince, dough king"
     })
  
- local Toggle = Tabs.Ms:AddToggle("MyToggle", {Title = "Auto Elite Hunter", Default = false })
+ local Toggle = Tabs.Mt:AddToggle("MyToggle", {Title = "Auto Elite Hunter", Default = false })
 
     Toggle:OnChanged(function(Value)
         _G.AutoElitehunter = Value
@@ -4397,7 +4397,7 @@ end)
 		end
 	end)
  
- local Toggle = Tabs.Ms:AddToggle("MyToggle", {Title = "Auto Kill Rip Indra", Default = false })
+ local Toggle = Tabs.Mt:AddToggle("MyToggle", {Title = "Auto Kill Rip Indra", Default = false })
 
     Toggle:OnChanged(function(Value)
         _G.RipIndraKill = Value
@@ -4440,7 +4440,7 @@ end)
         end)
     end)
     
-    local Toggle = Tabs.Ms:AddToggle("MyToggle", {Title = "Kill Dough King", Default = false })
+    local Toggle = Tabs.Mt:AddToggle("MyToggle", {Title = "Kill Dough King", Default = false })
 
     Toggle:OnChanged(function(Value)
         _G.Autodoughking = Value
@@ -4482,12 +4482,12 @@ end)
         end
     end)
      
- Tabs.Ms:AddParagraph({
+ Tabs.Mt:AddParagraph({
         Title = "Dark Fragment",
         Content = "Need fish of darkness"
     })
  
- local Toggle = Tabs.Ms:AddToggle("MyToggle", {Title = "Auto Kill Blackbeard", Default = false })
+ local Toggle = Tabs.Mt:AddToggle("MyToggle", {Title = "Auto Kill Blackbeard", Default = false })
 
     Toggle:OnChanged(function(Value)
         _G.Auto_DarkBoss = Value
@@ -4524,12 +4524,12 @@ end)
         end
     end)
     
-    Tabs.Ms:AddParagraph({
+    Tabs.Mt:AddParagraph({
         Title = "Soul Reaper",
         Content = "Boss hunted castle"
     })
     
-    local Toggle = Tabs.Ms:AddToggle("MyToggle", {Title = "Auto Soul Reaper", Default = false })
+    local Toggle = Tabs.Mt:AddToggle("MyToggle", {Title = "Auto Soul Reaper", Default = false })
 
     Toggle:OnChanged(function(Value)
         _G.AutoFarmBossHallow = Value
