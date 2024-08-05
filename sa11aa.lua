@@ -6344,18 +6344,18 @@ Tabs.RC:AddButton({
         end
     })
 
-    Tabs.RC:AddButton({
-        Title = "Teleport Clock Gear",
-        Description = "",            
-            if World3 then
-                if (game.Players.LocalPlayer.Character.HumanoidRootPart.Position - PosTemplete.Position).Magnitude > 1000 then
-                    TweenTemplete()
-                elseif (game.Players.LocalPlayer.Character.HumanoidRootPart.Position - PosTemplete.Position).Magnitude < 1000 then
-                    wait(1)
-                    Tween(CFrame.new(29551.9941, 15069.002, -85.5179291))
-                end
+    local Toggle = Tabs.Se:AddToggle("MyToggle", {Title = "Teleport Clock Get Gear", Default = false })
+
+    Toggle:OnChanged(function(Value)
+        if World3 then
+            if (game.Players.LocalPlayer.Character.HumanoidRootPart.Position - PosTemplete.Position).Magnitude > 1000 then
+                TweenTemplete()
+            elseif (game.Players.LocalPlayer.Character.HumanoidRootPart.Position - PosTemplete.Position).Magnitude < 1000 then
+                wait(1)
+                Tween(CFrame.new(29551.9941, 15069.002, -85.5179291))
             end
-        end})
+        end
+    end)
 
 
 
