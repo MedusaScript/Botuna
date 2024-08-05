@@ -6354,8 +6354,6 @@ Tabs.RC:AddButton({
                 wait(1)
                 Tween(CFrame.new(29551.9941, 15069.002, -85.5179291))
             end
-        end
-    end
 })
 
 local Toggle = Tabs.RC:AddToggle("MyToggle", {Title = "Kill Player When Trial Complete", Default = false })
