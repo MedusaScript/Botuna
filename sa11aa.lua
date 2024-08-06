@@ -5432,7 +5432,7 @@ end
 end
 end)
 end)
-
+--[[
 local Toggle = Tabs.Qs:AddToggle("MyToggle", {Title = "No Clip & Fly", Default = false })
     Toggle:OnChanged,_G.NOCLIP,function()
         _G.NOCLIP = value
@@ -5526,7 +5526,7 @@ local Toggle = Tabs.Qs:AddToggle("MyToggle", {Title = "No Clip & Fly", Default =
             end)
             start()
         end -- batas no clip & fly
-
+    ]]
 
     local Input = Tabs.Ms:AddInput("Input", {
         Title = "Job Id Webhook",
