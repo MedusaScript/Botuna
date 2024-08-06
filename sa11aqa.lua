@@ -413,7 +413,7 @@ function Update:Window(text,logo,keybind)
 	Logo.BackgroundTransparency = 1.000
 	Logo.Position = UDim2.new(0, -5, 0, -5)
 	Logo.Size = UDim2.new(0, 135, 0, 135)
-	Logo.Image = "rbxassetid://18837634743" --logo tema
+	Logo.Image = "rbxassetid://18837785989" --logo tema
     local Tab = Instance.new("Frame")
     Tab.Name = "Tab"
     Tab.Parent = Main
