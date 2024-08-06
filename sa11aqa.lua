@@ -3828,7 +3828,7 @@ local RaceV4 = Library:AddTab("Trial V4","18477916271")
 local P = Library:AddTab("Bounty","18492098759")
 local R = Library:AddTab("Auto Raid","18491947999")
 local T = Library:AddTab("Teleport","18477347703")
-local S = Library:AddTab("Shop Dealer","18477410455")
+local S = Library:AddTab("Shop","18477410455")
 local D = Library:AddTab("Devil Fruit","18477363100")
 local Mh = Library:AddTab("Mod Hack","18797339934")
 local Misc = Library:AddTab("MISC","18477908150")
@@ -7229,25 +7229,7 @@ spawn(function()
     end
 end)
 
-M:AddToggle("Speed Boat (Auto ngibrit wak)",_G.Speed,function(state)
-    _G.Speed = Value
-    end)
-    
-spawn(function()
-game:GetService("RunService").RenderStepped:Connect(function()
-    if _G.Speed then
-         pcall(function()
-    for _,v in next, game.Workspace.Boats.PirateBrigade:GetDescendants() do
-    if v.Name:find("VehicleSeat") then
-                    v.MaxSpeed = 300
-                    end
-                 end
-        end)
-    end
-end)
-end)
---[[
-M:AddToggle("Buy Boat + Auto Finish Zone 5",_G.dao,function(state)
+M:AddToggle("Auto Finish Zone 5 (Beta)",_G.dao,function(state)
     _G.dao = state
     end)
 
@@ -7272,8 +7254,8 @@ M:AddToggle("Buy Boat + Auto Finish Zone 5",_G.dao,function(state)
                 end
             end
         end)
-]]
-M:AddToggle("Speed Boat (auto ngibrit cuy)",_G.Speed,function(state)
+
+M:AddToggle("Speed Boat Pirate Brigade)",_G.Speed,function(state)
 _G.Speed = Value
 end)
             
@@ -12613,6 +12595,14 @@ end)
     S:AddButton("Buy God Human | $5,000 Frag | $5,000,000  ",function()
         game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuyGodhuman")
     end)
+
+    S:AddButton("Buy Sanguine Art | $5,000 Frag | $5,000,000  ",function()
+        game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuySanguineArt")
+    end)
+
+    S:AddButton("Buy DivineArt (Update) | $7,500 Frag | $7,500,000  ",function()
+        game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuyDivineArt")
+    end)
     -----Shop----------------
     
     S:AddSeperator(" Sword ")
@@ -12732,7 +12722,19 @@ end)
     
     ------------Stat------------------
     
-    S:AddSeperator("Fragments")
+    S:AddSeperator("Reset Stats & Race")
+
+    S:AddButton("Buy Race Ghoul", function()            
+    local S = {[1] = "Ectoplasm", [2] = "BuyCheck", [3] = 4}
+        game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(S))
+        local S = {[1] = "Ectoplasm", [2] = "Change", [3] = 4}
+        game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(S))
+        end)
+
+S:AddButton("Buy Race Cyborg", function()
+    local S = {[1] = "CyborgTrainer", [2] = "Buy"}
+    game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(S))
+end)
 
 S:AddButton("Reset Stats (Use 2.5K Fragments)", function()
     game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BlackbeardReward","Refund","1")
@@ -14151,7 +14153,57 @@ function INGENG()
         end 
     end)
 end
+
+Mh:AddToggle("Infinite Ability",_G.InfiniteAbility,function(value)
+    InfiniteAbility = value
+end)
     
+spawn(function()
+    while wait() do
+        if InfiniteAbility then
+            InfAb()
+        end
+    end
+end)
+
+function InfAb()
+    if InfiniteAbility then
+        if not game.Players.LocalPlayer.Character.HumanoidRootPart:FindFirstChild("Agility") then
+            local inf = Instance.new("ParticleEmitter")
+            inf.Acceleration = Vector3.new(0,0,0)
+            inf.Archivable = true
+            inf.Drag = 20
+            inf.EmissionDirection = Enum.NormalId.Top
+            inf.Enabled = true
+            inf.Lifetime = NumberRange.new(0.2,0.2)
+            inf.LightInfluence = 0
+            inf.LockedToPart = true
+            inf.Name = "Agility"
+            inf.Rate = 500
+            local numberKeypoints2 = {
+                NumberSequenceKeypoint.new(0, 0); 
+                NumberSequenceKeypoint.new(1, 4); 
+            }
+
+            inf.Size = NumberSequence.new(numberKeypoints2)
+            inf.RotSpeed = NumberRange.new(999, 9999)
+            inf.Rotation = NumberRange.new(0, 0)
+            inf.Speed = NumberRange.new(30, 30)
+            inf.SpreadAngle = Vector2.new(360,360)
+            inf.Texture = "rbxassetid://243098098"
+            inf.VelocityInheritance = 0
+            inf.ZOffset = 2
+            inf.Transparency = NumberSequence.new(0)
+            inf.Color = ColorSequence.new(Color3.fromRGB(0, 255, 255),Color3.fromRGB(0, 255, 255))
+            inf.Parent = game:GetService("Players").LocalPlayer.Character.HumanoidRootPart
+        end
+    else
+        repeat wait()
+            game.Players.LocalPlayer.Character.HumanoidRootPart:FindFirstChild("Agility"):Destroy()
+        until not game.Players.LocalPlayer.Character.HumanoidRootPart:FindFirstChild("Agility")
+    end
+end
+
     Mh:AddToggle("Walk on Water",true,function(value)
         _G.WalkWater = value
     end)
