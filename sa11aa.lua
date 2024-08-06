@@ -5321,6 +5321,86 @@ end)
                 end)
             end
     end)
+
+    local Toggle = Tabs.Qs:AddToggle("MyToggle", {Title = "Aim Bot Skill & Gun (Beta)", Default = false })
+    Toggle:OnChanged(function()
+        _G.Aimbotskillgun  = value
+	end)
+
+    local lp = game:GetService('Players').LocalPlayer
+	local mouse = lp:GetMouse()
+	spawn(function()
+		while wait() do
+			if _G.Aimbotskillgun  then
+				pcall(function()
+					local MaxDist, Closest = math.huge
+					for i,v in pairs(game:GetService("Players"):GetChildren()) do 
+						local Head = v.Character:FindFirstChild("HumanoidRootPart")
+						local Pos, Vis = game.Workspace.CurrentCamera.WorldToScreenPoint(game.Workspace.CurrentCamera, Head.Position)
+						local MousePos, TheirPos = Vector2.new(mouse.X, mouse.Y), Vector2.new(Pos.X, Pos.Y)
+						local Dist = (TheirPos - MousePos).Magnitude
+						if Dist < MaxDist and Dist <= _G.FOVSize and v.Name ~= game.Players.LocalPlayer.Name then
+							MaxDist = Dist
+							_G.SelectAim  = v
+						end
+					end
+				end)
+			end
+		end
+	end)
+	
+	spawn(function()
+		local gg = getrawmetatable(game)
+		local old = gg.__namecall
+		setreadonly(gg,false)
+		gg.__namecall = newcclosure(function(...)
+			local method = getnamecallmethod()
+			local args = {...}
+			if tostring(method) == "FireServer" then
+				if tostring(args[1]) == "RemoteEvent" then
+					if tostring(args[2]) ~= "true" and tostring(args[2]) ~= "false" then
+						if _G.Aimbotskillgun  then
+							args[2] = _G.SelectAim.Character.HumanoidRootPart.Position
+							return old(unpack(args))
+						end
+					end
+				end
+			end
+			return old(...)
+		end)
+	end)
+	
+spawn(function()
+		while wait() do
+			for i,v in pairs(game.Players.LocalPlayer.Backpack:GetChildren()) do  
+				if v:IsA("Tool") then
+					if v:FindFirstChild("RemoteFunctionShoot") then 
+						SelectToolWeaponGun = v.Name
+					end
+				end
+			end
+			for i,v in pairs(game.Players.LocalPlayer.Character:GetChildren()) do  
+				if v:IsA("Tool") then
+					if v:FindFirstChild("RemoteFunctionShoot") then 
+						SelectToolWeaponGun = v.Name
+					end
+				end
+			end
+		end
+	end)
+	
+	spawn(function()
+		mouse.Button1Down:Connect(function()
+			if SelectToolWeaponGun ~= nil then
+				if AimBotFullFunction and game.Players.LocalPlayer.Character:FindFirstChild(SelectToolWeaponGun) and game:GetService("Players"):FindFirstChild(_G.SelectAim.Name) then
+					tool = game:GetService("Players").LocalPlayer.Character[SelectToolWeaponGun]
+					v17 = workspace:FindPartOnRayWithIgnoreList(Ray.new(tool.Handle.CFrame.p, (game:GetService("Players"):FindFirstChild(_G.SelectAim.Name).Character.HumanoidRootPart.Position - tool.Handle.CFrame.p).unit * 100), { game.Players.LocalPlayer.Character, workspace._WorldOrigin });
+					game:GetService("Players").LocalPlayer.Character[SelectToolWeaponGun].RemoteFunctionShoot:InvokeServer(game:GetService("Players"):FindFirstChild(_G.SelectAim.Name).Character.HumanoidRootPart.Position, (require(game.ReplicatedStorage.Util).Other.hrpFromPart(v17)));
+				end 
+			end
+		end)
+	end) -- aimbot skill & gun
+
     
     local Toggle = Tabs.Qs:AddToggle("MyToggle", {Title = "Infinite Jump", Default = false })
     Toggle:OnChanged(function()
@@ -5353,7 +5433,7 @@ end
 end)
 end)
 
-local Toggle = Tabs.Qs:AddToggle("MyToggle", {Title = "Fly", Default = false })
+local Toggle = Tabs.Qs:AddToggle("MyToggle", {Title = "Fly & Inf Jump", Default = false })
     Toggle:OnChanged(function()
             flying = false
             lplayer = game.Players.LocalPlayer
