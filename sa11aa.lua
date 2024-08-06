@@ -5357,8 +5357,8 @@ local Toggle = Tabs.Qs:AddToggle("MyToggle", {Title = "Fly", Default = false })
     Toggle:OnChanged(function()
             flying = false
             lplayer = game.Players.LocalPlayer
-            speedget = 2
-            speedfly = 2
+            speedget = 1
+            speedfly = 1
             Mouse = lplayer:GetMouse()
             
             Mouse.KeyDown:Connect(function(k)
