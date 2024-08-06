@@ -3830,7 +3830,7 @@ local R = Library:AddTab("Auto Raid","18491947999")
 local T = Library:AddTab("Teleport","18477347703")
 local S = Library:AddTab("Shop Dealer","18477410455")
 local D = Library:AddTab("Devil Fruit","18477363100")
-local Mh = Library:AddTab("Mod Hack","18797339934")
+local Mh = Library:AddTab("Mod Hack","18838674529")
 local Misc = Library:AddTab("Setting","18477908150")
 --- Nama toggle ui
 NguyenTien:AddSeperator("Information Developer")
@@ -13889,10 +13889,10 @@ Misc:AddButton("Kaitun Cap", function(value)
         end
     end)
     
-    Misc:AddSeperator("Graphic")
+    Mh:AddSeperator("Graphic")
 
     
-    Misc:AddButton("FPS Boost",function()
+    Mh:AddButton("FPS Boost",function()
         pcall(function()
             game:GetService("Lighting").FantasySky:Destroy()
             local g = game
@@ -13940,18 +13940,18 @@ Misc:AddButton("Kaitun Cap", function(value)
         end)
     end)
     
-    Misc:AddButton("Remove Fog",function(qww)
+    Mh:AddButton("Remove Fog",function(qww)
 	game:GetService("Lighting").LightingLayers:Destroy()
 	game:GetService("Lighting").Sky:Destroy()
 end)
     
-    Misc:AddButton("Always Day",function()
+    Mh:AddButton("Always Day",function()
     game:GetService("RunService").Heartbeat:wait() do
         game:GetService("Lighting").ClockTime = 12
     end
     end)
     
-    Misc:AddToggle("Remove Damage",function()
+    Mh:AddToggle("Remove Damage",function()
 		for i,v in pairs(game.Workspace:GetDescendants()) do
 			if v.Name == "DamageCounter" then   
 				v:Destroy()
@@ -13964,11 +13964,11 @@ end)
 		end
 	end)
     
-    Misc:AddButton("Unlock FPS",function()
+    Mh:AddButton("Unlock FPS",function()
         setfpscap(9999999)
     end)
     
-    Misc:AddButton("Reduce Cpu", function()
+    Mh:AddButton("Reduce Cpu", function()
 	for i,v in pairs(game.Workspace.Map:GetDescendants()) do
 		if v.Name == "Tavern" or v.Name == "SmileFactory" or v.Name == "Tree" or v.Name == "Rocks" or v.Name == "PartHouse" or v.Name == "Hotel" or v.Name == "WallPiece" or v.Name == "MiddlePillars" or v.Name == "Cloud" or v.Name == "PluginGrass" or v.Name == "BigHouse" or v.Name == "SmallHouse" or v.Name == "Detail" then
 			v:Destroy()
@@ -14090,14 +14090,14 @@ Misc:AddToggle("Esp Mob", false, function(nec)
     MobESP = nec
 end)
 
-    Misc:AddSeperator("Abilities")
+    Mh:AddSeperator("Mod Hack By Medusa")
     
-    Misc:AddToggle("Dodge No Cooldown",false,function(value)
+    Mh:AddToggle("Dodge No Cooldown",false,function(value)
         nododgecool = value
         NoDodgeCool()
     end)
     
-    Misc:AddToggle("Auto Active Race",_G.AutoAgility,function(value)
+    Mh:AddToggle("Auto Active Race",_G.AutoAgility,function(value)
         _G.AutoAgility = value
     end)
     
@@ -14111,7 +14111,7 @@ end)
         end)
     end)
     
-    Misc:AddToggle("Infinite Soru",getgenv().InfSoru,function(value)
+    Mh:AddToggle("Infinite Soru",getgenv().InfSoru,function(value)
         getgenv().InfSoru = value
     end)
     
@@ -14137,7 +14137,7 @@ end)
         end
     end)
     
-    Misc:AddToggle("Walk on Water",true,function(value)
+    Mh:AddToggle("Walk on Water",true,function(value)
         _G.WalkWater = value
     end)
     
@@ -14153,7 +14153,7 @@ end)
 			end
 		end)
     
-    Misc:AddToggle("No Clip And Fly",_G.NOCLIP,function(value)
+    Mh:AddToggle("No Clip And Fly",_G.NOCLIP,function(value)
         _G.NOCLIP = value
     end)
 	
@@ -14169,7 +14169,7 @@ end)
         end
     end)
     
-    Misc:AddButton("Remove Lave",function()
+    Mh:AddButton("Remove Lave",function()
 		for i,v in pairs(game.Workspace:GetDescendants()) do
 			if v.Name == "Lava" then   
 				v:Destroy()
