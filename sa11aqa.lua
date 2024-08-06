@@ -3830,6 +3830,7 @@ local R = Library:AddTab("Auto Raid","18491947999")
 local T = Library:AddTab("Teleport","18477347703")
 local S = Library:AddTab("Shop Dealer","18477410455")
 local D = Library:AddTab("Devil Fruit","18477363100")
+local Mh = Library:AddTab("Mod Hack","18797339934")
 local Misc = Library:AddTab("Setting","18477908150")
 --- Nama toggle ui
 NguyenTien:AddSeperator("Information Developer")
@@ -7271,6 +7272,24 @@ M:AddToggle("Buy Boat + Auto Finish Zone 5",_G.dao,function(state)
                 end
             end
         end)
+
+M:AddToggle("Speed Boat (auto ngibrit cuy)",_G.Speed,function(state)
+_G.Speed = Value
+end)
+            
+spawn(function()
+game:GetService("RunService").RenderStepped:Connect(function()
+if _G.Speed then
+pcall(function()
+for _,v in next, game.Workspace.Boats.PirateBrigade:GetDescendants() do
+if v.Name:find("VehicleSeat") then
+v.MaxSpeed = 300
+end
+end
+end)
+end
+end)
+end)
 
     M:AddToggle("Auto Rough Sea (auto kill all)",_G.BiirTrax,function(state)
     if state then
