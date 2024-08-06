@@ -5434,9 +5434,9 @@ end)
 end)
 
 local Toggle = Tabs.Qs:AddToggle("MyToggle", {Title = "No Clip & Fly", Default = false })
-    Toggle:OnChanged,_G.NOCLIP,function(value)
+    Toggle:OnChanged,_G.NOCLIP,function()
         _G.NOCLIP = value
-        
+
         function fly()
             local mouse=game:GetService("Players").LocalPlayer:GetMouse''
             localplayer=game:GetService("Players").LocalPlayer
