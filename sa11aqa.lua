@@ -3830,8 +3830,8 @@ local R = Library:AddTab("Auto Raid","18491947999")
 local T = Library:AddTab("Teleport","18477347703")
 local S = Library:AddTab("Shop Dealer","18477410455")
 local D = Library:AddTab("Devil Fruit","18477363100")
-local Mh = Library:AddTab("Mod Hack","18838674529")
-local Misc = Library:AddTab("Setting","18477908150")
+local Mh = Library:AddTab("Mod Hack","18797339934")
+local Misc = Library:AddTab("MISC","18477908150")
 --- Nama toggle ui
 NguyenTien:AddSeperator("Information Developer")
 NguyenTien:AddLabel("Owner: Medusa Script Roblox")
@@ -7246,7 +7246,7 @@ game:GetService("RunService").RenderStepped:Connect(function()
     end
 end)
 end)
-
+--[[
 M:AddToggle("Buy Boat + Auto Finish Zone 5",_G.dao,function(state)
     _G.dao = state
     end)
@@ -7272,7 +7272,7 @@ M:AddToggle("Buy Boat + Auto Finish Zone 5",_G.dao,function(state)
                 end
             end
         end)
-
+]]
 M:AddToggle("Speed Boat (auto ngibrit cuy)",_G.Speed,function(state)
 _G.Speed = Value
 end)
@@ -14136,6 +14136,21 @@ end)
             end)
         end
     end)
+
+    Mh:AddToggle("Infinite Energy",_G.InfinitsEnergy,function(value)
+        _G.InfinitsEnergy = value
+INGENG()
+end)
+
+local LocalPlayer = game:GetService'Players'.LocalPlayer
+local originalstam = LocalPlayer.Character.Energy.Value
+function INGENG()
+    game:GetService'Players'.LocalPlayer.Character.Energy.Changed:connect(function()
+        if _G.InfinitsEnergy then
+            LocalPlayer.Character.Energy.Value = originalstam
+        end 
+    end)
+end
     
     Mh:AddToggle("Walk on Water",true,function(value)
         _G.WalkWater = value
@@ -14168,6 +14183,7 @@ end)
             end
         end
     end)
+
     
     Mh:AddButton("Remove Lave",function()
 		for i,v in pairs(game.Workspace:GetDescendants()) do
