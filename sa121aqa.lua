@@ -14155,7 +14155,7 @@ function INGENG()
 end
 
 Mh:AddToggle("Infinite Ability",_G.InfiniteAbility,function(value)
-    InfiniteAbility = true
+    InfiniteAbility = value
 end)
     
 spawn(function()
