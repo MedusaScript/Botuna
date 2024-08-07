@@ -13181,7 +13181,7 @@ end)
     end)
 
 
-    Misc:AddSeperator("Server")
+    Misc:AddSeperator("Join Webhook")
     
     Misc:AddButton("Rejoin Server",function()
         game:GetService("TeleportService"):Teleport(game.PlaceId, game:GetService("Players").LocalPlayer)
@@ -14154,7 +14154,7 @@ function INGENG()
     end)
 end
 
-Mh:AddToggle("Infinite Ability",_G.InfiniteAbility,function(value)
+Mh:AddToggle("Infinite Ability",_G.InfiniteAbility,true,function(value)
     InfiniteAbility = value
 end)
     
