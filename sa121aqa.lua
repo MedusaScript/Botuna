@@ -7229,7 +7229,7 @@ spawn(function()
     end
 end)
 
-M:AddToggle("Auto Finish Zone 5 (Beta)",_G.dao,function(state)
+M:AddToggle("Auto Finish Zone 5 (fix bug)",_G.dao,function(state)
     _G.dao = state
     end)
 
@@ -7255,7 +7255,7 @@ M:AddToggle("Auto Finish Zone 5 (Beta)",_G.dao,function(state)
             end
         end)
 
-M:AddToggle("Speed Boat Pirate Brigade)",_G.Speed,function(state)
+M:AddToggle("Speed Boat (semi work)",_G.Speed,function(value) -- state
 _G.Speed = Value
 end)
             
@@ -14154,7 +14154,7 @@ function INGENG()
     end)
 end
 
-Mh:AddToggle("Infinite Ability",_G.InfiniteAbility,true,function(value)
+Mh:AddToggle("Infinite Ability",_G.InfiniteAbility,function(value)
     InfiniteAbility = value
 end)
     
