@@ -631,7 +631,7 @@ local LogoToggle = Instance.new("ImageLabel")
             DropImage.Position = UDim2.new(0, 435, 0, 6)
             DropImage.Rotation = 180.000
             DropImage.Size = UDim2.new(0, 20, 0, 20)
-            DropImage.Image = "rbxassetid://10162644180"
+            DropImage.Image = "rbxassetid://18837227406"
             
             DropButton.Name = "DropButton"
             DropButton.Parent = Dropdown
@@ -10394,7 +10394,7 @@ end)
                 if _G.AutoObservation then
                     if game:GetService("Players").LocalPlayer.VisionRadius.Value >= 3000 then
                         game:GetService("StarterGui"):SetCore("SendNotification", {
-                            Icon = "rbxassetid://0";
+                            Icon = "rbxassetid://18837227406";
                             Title = "Observation", 
                             Text = "You Have Max Points"
                         })
@@ -15400,7 +15400,7 @@ Misc:AddButton("Kaitun Cap", function(value)
 		for k,v in pairs(cac) do
 			if ListHuhu[v] and game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("Buy"..v,true) == 1 then 
 				local huhu = Instance.new("ImageLabel",MeleeG)
-				huhu.Image = "rbxassetid://9945562382"
+				huhu.Image = "rbxassetid://18837227406"
 				huhu.ImageRectSize = Vector2.new(100,100)
 				huhu.ImageRectOffset = ListHuhu[v]*100
 			end
