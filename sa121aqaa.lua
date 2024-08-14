@@ -10968,25 +10968,6 @@ else
             end
         }
     )
-    --UJI COBA
-    i:addCheckbox(
-        {
-            Section = 1,
-            default = false,
-            corner = 5,
-            title = "Auto Spawn Katakuri",
-            disabled = false,
-            Group = nil,
-            callback = function(a)
-                _G.Spawnka = a
-                while _G.Spawnka do
-                    wait()
-                    game.ReplicatedStorage.Remotes.CommF_:InvokeServer("CakePrinceSpawner")
-                end
-            end
-        }
-    )
-    --UJI COBA
     h:addLabel(
         {
             Section = 1,
@@ -14375,7 +14356,7 @@ else
             end}
     )
     ]]
-    n:addLabel(
+    i:addLabel(
         {
             Section = 1,
             text = "Island",
@@ -14443,7 +14424,7 @@ else
             "TikiOutpost"
         }
     end
-    n:addDropdown(
+    i:addDropdown(
         {
             Section = 1,
             title = "Select Island",
