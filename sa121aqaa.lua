@@ -14126,7 +14126,7 @@ else
         }
     )
     local b = {"Melee", "Defense", "Sword", "Gun", "Fruit"}
-    ]]
+    
     i:addDropdown(
         {
             Section = 1,
@@ -14355,6 +14355,7 @@ else
                 end
             end}
     )
+    ]]
     n:addLabel(
         {
             Section = 1,
