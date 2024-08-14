@@ -3,8 +3,7 @@ local ArrayField = loadstring(game:HttpGet("https://raw.githubusercontent.com/cr
 
 local Window = ArrayField:CreateWindow({
     Name = "SpeedX Hub",
-local Fluent = 
-loadstring(game:HttpGet("https://github.com/dawid-scripts/Fluent/releases/latest/download/main.lua"))()
+local Fluent = loadstring(game:HttpGet("https://github.com/dawid-scripts/Fluent/releases/latest/download/main.lua"))()
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/cracklua/cracks/m/sources/pitbull/Library/V4.lua"))()
 
 local Stats = game:GetService('Stats')
