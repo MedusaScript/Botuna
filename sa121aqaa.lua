@@ -1588,7 +1588,7 @@ else
             end
         end
     end
-    local a = a:new({title = "Zekrom Hub X ", version = "Blox Fruit", icon = a.Icons["ZekromHubX-icon"]})
+    local a = a:new({title = "BRUTALITY HUB ", version = "Blox Fruit", icon = a.Icons["ZekromHubX-icon"]})
     local g = a:addPage({icon = "rbxassetid://7040391851", title = "Main"})
     local h = a:addPage({icon = "rbxassetid://11446859498", title = "Item"})
     local i = a:addPage({icon = "rbxassetid://11447069304", title = "Stats"})
@@ -10968,6 +10968,25 @@ else
             end
         }
     )
+    --UJI COBA
+    i:addCheckbox(
+        {
+            Section = 1,
+            default = false,
+            corner = 5,
+            title = "Auto Spawn Katakuri",
+            disabled = false,
+            Group = nil,
+            callback = function(a)
+                _G.Spawnka = a
+                while _G.Spawnka do
+                    wait()
+                    game.ReplicatedStorage.Remotes.CommF_:InvokeServer("CakePrinceSpawner")
+                end
+            end
+        }
+    )
+    --UJI COBA
     h:addLabel(
         {
             Section = 1,
