@@ -148,13 +148,13 @@ function Update:Window(text,logo,keybind)
     local Hub = Instance.new("TextLabel")
     Hub.Name = "Hub"
     Hub.Parent = Top
-    Hub.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+    Hub.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
     Hub.BackgroundTransparency = 1.000
     Hub.Position = UDim2.new(0, 85, 0, 0)
     Hub.Size = UDim2.new(0, 81, 0, 27)
     Hub.Font = Enum.Font.GothamSemibold
-    Hub.Text = "             | Blox Fruits" --        HUB
-    Hub.TextColor3 = Color3.fromRGB(255, 255, 255)   --0, 247, 255
+    Hub.Text = "             | BRUTALITY HUB V4" --        HUB
+    Hub.TextColor3 = Color3.fromRGB(255, 0, 0)   --0, 247, 255
     Hub.TextSize = 20.000
     Hub.TextXAlignment = Enum.TextXAlignment.Left
 
@@ -3206,7 +3206,7 @@ end)
 
 print("Load Script")
 
-local Library = Update:Window("                     BRUTALITY HUB V4","18962361962",Enum.KeyCode.RightControl); --12523036534
+local Library = Update:Window("                  Blox Fruits","18962361962",Enum.KeyCode.RightControl); --12523036534
 
 local H = Library:AddTab("Home","6026568198")
 local Main = Library:AddTab("Level Farm","13075651575")
