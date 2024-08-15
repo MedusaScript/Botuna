@@ -14,7 +14,7 @@ ImageButton1.BorderSizePixel = 0
 ImageButton1.Position = UDim2.new(0.120833337, 0, 0.0952890813, 0)
 ImageButton1.Size = UDim2.new(0, 50, 0, 50)
 ImageButton1.Draggable = true
-ImageButton1.Image = "http://www.roblox.com/asset/?id=18960986232"
+ImageButton1.Image = "http://www.roblox.com/asset/?id=18962361962"
 ImageButton1.MouseButton1Down:connect(function()
   game:GetService("VirtualInputManager"):SendKeyEvent(true,305,false,game)
   game:GetService("VirtualInputManager"):SendKeyEvent(false,305,false,game)
@@ -516,9 +516,9 @@ local LogoToggle = Instance.new("ImageLabel")
     LogoToggle.Parent = Toggle
     LogoToggle.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
     LogoToggle.BackgroundTransparency = 1.000
-    LogoToggle.Position = UDim2.new(0, 7, 0, 2)
+    LogoToggle.Position = UDim2.new(0, 6, 0, 2)
     LogoToggle.Size = UDim2.new(0, 26, 0, 26)
-    LogoToggle.Image = "http://www.roblox.com/asset/?id="..tostring(18962339333) --logo toggle
+    LogoToggle.Image = "http://www.roblox.com/asset/?id="..tostring(18962361962) --logo toggle
 
             Circle.Name = "Circle"
             Circle.Parent = ToggleImage
@@ -5187,7 +5187,7 @@ end)
     Main:AddSeperator("Setting")
     
     
-Main:AddToggle("By Pass Tp",BypassTP,function(Fast)
+Main:AddToggle("ByPass Teleport",BypassTP,function(Fast)
 BypassTP = Fast
 end)
 
