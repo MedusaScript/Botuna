@@ -3326,12 +3326,11 @@ end)
 
 print("Load Script")
 
-local Library = Update:Window("           Blox Fruit","18947886746",Enum.KeyCode.RightControl); --12523036534
+local Library = Update:Window("            Blox Fruit","18947886746",Enum.KeyCode.RightControl); --12523036534
 
 local H = Library:AddTab("Home","6026568198")
 local Main = Library:AddTab("Level Farm","13075651575")
-local M = Library:AddTab("Item Quest","13075622619")
-local Ss = Library:AddTab("Stats","7040410130")
+local M = Library:AddTab("All Quest","13075622619")
 local RaceV4 = Library:AddTab("RaceV4","11162889532")
 local P = Library:AddTab("Player","7251993295")
 local R = Library:AddTab("Raid","11155986081")
@@ -3339,7 +3338,8 @@ local T = Library:AddTab("Teleport","11155851001")
 local S = Library:AddTab("Shop","6031265976")
 local X3X = Library:AddTab("Sea Event","6031265976")
 local D = Library:AddTab("Devil Fruit","7044233235")
-local Dms = Library:AddTab("Misc","11156061121")
+local Ss = Library:AddTab("MISC","11156061121") --7040410130
+--local Dms = Library:AddTab("Misc","11156061121")
 
 local Time = H:AddLabel("Executor Time");spawn(function() getgenv().Time = true;while true do wait(.1) UpdateTime() end end);function UpdateTime() local date = os.date("*t");local hour = (date.hour) % 24;local ampm = hour < 12 and "AM" or "PM";local timezone = string.format("%02i:%02i:%02i %s", ((hour -1) % 12) + 1, date.min, date.sec, ampm);local datetime = string.format("%02d/%02d/%04d", date.day, date.month, date.year);local LocalizationService = game:GetService("LocalizationService");local Players = game:GetService("Players");local player = Players.LocalPlayer;local name = player.Name;local result, code = pcall(function()   return LocalizationService:GetCountryRegionForPlayerAsync(player)  end);Time:Set(" : " .. timezone);Time:Set("Executor Time: " .. datetime .. " [ " .. code .. " ]");spawn(function() if getgenv().Time then pcall(function()  while wait() do  Time()  end end) end end) end
 
@@ -15796,89 +15796,43 @@ Ss:AddToggle("Remove Fog",RemoveFog,function(value)
     game.Players.LocalPlayer.Character.Animate.Disabled = true 
 end)
 
-   X3X:AddSeperator("ESP MENU")
-X3X:AddToggle("Esp Mirage Island", false, function(value)
+   Ss:AddSeperator("ESP MENU")
+
+   Ss:AddToggle("Esp Mirage Island",false, function(value)
     MirageIslandESP = value
         while MirageIslandESP do wait()
             UpdateIslandMirageESP()
         end
     end)
-X3X:AddToggle("Esp Kitsune Island (beta)", false, function(value)
+    Ss:AddToggle("Esp Kitsune Island (beta)",false, function(value)
     IslandESPP = value
         while IslandESPP do wait()
             UpdateKitsuneESP()
         end
     end)
-    [[
-X3X:AddToggle("Auto Find Full Moon",_G.AutoFindFullmoon,function(value)
-        _G.AutoFindFullmoon = value    
-       end)
-       
-       spawn(function()
-              while wait() do
-                  if _G.AutoFindFullmoon then
-                  if game:GetService("Lighting").Sky.MoonTextureId=="http://www.roblox.com/asset/?id=9709149052" or game:GetService("Lighting").Sky.MoonTextureId=="http://www.roblox.com/asset/?id=9709149431" then
-                      wait(2.0)
-                      game.StarterGui:SetCore("SendNotification", {
-                          Title = "Brutality Hub", 
-                          Text = "Full Moon" ,
-                          Icon = "http://www.roblox.com/asset/?id=18837557481",
-                          Duration = 2.5
-                      })
-                  elseif game:GetService("Lighting").Sky.MoonTextureId=="http://www.roblox.com/asset/?id=9709143733" then
-                      Hop()
-                      game.StarterGui:SetCore("SendNotification", {
-                          Title = "Brutality Hub", 
-                          Text = "Wait New Server" ,
-                          Icon = "http://www.roblox.com/asset/?id=18837557481",
-                          Duration = 2.5
-                      })
-                  elseif game:GetService("Lighting").Sky.MoonTextureId=="http://www.roblox.com/asset/?id=9709150401" then
-                      Hop()
-                      game.StarterGui:SetCore("SendNotification", {
-                          Title = "Brutality Hub", 
-                          Text = "Wait New Server" ,
-                          Icon = "http://www.roblox.com/asset/?id=18837557481",
-                          Duration = 2.5
-                      })
-                  elseif game:GetService("Lighting").Sky.MoonTextureId=="http://www.roblox.com/asset/?id=9709149680" then
-                      Hop()
-                      game.StarterGui:SetCore("SendNotification", {
-                          Title = "Brutality Hub", 
-                          Text = "Wait New Server" ,
-                          Icon = "http://www.roblox.com/asset/?id=18837557481",
-                          Duration = 2.5
-                      })
-                  else
-                      Hop()
-                      end
-                  end
-              end
-          end)
-]]  
-    X3X:AddToggle("ESP Player",false,function(a)
+    Ss:AddToggle("ESP Player",false,function(a)
         ESPPlayer = a
 	UpdatePlayerChams()
     end)
     
-    X3X:AddToggle("ESP Chest",false,function(a)
+    Ss:AddToggle("ESP Chest",false,function(a)
         ChestESP = a
 	UpdateChestChams() 
     end)
     
-    X3X:AddToggle("ESP Fruit",false,function(a)
+    Ss:AddToggle("ESP Fruit",false,function(a)
         DevilFruitESP = a
         while DevilFruitESP do wait()
             UpdateDevilChams() 
         end
     end)
     
-    X3X:AddToggle("ESP Real Fruit",RealFruitESP,function(a)
+    Ss:AddToggle("ESP Real Fruit",RealFruitESP,function(a)
         RealFruitESP = a
 	UpdateRealFruitChams() 
     end)
     
-    X3X:AddToggle("ESP Flower",false,function(a)
+    Ss:AddToggle("ESP Flower",false,function(a)
         FlowerESP = a
 	UpdateFlowerChams() 
     end)
