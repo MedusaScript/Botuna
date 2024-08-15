@@ -14100,7 +14100,7 @@ else
         }
     )
     -- yang dihapus tanda [[
-    i:addDropdown(
+    a:addDropdown(
         {
             Section = 1,
             title = "Select Stats List",
@@ -14113,3 +14113,19 @@ else
             end
         }
     )
+end
+a:addCheckbox(
+        {
+            Section = 1,
+            default = false,
+            corner = 5,
+            title = "Infinities Energy",
+            disabled = false,
+            Group = nil,
+            callback = function(a)
+                _G.InfinitiesEnergy = a
+                InfinitiesEnergy()
+            end
+        }
+    )
+end
