@@ -9304,14 +9304,14 @@ end)
 end)
 
 
-FrozenIsland = X3X:AddLabel("")
+FrozenIsland = M:AddLabel("")
      
-    X3X:AddToggle("Teleport Frozen Dimension",_G.AutoFrozenDimension,function(value)
+    M:AddToggle("Teleport Frozen Dimension",_G.AutoFrozenDimension,function(value)
     _G.AutoFrozenDimension = value
     StopTween(_G.AutoFrozenDimension)
     end)
     
-    X3X:AddToggle("Auto Kitsunen Island",_G.AutoFKitsune,function(value)
+    M:AddToggle("Auto Kitsunen Island",_G.AutoFKitsune,function(value)
     _G.AutoFKitsune = value
     StopTween(_G.AutoFKitsune)
     end)
