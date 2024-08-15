@@ -16,7 +16,7 @@
   
 local Update = loadstring(Game:HttpGet"https://roblox.relzscript.xyz/source/relzhub/library/pc.lua")() --https://roblox.relzscript.xyz/source/relzhub/library/pc.lua
 local Alert = loadstring(Game:HttpGet"https://raw.githubusercontent.com/MedusaScript/BrutalityV2/main/BotunaUi.lua")() --https://raw.githubusercontent.com/Basicallyybeta/uii/main/Mingameui.lua
-local Library = Update:Window("Blox Fruits")
+local Library = Update:Window("Made By Medusa")
 local Main = Library:Tab("Main","rbxassetid://10723407389")
 local Set = Library:Tab("Setting","rbxassetid://10734950309")
 local Hold = Library:Tab("Hold Skill","rbxassetid://10734984606")
