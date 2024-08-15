@@ -2600,7 +2600,113 @@ function UpdateAfdESP()
         end)
     end
 end
-
+--esp kitsune dari sini
+function ESPKisuneIsland()
+    pcall(
+        function()
+            if _G.EspKitsuneIsland then
+                for a, a in pairs(game:GetService("Workspace").Map.KitsuneIsland:GetChildren()) do
+                    pcall(
+                        function()
+                            if a.Name == "Center" then
+                                if not a:FindFirstChild("EspKitsune") then
+                                    local b = Instance.new("BillboardGui", a)
+                                    b.Name = "EspKitsune"
+                                    b.ExtentsOffset = Vector3.new(0, 1, 0)
+                                    b.Size = UDim2.new(1, 200, 1, 30)
+                                    b.Adornee = a
+                                    b.AlwaysOnTop = true
+                                    local b = Instance.new("TextLabel", b)
+                                    b.Font = "GothamBold"
+                                    b.FontSize = "Size14"
+                                    b.TextWrapped = true
+                                    b.Size = UDim2.new(1, 0, 1, 0)
+                                    b.TextYAlignment = "Top"
+                                    b.BackgroundTransparency = 1
+                                    b.TextStrokeTransparency = 0.5
+                                    b.TextColor3 = Color3.fromRGB(255, 255, 255)
+                                    b.Text =
+                                        ("Kitsune Island" ..
+                                        " \n" ..
+                                            " [ " ..
+                                                c(
+                                                    (game:GetService("Players").LocalPlayer.Character.Head.Position -
+                                                        a.Position).Magnitude / 3
+                                                ) ..
+                                                    " M" .. " ] ")
+                                else
+                                    a.EspKitsune.TextLabel.Text =
+                                        ("Kitsune Island" ..
+                                        " \n" ..
+                                            " [ " ..
+                                                c(
+                                                    (game:GetService("Players").LocalPlayer.Character.Head.Position -
+                                                        a.Position).Magnitude / 3
+                                                ) ..
+                                                    " M" .. " ] ")
+                                    a.EspKitsune.TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+                                end
+                            end
+                        end
+                    )
+                end
+            else
+                for a, a in pairs(game:GetService("Workspace").Map.KitsuneIsland:GetChildren()) do
+                    if a.Name == "Center" then
+                        if a:FindFirstChild("EspKitsune") then
+                            a:FindFirstChild("EspKitsune"):Destroy()
+                        end
+                    end
+                end
+            end
+        end
+    )
+end
+spawn(
+    function()
+        while wait() do
+            if _G.EspKitsuneIsland then
+                EspKitsuneIsland()
+            end
+        end
+    end
+) --batas esp kitsune 1
+function UpdateKitsuneESP()
+    for i, v in pairs(game:GetService("Workspace").Map.KitsuneIsland.ShrineActive:GetChildren()) do
+        pcall(function()
+            if IslandESPP then
+                if v.Name ~= "NeonShrinePart" then
+                    if not v:FindFirstChild('IslandESPP') then
+                        local bill = Instance.new('BillboardGui', v)
+                        bill.Name = 'IslandESPP'
+                        bill.ExtentsOffset = Vector3.new(0, 1, 0)
+                        bill.Size = UDim2.new(1, 200, 1, 30)
+                        bill.Adornee = v
+                        bill.AlwaysOnTop = true
+                        local name = Instance.new('TextLabel', bill)
+                        name.Font = "Code"
+                        name.FontSize = "Size14"
+                        name.TextWrapped = true
+                        name.Size = UDim2.new(1, 0, 1, 0)
+                        name.TextYAlignment = 'Top'
+                        name.BackgroundTransparency = 1
+                        name.TextStrokeTransparency = 0.5
+                        name.TextColor3 = Color3.fromRGB(80, 245, 245)
+                        -- Thay Ä‘á»•i vÄƒn báº£n hiá»ƒn thá»‹ thĂ nh "123"
+                        name.Text = "Kitsune Island"
+                    else
+                        v['IslandESPP'].TextLabel.Text = "Kitsune Island"
+                    end
+                end
+            else
+                if v:FindFirstChild('IslandESPP') then
+                    v:FindFirstChild('IslandESPP'):Destroy()
+                end
+            end
+        end)
+    end
+end
+--esp kitsune sampai sini
 function UpdateAuraESP() 
     for i,v in pairs(game:GetService("Workspace").NPCs:GetChildren()) do
         pcall(function()
@@ -15690,6 +15796,20 @@ Ss:AddToggle("Remove Fog",RemoveFog,function(value)
     game.Players.LocalPlayer.Character.Animate.Disabled = true 
 end)
 
+X3X:AddSeperator("ESP ISLAND")
+X3X:AddToggle("Esp Mirage Island", false, function(value)
+    MirageIslandESP = value
+        while MirageIslandESP do wait()
+            UpdateIslandMirageESP()
+        end
+    end)
+X3X:AddToggle("Esp Kitsune Island (beta)", false, function(value)
+    IslandESPP = value
+        while IslandESPP do wait()
+            UpdateKitsuneESP()
+        end
+    end)
+
 Ss:AddSeperator("ESP MENU")
     
     Ss:AddToggle("ESP Player",false,function(a)
@@ -15755,14 +15875,14 @@ end)
 Ss:AddToggle("Esp Mob", false, function(nec)
     MobESP = nec
 end)
-
+[[
 Ss:AddToggle("Esp Mirage Island", false, function(value)
     MirageIslandESP = value
         while MirageIslandESP do wait()
             UpdateIslandMirageESP()
         end
     end)
-
+]]
 Ss:AddToggle("Esp Advanced Fruit Dealer", false, function(value)
     AfdESP = value
         while AfdESP do wait()
