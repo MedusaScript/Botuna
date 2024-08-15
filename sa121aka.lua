@@ -2600,7 +2600,7 @@ function UpdateAfdESP()
         end)
     end
 end
-
+[[
 function UpdateKitsuneESP()
     pcall(
         function()
@@ -2707,7 +2707,7 @@ function UpdateKitsuneESP()
         end)
     end
 end
-
+]]
 function UpdateAuraESP() 
     for i,v in pairs(game:GetService("Workspace").NPCs:GetChildren()) do
         pcall(function()
