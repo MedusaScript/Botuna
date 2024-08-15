@@ -3220,7 +3220,7 @@ end)
 
 print("Load Script")
 
-local Library = Update:Window("           Blox Fruit","18837634743",Enum.KeyCode.RightControl); --12523036534
+local Library = Update:Window("           Blox Fruit","18947886746",Enum.KeyCode.RightControl); --12523036534
 
 local H = Library:AddTab("Home","6026568198")
 local Main = Library:AddTab("Level Farm","13075651575")
@@ -3231,6 +3231,7 @@ local P = Library:AddTab("Player","7251993295")
 local R = Library:AddTab("Raid","11155986081")
 local T = Library:AddTab("Teleport","11155851001")
 local S = Library:AddTab("Shop","6031265976")
+local X3X = Library:AddTab("Premium","6031265976")
 local D = Library:AddTab("Devil Fruit","7044233235")
 local Dms = Library:AddTab("Misc","11156061121")
 
