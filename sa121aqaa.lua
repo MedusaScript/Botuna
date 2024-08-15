@@ -14,7 +14,7 @@
 [+] Nếu Bạn Edit Source Và Up Web Share Nhớ Obfuscate Script. Nếu Bạn Có Tiền Thì Sử Dụng: Lura.Ph, Luarmor.Net | Nếu Bạn Không Có Tiền Thì Dùng: luaobfuscate.com, MoonSec, 77Fuscate,... Nhé!
 ]]
   
-local Update = loadstring(Game:HttpGet"https://raw.githubusercontent.com/MedusaScript/BrutalityV2/main/LibraryPc.lua")() --https://roblox.relzscript.xyz/source/relzhub/library/pc.lua
+local Update = loadstring(Game:HttpGet"https://roblox.relzscript.xyz/source/relzhub/library/pc.lua")() --https://roblox.relzscript.xyz/source/relzhub/library/pc.lua
 local Alert = loadstring(Game:HttpGet"https://raw.githubusercontent.com/MedusaScript/BrutalityV2/main/BotunaUi.lua")() --https://raw.githubusercontent.com/Basicallyybeta/uii/main/Mingameui.lua
 local Library = Update:Window("Blox Fruits")
 local Main = Library:Tab("Main","rbxassetid://10723407389")
