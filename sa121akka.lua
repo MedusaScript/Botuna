@@ -136,7 +136,7 @@ function Update:Window(text,logo,keybind)
     local Name = Instance.new("TextLabel")
     Name.Name = "Name"
     Name.Parent = Top
-    Name.BackgroundColor3 = Color3.fromRGB(85, 0, 255) --255, 255, 255
+    Name.BackgroundColor3 = Color3.fromRGB(85, 0, 255) --255, 255, 255 --baru edit sampai sini
     Name.BackgroundTransparency = 1.000
     Name.Position = UDim2.new(0.0609756112, -25, 0, 0)
     Name.Size = UDim2.new(0, 61, 0, 27)
@@ -153,8 +153,8 @@ function Update:Window(text,logo,keybind)
     Hub.Position = UDim2.new(0, 85, 0, 0)
     Hub.Size = UDim2.new(0, 81, 0, 27)
     Hub.Font = Enum.Font.GothamSemibold
-    Hub.Text = "        | BRUTALITY HUB V4" --        HUB
-    Hub.TextColor3 = Color3.fromRGB(255, 0, 0)   --0, 247, 255
+    Hub.Text = "             | Blox Fruits" --        HUB
+    Hub.TextColor3 = Color3.fromRGB(255, 255, 255)   --0, 247, 255
     Hub.TextSize = 20.000
     Hub.TextXAlignment = Enum.TextXAlignment.Left
 
@@ -3206,7 +3206,7 @@ end)
 
 print("Load Script")
 
-local Library = Update:Window("            Blox Fruit","18962361962",Enum.KeyCode.RightControl); --12523036534
+local Library = Update:Window("            BRUTALITY HUB V4","18962361962",Enum.KeyCode.RightControl); --12523036534
 
 local H = Library:AddTab("Home","6026568198")
 local Main = Library:AddTab("Level Farm","13075651575")
@@ -12157,7 +12157,7 @@ end)
     end)
 
 	
-    local plyserv = P:AddLabel("Total PLayers :")
+    local plyserv = P:AddLabel("Total PLayers")
 
     
 
@@ -12166,11 +12166,11 @@ end)
             pcall(function()
                 for i,v in pairs(game:GetService("Players"):GetPlayers()) do
                     if i == 12 then
-                        plyserv:Set("Players :".." "..i.." ".."/".." ".."12".." ".."(Max)")
+                        plyserv:Set("Total Players :".." "..i.." ".."/".." ".."12".." ".."(Max)")
                     elseif i == 1 then
-                        plyserv:Set("Player :".." "..i.." ".."/".." ".."12")
+                        plyserv:Set("Total Player :".." "..i.." ".."/".." ".."12")
                     else
-                        plyserv:Set("Players :".." "..i.." ".."/".." ".."12")
+                        plyserv:Set("Total Players :".." "..i.." ".."/".." ".."12")
                     end
                 end
             end)
