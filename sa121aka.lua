@@ -2707,7 +2707,7 @@ function UpdateKitsuneESP()
         end)
     end
 end
-]]
+
 function UpdateAuraESP() 
     for i,v in pairs(game:GetService("Workspace").NPCs:GetChildren()) do
         pcall(function()
@@ -15860,14 +15860,14 @@ end)
 Ss:AddToggle("Esp Mob", false, function(nec)
     MobESP = nec
 end)
-
+[[
 Ss:AddToggle("Esp Kitsune Island (beta)",false, function(value)
     KitsuneIslandESP = value
         while KitsuneIslandESP do wait()
             UpdateKitsuneESP()
         end
     end)
-
+]]
 Ss:AddToggle("Esp Mirage Island",false, function(value)
     MirageIslandESP = value
         while MirageIslandESP do wait()
