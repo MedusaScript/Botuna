@@ -5929,7 +5929,6 @@ end)
                 end)
             end
         end)
-X3X:AddSeperator("SEA EVENT")
     elseif World3 then
     spawn(function()
         pcall(function()
