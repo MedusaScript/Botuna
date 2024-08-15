@@ -3243,7 +3243,7 @@ H:AddLabel("Work For PC/Mobile")
 H:AddLabel("Thanks For Using Brutality Hub")
 
 H:AddSeperator("Made By Medusa Script")
-
+H:AddSeperator("Click for copy link")
 
 
 H:AddButton("Join Discord",function()
@@ -3446,7 +3446,7 @@ H:AddSeperator("Status")
             end)
         end
     end)
-[[
+
 H:AddSeperator(" Sword ")
 
 local Saber = H:AddLabel("❌: Saber")
@@ -3646,7 +3646,7 @@ spawn(function()
         end)
     end
 end)
-]]
+
 Main:AddSeperator("Farm")
 
 
