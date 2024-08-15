@@ -28,7 +28,7 @@ ImageButton1.BorderSizePixel = 0
 ImageButton1.Position = UDim2.new(0.120833337, 0, 0.0952890813, 0)
 ImageButton1.Size = UDim2.new(0, 50, 0, 50)
 ImageButton1.Draggable = true
-ImageButton1.Image = "http://www.roblox.com/asset/?id=18947886746"
+ImageButton1.Image = "http://www.roblox.com/asset/?id=12523036534"
 ImageButton1.MouseButton1Down:connect(function()
   game:GetService("VirtualInputManager"):SendKeyEvent(true,305,false,game)
   game:GetService("VirtualInputManager"):SendKeyEvent(false,305,false,game)
@@ -131,6 +131,7 @@ function Update:Window(text,logo,keybind)
     Main.BackgroundColor3 = Color3.fromRGB(45, 45, 45)
     Main.Position = UDim2.new(0.5, 0, 0.5, 0)
     Main.Size = UDim2.new(0, 0, 0, 0)
+
     
     Main:TweenSize(UDim2.new(0, 656, 0, 350),"Out","Quad",0.4,true)
 
@@ -212,7 +213,7 @@ local LogoHub = Instance.new("ImageLabel")
     LogoHub.BackgroundTransparency = 1.000
     LogoHub.Position = UDim2.new(0, 5, 0, 1)
     LogoHub.Size = UDim2.new(0, 26, 0, 26)
-    LogoHub.Image = "http://www.roblox.com/asset/?id="..tostring(18837227406)
+    LogoHub.Image = "http://www.roblox.com/asset/?id="..tostring(12523036534)
 
     local ScrollTab = Instance.new("ScrollingFrame")
     ScrollTab.Name = "ScrollTab"
@@ -531,7 +532,7 @@ local LogoToggle = Instance.new("ImageLabel")
     LogoToggle.BackgroundTransparency = 1.000
     LogoToggle.Position = UDim2.new(0, 7, 0, 2)
     LogoToggle.Size = UDim2.new(0, 26, 0, 26)
-    LogoToggle.Image = "http://www.roblox.com/asset/?id="..tostring(18837227406)
+    LogoToggle.Image = "http://www.roblox.com/asset/?id="..tostring(12523036534)
 
             Circle.Name = "Circle"
             Circle.Parent = ToggleImage
@@ -630,7 +631,7 @@ local LogoToggle = Instance.new("ImageLabel")
             DropImage.Position = UDim2.new(0, 435, 0, 6)
             DropImage.Rotation = 180.000
             DropImage.Size = UDim2.new(0, 20, 0, 20)
-            DropImage.Image = "rbxassetid://18947886746"
+            DropImage.Image = "rbxassetid://10162644180"
             
             DropButton.Name = "DropButton"
             DropButton.Parent = Dropdown
@@ -3219,7 +3220,7 @@ end)
 
 print("Load Script")
 
-local Library = Update:Window("           BRUTALITY","18837227406",Enum.KeyCode.RightControl);
+local Library = Update:Window("           Domadic","12523036534",Enum.KeyCode.RightControl);
 
 local H = Library:AddTab("Home","6026568198")
 local Main = Library:AddTab("Level Farm","13075651575")
@@ -3236,7 +3237,7 @@ local Misc = Library:AddTab("Misc","11156061121")
 local Time = H:AddLabel("Executor Time");spawn(function() getgenv().Time = true;while true do wait(.1) UpdateTime() end end);function UpdateTime() local date = os.date("*t");local hour = (date.hour) % 24;local ampm = hour < 12 and "AM" or "PM";local timezone = string.format("%02i:%02i:%02i %s", ((hour -1) % 12) + 1, date.min, date.sec, ampm);local datetime = string.format("%02d/%02d/%04d", date.day, date.month, date.year);local LocalizationService = game:GetService("LocalizationService");local Players = game:GetService("Players");local player = Players.LocalPlayer;local name = player.Name;local result, code = pcall(function()   return LocalizationService:GetCountryRegionForPlayerAsync(player)  end);Time:Set(" : " .. timezone);Time:Set("Executor Time: " .. datetime .. " [ " .. code .. " ]");spawn(function() if getgenv().Time then pcall(function()  while wait() do  Time()  end end) end end) end
 
 H:AddLabel("Script PC/Mobile")
-H:AddLabel("Wellcone To Script Brutality Hub")
+H:AddLabel("Wellcone To Script Domadic Hub")
 
 H:AddSeperator("Credit")
 
@@ -3246,7 +3247,7 @@ H:AddButton("Copy Link Donate",function()
 setclipboard("https://direct-link.net/547536/donate-domadic-hub")
 end)
 
-H:AddButton("Copy Youtube Brutality Hub",function()
+H:AddButton("Copy Youtube Domadic Hub",function()
 setclipboard("https://youtube.com/@nomadicoof789")
 end)
 
@@ -6257,7 +6258,7 @@ spawn(function()
 						game.StarterGui:SetCore("SendNotification", {
 							Title = "Notification", 
 							Text = "Not Have Superhuman" ,
-							Icon = "http://www.roblox.com/asset/?id=18837227406",
+							Icon = "http://www.roblox.com/asset/?id=12523036534",
 							Duration = 2.5
 						})
 					end
@@ -6269,7 +6270,7 @@ spawn(function()
 						game.StarterGui:SetCore("SendNotification", {
 							Title = "Notification", 
 							Text = "Not Have Death Step" ,
-							Icon = "http://www.roblox.com/asset/?id=18837227406",
+							Icon = "http://www.roblox.com/asset/?id=12523036534",
 							Duration = 2.5
 						})
 					end
@@ -6281,7 +6282,7 @@ spawn(function()
 						game.StarterGui:SetCore("SendNotification", {
 							Title = "Notification", 
 							Text = "Not Have SharkMan Karate" ,
-							Icon = "http://www.roblox.com/asset/?id=18837227406",
+							Icon = "http://www.roblox.com/asset/?id=12523036534",
 							Duration = 2.5
 						})
 					end
@@ -6293,7 +6294,7 @@ spawn(function()
 						game.StarterGui:SetCore("SendNotification", {
 							Title = "Notification", 
 							Text = "Not Have Electric Claw" ,
-							Icon = "http://www.roblox.com/asset/?id=18837227406",
+							Icon = "http://www.roblox.com/asset/?id=12523036534",
 							Duration = 2.5
 						})
 					end
@@ -6303,7 +6304,7 @@ spawn(function()
 								game.StarterGui:SetCore("SendNotification", {
 									Title = "Notification", 
 									Text = "Not Have Enough Material" ,
-									Icon = "http://www.roblox.com/asset/?id=18837227406",
+									Icon = "http://www.roblox.com/asset/?id=12523036534",
 									Duration = 2.5
 								})
 							else
@@ -6314,7 +6315,7 @@ spawn(function()
 						game.StarterGui:SetCore("SendNotification", {
 							Title = "Notification", 
 							Text = "Not Have Dragon Talon" ,
-							Icon = "http://www.roblox.com/asset/?id=18837227406",
+							Icon = "http://www.roblox.com/asset/?id=12523036534",
 							Duration = 2.5
 						})
 					end
@@ -8076,33 +8077,33 @@ M:AddToggle("Auto Find Full Moon",_G.AutoFindFullmoon,function(value)
             if game:GetService("Lighting").Sky.MoonTextureId=="http://www.roblox.com/asset/?id=9709149052" or game:GetService("Lighting").Sky.MoonTextureId=="http://www.roblox.com/asset/?id=9709149431" then
                 wait(2.0)
                 game.StarterGui:SetCore("SendNotification", {
-					Title = "BRUTALITY HUB", 
+					Title = "Domadic Hab", 
 					Text = "Full Moon" ,
-					Icon = "http://www.roblox.com/asset/?id=18837227406",
+					Icon = "http://www.roblox.com/asset/?id=12523036534",
 					Duration = 2.5
 				})
             elseif game:GetService("Lighting").Sky.MoonTextureId=="http://www.roblox.com/asset/?id=9709143733" then
                 Hop()
                 game.StarterGui:SetCore("SendNotification", {
-					Title = "BRUTALITY HUB", 
+					Title = "Domadic Hub", 
 					Text = "Wait New Server" ,
-					Icon = "http://www.roblox.com/asset/?id=18837227406",
+					Icon = "http://www.roblox.com/asset/?id=12523036534",
 					Duration = 2.5
 				})
             elseif game:GetService("Lighting").Sky.MoonTextureId=="http://www.roblox.com/asset/?id=9709150401" then
                 Hop()
                 game.StarterGui:SetCore("SendNotification", {
-					Title = "BRUTALITY HUB", 
+					Title = "Domadic Hub", 
 					Text = "Wait New Server" ,
-					Icon = "http://www.roblox.com/asset/?id=18837227406",
+					Icon = "http://www.roblox.com/asset/?id=12523036534",
 					Duration = 2.5
 				})
             elseif game:GetService("Lighting").Sky.MoonTextureId=="http://www.roblox.com/asset/?id=9709149680" then
                 Hop()
                 game.StarterGui:SetCore("SendNotification", {
-					Title = "BRUTALITY HUB", 
+					Title = "Domadic Hub", 
 					Text = "Wait New Server" ,
-					Icon = "http://www.roblox.com/asset/?id=18837227406",
+					Icon = "http://www.roblox.com/asset/?id=12523036534",
 					Duration = 2.5
 				})
             else
@@ -8112,9 +8113,9 @@ M:AddToggle("Auto Find Full Moon",_G.AutoFindFullmoon,function(value)
         end
     end)
     
- M:AddSeperator("Dual Cursed Katana")
+ M:AddSeperator("Dual Curse Katana")
 
-M:AddToggle("Auto Dual Cursed Katana",_G.AutoCdk,function(value)
+M:AddToggle("Auto Dual Curse Katana",_G.AutoCdk,function(value)
  Auto_Cursed_Dual_Katana = value
 StopTween(Auto_Cursed_Dual_Katana)
 end)
@@ -9184,7 +9185,7 @@ FrozenIsland = M:AddLabel("")
     StopTween(_G.AutoFrozenDimension)
     end)
     
-    M:AddToggle("Auto Kitsune Island",_G.AutoFKitsune,function(value)
+    M:AddToggle("Auto Kitsunen Island",_G.AutoFKitsune,function(value)
     _G.AutoFKitsune = value
     StopTween(_G.AutoFKitsune)
     end)
@@ -10393,7 +10394,7 @@ end)
                 if _G.AutoObservation then
                     if game:GetService("Players").LocalPlayer.VisionRadius.Value >= 3000 then
                         game:GetService("StarterGui"):SetCore("SendNotification", {
-                            Icon = "rbxassetid://18947886746";
+                            Icon = "rbxassetid://0";
                             Title = "Observation", 
                             Text = "You Have Max Points"
                         })
@@ -14547,8 +14548,8 @@ spawn(function()
 	   end
     end)
     
-    D:AddToggle("Fruit Notification",_G.Grabfruit,function(true)
-    _G.FruitCheck = true
+    D:AddToggle("Fruit Notification",_G.Grabfruit,function(value)
+    _G.FruitCheck = value
     end)
     
     spawn(function()
@@ -15399,7 +15400,7 @@ Misc:AddButton("Kaitun Cap", function(value)
 		for k,v in pairs(cac) do
 			if ListHuhu[v] and game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("Buy"..v,true) == 1 then 
 				local huhu = Instance.new("ImageLabel",MeleeG)
-				huhu.Image = "rbxassetid://18947886746"
+				huhu.Image = "rbxassetid://9945562382"
 				huhu.ImageRectSize = Vector2.new(100,100)
 				huhu.ImageRectOffset = ListHuhu[v]*100
 			end
@@ -15963,18 +15964,18 @@ spawn(function()
     end)
     end)
 
-print("Brutality Hub Load Complete")
+print("Domadic Hub Load Complete")
 
 game.StarterGui:SetCore("SendNotification", {
-      Icon = "http://www.roblox.com/asset/?id=18837227406";
-      Title = "Brutality Hub", 
-      Text = "Made By Medusa Script";
+      Icon = "http://www.roblox.com/asset/?id=12523036534";
+      Title = "Domadic Hub", 
+      Text = "Welcome To Script!!";
 })
 wait(3)
 game.StarterGui:SetCore("SendNotification", {
-      Icon = "http://www.roblox.com/asset/?id=18837227406";
-      Title = "Brutality Hub", 
-      Text = "YouTube : Medusa Script Roblox";
+      Icon = "http://www.roblox.com/asset/?id=12523036534";
+      Title = "Domadic Hub", 
+      Text = "made by @miidraayeerng อยาก Yed Owner Zps วะ";
 })
 
    
