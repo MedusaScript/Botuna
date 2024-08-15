@@ -11,7 +11,7 @@ ScreenGui1.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 ImageButton1.Parent = ScreenGui1
 ImageButton1.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
 ImageButton1.BorderSizePixel = 0
-ImageButton1.Position = UDim2.new(1.120833337, 0, 0.0952890813, 0) -- paling depan tadinya 0
+ImageButton1.Position = UDim2.new(0.120833337, 0, 0.0952890813, 0) -- paling depan tadinya 0
 ImageButton1.Size = UDim2.new(0, 50, 0, 50)
 ImageButton1.Draggable = true
 ImageButton1.Image = "http://www.roblox.com/asset/?id=18962361962"
@@ -22,7 +22,7 @@ end)
 UICorner.Parent = ImageButton1
 
 do local GUI = game.CoreGui:FindFirstChild("SOMEXHUB");if GUI then GUI:Destroy();end;if _G.Color == nil then
-    _G.Color = Color3.fromRGB(36, 3, 252) --Biru muda 0, 247, 255
+    _G.Color = Color3.fromRGB(255, 0, 0) --Biru muda 0, 247, 255
    end 
 end
 
