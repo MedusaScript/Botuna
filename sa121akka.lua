@@ -15872,12 +15872,6 @@ game.StarterGui:SetCore("SendNotification", {
       Title = "BRUTALITY HUB", 
       Text = "The Next Generation";
 })
-
-game.StarterGui:SetCore("SendNotification", {
-    Icon = "http://www.roblox.com/asset/?id=18962361962";
-    Title = "YouTube", 
-    Text = "Medusa Script Roblox";
-})
 wait(3)
 game.StarterGui:SetCore("SendNotification", {
       Icon = "http://www.roblox.com/asset/?id=18395460459";
