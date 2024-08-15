@@ -16095,5 +16095,3 @@ game.StarterGui:SetCore("SendNotification", {
       Title = "Brutality Hub", 
       Text = "made by @miidraayeerng อยาก Yed Owner Zps วะ";
 })
-
-   
