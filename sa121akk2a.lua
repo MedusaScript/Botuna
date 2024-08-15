@@ -1572,7 +1572,7 @@ else
             end
         end
     end
-    local a = a:new({title = "BRUTALITY HUB ", version = "Blox Fruit", icon = a.Icons["ZekromHubX-icon"]})
+    local a = a:new({title = "BRUTALITY HUB ", version = "Blox Fruit", icon = a.Icons["BrutalityHub-icon"]})
     local g = a:addPage({icon = "rbxassetid://7040391851", title = "Main"})
     local h = a:addPage({icon = "rbxassetid://11446859498", title = "Item"})
     local i = a:addPage({icon = "rbxassetid://11447069304", title = "Stats"})
