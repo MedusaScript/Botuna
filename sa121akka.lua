@@ -9213,7 +9213,7 @@ end)
         end
           end)
     
-          M:AddToggle("Speed Boat", _G.increaseboatspeed,function(a)
+          M:AddToggle("Speed Boat", _G.increaseboatspeed,function(value)
             callback = function(a)
                 _G.increaseboatspeed = a
                 local a = {}
