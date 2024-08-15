@@ -3234,26 +3234,49 @@ local Ss = Library:AddTab("MISC","11156061121")
 local D = Library:AddTab("Devil Fruit","7044233235")
 local Dms = Library:AddTab("Misc","11156061121")
 
-local Time = H:AddLabel("Executor Time");spawn(function() getgenv().Time = true;while true do wait(.1) UpdateTime() end end);function UpdateTime() local date = os.date("*t");local hour = (date.hour) % 24;local ampm = hour < 12 and "AM" or "PM";local timezone = string.format("%02i:%02i:%02i %s", ((hour -1) % 12) + 1, date.min, date.sec, ampm);local datetime = string.format("%02d/%02d/%04d", date.day, date.month, date.year);local LocalizationService = game:GetService("LocalizationService");local Players = game:GetService("Players");local player = Players.LocalPlayer;local name = player.Name;local result, code = pcall(function()   return LocalizationService:GetCountryRegionForPlayerAsync(player)  end);Time:Set(" : " .. timezone);Time:Set("Executor Time: " .. datetime .. " [ " .. code .. " ]");spawn(function() if getgenv().Time then pcall(function()  while wait() do  Time()  end end) end end) end
+H:AddSeperator("Status Server/User")
 
-H:AddLabel("Script PC/Mobile")
-H:AddLabel("Wellcone To Script Domadic Hub")
+[[("Executor Time");spawn(function() getgenv().Time = true;while true do wait(.1) UpdateTime() end end);function UpdateTime() local date = os.date("*t");local hour = (date.hour) % 24;local ampm = hour < 12 and "AM" or "PM";local timezone = string.format("%02i:%02i:%02i %s", ((hour -1) % 12) + 1, date.min, date.sec, ampm);local datetime = string.format("%02d/%02d/%04d", date.day, date.month, date.year);local LocalizationService = game:GetService("LocalizationService");local Players = game:GetService("Players");local player = Players.LocalPlayer;local name = player.Name;local result, code = pcall(function()   return LocalizationService:GetCountryRegionForPlayerAsync(player)  end);Time:Set(" : " .. timezone);Time:Set("Executor Time: " .. datetime .. " [ " .. code .. " ]");spawn(function() if getgenv().Time then pcall(function()  while wait() do  Time()  end end) end end) end]]
 
-H:AddSeperator("Credit")
+[[local Time = H:AddLabel("Executor Time");spawn(function() getgenv().Time = true;while true do wait(.1) UpdateTime() end end);function UpdateTime() local date = os.date("*t");local hour = (date.hour) % 24;local ampm = hour < 12 and "AM" or "PM";local timezone = string.format("%02i:%02i:%02i %s", ((hour -1) % 12) + 1, date.min, date.sec, ampm);local datetime = string.format("%02d/%02d/%04d", date.day, date.month, date.year);local LocalizationService = game:GetService("LocalizationService");local Players = game:GetService("Players");local player = Players.LocalPlayer;local name = player.Name;local result, code = pcall(function()   return LocalizationService:GetCountryRegionForPlayerAsync(player)  end);Time:Set(" : " .. timezone);Time:Set("Executor Time: " .. datetime .. " [ " .. code .. " ]");spawn(function() if getgenv().Time then pcall(function()  while wait() do  Time()  end end) end end) end]]
+function UpdateTime()
+local GameTime = math.floor(workspace.DistributedGameTime+0.5)
+local Hour = math.floor(GameTime/(60^2))%24
+local Minute = math.floor(GameTime/(60^1))%60
+local Second = math.floor(GameTime/(60^0))%60
+local Time = H:AddLabel("[Sever Time] : Hour : "..Hour.. "  Minute : "..Minute.."  Second : "..Second)
+end
+    
+spawn(function()
+while task.wait() do
+pcall(function()
+UpdateTime()
+end)
+end
+end)
+
+H:AddLabel("Work For PC/Mobile")
+H:AddLabel("Thanks For Using Brutality Hub")
+
+H:AddSeperator("Made By Medusa Script")
 
 
 
-H:AddButton("Copy Link Donate",function()
+H:AddButton("Join Discord",function()
 setclipboard("https://direct-link.net/547536/donate-domadic-hub")
 end)
 
-H:AddButton("Copy Youtube Domadic Hub",function()
+H:AddButton("Youtube Brutality Hub",function()
 setclipboard("https://youtube.com/@nomadicoof789")
+end)
+
+H:AddButton("Website Bypass Key",function()
+setclipboard("https://bypassmedusa.vercel.app/")
 end)
 
 H:AddLine()
 
-
+[[
 H:AddSeperator("UpdLog")
 
 
@@ -3349,7 +3372,7 @@ H:AddLabel("[+] Bypass Tele Boss|6/11/2566|20:57")
 H:AddLabel("[+] Auto Find Full Moon|28/11/2566|16:30")
 H:AddLabel("[+] New Tween|11/12/2566|18:19")
 H:AddLabel("[+] New GUI|11/12/2566|18:19")
-
+]]
 
 
 
@@ -3439,7 +3462,7 @@ H:AddSeperator("Status")
             end)
         end
     end)
-
+[[
 H:AddSeperator(" Sword ")
 
 local Saber = H:AddLabel("❌: Saber")
@@ -3639,7 +3662,7 @@ spawn(function()
         end)
     end
 end)
-
+]]
 Main:AddSeperator("Farm")
 
 
@@ -5827,14 +5850,14 @@ end)
         pcall(function()
             while wait() do
     if game.Workspace._WorldOrigin.Locations:FindFirstChild('Mirage Island') then
-    Mirragecheck:Set('🏝️: Mirage Island is Spawning')
+    Mirragecheck:Set('Mirage Island is Spawning!!')
     else
-      Mirragecheck:Set('❌: Mirage Island Not Found' )end
+      Mirragecheck:Set('Mirage Island Not Found' )end
             end
         end)
 end)
 Mirragecheck = M:AddLabel("")
-M:AddToggle("Auto Mystic Island",_G.AutoMysticIsland,function(value)
+M:AddToggle("Teleport Mystic Island",_G.AutoMysticIsland,function(value)
         _G.AutoMysticIsland = value
         StopTween(_G.AutoMysticIsland)
         end)
@@ -5850,7 +5873,7 @@ M:AddToggle("Auto Mystic Island",_G.AutoMysticIsland,function(value)
                 end
             end)
         end)
-    M:AddToggle("Auto Drive",AutoW,function(W)
+    M:AddToggle("Auto Drive Boat",AutoW,function(W)
     AutoW = W
     end)
     spawn(function()
