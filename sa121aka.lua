@@ -15796,20 +15796,7 @@ Ss:AddToggle("Remove Fog",RemoveFog,function(value)
     game.Players.LocalPlayer.Character.Animate.Disabled = true 
 end)
 
-   Ss:AddSeperator("ESP MENU")
-
-   Ss:AddToggle("Esp Mirage Island",false, function(value)
-    MirageIslandESP = value
-        while MirageIslandESP do wait()
-            UpdateIslandMirageESP()
-        end
-    end)
-    Ss:AddToggle("Esp Kitsune Island (beta)",false, function(value)
-    IslandESPP = value
-        while IslandESPP do wait()
-            UpdateKitsuneESP()
-        end
-    end)
+    Ss:AddSeperator("ESP MENU")
     Ss:AddToggle("ESP Player",false,function(a)
         ESPPlayer = a
 	UpdatePlayerChams()
@@ -15873,6 +15860,19 @@ end)
 Ss:AddToggle("Esp Mob", false, function(nec)
     MobESP = nec
 end)
+
+Ss:AddToggle("Esp Mirage Island",false, function(value)
+    MirageIslandESP = value
+        while MirageIslandESP do wait()
+            UpdateIslandMirageESP()
+        end
+    end)
+Ss:AddToggle("Esp Kitsune Island (beta)",false, function(value)
+    IslandESPP = value
+        while IslandESPP do wait()
+            UpdateKitsuneESP()
+        end
+    end)
 [[
 Ss:AddToggle("Esp Mirage Island", false, function(value)
     MirageIslandESP = value
