@@ -522,7 +522,7 @@ local LogoToggle = Instance.new("ImageLabel")
 
             Circle.Name = "Circle"
             Circle.Parent = ToggleImage
-            Circle.BackgroundColor3 = Color3.fromRGB(227, 60, 60)
+            Circle.BackgroundColor3 = Color3.fromRGB(0, 0, 0) --227, 60, 60
             Circle.Position = UDim2.new(0, 2, 0, 2)
             Circle.Size = UDim2.new(0, 16, 0, 16)
 
@@ -9082,12 +9082,12 @@ end)
 
 FrozenIsland = M:AddLabel("")
     
-   M:AddToggle("Auto Frozen Dimension",_G.AutoFrozenDimension,function(value)
+   M:AddToggle("Auto Tp Frozen Dimension",_G.AutoFrozenDimension,function(value)
    _G.AutoFrozenDimension = value
    StopTween(_G.AutoFrozenDimension)
    end)
    
-   M:AddToggle("Auto Kitsunen Island",_G.AutoFKitsune,function(value)
+   M:AddToggle("Auto Tp Kitsunen Island",_G.AutoFKitsune,function(value)
    _G.AutoFKitsune = value
    StopTween(_G.AutoFKitsune)
    end)
