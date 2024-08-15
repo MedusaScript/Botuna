@@ -544,7 +544,7 @@ local LogoToggle = Instance.new("ImageLabel")
                     TweenService:Create(
                         Circle,
                         TweenInfo.new(0.4,Enum.EasingStyle.Quad,Enum.EasingDirection.Out),
-                        {BackgroundColor3 = Color3.fromRGB(227, 60, 110)}
+                        {BackgroundColor3 = Color3.fromRGB(0, 0, 0)}
                     ):Play()
                 end
                 pcall(callback,toggled)
