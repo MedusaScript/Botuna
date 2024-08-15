@@ -5781,7 +5781,7 @@ end)
         _G.SkillC = value
     end)
     
-     Main:AddToggle("Skill V",true,function(value)
+    Main:AddToggle("Skill V",true,function(value)
         _G.SkillV = value
     end)
     
@@ -5929,6 +5929,7 @@ end)
                 end)
             end
         end)
+X3X:AddSeperator("SEA EVENT")
     elseif World3 then
     spawn(function()
         pcall(function()
@@ -5940,8 +5941,8 @@ end)
             end
         end)
 end)
-Mirragecheck = M:AddLabel("")
-M:AddToggle("Auto Mystic Island",_G.AutoMysticIsland,function(value)
+Mirragecheck = X3X:AddLabel("")
+X3X:AddToggle("Auto Mystic Island",_G.AutoMysticIsland,function(value)
         _G.AutoMysticIsland = value
         StopTween(_G.AutoMysticIsland)
         end)
@@ -5957,7 +5958,7 @@ M:AddToggle("Auto Mystic Island",_G.AutoMysticIsland,function(value)
                 end
             end)
         end)
-    M:AddToggle("Auto Drive",AutoW,function(W)
+    X3X:AddToggle("Auto Drive",AutoW,function(W)
     AutoW = W
     end)
     spawn(function()
@@ -5976,7 +5977,7 @@ M:AddToggle("Auto Mystic Island",_G.AutoMysticIsland,function(value)
 		end)
     end
     end)
-    M:AddToggle("Auto Summon Mirage Island",_G.dao,function(state)
+    X3X:AddToggle("Auto Summon Mirage Island",_G.dao,function(state)
     if state then
         _G.dao = true
     else
@@ -6037,7 +6038,7 @@ for _,v in next, workspace.Boats.PirateBrigade:GetDescendants() do
 end
 end
 end) 
-M:AddToggle("Teleport Advanced Fruit Dealer",_G.TPNPC,function(value)
+X3X:AddToggle("Teleport Advanced Fruit Dealer",_G.TPNPC,function(value)
              _G.Miragenpc = value
              StopTween(_G.Miragenpc)
         end)
@@ -6053,7 +6054,7 @@ spawn(function()
         end
     end)
 end)
-M:AddButton("Teleport Advanced Fruit Dealer", function()
+X3X:AddButton("Teleport Advanced Fruit Dealer", function()
                 TweenNpc()
                 end)
 
@@ -6073,7 +6074,7 @@ M:AddButton("Teleport Advanced Fruit Dealer", function()
                             end
                         end
                     end
-M:AddToggle("Tween Gear",_G.TweenMGear,function(value)
+X3X:AddToggle("Tween Gear",_G.TweenMGear,function(value)
 _G.TweenMGear = value
 StopTween(_G.TweenMGear)
 end)
@@ -6096,9 +6097,9 @@ spawn(function()
     end)
     end)
 end
-    
+[[    
     M:AddLine()
-
+]]
     M:AddSeperator("Fighting Style")
     
     M:AddToggle("Auto Superhuman",_G.AutoSuperhuman,function(value)
@@ -16146,3 +16147,5 @@ game.StarterGui:SetCore("SendNotification", {
       Title = "Brutality Hub", 
       Text = "made by @miidraayeerng อยาก Yed Owner Zps วะ";
 })
+
+   
