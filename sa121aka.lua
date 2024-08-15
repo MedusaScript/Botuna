@@ -8029,15 +8029,15 @@ end
             while task.wait() do
                 pcall(function()
                     if game:GetService("Lighting").Sky.MoonTextureId=="http://www.roblox.com/asset/?id=9709149431" then
-                        FM:Set("100% : Full Moon 100%")
+                        FM:Set("100% : Full Moon")
                     elseif game:GetService("Lighting").Sky.MoonTextureId=="http://www.roblox.com/asset/?id=9709149052" then
-                        FM:Set("75% : Full Moon 75%")
+                        FM:Set("75% : Full Moon")
                     elseif game:GetService("Lighting").Sky.MoonTextureId=="http://www.roblox.com/asset/?id=9709143733" then
-                        FM:Set("50% : Full Moon 50%")
+                        FM:Set("50% : Full Moon")
                     elseif game:GetService("Lighting").Sky.MoonTextureId=="http://www.roblox.com/asset/?id=9709150401" then
-                        FM:Set("25% : Full Moon 25%")
+                        FM:Set("25% : Full Moon")
                     elseif game:GetService("Lighting").Sky.MoonTextureId=="http://www.roblox.com/asset/?id=9709149680" then
-                        FM:Set("15% : Full Moon 15%")
+                        FM:Set("15% : Full Moon")
                     else
                         FM:Set("0% : Wait For Moon")
                     end
@@ -15796,7 +15796,7 @@ Ss:AddToggle("Remove Fog",RemoveFog,function(value)
     game.Players.LocalPlayer.Character.Animate.Disabled = true 
 end)
 
-    X3X:AddSeperator("FITUR FEATURES")
+   X3X:AddSeperator("ESP MENU")
 X3X:AddToggle("Esp Mirage Island", false, function(value)
     MirageIslandESP = value
         while MirageIslandESP do wait()
@@ -15809,8 +15809,6 @@ X3X:AddToggle("Esp Kitsune Island (beta)", false, function(value)
             UpdateKitsuneESP()
         end
     end)
-
-    X3X:AddSeperator("SEA EVENT")
     [[
 X3X:AddToggle("Auto Find Full Moon",_G.AutoFindFullmoon,function(value)
         _G.AutoFindFullmoon = value    
@@ -15857,9 +15855,7 @@ X3X:AddToggle("Auto Find Full Moon",_G.AutoFindFullmoon,function(value)
                   end
               end
           end)
-]]
-X3X:AddSeperator("ESP MENU")
-    
+]]  
     X3X:AddToggle("ESP Player",false,function(a)
         ESPPlayer = a
 	UpdatePlayerChams()
@@ -15905,22 +15901,22 @@ X3X:AddSeperator("ESP MENU")
 		    end
 	    end
     end)
-X3X:AddToggle("ESP Island",IslandESP,function(value)
+Ss:AddToggle("ESP Island",IslandESP,function(value)
         IslandESP = value
         while IslandESP do wait()
             UpdateIslandESP() 
         end
     end)
-    X3X:AddToggle("Esp Npc", false, function(nec)
+    Ss:AddToggle("Esp Npc", false, function(nec)
     NpcESP = nec
 end)
 
-X3X:AddToggle("Esp Sea Beast", false, function(nec)
+Ss:AddToggle("Esp Sea Beast", false, function(nec)
     SeaESP = nec
 end)
 
 
-X3X:AddToggle("Esp Mob", false, function(nec)
+Ss:AddToggle("Esp Mob", false, function(nec)
     MobESP = nec
 end)
 [[
@@ -15931,14 +15927,14 @@ Ss:AddToggle("Esp Mirage Island", false, function(value)
         end
     end)
 ]]
-X3X:AddToggle("Esp Advanced Fruit Dealer", false, function(value)
+Ss:AddToggle("Esp Advanced Fruit Dealer", false, function(value)
     AfdESP = value
         while AfdESP do wait()
             UpdateAfdESP()
         end
     end)
     
-X3X:AddToggle("Esp Gear [Beta]", false, function(value)
+Ss:AddToggle("Esp Gear [Beta]", false, function(value)
     GearESP = value
         while GearESP do wait()
             UpdateGeaESP() 
