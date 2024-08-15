@@ -3260,10 +3260,10 @@ end)
 
 H:AddLine()
 
+
+H:AddSeperator("Update Log")
+
 [[
-H:AddSeperator("UpdLog")
-
-
 H:AddLabel("[+] Reduce Tween Speed | 5/4/2566|10:02")
 H:AddLabel("[+] Added Super Fast Attack | 8/4/2566|00:30")
 H:AddLabel("[+] Added Anti Afk | 8/4/2566|00:30")
@@ -3355,8 +3355,9 @@ H:AddLabel("[x] Fix Auto Sea Beast Fully|6/11/2566|20:57")
 H:AddLabel("[+] Bypass Tele Boss|6/11/2566|20:57")
 H:AddLabel("[+] Auto Find Full Moon|28/11/2566|16:30")
 H:AddLabel("[+] New Tween|11/12/2566|18:19")
-H:AddLabel("[+] New GUI|11/12/2566|18:19")
 ]]
+H:AddLabel("[+] New UI|18/08/2024|04:20")
+H:AddLabel("[+] New Fitur|15/08/2024|04:20")
 
 
 
