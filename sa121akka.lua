@@ -1,3 +1,19 @@
+--[[
+ /$$$$$$$                      /$$                 /$$$$$$$$                               
+| $$__  $$                    |__/                |__  $$__/                               
+| $$  \ $$  /$$$$$$   /$$$$$$$ /$$  /$$$$$$          | $$  /$$$$$$   /$$$$$$  /$$$$$$/$$$$ 
+| $$$$$$$/ /$$__  $$ /$$_____/| $$ /$$__  $$         | $$ /$$__  $$ |____  $$| $$_  $$_  $$
+| $$__  $$| $$  \ $$|  $$$$$$ | $$| $$$$$$$$         | $$| $$$$$$$$  /$$$$$$$| $$ \ $$ \ $$
+| $$  \ $$| $$  | $$ \____  $$| $$| $$_____/         | $$| $$_____/ /$$__  $$| $$ | $$ | $$
+| $$  | $$|  $$$$$$/ /$$$$$$$/| $$|  $$$$$$$         | $$|  $$$$$$$|  $$$$$$$| $$ | $$ | $$
+|__/  |__/ \______/ |_______/ |__/ \_______/         |__/ \_______/ \_______/|__/ |__/ |__/     
+
+[+] Rosie Team Cảm Ơn Bạn Đã Tin Tưởng Và Sử Dụng Dịch Vụ Của Chúng Tôi, Nếu Thấy Hữu Ít Hãy Chia Sẻ Cho Bạn Bè Của Bạn !!
+[+] Không Được Share Hay Crack Mã Nguồn Này Cho Ai! Nếu Không Bạn Sẽ Bị Ban IP Khỏi Website Vĩnh Viễn!
+[+] Chúng Tôi Không Nhận Hỗ Trợ Những Mã Nguồn Miễn Phí, Xin Đừng Bảo Vì Sao. Tạo Ticket Hỗ Trợ Của Website Tại: https://rosieteam.net/dash/ticket
+[+] Nếu Bạn Edit Source Và Up Web Share Nhớ Obfuscate Script. Nếu Bạn Có Tiền Thì Sử Dụng: Lura.Ph, Luarmor.Net | Nếu Bạn Không Có Tiền Thì Dùng: luaobfuscate.com, MoonSec, 77Fuscate,... Nhé!
+]]
+  
 local ScreenGui1 = Instance.new("ScreenGui")
 local ImageButton1 = Instance.new("ImageButton")
 local UICorner = Instance.new("UICorner")
@@ -8157,7 +8173,7 @@ end)
 M:AddToggle("Auto Soul Guitar + Hop",false,function(value)
   _G.soulGuitarhop = value    
  end)
-[[
+
 M:AddToggle("Auto Find Full Moon",_G.AutoFindFullmoon,function(value)
   _G.AutoFindFullmoon = value    
  end)
@@ -8203,7 +8219,7 @@ M:AddToggle("Auto Find Full Moon",_G.AutoFindFullmoon,function(value)
             end
         end
     end)
-    ]]
+
  M:AddSeperator("Dual Cursed Katana")
 
 M:AddToggle("Auto Dual Cursed Katana",_G.AutoCdk,function(value)
@@ -15814,6 +15830,7 @@ X3X:AddToggle("Esp Kitsune Island (beta)", false, function(value)
     end)
 
     X3X:AddSeperator("SEA EVENT")
+    [[
 X3X:AddToggle("Auto Find Full Moon",_G.AutoFindFullmoon,function(value)
         _G.AutoFindFullmoon = value    
        end)
@@ -15859,7 +15876,7 @@ X3X:AddToggle("Auto Find Full Moon",_G.AutoFindFullmoon,function(value)
                   end
               end
           end)
-
+]]
 Ss:AddSeperator("ESP MENU")
     
     Ss:AddToggle("ESP Player",false,function(a)
