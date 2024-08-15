@@ -167,7 +167,7 @@ function Update:Window(text,logo,keybind)
     Hub.Position = UDim2.new(0, 85, 0, 0)
     Hub.Size = UDim2.new(0, 81, 0, 27)
     Hub.Font = Enum.Font.GothamSemibold
-    Hub.Text = "BRUTALITY HUB" --        HUB
+    Hub.Text = "        BRUTALITY HUB" --        HUB
     Hub.TextColor3 = Color3.fromRGB(0, 247, 255)   
     Hub.TextSize = 20.000
     Hub.TextXAlignment = Enum.TextXAlignment.Left
@@ -3220,7 +3220,7 @@ end)
 
 print("Load Script")
 
-local Library = Update:Window("Blox Fruits","18837557481",Enum.KeyCode.RightControl); --12523036534
+local Library = Update:Window("           Blox Fruit","18837634743",Enum.KeyCode.RightControl); --12523036534
 
 local H = Library:AddTab("Home","6026568198")
 local Main = Library:AddTab("Level Farm","13075651575")
@@ -3232,7 +3232,7 @@ local R = Library:AddTab("Raid","11155986081")
 local T = Library:AddTab("Teleport","11155851001")
 local S = Library:AddTab("Shop","6031265976")
 local D = Library:AddTab("Devil Fruit","7044233235")
-local Misc = Library:AddTab("Misc","11156061121")
+local Dms = Library:AddTab("Misc","11156061121")
 
 local Time = H:AddLabel("Executor Time");spawn(function() getgenv().Time = true;while true do wait(.1) UpdateTime() end end);function UpdateTime() local date = os.date("*t");local hour = (date.hour) % 24;local ampm = hour < 12 and "AM" or "PM";local timezone = string.format("%02i:%02i:%02i %s", ((hour -1) % 12) + 1, date.min, date.sec, ampm);local datetime = string.format("%02d/%02d/%04d", date.day, date.month, date.year);local LocalizationService = game:GetService("LocalizationService");local Players = game:GetService("Players");local player = Players.LocalPlayer;local name = player.Name;local result, code = pcall(function()   return LocalizationService:GetCountryRegionForPlayerAsync(player)  end);Time:Set(" : " .. timezone);Time:Set("Executor Time: " .. datetime .. " [ " .. code .. " ]");spawn(function() if getgenv().Time then pcall(function()  while wait() do  Time()  end end) end end) end
 
