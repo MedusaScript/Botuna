@@ -3206,7 +3206,7 @@ end)
 
 print("Load Script")
 
-local Library = Update:Window("            BRUTALITY HUB V4","18962361962",Enum.KeyCode.RightControl); --12523036534
+local Library = Update:Window("                     BRUTALITY HUB V4","18962361962",Enum.KeyCode.RightControl); --12523036534
 
 local H = Library:AddTab("Home","6026568198")
 local Main = Library:AddTab("Level Farm","13075651575")
