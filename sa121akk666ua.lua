@@ -9193,7 +9193,7 @@ FrozenIsland = M:AddLabel("")
         _G.SetToTradeAureEmber = value
     end)
 
-    M:Toggle("Auto Trade Azure Ember",_G.TradeAureEmber,function(v)
+    M:Toggle("Auto Trade Azure Ember",_G.TradeAureEmber,function(value)
         _G.TradeAureEmber = v
     end)
 
