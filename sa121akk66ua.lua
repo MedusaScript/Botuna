@@ -9189,11 +9189,11 @@ FrozenIsland = M:AddLabel("")
         end)
 
         _G.SetToTradeAureEmber = 20
-    M:Slider("Set Azure Ember", 10, 25, _G.SetToTradeAureEmber, function(value)
+    M:Slider("Set Azure Ember", 10, 25,_G.SetToTradeAureEmber, function(value)
         _G.SetToTradeAureEmber = value
     end)
 
-    Sea:Toggle("Auto Trade Azure Ember", false,function(value)
+    M:Toggle("Auto Trade Azure Ember",_G.TradeAureEmber,function(value)
         _G.TradeAureEmber = value
     end)
 
