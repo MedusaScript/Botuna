@@ -9153,8 +9153,8 @@ FrozenIsland = M:AddLabel("")
                 end
             end
         end)
-    M:Toggle("Auto Trade Azure Ember", false,function(state)
-        _G.TradeAureEmber = state
+    M:Toggle("Auto Trade Azure Ember", _G.TradeAureEmber,function(value)
+        _G.TradeAureEmber = value
         end)
 
         function GetCountMaterials(MaterialName)
