@@ -1,4 +1,3 @@
-
 local ScreenGui1 = Instance.new("ScreenGui")
 local ImageButton1 = Instance.new("ImageButton")
 local UICorner = Instance.new("UICorner")
@@ -9138,22 +9137,7 @@ FrozenIsland = M:AddLabel("")
                end
            end
        end)
-    M::Toggle("Auto Collect Azure",_G.CollectAzure,function(value)
-        _G.CollectAzure = value
-        end) 
-        
-        spawn(function()
-            while wait() do
-                if _G.CollectAzure then
-                    pcall(function()
-                        if game:GetService("Workspace"):FindFirstChild("AttachedAzureEmber") then
-                            fastpos(game:GetService("Workspace"):WaitForChild("EmberTemplate"):FindFirstChild("Part").CFrame)
-                        end
-                    end)
-                end
-            end
-        end)
-        
+
     M:AddSeperator("Misc Elite")
     
     local EliteProgress = M:AddLabel("")
