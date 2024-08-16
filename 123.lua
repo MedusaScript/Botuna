@@ -9153,32 +9153,6 @@ FrozenIsland = M:AddLabel("")
                 end
             end
         end)
-    M:Toggle("Auto Trade Azure Ember", _G.TradeAureEmber,function(value)
-        _G.TradeAureEmber = value
-        end)
-
-        function GetCountMaterials(MaterialName)
-            local Inventory = game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("getInventory")
-            for i, v in pairs(Inventory) do
-                if v.Name == MaterialName then
-                    return v["Count"]
-                end
-            end
-        end
-
-        spawn(function()
-            while wait() do
-                if _G.TradeAureEmber then
-                    pcall(function()
-                        local AzureAvilable = GetCountMaterials("Azure Ember")
-                        if AzureAvilable >= _G.SetToTradeAureEmber then
-                            game:GetService("ReplicatedStorage").Modules.Net:FindFirstChild("RF/KitsuneStatuePray"):InvokeServer()
-                            game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("KitsuneStatuePray")
-                        end
-                    end)
-                end
-            end
-        end)
         
     M:AddSeperator("Misc Elite")
     
