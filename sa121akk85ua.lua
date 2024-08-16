@@ -2757,9 +2757,9 @@ local function AutoSoulGuitar()
       FireRemote("GuitarPuzzleProgress", "Ghost")
     else
     end
-    --[[game:GetService("Workspace").Map["Haunted Castle"].ElevatorDoor.Left
+    game:GetService("Workspace").Map["Haunted Castle"].ElevatorDoor.Left
     game:GetService("Workspace").NPCs["Skeleton Machine"].HumanoidRootPart
-    game:GetService("Workspace").Map["Haunted Castle"].Placard1.Right.Part]]
+    game:GetService("Workspace").Map["Haunted Castle"].Placard1.Right.Part
     
     local plrChar = Player and Player.Character
     local plrPP = plrChar and plrChar.PrimaryPart
@@ -3736,13 +3736,6 @@ if Sea3 then
   AutoSea:AddToggle("Toggle", {Title = "Fish Boat", Default = true,Callback = function(Value)
     getgenv().FishBoat = Value
   end})
-  --[[AddTextLabel(AutoSea, {"Sea Beast"})
-  AutoSea:AddToggle("Toggle", {Title = "Sea Beast",Default = true,Callback = function(Value)
-    getgenv().SeaBeast = Value
-  end})
-  AutoSea:AddToggle("Toggle", {Title = "Triple Sea Beast",Default = true,Callback = function(Value)
-    getgenv().SeaBeastTriple = Value
-  end})]]
   AutoSea:AddSection("Skill")
   AutoSea:AddToggle("Toggle", {Title = "AimBot Skill Enemie",  Default = true,Callback = function(Value)
     getgenv().SeaAimBotSkill = Value
@@ -3989,111 +3982,6 @@ elseif Sea2 then
     end
   })
 end
-
---[[MainFarm:AddSection("Christmas")
-
-local TimeLabel = MainFarm:AddParagraph({Title = "Time for next gift : nil"})
-
-task.spawn(function()
-  local Counter = workspace:WaitForChild("Countdown", 9e9)
-  local SurfaceGui = Counter:WaitForChild("SurfaceGui", 9e9)
-  local TextLabel = SurfaceGui:WaitForChild("TextLabel", 9e9)
-  
-  while task.wait() do
-    TimeLabel:Set("Time to Next gift : " .. TextLabel.Text)
-    
-    if TextLabel.Text ~= "STARTING!" then
-      local TimerL, Timer = TextLabel.Text:split(":"), 0
-      if tonumber(TimerL[2]) >= 1 then
-        Timer = tonumber(TimerL[2]) * 60
-      end
-      Timer = Timer + tonumber(TimerL[3])
-      
-      getgenv().TimeToGift = Timer
-    else
-      getgenv().TimeToGift = 0
-    end
-  end
-end)
-
-if PlayerLevel.Value >= 2550 and Sea3 then
-  MainFarm:AddToggle("Toggle", {Title = "Auto Farm Candy", Callback = function(Value)
-    getgenv().AutoCandy = Value
-    task.spawn(function()
-      local Enemies1 = workspace:WaitForChild("Enemies", 9e9)
-      local Enemies2 = ReplicatedStorage
-      
-      local function GetProxyNPC()
-        local Distance = math.huge
-        local NPC = nil
-        local plrChar = Player and Player.Character and Player.Character.PrimaryPart
-        
-        for _,npc in pairs(Enemies1:GetChildren()) do
-          if npc.Name == "Isle Champion" or npc.Name == "Sun-kissed Warrior" or npc.Name == "Island Boy" or npc.Name == "Isle Outlaw" then
-            if plrChar and npc and npc:FindFirstChild("HumanoidRootPart") and (plrChar.Position - npc.HumanoidRootPart.Position).Magnitude <= Distance then
-              Distance = (plrChar.Position - npc.HumanoidRootPart.Position).Magnitude
-              NPC = npc
-            end
-          end
-        end
-        for _,npc in pairs(Enemies2:GetChildren()) do
-          if npc.Name == "Isle Champion" or npc.Name == "Sun-kissed Warrior" or npc.Name == "Island Boy" or npc.Name == "Isle Outlaw" then
-            if plrChar and npc and npc:FindFirstChild("HumanoidRootPart") and (plrChar.Position - npc.HumanoidRootPart.Position).Magnitude <= Distance then
-              Distance = (plrChar.Position - npc.HumanoidRootPart.Position).Magnitude
-              NPC = npc
-            end
-          end
-        end
-        return NPC
-      end
-      
-      while getgenv().AutoCandy do task.wait()
-        if Configure("Candy") then
-        else
-          local Enemie = GetProxyNPC()
-          if Enemie then
-            PlayerTP(Enemie.HumanoidRootPart.CFrame + getgenv().FarmPos)
-            pcall(function()PlayerClick()ActiveHaki()EquipTool()BringNPC(Enemie, true)end)
-          end
-        end
-      end
-    end)
-  end})
-end
-
-MainFarm:AddToggle("Toggle", {Title = "Auto Gift", Callback = function(Value)
-  getgenv().AutoGift = Value
-  task.spawn(function()
-    local function GetGift()
-      for _,part in pairs(workspace["_WorldOrigin"]:GetChildren()) do
-        if part.Name == "Present" then
-          if part:FindFirstChild("Box") and part.Box:FindFirstChild("ProximityPrompt") then
-            return part, part.Box.ProximityPrompt
-          end
-        end
-      end
-    end
-    
-    while getgenv().AutoGift do task.wait()
-      local Gift, Prompt = GetGift()
-      
-      if Gift and Gift.PrimaryPart then
-        PlayerTP(Gift.PrimaryPart.CFrame)
-        if Prompt then
-          fireproximityprompt(Prompt)
-        end
-      elseif getgenv().TimeToGift < 90 then
-        if Sea3 then
-          PlayerTP(CFrame.new(-1076, 14, -14437))
-        elseif Sea2 then
-          PlayerTP(CFrame.new(-5219, 15, 1532))
-        elseif Sea1 then
-          PlayerTP(CFrame.new(1007, 15, -3805))
-        end
-      end
-    end
-  end)
-end})]]
 
 if Sea3 then
   
@@ -4971,15 +4859,7 @@ elseif Sea3 then
     AutoRipIndra()
   end})
   
-  --[[QuestsTabs:AddSection("Ken Haki")
-  
-  QuestsTabs:AddToggle("Toggle", {
-    Title = "Auto Ken Haki V2",
-    Callback = function(Value)
-      getgenv().AutoKenV2 = Value
-      AutoKenV2()
-    end
-  })]]
+
   
   QuestsTabs:AddSection("Musketeer Hat")
   
@@ -5696,26 +5576,6 @@ if Sea3 then
     end
   })
   
-  --[[QuestsTabs:AddSection("Soul Guitar")
-  
-  QuestsTabs:AddToggle("Toggle", {
-    Title = "Auto Soul Guitar <Soon>",
-    Callback = function(Value)
-      getgenv().AutoSoulGuitar = Value
-      AutoSoulGuitar()
-    end
-  })]]
-  
-  --[[QuestsTabs:AddSection("Cursed Dual Katana")
-  
-  QuestsTabs:AddToggle("Toggle", {
-    Title = "Auto CDK",
-    Callback = function(Value)
-      getgenv().AutoCursedDualKatana = Value
-      AutoCursedDualKatana()
-    end
-  })]]
-end
 
 Teleport:AddSection("Teleport to Sea")
 
@@ -5912,19 +5772,7 @@ if Sea3 then
   end})
 end
 
---[[Misc:AddSection("Join Server")
-local TeleportService = game:GetService("TeleportService")
-local ServerBrowser, ServerID = "" ,""
-Misc:AddTextBox({Title = "Server ID",Default = "",PlaceholderText = "Server ID",Callback = function(Value)
-  local ID = tostring(Value)
-  ID = ID:gsub("`", "")
-  ID = ID:gsub("lua", "")
-  ServerID = ID
-end})
-Misc:AddButton({Title = "Join Server", function()
-  ReplicatedStorage["__ServerBrowser"]:InvokeServer("teleport", ServerID)
-end})
--- ReplicatedStorage.__ServerBrowser:InvokeServer("teleport", "Id")]]
+
 Misc:AddSection("Configs")
 Misc:AddSlider("Slider", {Title = "Farm Distance",Min = 5,Max = 50,Default = 20,Rounding = 1,Callback = function(Value)
   getgenv().FarmPos = Vector3.new(0, Value or 15, Value or 10)getgenv().FarmDistance = Value
@@ -6082,21 +5930,7 @@ Misc:AddToggle("Toggle", {
   end
 })
 
---[[Shop:AddSection("Christmas")
-Shop:AddButton({Title = Buy 2x EXP (15 mins.) < 50 Candies >", function()FireRemote("Candies", "Check")FireRemote("Candies", "Buy", 1, 1)end})
-Shop:AddButton({Title = Stats Refund < 75 Candies >", function()FireRemote("Candies", "Check")FireRemote("Candies", "Buy", 1, 2)end})
-Shop:AddButton({Title = Race Reroll < 100 Candies >", function()FireRemote("Candies", "Check")FireRemote("Candies", "Buy", 1, 3)end})
-Shop:AddSection("")
-Shop:AddButton({Title = Buy 200 Frags < 50 Candies >", function()FireRemote("Candies", "Check")FireRemote("Candies", "Buy", 2, 2)end})
-Shop:AddButton({Title = Buy 500 Frags < 100 Candies >", function()FireRemote("Candies", "Check")FireRemote("Candies", "Buy", 2, 2)end})
-Shop:AddSection("Bones")
-Shop:AddButton({Title = Buy Surprise < 50 Bones >", function()FireRemote("Bones", "Buy", 1, 1)end})
-Shop:AddButton({Title = Stats Refund < 150 Bones >", function()FireRemote("Bones", "Buy", 1, 2)end})
-Shop:AddButton({Title = Race Reroll < 300 Bones >", function()FireRemote("Bones", "Buy", 1, 3)end})]]
---[[Shop:AddSection("Ectoplasm")
-Shop:AddButton({Title = Midnight Blade", function()end})
-Shop:AddButton({Title = Bizarre Rifle", function()end})
-Shop:AddButton({Title = Midnight Blade", function()end})]]
+
 Shop:AddSection("Frags")
 Shop:AddButton({Title = "Race Rerol", function()
 FireRemote("BlackbeardReward", "Reroll", "1")FireRemote("BlackbeardReward", "Reroll", "2")end})
@@ -6149,17 +5983,6 @@ Shop:AddButton({Title = "Cyborg Race", function()FireRemote("CyborgTrainer", "Bu
 local NotifiFruits = false
 local NotifiTime = 15
 
---[==[workspace.ChildAdded:Connect(function(part)
-  if NotifiFruits then
-    if part:IsA("Tool") or string.find(part.Name, "Fruit") then
-     --[[ redlib:MakeNotify({
-        Title = "Fruit Notifier",
-        Text = "The fruit '" .. part.Name .. "' Spawned on the Map",
-        Time = NotifiTime
-      }) ]]
-    end
-  end
-end)]==]
 
 Visual:AddSection("Notifications")
 Visual:AddSlider("Slider", {Title = "Nofication Time",Max = 120, Min = 5, Rounding = 1, Default = 15, Callback = function(Value)
