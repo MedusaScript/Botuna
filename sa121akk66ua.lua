@@ -9189,12 +9189,12 @@ FrozenIsland = M:AddLabel("")
         end)
 
         _G.SetToTradeAureEmber = 20
-    M:Slider("Set Azure Ember", 10, 25,_G.SetToTradeAureEmber, function(value)
+    M:AddSlider("Set Trade Azure Ember"20,25,function(value)
         _G.SetToTradeAureEmber = value
     end)
 
-    M:Toggle("Auto Trade Azure Ember",_G.TradeAureEmber,function(value)
-        _G.TradeAureEmber = value
+    M:Toggle("Auto Trade Azure Ember",_G.TradeAureEmber,function(v)
+        _G.TradeAureEmber = v
     end)
 
         function GetCountMaterials(MaterialName)
