@@ -3280,10 +3280,10 @@ local RaceV4 = Library:AddTab("RaceV4","11162889532")
 local P = Library:AddTab("Player","7251993295")
 local R = Library:AddTab("Raid","11155986081")
 local T = Library:AddTab("Teleport","11155851001")
+local D = Library:AddTab("Devil Fruit","7044233235")
+local Sts = Library:AddTab("Status","7040410130")
 local S = Library:AddTab("Shop","6031265976")
 local Ss = Library:AddTab("MISC","11156061121")
-local D = Library:AddTab("Devil Fruit","7044233235")
-local Sts = Library:AddTab("Status","7044233235")
 --local Dms = Library:AddTab("Misc","11156061121")
 
 H:AddSeperator("Status Time")
@@ -7907,7 +7907,7 @@ end
         end
     end)
 
-    Sts:AddSeperator("Soul Guitar")
+    Sts:AddSeperator("Status Moon")
     
     local FM = Sts:AddLabel('Third World')
     
