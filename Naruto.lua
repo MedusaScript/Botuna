@@ -13100,8 +13100,8 @@ end)
         end)
     end)
     
-    R::AddToggle("Kill Aura",_G.concubu ,function(vu)
-        _G.concubu  = vu
+    R::AddToggle("Kill Aura",_G.concubu ,function(value)
+        _G.concubu  = value
         end)
     
     spawn(function()
