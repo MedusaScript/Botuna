@@ -7907,7 +7907,7 @@ end
         end
     end)
 
-    Sts:AddSeperator("Status Moon")
+    Sts:AddSeperator("Status Server")
     
     local FM = Sts:AddLabel('Third World')
     
@@ -7930,6 +7930,8 @@ end
                 end)
             end
     end)
+
+    FrozenIsland = Sts:AddLabel("")
     
     M:AddSeperator("Soul Guitar")
     
