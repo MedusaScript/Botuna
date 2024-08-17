@@ -5819,7 +5819,7 @@ M:AddToggle("Teleport Mystic Island",_G.AutoMysticIsland,function(value)
                 end
             end)
         end)
-    M:AddToggle("Speed Boat",true,function(value)
+    M:AddToggle("Speed Boat",_G.IncreaseBoatSpeed,function(value)
         _G.IncreaseBoatSpeed = value
             end)
             spawn(function()
