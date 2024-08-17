@@ -3280,9 +3280,10 @@ local RaceV4 = Library:AddTab("RaceV4","11162889532")
 local P = Library:AddTab("Player","7251993295")
 local R = Library:AddTab("Raid","11155986081")
 local T = Library:AddTab("Teleport","11155851001")
-local D = Library:AddTab("Devil Fruit","7044233235")
 local S = Library:AddTab("Shop","6031265976")
+local D = Library:AddTab("Devil Fruit","7044233235")
 local Ss = Library:AddTab("MISC","11156061121")
+local D = Library:AddTab("Devil Fruit","7044233235")
 --local Dms = Library:AddTab("Misc","11156061121")
 
 H:AddSeperator("Status Server")
@@ -5818,7 +5819,7 @@ M:AddToggle("Teleport Mystic Island",_G.AutoMysticIsland,function(value)
                 end
             end)
         end)
-    M:AddToggle("Speed Boat",_G.IncreaseBoatSpeed, true, function(value)
+    M:AddToggle("Speed Boat",true,_G.IncreaseBoatSpeed,function(value)
         _G.IncreaseBoatSpeed = value
             end)
             spawn(function()
@@ -12972,9 +12973,9 @@ end)
         pcall(function()
             while wait() do
     if game.Workspace._WorldOrigin.Locations:FindFirstChild('Island 1') then
-    Island1:Set('100%: Island 1')
+    Island1:Set('✅ | Island 1')
     else
-      Island1:Set('50%: Island 1' )end
+      Island1:Set('❌ | Island 1' )end
             end
         end)
 end)
@@ -12983,9 +12984,9 @@ spawn(function()
         pcall(function()
             while wait() do
     if game.Workspace._WorldOrigin.Locations:FindFirstChild('Island 2') then
-    Island2:Set('100%: Island 2')
+    Island2:Set('✅ | Island 2')
     else
-      Island2:Set('50%: Island 2' )end
+      Island2:Set('❌ | Island 2' )end
             end
         end)
 end)
@@ -12994,9 +12995,9 @@ spawn(function()
         pcall(function()
             while wait() do
     if game.Workspace._WorldOrigin.Locations:FindFirstChild('Island 3') then
-    Island3:Set('100%: Island 3')
+    Island3:Set('✅ | Island 3')
     else
-      Island3:Set('50%: Island 3' )end
+      Island3:Set('❌ | Island 3' )end
             end
         end)
 end)
@@ -13005,9 +13006,9 @@ spawn(function()
         pcall(function()
             while wait() do
     if game.Workspace._WorldOrigin.Locations:FindFirstChild('Island 4') then
-    Island4:Set('100%: Island 4')
+    Island4:Set('✅ | Island 4')
     else
-      Island4:Set('50%: Island 4' )end
+      Island4:Set('❌ | Island 4' )end
             end
         end)
 end)
@@ -13016,9 +13017,9 @@ spawn(function()
         pcall(function()
             while wait() do
     if game.Workspace._WorldOrigin.Locations:FindFirstChild('Island 5') then
-    Island5:Set('100%: Island 5')
+    Island5:Set('✅ | Island 5')
     else
-      Island5:Set('50%: Island 5' )end
+      Island5:Set('❌ | Island 5' )end
             end
         end)
 end)
@@ -13099,30 +13100,26 @@ end)
         end)
     end)
     
-    R:AddToggle("Kill Aura",nil,function(value)
-    _G.Kill_Aura = value
-    end) 
-
-spawn(function()
-        pcall(function() 
-            while wait() do
-                if _G.Kill_Aura then
-                    if game:GetService("Players")["LocalPlayer"].PlayerGui.Main.Timer.Visible == true then
-                        for i,v in pairs(game:GetService("Workspace").Enemies:GetDescendants()) do
-                            if v:FindFirstChild("Humanoid") and v:FindFirstChild("HumanoidRootPart") and v.Humanoid.Health > 0 then
-                                pcall(function()
-                                    repeat wait()
-                                        sethiddenproperty(game:GetService("Players").LocalPlayer,"SimulationRadius",math.huge)
-                                        v.Humanoid.Health = 0
-                                        v.HumanoidRootPart.CanCollide = false
-                                    until not _G.Kill_Aura or not v.Parent or v.Humanoid.Health <= 0
-                                end)
-                            end
-                        end
+    R::AddToggle("Kill Aura",_G.concubu ,function(vu)
+        _G.concubu  = vu
+        end)
+    
+    spawn(function()
+        while wait() do
+            if _G.concubu then
+                for i,v in pairs(game.Workspace.Enemies:GetDescendants()) do
+                    if v:FindFirstChild("Humanoid") and v:FindFirstChild("HumanoidRootPart") and v.Humanoid.Health > 0 then
+                        pcall(function()
+                            repeat wait(.1)
+                                v.Humanoid.Health = 0
+                                v.HumanoidRootPart.CanCollide = false
+                                sethiddenproperty(game.Players.LocalPlayer, "SimulationRadius", math.huge)
+                            until not _G.concubu  or not v.Parent or v.Humanoid.Health <= 0
+                        end)
                     end
                 end
             end
-        end)
+        end
     end)
 
     
