@@ -3286,7 +3286,7 @@ local GameTime = math.floor(workspace.DistributedGameTime+0.5)
 local Hour = math.floor(GameTime/(60^2))%24
 local Minute = math.floor(GameTime/(60^1))%60
 local Second = math.floor(GameTime/(60^0))%60
-Time1:Set("[GameTime] : Hours : "..Hour.." Min : "..Minute.." Sec : "..Second)
+H:Label("[GameTime] : Hours : "..Hour.." Min : "..Minute.." Sec : "..Second)
 end
 
 spawn(function()
@@ -3296,33 +3296,6 @@ UpdateTime()
 end)
 end
 end)
-
-local Client = H:Label("Client")
-
-function UpdateClient()
-local Fps = workspace:GetRealPhysicsFPS()
-Client:Set("[Fps] : "..Fps)
-end
-
-spawn(function()
-while true do wait(.1)
-UpdateClient()
-end
-end)
-
-local Client1 = H:Label("Client")
-
-function UpdateClient1()
-local Ping = game:GetService("Stats").Network.ServerStatsItem["Data Ping"]:GetValueString()
-Client1:Set("[Ping] : "..Ping)
-end
-
-spawn(function()
-while true do wait(.1)
-UpdateClient1()
-end
-end)
-
 
 H:AddLabel("Work For PC/Mobile")
 H:AddLabel("Thanks For Using Brutality Hub")
