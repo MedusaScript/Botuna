@@ -2754,7 +2754,15 @@ function UpdateGeaESP()
     end
 end
     
-
+local LocalPlayer = game:GetService'Players'.LocalPlayer
+local originalstam = LocalPlayer.Character.Energy.Value
+function INGENG()
+    game:GetService'Players'.LocalPlayer.Character.Energy.Changed:connect(function()
+        if _G.InfinitsEnergy then
+            LocalPlayer.Character.Energy.Value = originalstam
+        end 
+    end)
+end
     
     function InfAb()
         if InfAbility then
@@ -2793,27 +2801,7 @@ end
         end
     end
     
-    local LocalPlayer = game:GetService'Players'.LocalPlayer
-    local originalstam = LocalPlayer.Character.Energy.Value
-    function infinitestam()
-        LocalPlayer.Character.Energy.Changed:connect(function()
-            if InfiniteEnergy then
-                LocalPlayer.Character.Energy.Value = originalstam
-            end 
-        end)
-    end
-    
-    spawn(function()
-        pcall(function()
-            while wait(.1) do
-                if InfiniteEnergy then
-                    wait(0.1)
-                    originalstam = LocalPlayer.Character.Energy.Value
-                    infinitestam()
-                end
-            end
-        end)
-    end)
+
     
     function NoDodgeCool()
         if nododgecool then
@@ -15817,26 +15805,11 @@ Ss:AddToggle("Esp Blue Gear [Beta]", false, function(value)
         nododgecool = value
         NoDodgeCool()
     end)
-    
-    Ss:AddToggle("Infinite Energy",false,function(value)
-        InfiniteEnergy = value
-        originalstam = LocalPlayer.Character.Energy.Value
-    end)
 
-    Ss:AddToggle("Infinite Energy",true,_G.InfinitsEnergy,function(value)
+    Ss:AddToggle("Infinite Energy",_G.InfinitsEnergy,function(value)
         _G.InfinitsEnergy = value
 INGENG()
 end)
-
-local LocalPlayer = game:GetService'Players'.LocalPlayer
-local originalstam = LocalPlayer.Character.Energy.Value
-function INGENG()
-    game:GetService'Players'.LocalPlayer.Character.Energy.Changed:connect(function()
-        if _G.InfinitsEnergy then
-            LocalPlayer.Character.Energy.Value = originalstam
-        end 
-    end)
-end
     
     Ss:AddToggle("Auto Active Race",_G.AutoAgility,function(value)
         _G.AutoAgility = value
