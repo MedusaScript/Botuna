@@ -15999,7 +15999,12 @@ game.StarterGui:SetCore("SendNotification", {
 })
 wait(3)
 game.StarterGui:SetCore("SendNotification", {
-      Icon = "http://www.roblox.com/asset/?id=18395460459";
-      Title = "Brutality Hub", 
+    Icon = "http://www.roblox.com/asset/?id=18395460459";
+    Title = "CHANNEL YOUTUBE", 
+    Text = "Medusa Script Roblox";
+})
+game.StarterGui:SetCore("SendNotification", {
+      Icon = "http://www.roblox.com/asset/?id=18962361962";
+      Title = "BRUTALITY HUB", 
       Text = "Made By Medusa Script";
 })
