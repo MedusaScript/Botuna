@@ -9279,13 +9279,44 @@ FrozenIsland = M:AddLabel("")
     M:AddToggle("Auto Collect Azure Ember",_G.CollectAzure,function(value)
         _G.CollectAzure = value
         end)
-        
+
         spawn(function()
             while wait() do
                 if _G.CollectAzure then
                     pcall(function()
                         if game:GetService("Workspace"):FindFirstChild("AttachedAzureEmber") then
                             fastpos(game:GetService("Workspace"):WaitForChild("EmberTemplate"):FindFirstChild("Part").CFrame)
+                        end
+                    end)
+                end
+            end
+        end)
+
+    _G.SetToTradeAureEmber = 20
+    M:AddSlider("Set Trade Azure Ember", 10, 25, _G.SetToTradeAureEmber, function(v)
+        _G.SetToTradeAureEmber = v
+    end)
+
+    M:AddToggle("Auto Trade Azure Ember",false,function(state)
+        _G.TradeAureEmber = state
+        end)
+        function GetCountMaterials(MaterialName)
+            local Inventory = game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("getInventory")
+            for i, v in pairs(Inventory) do
+                if v.Name == MaterialName then
+                    return v["Count"]
+                end
+            end
+        end
+
+        spawn(function()
+            while wait() do
+                if _G.TradeAureEmber then
+                    pcall(function()
+                        local AzureAvilable = GetCountMaterials("Azure Ember")
+                        if AzureAvilable >= _G.SetToTradeAureEmber then
+                            game:GetService("ReplicatedStorage").Modules.Net:FindFirstChild("RF/KitsuneStatuePray"):InvokeServer()
+                            game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("KitsuneStatuePray")
                         end
                     end)
                 end
