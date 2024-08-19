@@ -1,7 +1,7 @@
 
 local Update = loadstring(Game:HttpGet"https://raw.githubusercontent.com/MedusaScript/limitless-medusa/main/6.lua")() --https://roblox.relzscript.xyz/source/relzhub/library/pc.lua
 local Alert = loadstring(Game:HttpGet"https://raw.githubusercontent.com/MedusaScript/BrutalityV2/main/BotunaUi.lua")() --https://raw.githubusercontent.com/Basicallyybeta/uii/main/Mingameui.lua
-local Library = Update:Window("Blox Fruits")
+local Library = Update:Window("By Medusa Script Roblox")
 local Main = Library:Tab("Main","rbxassetid://10723407389")
 local Set = Library:Tab("Setting","rbxassetid://10734950309")
 local Hold = Library:Tab("Hold Skill","rbxassetid://10734984606")
@@ -10939,7 +10939,7 @@ ESP:Toggle("Esp Gear", false,"Highlight Gear", function(value)
         end)
     end)
 
-    Serv:Seperator("Server")
+    Misc:Seperator("Server")
 
     task.spawn(function()
         while task.wait() do
@@ -11013,11 +11013,11 @@ ESP:Toggle("Esp Gear", false,"Highlight Gear", function(value)
         end
     
 
-    Serv:Button("Rejoin Server",function()
+    Misc:Button("Rejoin Server",function()
         game:GetService("TeleportService"):Teleport(game.PlaceId, game:GetService("Players").LocalPlayer)
     end)
     
-    Serv:Button("Server Hop",function()
+    Misc:Button("Server Hop",function()
         while wait() do
             local module = loadstring(game:HttpGet"https://roblox.relzscript.xyz/Hop.lua")()
             module:Teleport(game.PlaceId, "Singapore")
@@ -11032,32 +11032,32 @@ ESP:Toggle("Esp Gear", false,"Highlight Gear", function(value)
         end
     end)
     
-    Serv:Line()
+    Misc:Line()
     
-    JobAiDee = Serv:Label("Server Job ID : ")
+    JobAiDee = Misc:Label("Server Job ID : ")
     
-    Serv:Button("Copy Server Job ID",function()
+    Misc:Button("Copy Server Job ID",function()
 	setclipboard(tostring(game.JobId))
 	end)
 	
-    Serv:Textbox("Enter Server Job ID", true, function(value)
+    Misc:Textbox("Enter Server Job ID", true, function(value)
 	_G.Job = value
 	end)
 
-	Serv:Button("Join Sever",function()
+	Misc:Button("Join Sever",function()
 	game:GetService("TeleportService"):TeleportToPlaceInstance(game.placeId,_G.Job, game.Players.LocalPlayer)
 	end)
 
-    Serv:Seperator("Status")
+    Misc:Seperator("Status")
 
-    FM = Serv:Label("Moon")
-    MirageStatus = Serv:Label("Mirage")
-    KitsuneStatus = Serv:Label("Kitsune")
-    SwordDealer = Serv:Label("Legendary Sword Dealer")
-    HakiDealer = Serv:Label("Haki Dealer")
-    FindFruit = Serv:Label("Devil Fruit")
+    FM = Misc:Label("Moon")
+    MirageStatus = Misc:Label("Mirage")
+    KitsuneStatus = Misc:Label("Kitsune")
+    SwordDealer = Misc:Label("Legendary Sword Dealer")
+    HakiDealer = Misc:Label("Haki Dealer")
+    FindFruit = Misc:Label("Devil Fruit")
 
-    Serv:Seperator("Advance Fruit Stock")
+    Misc:Seperator("Advance Fruit Stock")
 
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 local Remotes = ReplicatedStorage.Remotes
@@ -11079,7 +11079,7 @@ for _, fruitData in pairs(result) do
         local priceWithCommas = addCommas(fruitData["Price"])
         local fruitInfo = fruitData["Name"] .. " - $" .. priceWithCommas
         table.insert(fruitsOnSale, fruitInfo)
-        Serv:Label(tostring(fruitInfo))
+        Misc:Label(tostring(fruitInfo))
     end
 end
 
