@@ -3259,7 +3259,7 @@ end)
 
 print("Load Script")
 
-local Library = Update:Window("                  Blox Fruits","18962361962",Enum.KeyCode.RightControl); --12523036534
+local Library = Update:Window("                  PREMIUM","18962361962",Enum.KeyCode.RightControl); --12523036534
 
 local H = Library:AddTab("Home","6026568198")
 local Main = Library:AddTab("Level Farm","13075651575")
@@ -3289,10 +3289,13 @@ H:AddLabel("[+] New UI | 17/08/2024 | 04:20")
 H:AddLabel("[+] New Fitur | 17/08/2024 | 04:20")
 H:AddLabel("[+] Speed Boat |17/08/2024|04:20")
 H:AddLabel("[+] Reduce Lag | 17/08/2024 | 04:20")
-H:AddLabel("[+] Find Server FM |17/08/2024|04:20")
-H:AddLabel("[+] Find Server Mirage |18/08/2024|04:20")
-H:AddLabel("[+] Speed Boat |19/08/2024|04:20")
-H:AddLabel("[+] Add Fitur Premium |18/08/2024|04:20")
+H:AddLabel("[+] Find Server FM |17/08/2024 |04:20")
+H:AddLabel("[+] Find Server Mirage |18/08/2024 |04:20")
+H:AddLabel("[+] Speed Boat |19/08/2024 |04:20")
+H:AddLabel("[+] Race Ghoul & Cyborg |19/08/2024 |04:20")
+H:AddLabel("[+] Buy Saguine Art |20/08/2024 |04:20")
+H:AddLabel("[+] Buy Divine Art |20/08/2024 |04:20")
+H:AddLabel("[+] Add Fitur Premium |20/08/2024 |04:20")
 
 H:AddSeperator("Made By Medusa Script")
 H:AddLabel("Click for copy link")
