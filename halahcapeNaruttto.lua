@@ -3277,7 +3277,7 @@ local D = Library:AddTab("Devil Fruit","7044233235")
 H:AddSeperator("Status Server")
 
 
-local Time = H:AddLabel("Run Script");spawn(function() getgenv().Time = true;while true do wait(.1) UpdateTime() end end);function UpdateTime() local date = os.date("*t");local hour = (date.hour) % 24;local ampm = hour < 12 and "AM" or "PM";local timezone = string.format("%02i:%02i:%02i %s", ((hour -1) % 12) + 1, date.min, date.sec, ampm);local datetime = string.format("%02d/%02d/%04d", date.day, date.month, date.year);local LocalizationService = game:GetService("LocalizationService");local Players = game:GetService("Players");local player = Players.LocalPlayer;local name = player.Name;local result, code = pcall(function()   return LocalizationService:GetCountryRegionForPlayerAsync(player)  end);Time:Set(" : " .. timezone);Time:Set("Executor Time: " .. datetime .. " [ " .. code .. " ]");spawn(function() if getgenv().Time then pcall(function()  while wait() do  Time()  end end) end end) end
+--local Time = H:AddLabel("Run Script");spawn(function() getgenv().Time = true;while true do wait(.1) UpdateTime() end end);function UpdateTime() local date = os.date("*t");local hour = (date.hour) % 24;local ampm = hour < 12 and "AM" or "PM";local timezone = string.format("%02i:%02i:%02i %s", ((hour -1) % 12) + 1, date.min, date.sec, ampm);local datetime = string.format("%02d/%02d/%04d", date.day, date.month, date.year);local LocalizationService = game:GetService("LocalizationService");local Players = game:GetService("Players");local player = Players.LocalPlayer;local name = player.Name;local result, code = pcall(function()   return LocalizationService:GetCountryRegionForPlayerAsync(player)  end);Time:Set(" : " .. timezone);Time:Set("Executor Time: " .. datetime .. " [ " .. code .. " ]");spawn(function() if getgenv().Time then pcall(function()  while wait() do  Time()  end end) end end) end
 
 local Time1 = H:AddLabel("Executor Time")
 
@@ -3510,13 +3510,12 @@ spawn(function()
         end)
     end
 end)
-
+--[[
 H:AddSeperator("Quest")
 
 local Bartilo_Quest = H:AddLabel("❌ | Bartilo Quest")
 local Don_Swan_Quest = H:AddLabel("❌ | Don Swan Quest")
 local Kill_Don_Swan = H:AddLabel("❌ | Kill Don Swan")
-local Flamingo_Access = H:AddLabel("❌ | FlamingoAccess")
 
 spawn(function()
     while task.wait() do
@@ -3535,7 +3534,7 @@ spawn(function()
         end
     end
 end)
-
+]]--
 H:AddSeperator("Sword Legendary")
 
 local Shisui = H:AddLabel("❌ | Shisui")
