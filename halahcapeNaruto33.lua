@@ -582,7 +582,7 @@ local LogoToggle = Instance.new("ImageLabel")
             
             DropTitle.Name = "DropTitle"
             DropTitle.Parent = Dropdown
-            DropTitle.BackgroundColor3 = Color3.fromRGB(82, 1, 1)
+            DropTitle.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
             DropTitle.BackgroundTransparency = 1.000
             DropTitle.Size = UDim2.new(0, 470, 0, 31)
             DropTitle.Font = Enum.Font.GothamSemibold
