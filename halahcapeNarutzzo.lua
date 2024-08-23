@@ -226,7 +226,7 @@ local LogoHub = Instance.new("ImageLabel")
     local Page = Instance.new("Frame")
     Page.Name = "Page"
     Page.Parent = Main
-    Page.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
+    Page.BackgroundColor3 = Color3.fromRGB(140, 140, 140) --35, 35, 35
     Page.Position = UDim2.new(0.245426834, 0, 0.075000003, 0)
     Page.Size = UDim2.new(0, 490, 0, 365)
 
