@@ -3287,7 +3287,7 @@ game:GetService("Players").LocalPlayer.Idled:connect(function()
 end)
 --diatas fitur sc
 --dibawah mulai masuk yang lain nya
-H:Seperator("Level Farm")
+H:AddSeperator("Level Farm")
 
 local WeaponList = {"Melee","Sword","Fruit","Gun"}
 _G.SelectWeapon = "Melee"
@@ -3341,7 +3341,7 @@ H:AddDropdown("Farm Mode", ListF,FarmMode,function(value)
     FarmMode = value
 end)
 
-    H:AddToggle("Start Auto Farm",_G.AutoFarm,"Auto Farm Selected Mode",function(value)
+    H:AddToggle("Start Auto Farm",_G.AutoFarm,function(value)
         _G.AutoFarm = value
         StopTween(_G.AutoFarm)
     end)
@@ -3590,9 +3590,9 @@ end
         end
     end)
 
-    H:Seperator("Mastery Farm")
+    H:AddSeperator("Mastery Farm")
 
-    H:addToggle("Auto Farm Fruit Mastery",_G.AutoFarmFruitMastery,"Auto Kill Mob Using Fruit",function(value)
+    H:addToggle("Auto Farm Fruit Mastery",_G.AutoFarmFruitMastery,function(value)
         _G.AutoFarmFruitMastery = value
         StopTween(_G.AutoFarmFruitMastery)
     end)
