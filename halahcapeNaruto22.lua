@@ -394,13 +394,13 @@ local LogoHub = Instance.new("ImageLabel")
             
             TextBtn.Name = "TextBtn"
             TextBtn.Parent = Button
-            TextBtn.BackgroundColor3 = Color3.fromRGB(82, 1, 1) --45,45,45
+            TextBtn.BackgroundColor3 = Color3.fromRGB(82, 1, 1) --warna background button
             TextBtn.Position = UDim2.new(0, 1, 0, 1)
             TextBtn.Size = UDim2.new(0, 468, 0, 29)
             TextBtn.AutoButtonColor = false
             TextBtn.Font = Enum.Font.GothamSemibold
             TextBtn.Text = text
-            TextBtn.TextColor3 = Color3.fromRGB(255, 255, 255) --255
+            TextBtn.TextColor3 = Color3.fromRGB(255, 255, 255) --warna text button dan toggle
             TextBtn.TextSize = 15.000
             
             UICorner_2.CornerRadius = UDim.new(0, 5)
@@ -465,7 +465,7 @@ local LogoHub = Instance.new("ImageLabel")
 
             Button.Name = "Button"
             Button.Parent = Toggle
-            Button.BackgroundColor3 = Color3.fromRGB(45, 45, 45)
+            Button.BackgroundColor3 = Color3.fromRGB(82, 1, 1)
             Button.Position = UDim2.new(0, 1, 0, 1)
             Button.Size = UDim2.new(0, 468, 0, 29)
             Button.AutoButtonColor = false
