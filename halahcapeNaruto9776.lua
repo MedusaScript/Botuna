@@ -13942,286 +13942,299 @@ end)
      StopTween(_G.TeleportNPC)
  end)
  
-
-if World1 then
- T:AddDropdown("Select Island Bypass Tp",{
-     "WindMill",
-     "Marine",
-     "Middle Town",
-     "Jungle",
-     "Pirate Village",
-     "Desert",
-     "Snow Island",
-     "MarineFord",
-     "Colosseum",
-     "Sky Island 1",
-     "Prison",
-     "Magma Village",
-     "Under Water Island",
-     "Fountain City"
- },function(value)
-     _G.SelectWarp = value
- end)
+ if World1 then
+    T:AddDropdown("Select Island",{
+        "WindMill",
+        "Marine",
+        "Middle Town",
+        "Jungle",
+        "Pirate Village",
+        "Desert",
+        "Snow Island",
+        "MarineFord",
+        "Colosseum",
+        "Sky Island 1",
+        "Prison",
+        "Magma Village",
+        "Under Water Island",
+        "Fountain City"
+        },function(value)
+        _G.SelectWarp = value
+    end)
 end
 
 if World2 then
- T:AddDropdown("Select Island Bypass Tp",{
-     "The Cafe",
-     "Frist Spot",
-     "Flamingo Room",
-     "Green Zone",
-     "Zombie Island",
-     "Two Snow Mountain",
-     "Punk Hazard",
-     "Cursed Ship",
-     "Ice Castle",
-     "Forgotten Island"
- },function(value)
-     _G.SelectWarp = value
- end)
+    T:AddDropdown("Select Island",{
+        "The Cafe",
+        "Frist Spot",
+        "Flamingo Room",
+        "Green Zone",
+        "Zombie Island",
+        "Two Snow Mountain",
+        "Punk Hazard",
+        "Cursed Ship",
+        "Ice Castle",
+        "Forgotten Island"
+        },function(value)
+        _G.SelectWarp = value
+    end)
 end
 
 if World3 then
- T:AddDropdown("Select Island Bypass Tp",{
-     "Mansion",
-     "Port Town",
-     "Great Tree",
-     "Castle On The Sea",
-     "Hydra Island",
-     "Haunted Castle",
-     "Ice Cream Island",
-     "Peanut Island",
-     "Cake Island",
-     "Sea to Treats",
-     "Sea to Treats New"
- },function(value)
-     _G.SelectWarp = value
- end)
+    T:AddDropdown("Select Island",{
+        "Mansion",
+        "Port Town",
+        "Great Tree",
+        "Castle On The Sea",
+        "Hydra Island",
+        "Haunted Castle",
+        "Ice Cream Island",
+        "Peanut Island",
+        "Cake Island",
+        "Sea to Treats",
+        "Sea to Treats New", 
+        "Tiki Outpost", 
+        "Secret Tample"
+        },function(value)
+        _G.SelectWarp = value
+    end)
 end
 
-T:AddButton("Bypass Tp",function(value)
- if _G.TeleportWarp == "Manslon" then
- elseif _G.SelectWarp == "WindMill" then
-     wait(.1)
-     game.Players.localPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(979.79895019531, 16.516613006592, 1429.0466308594)
-     game:GetService("Players").LocalPlayer.Character.LowerTorso:Destroy()
-     game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("SetSpawnPoint")
- elseif _G.SelectWarp == "Marine" then
-     wait(.1)
-     game.Players.localPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-2566.4296875, 6.8556680679321, 2045.2561035156)
-     game:GetService("Players").LocalPlayer.Character.LowerTorso:Destroy()
-     game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("SetSpawnPoint")
- elseif _G.SelectWarp == "Middle Town" then
-     wait(.1)
-     game.Players.localPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-690.33081054688, 15.09425163269, 1582.2380371094)
-     game:GetService("Players").LocalPlayer.Character.LowerTorso:Destroy()
-     game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("SetSpawnPoint")
- elseif _G.SelectWarp == "Jungle" then
-     wait(.1)
-     game.Players.localPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1612.7957763672, 36.852081298828, 149.12843322754)
-     game:GetService("Players").LocalPlayer.Character.LowerTorso:Destroy()
-     game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("SetSpawnPoint")
- elseif _G.SelectWarp == "Pirate Village" then
-     wait(.1)
-     game.Players.localPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1181.3093261719, 4.7514905929565, 3803.5456542969)
-     game:GetService("Players").LocalPlayer.Character.LowerTorso:Destroy()
-     game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("SetSpawnPoint")
- elseif _G.SelectWarp == "Desert" then
-     wait(.1)
-     game.Players.localPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(944.15789794922, 20.919729232788, 4373.3002929688)
-     game:GetService("Players").LocalPlayer.Character.LowerTorso:Destroy()
-     game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("SetSpawnPoint")
- elseif _G.SelectWarp == "Snow Island" then
-     wait(.1)
-     game.Players.localPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(1347.8067626953, 104.66806030273, -1319.7370605469)
-     game:GetService("Players").LocalPlayer.Character.LowerTorso:Destroy()
-     game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("SetSpawnPoint")
- elseif _G.SelectWarp == "MarineFord" then
-     wait(.1)
-     game.Players.localPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-4914.8212890625, 50.963626861572, 4281.0278320313)
-     game:GetService("Players").LocalPlayer.Character.LowerTorso:Destroy()
-     game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("SetSpawnPoint")
- elseif _G.SelectWarp == "Colosseum" then
-     wait(.1)
-     game.Players.localPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1427.6203613281, 7.2881078720093, -2792.7722167969)
-     game:GetService("Players").LocalPlayer.Character.LowerTorso:Destroy()
-     game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("SetSpawnPoint")
- elseif _G.SelectWarp == "Sky Island 1" then
-     wait(.1)
-     game.Players.localPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-4869.1025390625, 733.46051025391, -2667.0180664063)
-     game:GetService("Players").LocalPlayer.Character.LowerTorso:Destroy()
-     game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("SetSpawnPoint")
- elseif _G.SelectWarp == "Prison" then
-     wait(.1)
-     game.Players.localPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(4875.330078125, 5.6519818305969, 734.85021972656)
-     game:GetService("Players").LocalPlayer.Character.LowerTorso:Destroy()
-     game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("SetSpawnPoint")
- elseif _G.SelectWarp == "Magma Village" then
-     wait(.1)
-     game.Players.localPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-5247.7163085938, 12.883934020996, 8504.96875)
-     game:GetService("Players").LocalPlayer.Character.LowerTorso:Destroy()
-     game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("SetSpawnPoint")
- elseif _G.SelectWarp == "Under Water Island" then
-     wait(.1)
-     game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("requestEntrance",Vector3.new(61163.8515625, 11.6796875, 1819.7841796875))
- elseif _G.SelectWarp == "Fountain City" then
-     wait(.1)
-     game.Players.localPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(5127.1284179688, 59.501365661621, 4105.4458007813)
-     game:GetService("Players").LocalPlayer.Character.LowerTorso:Destroy()
-     game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("SetSpawnPoint")
- elseif _G.SelectWarp == "Shank Room" then
-     wait(.1)
-     game.Players.localPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1442.16553, 29.8788261, -28.3547478)
-     game:GetService("Players").LocalPlayer.Character.LowerTorso:Destroy()
-     game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("SetSpawnPoint")
- elseif _G.SelectWarp == "Mob Island" then
-     wait(.1)
-     game.Players.localPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-2850.20068, 7.39224768, 5354.99268)
-     game:GetService("Players").LocalPlayer.Character.LowerTorso:Destroy()
-     game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("SetSpawnPoint")
- elseif _G.SelectWarp == "The Cafe" then
-     wait(.1)
-     game.Players.localPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-380.47927856445, 77.220390319824, 255.82550048828)
-     game:GetService("Players").LocalPlayer.Character.LowerTorso:Destroy()
-     game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("SetSpawnPoint")
- elseif _G.SelectWarp == "Frist Spot" then
-     wait(.1)
-     game.Players.localPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-11.311455726624, 29.276733398438, 2771.5224609375)
-     game:GetService("Players").LocalPlayer.Character.LowerTorso:Destroy()
-     game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("SetSpawnPoint")
- elseif _G.SelectWarp == "Dark Area" then
-     wait(.1)
-     game.Players.localPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(3780.0302734375, 22.652164459229, -3498.5859375)
-     game:GetService("Players").LocalPlayer.Character.LowerTorso:Destroy()
-     game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("SetSpawnPoint")
- elseif _G.SelectWarp == "Flamingo Mansion" then
-     wait(.1)
-     game.Players.localPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-483.73370361328, 332.0383605957, 595.32708740234)
-     game:GetService("Players").LocalPlayer.Character.LowerTorso:Destroy()      
-     game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("SetSpawnPoint")  
- elseif _G.SelectWarp == "Flamingo Room" then
-     wait(.1)
-     game.Players.localPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(2284.4140625, 15.152037620544, 875.72534179688)
-     game:GetService("Players").LocalPlayer.Character.LowerTorso:Destroy()        
-     game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("SetSpawnPoint")
- elseif _G.SelectWarp == "Green Zone" then
-     wait(.1)
-     game.Players.localPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-2448.5300292969, 73.016105651855, -3210.6306152344)
-     game:GetService("Players").LocalPlayer.Character.LowerTorso:Destroy()      
-     game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("SetSpawnPoint")  
- elseif _G.SelectWarp == "Factory" then
-     wait(.1)
-     game.Players.localPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(424.12698364258, 211.16171264648, -427.54049682617)
-     game:GetService("Players").LocalPlayer.Character.LowerTorso:Destroy()      
-     game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("SetSpawnPoint")  
- elseif _G.SelectWarp == "Colossuim" then
-     wait(.1)
-     game.Players.localPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1503.6224365234, 219.7956237793, 1369.3101806641)
-     game:GetService("Players").LocalPlayer.Character.LowerTorso:Destroy()  
-     game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("SetSpawnPoint")      
- elseif _G.SelectWarp == "Zombie Island" then
-     wait(.1)
-     game.Players.localPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-5622.033203125, 492.19604492188, -781.78552246094)
-     game:GetService("Players").LocalPlayer.Character.LowerTorso:Destroy()       
-     game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("SetSpawnPoint") 
- elseif _G.SelectWarp == "Two Snow Mountain" then
-     wait(.1)
-     game.Players.localPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(753.14288330078, 408.23559570313, -5274.6147460938)
-     game:GetService("Players").LocalPlayer.Character.LowerTorso:Destroy()    
-     game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("SetSpawnPoint")    
- elseif _G.SelectWarp == "Punk Hazard" then
-     wait(.1)
-     game.Players.localPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-6127.654296875, 15.951762199402, -5040.2861328125)
-     game:GetService("Players").LocalPlayer.Character.LowerTorso:Destroy()
-     game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("SetSpawnPoint")
- elseif _G.SelectWarp == "Cursed Ship" then
-     wait(.1)
-     game.Players.localPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(923.40197753906, 125.05712890625, 32885.875)
-     game:GetService("Players").LocalPlayer.Character.LowerTorso:Destroy()
-     game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("SetSpawnPoint")
- elseif _G.SelectWarp == "Ice Castle" then
-     wait(.1)
-     game.Players.localPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(6148.4116210938, 294.38687133789, -6741.1166992188)
-     game:GetService("Players").LocalPlayer.Character.LowerTorso:Destroy()
-     game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("SetSpawnPoint")
- elseif _G.SelectWarp == "Forgotten Island" then
-     wait(.1)
-     game.Players.localPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-3032.7641601563, 317.89672851563, -10075.373046875)
-     game:GetService("Players").LocalPlayer.Character.LowerTorso:Destroy()
-     game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("SetSpawnPoint")
- elseif _G.SelectWarp == "Ussop Island" then
-     wait(.1)
-     game.Players.localPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(4816.8618164063, 8.4599885940552, 2863.8195800781)
-     game:GetService("Players").LocalPlayer.Character.LowerTorso:Destroy()
-     game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("SetSpawnPoint")
- elseif _G.SelectWarp == "Mini Sky Island" then
-     wait(.1)
-     game.Players.localPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-288.74060058594, 49326.31640625, -35248.59375)
-     game:GetService("Players").LocalPlayer.Character.LowerTorso:Destroy()
-     game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("SetSpawnPoint")
- elseif _G.SelectWarp == "Great Tree" then
-     wait(.1)
-     game.Players.localPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(2681.2736816406, 1682.8092041016, -7190.9853515625)
-     game:GetService("Players").LocalPlayer.Character.LowerTorso:Destroy()
-     game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("SetSpawnPoint")
- elseif _G.SelectWarp == "Castle On The Sea" then
-     wait(.1)
-     game.Players.localPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-5085.23681640625, 316.5072021484375, -3156.202880859375)
- elseif _G.SelectWarp == "MiniSky" then
-     wait(.1)
-     game.Players.localPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-260.65557861328, 49325.8046875, -35253.5703125)
-     game:GetService("Players").LocalPlayer.Character.LowerTorso:Destroy()
-     game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("SetSpawnPoint")
- elseif _G.SelectWarp == "Port Town" then
-     wait(.1)
-     game.Players.localPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-290.7376708984375, 6.729952812194824, 5343.5537109375)
-     game:GetService("Players").LocalPlayer.Character.LowerTorso:Destroy()
-     game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("SetSpawnPoint")
- elseif _G.SelectWarp == "Hydra Island" then
-     wait(.1)
-     game.Players.localPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(5749.7861328125, 611.9736938476562, -276.2497863769531)
- elseif _G.SelectWarp == "Floating Turtle" then
-     wait(.1)
-     game.Players.localPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-13274.528320313, 531.82073974609, -7579.22265625)
-     game:GetService("Players").LocalPlayer.Character.LowerTorso:Destroy()
-     game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("SetSpawnPoint")
- elseif _G.SelectWarp == "Mansion" then
-     wait(.1)
-     game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("requestEntrance",Vector3.new(-12471.169921875, 374.94024658203, -7551.677734375))
-     game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("SetSpawnPoint")
- elseif _G.SelectWarp == "Haunted Castle" then
-     wait(.1)
-     game.Players.localPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-9515.3720703125, 164.00624084473, 5786.0610351562)
-     game:GetService("Players").LocalPlayer.Character.LowerTorso:Destroy()
-     game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("SetSpawnPoint")
- elseif _G.SelectWarp == "Ice Cream Island" then
-     wait(.1)
-     game.Players.localPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-902.56817626953, 79.93204498291, -10988.84765625)
-     game:GetService("Players").LocalPlayer.Character.LowerTorso:Destroy()
-     game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("SetSpawnPoint")
- elseif _G.SelectWarp == "Peanut Island" then
-     wait(.1)
-     game.Players.localPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-2062.7475585938, 50.473892211914, -10232.568359375)
-     game:GetService("Players").LocalPlayer.Character.LowerTorso:Destroy()
-     game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("SetSpawnPoint")
- elseif _G.SelectWarp == "Cake Island" then
-     wait(.1)
-     game.Players.localPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1884.7747802734375, 19.327526092529297, -11666.8974609375) 
-     game:GetService("Players").LocalPlayer.Character.LowerTorso:Destroy()
-     game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("SetSpawnPoint")
- elseif _G.SelectWarp == "Sea to Treats Old" then
-     wait(.1)
-     game.Players.localPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(508.21466064453125, 25.07753562927246, -12438.2294921875) 
-     game:GetService("Players").LocalPlayer.Character.LowerTorso:Destroy()
-     game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("SetSpawnPoint")
- elseif _G.SelectWarp == "Sea to Treats New" then
-     wait(.1)
-     game.Players.localPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1141.0223388671875, 47.25519561767578, -14204.609375) 
-     game:GetService("Players").LocalPlayer.Character.LowerTorso:Destroy()
-     game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("SetSpawnPoint")
- end
-end)
 
+T:AddButton("Bypass Teleport",function()
+     if _G.TeleportWarp == "Manslon" then
+            elseif _G.SelectWarp == "WindMill" then
+                wait(.1)
+                game.Players.localPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(979.79895019531, 16.516613006592, 1429.0466308594)
+                game.Players.LocalPlayer.Character.Head:Destroy()
+                game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("SetSpawnPoint")
+            elseif _G.SelectWarp == "Marine" then
+                wait(.1)
+                game.Players.localPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-2566.4296875, 6.8556680679321, 2045.2561035156)
+                game.Players.LocalPlayer.Character.Head:Destroy()
+                game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("SetSpawnPoint")
+            elseif _G.SelectWarp == "Middle Town" then
+                wait(.1)
+                game.Players.localPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-690.33081054688, 15.09425163269, 1582.2380371094)
+                game.Players.LocalPlayer.Character.Head:Destroy()
+                game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("SetSpawnPoint")
+            elseif _G.SelectWarp == "Jungle" then
+                wait(.1)
+                game.Players.localPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1612.7957763672, 36.852081298828, 149.12843322754)
+                game.Players.LocalPlayer.Character.Head:Destroy()
+                game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("SetSpawnPoint")
+            elseif _G.SelectWarp == "Pirate Village" then
+                wait(.1)
+                game.Players.localPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1181.3093261719, 4.7514905929565, 3803.5456542969)
+                game.Players.LocalPlayer.Character.Head:Destroy()
+                game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("SetSpawnPoint")
+            elseif _G.SelectWarp == "Desert" then
+                wait(.1)
+                game.Players.localPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(944.15789794922, 20.919729232788, 4373.3002929688)
+                game.Players.LocalPlayer.Character.Head:Destroy()
+                game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("SetSpawnPoint")
+            elseif _G.SelectWarp == "Snow Island" then
+                wait(.1)
+                game.Players.localPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(1347.8067626953, 104.66806030273, -1319.7370605469)
+                game.Players.LocalPlayer.Character.Head:Destroy()
+                game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("SetSpawnPoint")
+            elseif _G.SelectWarp == "MarineFord" then
+                wait(.1)
+                game.Players.localPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-4914.8212890625, 50.963626861572, 4281.0278320313)
+                game.Players.LocalPlayer.Character.Head:Destroy()
+                game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("SetSpawnPoint")
+            elseif _G.SelectWarp == "Colosseum" then
+                wait(.1)
+                game.Players.localPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1427.6203613281, 7.2881078720093, -2792.7722167969)
+                game.Players.LocalPlayer.Character.Head:Destroy()
+                game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("SetSpawnPoint")
+            elseif _G.SelectWarp == "Sky Island 1" then
+                wait(.1)
+                game.Players.localPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-4869.1025390625, 733.46051025391, -2667.0180664063)
+                game.Players.LocalPlayer.Character.Head:Destroy()
+                game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("SetSpawnPoint")
+            elseif _G.SelectWarp == "Prison" then
+                wait(.1)
+                game.Players.localPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(4875.330078125, 5.6519818305969, 734.85021972656)
+                game.Players.LocalPlayer.Character.Head:Destroy()
+                game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("SetSpawnPoint")
+            elseif _G.SelectWarp == "Magma Village" then
+                wait(.1)
+                game.Players.localPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-5247.7163085938, 12.883934020996, 8504.96875)
+                game.Players.LocalPlayer.Character.Head:Destroy()
+                game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("SetSpawnPoint")
+            elseif _G.SelectWarp == "Under Water Island" then
+                wait(.1)
+                game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("requestEntrance",Vector3.new(61163.8515625, 11.6796875, 1819.7841796875))
+            elseif _G.SelectWarp == "Fountain City" then
+                wait(.1)
+                game.Players.localPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(5127.1284179688, 59.501365661621, 4105.4458007813)
+                game.Players.LocalPlayer.Character.Head:Destroy()
+                game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("SetSpawnPoint")
+            elseif _G.SelectWarp == "Shank Room" then
+                wait(.1)
+                game.Players.localPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1442.16553, 29.8788261, -28.3547478)
+                game.Players.LocalPlayer.Character.Head:Destroy()
+                game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("SetSpawnPoint")
+            elseif _G.SelectWarp == "Mob Island" then
+                wait(.1)
+                game.Players.localPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-2850.20068, 7.39224768, 5354.99268)
+                game.Players.LocalPlayer.Character.Head:Destroy()
+                game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("SetSpawnPoint")
+            elseif _G.SelectWarp == "The Cafe" then
+                wait(.1)
+                game.Players.localPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-380.47927856445, 77.220390319824, 255.82550048828)
+                game.Players.LocalPlayer.Character.Head:Destroy()
+                game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("SetSpawnPoint")
+            elseif _G.SelectWarp == "Frist Spot" then
+                wait(.1)
+                game.Players.localPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-11.311455726624, 29.276733398438, 2771.5224609375)
+                game.Players.LocalPlayer.Character.Head:Destroy()
+                game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("SetSpawnPoint")
+            elseif _G.SelectWarp == "Dark Area" then
+                wait(.1)
+                game.Players.localPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(3780.0302734375, 22.652164459229, -3498.5859375)
+                game.Players.LocalPlayer.Character.Head:Destroy()
+                game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("SetSpawnPoint")
+            elseif _G.SelectWarp == "Flamingo Mansion" then
+                wait(.1)
+                game.Players.localPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-483.73370361328, 332.0383605957, 595.32708740234)
+                game.Players.LocalPlayer.Character.Head:Destroy()
+                game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("SetSpawnPoint")  
+            elseif _G.SelectWarp == "Flamingo Room" then
+                wait(.1)
+                game.Players.localPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(2284.4140625, 15.152037620544, 875.72534179688)
+                game.Players.LocalPlayer.Character.Head:Destroy()
+                game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("SetSpawnPoint")
+            elseif _G.SelectWarp == "Green Zone" then
+                wait(.1)
+                game.Players.localPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-2448.5300292969, 73.016105651855, -3210.6306152344)
+                game.Players.LocalPlayer.Character.Head:Destroy()
+                game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("SetSpawnPoint")  
+            elseif _G.SelectWarp == "Factory" then
+                wait(.1)
+                game.Players.localPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(424.12698364258, 211.16171264648, -427.54049682617)
+                game.Players.LocalPlayer.Character.Head:Destroy()
+                game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("SetSpawnPoint")  
+            elseif _G.SelectWarp == "Colossuim" then
+                wait(.1)
+                game.Players.localPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1503.6224365234, 219.7956237793, 1369.3101806641)
+                game.Players.LocalPlayer.Character.Head:Destroy()
+                game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("SetSpawnPoint")      
+            elseif _G.SelectWarp == "Zombie Island" then
+                wait(.1)
+                game.Players.localPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-5622.033203125, 492.19604492188, -781.78552246094)
+                game.Players.LocalPlayer.Character.Head:Destroy()
+                game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("SetSpawnPoint") 
+            elseif _G.SelectWarp == "Two Snow Mountain" then
+                wait(.1)
+                game.Players.localPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(753.14288330078, 408.23559570313, -5274.6147460938)
+                game.Players.LocalPlayer.Character.Head:Destroy()
+                game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("SetSpawnPoint")    
+            elseif _G.SelectWarp == "Punk Hazard" then
+                wait(.1)
+                game.Players.localPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-6127.654296875, 15.951762199402, -5040.2861328125)
+                game.Players.LocalPlayer.Character.Head:Destroy()
+                game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("SetSpawnPoint")
+            elseif _G.SelectWarp == "Cursed Ship" then
+                wait(.1)
+                game.Players.localPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(923.40197753906, 125.05712890625, 32885.875)
+                game.Players.LocalPlayer.Character.Head:Destroy()
+                game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("SetSpawnPoint")
+            elseif _G.SelectWarp == "Ice Castle" then
+                wait(.1)
+                game.Players.localPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(6148.4116210938, 294.38687133789, -6741.1166992188)
+                game.Players.LocalPlayer.Character.Head:Destroy()
+                game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("SetSpawnPoint")
+            elseif _G.SelectWarp == "Forgotten Island" then
+                wait(.1)
+                game.Players.localPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-3032.7641601563, 317.89672851563, -10075.373046875)
+                game.Players.LocalPlayer.Character.Head:Destroy()
+                game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("SetSpawnPoint")
+            elseif _G.SelectWarp == "Ussop Island" then
+                wait(.1)
+                game.Players.localPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(4816.8618164063, 8.4599885940552, 2863.8195800781)
+                game.Players.LocalPlayer.Character.Head:Destroy()
+                game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("SetSpawnPoint")
+            elseif _G.SelectWarp == "Mini Sky Island" then
+                wait(.1)
+                game.Players.localPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-288.74060058594, 49326.31640625, -35248.59375)
+                game.Players.LocalPlayer.Character.Head:Destroy()
+                game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("SetSpawnPoint")
+            elseif _G.SelectWarp == "Great Tree" then
+                wait(.1)
+                game.Players.localPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(2681.2736816406, 1682.8092041016, -7190.9853515625)
+                game.Players.LocalPlayer.Character.Head:Destroy()
+                game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("SetSpawnPoint")
+            elseif _G.SelectWarp == "Castle On The Sea" then
+                wait(.1)
+                game.Players.localPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-5085.23681640625, 316.5072021484375, -3156.202880859375)
+            elseif _G.SelectWarp == "MiniSky" then
+                wait(.1)
+                game.Players.localPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-260.65557861328, 49325.8046875, -35253.5703125)
+                game.Players.LocalPlayer.Character.Head:Destroy()
+                game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("SetSpawnPoint")
+            elseif _G.SelectWarp == "Port Town" then
+                wait(.1)
+                game.Players.localPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-290.7376708984375, 6.729952812194824, 5343.5537109375)
+                game.Players.LocalPlayer.Character.Head:Destroy()
+                game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("SetSpawnPoint")
+            elseif _G.SelectWarp == "Hydra Island" then
+                wait(.1)
+                game.Players.localPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(5749.7861328125, 611.9736938476562, -276.2497863769531)
+            elseif _G.SelectWarp == "Floating Turtle" then
+                wait(.1)
+                game.Players.localPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-13274.528320313, 531.82073974609, -7579.22265625)
+                game.Players.LocalPlayer.Character.Head:Destroy()
+                game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("SetSpawnPoint")
+            elseif _G.SelectWarp == "Mansion" then
+                wait(.1)
+                game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("requestEntrance",Vector3.new(-12471.169921875, 374.94024658203, -7551.677734375))
+                game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("SetSpawnPoint")
+            elseif _G.SelectWarp == "Haunted Castle" then
+                wait(.1)
+                game.Players.localPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-9515.3720703125, 164.00624084473, 5786.0610351562)
+                game.Players.LocalPlayer.Character.Head:Destroy()
+                game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("SetSpawnPoint")
+            elseif _G.SelectWarp == "Ice Cream Island" then
+                wait(.1)
+                game.Players.localPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-902.56817626953, 79.93204498291, -10988.84765625)
+                game.Players.LocalPlayer.Character.Head:Destroy()
+                game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("SetSpawnPoint")
+            elseif _G.SelectWarp == "Peanut Island" then
+                wait(.1)
+                game.Players.localPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-2062.7475585938, 50.473892211914, -10232.568359375)
+                game.Players.LocalPlayer.Character.Head:Destroy()
+                game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("SetSpawnPoint")
+            elseif _G.SelectWarp == "Cake Island" then
+                wait(.1)
+                game.Players.localPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1884.7747802734375, 19.327526092529297, -11666.8974609375) 
+                game.Players.LocalPlayer.Character.Head:Destroy()
+                game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("SetSpawnPoint")
+            elseif _G.SelectWarp == "Sea to Treats Old" then
+                wait(.1)
+                game.Players.localPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(508.21466064453125, 25.07753562927246, -12438.2294921875) 
+                game.Players.LocalPlayer.Character.Head:Destroy()
+                game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("SetSpawnPoint")
+            elseif _G.SelectWarp == "Sea to Treats New" then
+                wait(.1)
+                game.Players.localPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1141.0223388671875, 47.25519561767578, -14204.609375) 
+                game.Players.LocalPlayer.Character.Head:Destroy()
+                game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("SetSpawnPoint")
+            elseif _G.SelectWarp == "Tiki Outpost" then
+                wait(.1)
+                game.Players.localPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-15852.91796875, 485.5301818847656, 452.25537109375) 
+                game.Players.LocalPlayer.Character.Head:Destroy()
+                game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("SetSpawnPoint")
+            elseif _G.SelectWarp == "Secret Tample" then
+                wait(.1)
+                game.Players.localPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(5226.18994, 63.5174637, 858.837097, 1, 0, 0, 0, 1, 0, 0, 0, 1) 
+                game.Players.LocalPlayer.Character.Head:Destroy()
+                game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("SetSpawnPoint")
+             end
+         end)
+--ini yang muncul
+--batas toggle tp yang muncul
 T:AddButton("Bypass Tp",function(value)
     if _G.TeleportWarp == "Manslon" then
     elseif _G.SelectWarp == "WindMill" then
