@@ -471,7 +471,7 @@ local LogoHub = Instance.new("ImageLabel")
             Button.AutoButtonColor = false
             Button.Font = Enum.Font.SourceSans
             Button.Text = ""
-            Button.TextColor3 = Color3.fromRGB(0, 0, 0)
+            Button.TextColor3 = Color3.fromRGB(82, 1, 1)
             Button.TextSize = 11.000
 
             UICorner_2.CornerRadius = UDim.new(0, 5)
