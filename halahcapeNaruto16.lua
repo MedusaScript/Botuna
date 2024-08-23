@@ -408,7 +408,7 @@ local LogoHub = Instance.new("ImageLabel")
             
             Black.Name = "Black"
             Black.Parent = Button
-            Black.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+            Black.BackgroundColor3 = Color3.fromRGB(252, 239, 0)
             Black.BackgroundTransparency = 1.000
             Black.BorderSizePixel = 0
             Black.Position = UDim2.new(0, 1, 0, 1)
