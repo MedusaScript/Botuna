@@ -1,4 +1,3 @@
-
 --Fitur tab dan gui
 local ScreenGui1 = Instance.new("ScreenGui")
 local ImageButton1 = Instance.new("ImageButton")
@@ -15875,7 +15874,7 @@ spawn(function()
 print("Brutality Hub Load Complete")
 
 game.StarterGui:SetCore("SendNotification", {
-   Icon = "http://www.roblox.com/asset/?id=18962361962";
+   Icon = "http://www.roblox.com/asset/?id=110958770625024";
    Title = "BRUTALITY HUB", 
    Text = "The Next Generation";
 })
@@ -15886,7 +15885,7 @@ game.StarterGui:SetCore("SendNotification", {
  Text = "Medusa Script Roblox";
 })
 game.StarterGui:SetCore("SendNotification", {
-   Icon = "http://www.roblox.com/asset/?id=18962361962";
+   Icon = "http://www.roblox.com/asset/?id=110958770625024";
    Title = "BRUTALITY HUB", 
    Text = "Made By Medusa Script";
 })
