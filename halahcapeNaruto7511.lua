@@ -819,7 +819,7 @@ local LogoToggle = Instance.new("ImageLabel")
             AHEHE.Size = UDim2.new(0, 448, 0, 5)
             AHEHE.Font = Enum.Font.SourceSans
             AHEHE.Text = ""
-            AHEHE.TextColor3 = Color3.fromRGB(90, 90, 90)
+            AHEHE.TextColor3 = Color3.fromRGB(255, 255, 255)
             AHEHE.TextSize = 14.000
 
             bar.Name = "bar"
