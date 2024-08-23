@@ -114,7 +114,7 @@ function Update:Window(text,logo,keybind)
     Main.Parent = BRUTALITYHUB
     Main.ClipsDescendants = true
     Main.AnchorPoint = Vector2.new(0.5,0.5)
-    Main.BackgroundColor3 = Color3.fromRGB(0, 0, 0) -- warna tab kiri
+    Main.BackgroundColor3 = Color3.fromRGB(12, 0, 0) -- warna tab kiri
     Main.Position = UDim2.new(0.5, 0, 0.5, 0)
     Main.Size = UDim2.new(0, 0, 0, 0)
 
@@ -394,7 +394,7 @@ local LogoHub = Instance.new("ImageLabel")
             
             TextBtn.Name = "TextBtn"
             TextBtn.Parent = Button
-            TextBtn.BackgroundColor3 = Color3.fromRGB(184, 112, 6) --warna background button
+            TextBtn.BackgroundColor3 = Color3.fromRGB(42, 42, 42) --warna background button
             TextBtn.Position = UDim2.new(0, 1, 0, 1)
             TextBtn.Size = UDim2.new(0, 468, 0, 29)
             TextBtn.AutoButtonColor = false
