@@ -127,7 +127,7 @@ function Update:Window(text,logo,keybind)
     local Top = Instance.new("Frame")
     Top.Name = "Top"
     Top.Parent = Main
-    Top.BackgroundColor3 = Color3.fromRGB(224, 99, 18) -- warna tab atas
+    Top.BackgroundColor3 = Color3.fromRGB(0, 0, 0) -- warna tab atas
     Top.Size = UDim2.new(0, 656, 0, 27)
 
     local UICorner = Instance.new("UICorner")
