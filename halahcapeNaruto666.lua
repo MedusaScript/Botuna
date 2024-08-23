@@ -394,7 +394,7 @@ local LogoHub = Instance.new("ImageLabel")
             
             TextBtn.Name = "TextBtn"
             TextBtn.Parent = Button
-            TextBtn.BackgroundColor3 = Color3.fromRGB(82, 1, 1) --warna background button
+            TextBtn.BackgroundColor3 = Color3.fromRGB(184, 112, 6) --warna background button
             TextBtn.Position = UDim2.new(0, 1, 0, 1)
             TextBtn.Size = UDim2.new(0, 468, 0, 29)
             TextBtn.AutoButtonColor = false
@@ -521,7 +521,7 @@ local LogoToggle = Instance.new("ImageLabel")
 
             Circle.Name = "Circle"
             Circle.Parent = ToggleImage
-            Circle.BackgroundColor3 = Color3.fromRGB(0, 0, 0) --logo toggle
+            Circle.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
             Circle.Position = UDim2.new(0, 2, 0, 2)
             Circle.Size = UDim2.new(0, 16, 0, 16)
 
@@ -573,7 +573,7 @@ local LogoToggle = Instance.new("ImageLabel")
             
             Dropdown.Name = "Dropdown"
             Dropdown.Parent = MainFramePage
-            Dropdown.BackgroundColor3 = Color3.fromRGB(163, 105, 18) --warna toggle dropdown
+            Dropdown.BackgroundColor3 = Color3.fromRGB(184, 112, 6) --warna toggle dropdown
             Dropdown.ClipsDescendants = true
             Dropdown.Size = UDim2.new(0, 470, 0, 31)
             
