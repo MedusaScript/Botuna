@@ -616,7 +616,7 @@ local LogoToggle = Instance.new("ImageLabel")
             DropImage.Position = UDim2.new(0, 435, 0, 6)
             DropImage.Rotation = 180.000
             DropImage.Size = UDim2.new(0, 20, 0, 20) --logo image
-            DropImage.Image = "rbxassetid://18962361962"
+            DropImage.Image = "rbxassetid://104397992902189"
             
             DropButton.Name = "DropButton"
             DropButton.Parent = Dropdown
