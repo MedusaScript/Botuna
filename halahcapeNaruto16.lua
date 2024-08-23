@@ -142,7 +142,7 @@ function Update:Window(text,logo,keybind)
     Name.Size = UDim2.new(0, 61, 0, 27)
     Name.Font = Enum.Font.GothamSemibold
     Name.Text = text
-    Name.TextColor3 = Color3.fromRGB(252, 0, 0)
+    Name.TextColor3 = Color3.fromRGB(252, 239, 0)
     Name.TextSize = 20.000
 
     local Hub = Instance.new("TextLabel")
@@ -154,7 +154,7 @@ function Update:Window(text,logo,keybind)
     Hub.Size = UDim2.new(0, 81, 0, 27)
     Hub.Font = Enum.Font.GothamSemibold
     Hub.Text = "             | BRUTALITY HUB V4" 
-    Hub.TextColor3 = Color3.fromRGB(255, 0, 0)   --warna text atas
+    Hub.TextColor3 = Color3.fromRGB(252, 239, 0)   --warna text atas
     Hub.TextSize = 20.000
     Hub.TextXAlignment = Enum.TextXAlignment.Left
 
@@ -283,7 +283,7 @@ local LogoHub = Instance.new("ImageLabel")
         TabButton.Parent = ScrollTab
         TabButton.Name = text.."Server"
         TabButton.Text = text
-        TabButton.BackgroundColor3 = Color3.fromRGB(35, 35, 35) --abu abu
+        TabButton.BackgroundColor3 = Color3.fromRGB(0, 0, 0) --35,35,35
         TabButton.BackgroundTransparency = 0.150
         TabButton.Size = UDim2.new(0, 130, 0, 23)
         TabButton.Font = Enum.Font.GothamSemibold
