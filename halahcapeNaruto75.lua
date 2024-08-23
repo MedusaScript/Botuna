@@ -114,7 +114,7 @@ function Update:Window(text,logo,keybind)
     Main.Parent = BRUTALITYHUB
     Main.ClipsDescendants = true
     Main.AnchorPoint = Vector2.new(0.5,0.5)
-    Main.BackgroundColor3 = Color3.fromRGB(12, 0, 0) -- warna tab kiri
+    Main.BackgroundColor3 = Color3.fromRGB(0, 0, 0) -- warna tab kiri
     Main.Position = UDim2.new(0.5, 0, 0.5, 0)
     Main.Size = UDim2.new(0, 0, 0, 0)
 
@@ -283,7 +283,7 @@ local LogoHub = Instance.new("ImageLabel")
         TabButton.Parent = ScrollTab
         TabButton.Name = text.."Server"
         TabButton.Text = text
-        TabButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255) --35,35,35
+        TabButton.BackgroundColor3 = Color3.fromRGB(184, 112, 6) --warna tab toggle kiri
         TabButton.BackgroundTransparency = 0.150
         TabButton.Size = UDim2.new(0, 130, 0, 23)
         TabButton.Font = Enum.Font.GothamSemibold
