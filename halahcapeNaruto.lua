@@ -114,7 +114,7 @@ function Update:Window(text,logo,keybind)
     Main.Parent = BRUTALITYHUB
     Main.ClipsDescendants = true
     Main.AnchorPoint = Vector2.new(0.5,0.5)
-    Main.BackgroundColor3 = Color3.fromRGB(45, 45, 45) --warna tab kiri abu abu 45, 45, 45
+    Main.BackgroundColor3 = Color3.fromRGB(255, 255, 255) --warna tab kiri abu abu 45, 45, 45
     Main.Position = UDim2.new(0.5, 0, 0.5, 0)
     Main.Size = UDim2.new(0, 0, 0, 0)
 
