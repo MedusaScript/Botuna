@@ -3194,10 +3194,9 @@ end)
 print("Load Script")
 --akhiran fitur sc
 --Icon Tab
-local Library = Update:Window("                  PREMIUM","18962361962",Enum.KeyCode.RightControl); --12523036534
+local Library = Update:Window("                 PREMIUM","18962361962",Enum.KeyCode.RightControl); --12523036534
 
 local H = Library:AddTab("Home","6026568198")
-local Ssx = Library:AddTab("Status Server","7044233235")
 local Main = Library:AddTab("Level Farm","13075651575")
 local M = Library:AddTab("All Quest","13075622619")
 local RaceV4 = Library:AddTab("RaceV4","11162889532")
@@ -3214,6 +3213,7 @@ local Dms = Library:AddTab("Sea Event","11156061121")
 
 H:AddSeperator("Made By Medusa Script")
 H:AddLabel("Click for copy link")
+H:AddLabel("status Server Scroll Down!!")
 
 H:AddButton("Buy Permanent Key",function()
 setclipboard("https://discord.gg/brutality-hub-1182005198206545941")
@@ -3231,7 +3231,7 @@ H:AddButton("Website Script",function()
 setclipboard("https://www.medusascript.xyz")
 end)
 
-local Time1 = Ssx:AddLabel("Run Time Script")
+local Time1 = H:AddLabel("Run Time Script")
 
 function UpdateTime()
 local GameTime = math.floor(workspace.DistributedGameTime+0.5)
@@ -3249,7 +3249,7 @@ end)
 end
 end)
 
-local Client = Ssx:AddLabel("Client")
+local Client = H:AddLabel("Client")
 
 function UpdateClient()
 local Fps = workspace:GetRealPhysicsFPS()
@@ -3262,7 +3262,7 @@ UpdateClient()
 end
 end)
 
-local Client1 = Ssx:AddLabel("Client")
+local Client1 = H:AddLabel("Client")
 
 function UpdateClient1()
 local Ping = game:GetService("Stats").Network.ServerStatsItem["Data Ping"]:GetValueString()
