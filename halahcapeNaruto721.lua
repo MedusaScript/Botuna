@@ -465,7 +465,7 @@ local LogoHub = Instance.new("ImageLabel")
 
             Button.Name = "Button"
             Button.Parent = Toggle
-            Button.BackgroundColor3 = Color3.fromRGB(82, 1, 1) --belum ketemu
+            Button.BackgroundColor3 = Color3.fromRGB(42, 42, 42) --warna toggle
             Button.Position = UDim2.new(0, 1, 0, 1)
             Button.Size = UDim2.new(0, 468, 0, 29)
             Button.AutoButtonColor = false
