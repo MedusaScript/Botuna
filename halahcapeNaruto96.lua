@@ -8692,6 +8692,11 @@ local ListSeaBoat = {
     "BeastHunter",
 }
 
+_G.SelectedBoat = "Guardian"
+M:AddDropdown("Select Boat", ListSeaBoat, _G.SelectedBoat, function(x)
+_G.SelectedBoat = x
+end)
+
 local ListSeaZone = {
     "Zone 1",
     "Zone 2",
@@ -8702,18 +8707,13 @@ local ListSeaZone = {
     "Infinite"
 }
 
-_G.SelectedBoat = "Guardian"
-M:AddDropdown("Select Boat", ListSeaBoat, _G.SelectedBoat, function(x)
-_G.SelectedBoat = x
-end)
-
 _G.SelectedZone = "Zone 5"
 M:AddDropdown("Select Zone", ListSeaZone, _G.SelectedZone, function(x)
 _G.SelectedZone = x
 end)
 
 BoatSpeed = 300
-Sea:Slider("Boat Tween Speed", 100, 350, BoatSpeed, function(v)
+M:AddSlider("Boat Tween Speed", 100, 350, BoatSpeed, function(v)
     BoatSpeed = v
 end)
 
