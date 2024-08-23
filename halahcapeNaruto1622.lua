@@ -21,7 +21,7 @@ end)
 UICorner.Parent = ImageButton1
 
 do local GUI = game.CoreGui:FindFirstChild("BRUTALITYHUB");if GUI then GUI:Destroy();end;if _G.Color == nil then
-    _G.Color = Color3.fromRGB(0, 0, 0)
+    _G.Color = Color3.fromRGB(20, 0, 0)
    end 
 end
 
@@ -824,7 +824,7 @@ local LogoToggle = Instance.new("ImageLabel")
 
             bar.Name = "bar"
             bar.Parent = AHEHE
-            bar.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
+            bar.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
             bar.Size = UDim2.new(0, 448, 0, 5)
 
             bar1.Name = "bar1"
