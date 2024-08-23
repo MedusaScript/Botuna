@@ -269,7 +269,7 @@ local LogoHub = Instance.new("ImageLabel")
                 Main:TweenSize(UDim2.new(0, 0, 0, 0),"In","Quad",0.4,true)
             else
                 uihide = false
-                Main:TweenSize(UDim2.new(0, 656, 0, 350),"Out","Quad",0.4,true)
+                Main:TweenSize(UDim2.new(0, 0, 0, 0),"Out","Quad",0.4,true) --0, 656, 0, 350
             end
         end
     end)
