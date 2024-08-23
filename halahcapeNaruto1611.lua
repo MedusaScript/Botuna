@@ -226,7 +226,7 @@ local LogoHub = Instance.new("ImageLabel")
     local Page = Instance.new("Frame")
     Page.Name = "Page"
     Page.Parent = Main
-    Page.BackgroundColor3 = Color3.fromRGB(140, 140, 140) --35, 35, 35
+    Page.BackgroundColor3 = Color3.fromRGB(255, 255, 255) --35, 35, 35
     Page.Position = UDim2.new(0.245426834, 0, 0.075000003, 0)
     Page.Size = UDim2.new(0, 490, 0, 365) 
     local UICorner = Instance.new("UICorner")
@@ -408,7 +408,7 @@ local LogoHub = Instance.new("ImageLabel")
             
             Black.Name = "Black"
             Black.Parent = Button
-            Black.BackgroundColor3 = Color3.fromRGB(252, 239, 0)
+            Black.BackgroundColor3 = Color3.fromRGB(12, 0, 0) --warna pas button di click
             Black.BackgroundTransparency = 1.000
             Black.BorderSizePixel = 0
             Black.Position = UDim2.new(0, 1, 0, 1)
@@ -819,7 +819,7 @@ local LogoToggle = Instance.new("ImageLabel")
             AHEHE.Size = UDim2.new(0, 448, 0, 5)
             AHEHE.Font = Enum.Font.SourceSans
             AHEHE.Text = ""
-            AHEHE.TextColor3 = Color3.fromRGB(0, 0, 0)
+            AHEHE.TextColor3 = Color3.fromRGB(90, 90, 90)
             AHEHE.TextSize = 14.000
 
             bar.Name = "bar"
