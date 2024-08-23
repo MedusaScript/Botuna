@@ -465,7 +465,7 @@ local LogoHub = Instance.new("ImageLabel")
 
             Button.Name = "Button"
             Button.Parent = Toggle
-            Button.BackgroundColor3 = Color3.fromRGB(82, 1, 1)
+            Button.BackgroundColor3 = Color3.fromRGB(82, 1, 1) --belum ketemu
             Button.Position = UDim2.new(0, 1, 0, 1)
             Button.Size = UDim2.new(0, 468, 0, 29)
             Button.AutoButtonColor = false
@@ -521,7 +521,7 @@ local LogoToggle = Instance.new("ImageLabel")
 
             Circle.Name = "Circle"
             Circle.Parent = ToggleImage
-            Circle.BackgroundColor3 = Color3.fromRGB(0, 0, 0) --227, 60, 60
+            Circle.BackgroundColor3 = Color3.fromRGB(0, 0, 0) --logo toggle
             Circle.Position = UDim2.new(0, 2, 0, 2)
             Circle.Size = UDim2.new(0, 16, 0, 16)
 
@@ -573,7 +573,7 @@ local LogoToggle = Instance.new("ImageLabel")
             
             Dropdown.Name = "Dropdown"
             Dropdown.Parent = MainFramePage
-            Dropdown.BackgroundColor3 = Color3.fromRGB(45, 45, 45)
+            Dropdown.BackgroundColor3 = Color3.fromRGB(45, 45, 45) --baru sampai sini
             Dropdown.ClipsDescendants = true
             Dropdown.Size = UDim2.new(0, 470, 0, 31)
             
@@ -1112,3 +1112,48 @@ local Dms = Library:AddTab("Misc","11156061121")
 H:AddButton("Youtube Brutality Hub",function()
     setclipboard("https://youtube.com/@medusascriptroblox/")
     end)
+    local WeaponList = {"Melee","Sword","Fruit","Gun"}
+    _G.SelectWeapon = "Melee"
+H:AddDropdown("Select Weapon",WeaponList,function(value)
+    _G.SelectWeapon = value
+    end)
+    
+    task.spawn(function()
+        while wait() do
+            pcall(function()
+                if _G.SelectWeapon == "Melee" then
+                    for i ,v in pairs(game.Players.LocalPlayer.Backpack:GetChildren()) do
+                        if v.ToolTip == "Melee" then
+                            if game.Players.LocalPlayer.Backpack:FindFirstChild(tostring(v.Name)) then
+                                _G.SelectWeapon = v.Name
+                            end
+                        end
+                    end
+                elseif _G.SelectWeapon == "Sword" then
+                    for i ,v in pairs(game.Players.LocalPlayer.Backpack:GetChildren()) do
+                        if v.ToolTip == "Sword" then
+                            if game.Players.LocalPlayer.Backpack:FindFirstChild(tostring(v.Name)) then
+                                _G.SelectWeapon = v.Name
+                            end
+                        end
+                    end
+                elseif _G.SelectWeapon == "Gun" then
+                    for i ,v in pairs(game.Players.LocalPlayer.Backpack:GetChildren()) do
+                        if v.ToolTip == "Gun" then
+                            if game.Players.LocalPlayer.Backpack:FindFirstChild(tostring(v.Name)) then
+                                _G.SelectWeapon = v.Name
+                            end
+                        end
+                    end
+                elseif _G.SelectWeapon == "Fruit" then
+                    for i ,v in pairs(game.Players.LocalPlayer.Backpack:GetChildren()) do
+                        if v.ToolTip == "Blox Fruit" then
+                            if game.Players.LocalPlayer.Backpack:FindFirstChild(tostring(v.Name)) then
+                                _G.SelectWeapon = v.Name
+                            end
+                        end
+                    end
+                end
+            end)
+        end
+        end)
