@@ -20,7 +20,7 @@ ImageButton1.MouseButton1Down:connect(function()
 end)
 UICorner.Parent = ImageButton1
 
-do local GUI = game.CoreGui:FindFirstChild("BRUTALITYHUB");if GUI then GUI:Destroy();end;if _G.Color == nil then
+do local GUI = game.CoreGui:FindFirstChild("BrutalityHub");if GUI then GUI:Destroy();end;if _G.Color == nil then
     _G.Color = Color3.fromRGB(255, 0, 0)
    end 
 end
