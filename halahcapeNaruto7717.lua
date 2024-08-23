@@ -1157,6 +1157,21 @@ end)
 
 H:AddLabel("Work For PC/Mobile")
 H:AddLabel("Thanks For Using Brutality Hub")
+
+H:AddToggle("Disabled Notifications Text",false,function(NamfonGay)
+    _G.Remove_trct = NamfonGay
+    end)
+    
+    spawn(function()
+        while wait() do
+            if _G.Remove_trct then
+                game.Players.LocalPlayer.PlayerGui.Notifications.Enabled = false
+            else
+                game.Players.LocalPlayer.PlayerGui.Notifications.Enabled = true
+            end
+        end
+    end)
+
 H:AddButton("Youtube Brutality Hub",function()
     setclipboard("https://youtube.com/@medusascriptroblox/")
     end)
