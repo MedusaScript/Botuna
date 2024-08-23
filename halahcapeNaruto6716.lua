@@ -20,13 +20,13 @@ ImageButton1.MouseButton1Down:connect(function()
 end)
 UICorner.Parent = ImageButton1
 
-do local GUI = game.CoreGui:FindFirstChild("BrutalityHub");if GUI then GUI:Destroy();end;if _G.Color == nil then
-    _G.Color = Color3.fromRGB(255, 0, 0)
+do local GUI = game.CoreGui:FindFirstChild("BRUTALITYHUB");if GUI then GUI:Destroy();end;if _G.Color == nil then
+    _G.Color = Color3.fromRGB(0, 0, 0)
    end 
 end
 
 do
-    local NamfonHub = workspace:FindFirstChild("BrutalityHub")
+    local NamfonHub = workspace:FindFirstChild("BRUTALITYHUB")
     if NamfonHub then
         NamfonHub:Destroy()
     end
@@ -283,7 +283,7 @@ local LogoHub = Instance.new("ImageLabel")
         TabButton.Parent = ScrollTab
         TabButton.Name = text.."Server"
         TabButton.Text = text
-        TabButton.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
+        TabButton.BackgroundColor3 = Color3.fromRGB(35, 35, 35) --abu abu
         TabButton.BackgroundTransparency = 0.150
         TabButton.Size = UDim2.new(0, 130, 0, 23)
         TabButton.Font = Enum.Font.GothamSemibold
