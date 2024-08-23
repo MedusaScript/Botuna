@@ -2212,10 +2212,10 @@ local _Discord = Tabs.Discord do
   })
 end
 
-local _MainFarm = Tabs.MainFarm do
+local MainFarm = Tabs.MainFarm do
 local WeaponList = {"Melee","Sword","Fruit","Gun"}
 _G.SelectWeapon = "Melee"
-_MainFarm:AddDropdown("Select Weapon",WeaponList,_G.SelectWeapon,function(value)
+MainFarm:AddDropdown("Select Weapon",WeaponList,_G.SelectWeapon,function(value)
 _G.SelectWeapon = value
 end)
 
