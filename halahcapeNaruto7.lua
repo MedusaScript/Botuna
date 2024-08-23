@@ -226,7 +226,7 @@ local LogoHub = Instance.new("ImageLabel")
     local Page = Instance.new("Frame")
     Page.Name = "Page"
     Page.Parent = Main
-    Page.BackgroundColor3 = Color3.fromRGB(105, 105, 105) --35, 35, 35
+    Page.BackgroundColor3 = Color3.fromRGB(105, 105, 105) --warna tab kanan
     Page.Position = UDim2.new(0.245426834, 0, 0.075000003, 0)
     Page.Size = UDim2.new(0, 490, 0, 365) 
     local UICorner = Instance.new("UICorner")
@@ -1157,3 +1157,8 @@ H:AddDropdown("Select Weapon",WeaponList,function(value)
             end)
         end
         end)
+    H:addline()
+H:AddToggle("Auto Farm Level",_G.AutoFarm,function(value)
+_G.AutoFarm = value
+StopTween(_G.AutoFarm)
+end)
