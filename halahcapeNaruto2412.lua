@@ -199,7 +199,7 @@ local LogoHub = Instance.new("ImageLabel")
     LogoHub.BackgroundTransparency = 1.000
     LogoHub.Position = UDim2.new(0, 5, 0, 1)
     LogoHub.Size = UDim2.new(0, 26, 0, 26)
-    LogoHub.Image = "http://www.roblox.com/asset/?id="..tostring(18962361962) --logo didalam tab disini
+    LogoHub.Image = "http://www.roblox.com/asset/?id="..tostring(104397992902189) --logo didalam tab disini
 
     local ScrollTab = Instance.new("ScrollingFrame")
     ScrollTab.Name = "ScrollTab"
@@ -517,7 +517,7 @@ local LogoToggle = Instance.new("ImageLabel")
     LogoToggle.BackgroundTransparency = 1.000
     LogoToggle.Position = UDim2.new(0, 6, 0, 2)
     LogoToggle.Size = UDim2.new(0, 26, 0, 26)
-    LogoToggle.Image = "http://www.roblox.com/asset/?id="..tostring(18962361962) --logo toggle
+    LogoToggle.Image = "http://www.roblox.com/asset/?id="..tostring(110958770625024) --logo toggle
 
             Circle.Name = "Circle"
             Circle.Parent = ToggleImage
