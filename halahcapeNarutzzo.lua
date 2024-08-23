@@ -114,7 +114,7 @@ function Update:Window(text,logo,keybind)
     Main.Parent = BRUTALITYHUB
     Main.ClipsDescendants = true
     Main.AnchorPoint = Vector2.new(0.5,0.5)
-    Main.BackgroundColor3 = Color3.fromRGB(255, 255, 255) --warna tab kiri abu abu 45, 45, 45
+    Main.BackgroundColor3 = Color3.fromRGB(255, 255, 255) --warna tab kiri
     Main.Position = UDim2.new(0.5, 0, 0.5, 0)
     Main.Size = UDim2.new(0, 0, 0, 0)
 
@@ -127,7 +127,7 @@ function Update:Window(text,logo,keybind)
     local Top = Instance.new("Frame")
     Top.Name = "Top"
     Top.Parent = Main
-    Top.BackgroundColor3 = Color3.fromRGB(255, 255, 255) --35, 35, 35
+    Top.BackgroundColor3 = Color3.fromRGB(255, 255, 255) --warna tab atas
     Top.Size = UDim2.new(0, 656, 0, 27)
 
     local UICorner = Instance.new("UICorner")
@@ -136,7 +136,7 @@ function Update:Window(text,logo,keybind)
     local Name = Instance.new("TextLabel")
     Name.Name = "Name"
     Name.Parent = Top
-    Name.BackgroundColor3 = Color3.fromRGB(85, 0, 255) --255, 255, 255 --baru edit sampai sini
+    Name.BackgroundColor3 = Color3.fromRGB(85, 0, 255)
     Name.BackgroundTransparency = 1.000
     Name.Position = UDim2.new(0.0609756112, -25, 0, 0)
     Name.Size = UDim2.new(0, 61, 0, 27)
@@ -148,13 +148,13 @@ function Update:Window(text,logo,keybind)
     local Hub = Instance.new("TextLabel")
     Hub.Name = "Hub"
     Hub.Parent = Top
-    Hub.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+    Hub.BackgroundColor3 = Color3.fromRGB(255, 255, 255) --warna text atas
     Hub.BackgroundTransparency = 1.000
     Hub.Position = UDim2.new(0, 85, 0, 0)
     Hub.Size = UDim2.new(0, 81, 0, 27)
     Hub.Font = Enum.Font.GothamSemibold
-    Hub.Text = "             | BRUTALITY HUB V4" --        HUB
-    Hub.TextColor3 = Color3.fromRGB(255, 0, 0)   --0, 247, 255
+    Hub.Text = "             | BRUTALITY HUB V4" 
+    Hub.TextColor3 = Color3.fromRGB(255, 0, 0)   --warna text atas
     Hub.TextSize = 20.000
     Hub.TextXAlignment = Enum.TextXAlignment.Left
 
@@ -166,7 +166,7 @@ function Update:Window(text,logo,keybind)
     MapName.Position = UDim2.new(0, 85, 0, 0)
     MapName.Size = UDim2.new(0, 81, 0, 27)
     MapName.Font = Enum.Font.GothamSemibold
-    MapName.Text = "" --                | BLOX FRUIT
+    MapName.Text = "|" --                | BLOX FRUIT
     MapName.TextColor3 = Color3.fromRGB(225, 225, 225)   
     MapName.TextSize = 20.000
     MapName.TextXAlignment = Enum.TextXAlignment.Left
@@ -187,7 +187,7 @@ function Update:Window(text,logo,keybind)
     local Tab = Instance.new("Frame")
     Tab.Name = "Tab"
     Tab.Parent = Main
-    Tab.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
+    Tab.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
     Tab.BackgroundTransparency = 1.000
     Tab.Position = UDim2.new(0, 5, 0, 30)
     Tab.Size = UDim2.new(0, 150, 0, 350)
