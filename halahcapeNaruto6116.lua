@@ -3205,7 +3205,7 @@ local R = Library:AddTab("Raid","11155986081")
 local T = Library:AddTab("Teleport","11155851001")
 local S = Library:AddTab("Shop","6031265976")
 local D = Library:AddTab("Devil Fruit","7044233235")
-local SEAV = Library:AddTab("Sea Event","7044233235")
+local S3a = Library:AddTab("Sea Event","7044233235")
 local ESX = Library:AddTab("ESP","7044233235")
 local Ss = Library:AddTab("MISC","11156061121")
 local Dms = Library:AddTab("Sea Event","11156061121")
@@ -5499,8 +5499,8 @@ end)
          end
      end)
 end)
-Mirragecheck = SEAV:AddLabel("")
-SEAV:AddToggle("Teleport Mystic Island",_G.AutoMysticIsland,function(value)
+Mirragecheck = S3a:AddLabel("")
+S3a:AddToggle("Teleport Mystic Island",_G.AutoMysticIsland,function(value)
      _G.AutoMysticIsland = value
      StopTween(_G.AutoMysticIsland)
      end)
@@ -5516,7 +5516,7 @@ SEAV:AddToggle("Teleport Mystic Island",_G.AutoMysticIsland,function(value)
              end
          end)
      end)
- SEAV:AddToggle("Auto Drive Boat",AutoW,function(W)
+ S3a:AddToggle("Auto Drive Boat",AutoW,function(W)
  AutoW = W
  end)
  spawn(function()
@@ -5535,7 +5535,7 @@ SEAV:AddToggle("Teleport Mystic Island",_G.AutoMysticIsland,function(value)
      end)
  end
  end)
- SEAV:AddToggle("Auto Look Moon",false,function(v)
+ S3a:AddToggle("Auto Look Moon",false,function(v)
      _G.AutoDooHee = v
      end)
    spawn(function()
@@ -5550,7 +5550,7 @@ SEAV:AddToggle("Teleport Mystic Island",_G.AutoMysticIsland,function(value)
            end)
        end
    end)
- SEAV:AddToggle("Auto Summon Mirage Island",_G.dao,function(state)
+ S3a:AddToggle("Auto Summon Mirage Island",_G.dao,function(state)
  if state then
      _G.dao = true
  else
@@ -5610,7 +5610,7 @@ for _,v in next, workspace.Boats.PirateBrigade:GetDescendants() do
 end
 end
 end) 
-SEAV:AddToggle("Auto Hop Server Mirage Island",_G.Hopfinddao,function(value)
+S3a:AddToggle("Auto Hop Server Mirage Island",_G.Hopfinddao,function(value)
  _G.Hopfinddao = value
 end)
  spawn(function()
@@ -5626,7 +5626,7 @@ end)
          end
      end
  end)
-SEAV:AddToggle("Teleport Advanced Fruit Dealer",_G.TPNPC,function(value)
+S3a:AddToggle("Teleport Advanced Fruit Dealer",_G.TPNPC,function(value)
           _G.Miragenpc = value
           StopTween(_G.Miragenpc)
      end)
@@ -5642,7 +5642,7 @@ spawn(function()
      end
  end)
 end)
-SEAV:AddButton("Teleport Advanced Fruit Dealer", function()
+S3a:AddButton("Teleport Advanced Fruit Dealer", function()
              TweenNpc()
              end)
 
@@ -5662,7 +5662,7 @@ SEAV:AddButton("Teleport Advanced Fruit Dealer", function()
                          end
                      end
                  end
-SEAV:AddToggle("Tween Gear",_G.TweenMGear,function(value)
+S3a:AddToggle("Tween Gear",_G.TweenMGear,function(value)
 _G.TweenMGear = value
 StopTween(_G.TweenMGear)
 end)
@@ -15463,30 +15463,30 @@ Ss:AddToggle("Remove Fog",RemoveFog,function(value)
  game.Players.LocalPlayer.Character.Animate.Disabled = true 
 end)
 
- Ss:AddSeperator("ESP MENU")
- Ss:AddToggle("ESP Player",false,function(a)
+ ESX:AddSeperator("ESP MENU")
+ ESX:AddToggle("ESP Player",false,function(a)
      ESPPlayer = a
  UpdatePlayerChams()
  end)
  
- Ss:AddToggle("ESP Chest",false,function(a)
+ ESX:AddToggle("ESP Chest",false,function(a)
      ChestESP = a
  UpdateChestChams() 
  end)
  
- Ss:AddToggle("ESP Fruit",false,function(a)
+ ESX:AddToggle("ESP Fruit",false,function(a)
      DevilFruitESP = a
      while DevilFruitESP do wait()
          UpdateDevilChams() 
      end
  end)
  
- Ss:AddToggle("ESP Real Fruit",RealFruitESP,function(a)
+ ESX:AddToggle("ESP Real Fruit",RealFruitESP,function(a)
      RealFruitESP = a
  UpdateRealFruitChams() 
  end)
  
- Ss:AddToggle("ESP Flower",false,function(a)
+ ESX:AddToggle("ESP Flower",false,function(a)
      FlowerESP = a
  UpdateFlowerChams() 
  end)
@@ -15509,40 +15509,40 @@ end)
          end
      end
  end)
-Ss:AddToggle("ESP Island",IslandESP,function(value)
+ESX:AddToggle("ESP Island",IslandESP,function(value)
      IslandESP = value
      while IslandESP do wait()
          UpdateIslandESP() 
      end
  end)
- Ss:AddToggle("Esp Npc", false, function(nec)
+ ESX:AddToggle("Esp Npc", false, function(nec)
  NpcESP = nec
 end)
 
-Ss:AddToggle("Esp Sea Beast", false, function(nec)
+ESX:AddToggle("Esp Sea Beast", false, function(nec)
  SeaESP = nec
 end)
 
 
-Ss:AddToggle("Esp Mob", false, function(nec)
+ESX:AddToggle("Esp Mob", false, function(nec)
  MobESP = nec
 end)
 
-Ss:AddToggle("Esp Mirage Island",false, function(value)
+ESX:AddToggle("Esp Mirage Island",false, function(value)
  MirageIslandESP = value
      while MirageIslandESP do wait()
          UpdateIslandMirageESP()
      end
  end)
 
-Ss:AddToggle("Esp Advanced Fruit Dealer", false, function(value)
+ESX:AddToggle("Esp Advanced Fruit Dealer", false, function(value)
  AfdESP = value
      while AfdESP do wait()
          UpdateAfdESP()
      end
  end)
  
-Ss:AddToggle("Esp Blue Gear [Beta]", false, function(value)
+ESX:AddToggle("Esp Blue Gear", false, function(value)
  GearESP = value
      while GearESP do wait()
          UpdateGeaESP() 
