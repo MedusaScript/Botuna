@@ -400,7 +400,7 @@ local LogoHub = Instance.new("ImageLabel")
             TextBtn.AutoButtonColor = false
             TextBtn.Font = Enum.Font.GothamSemibold
             TextBtn.Text = text
-            TextBtn.TextColor3 = Color3.fromRGB(255, 255, 255) --warna text button dan toggle
+            TextBtn.TextColor3 = Color3.fromRGB(46, 2, 2) --warna text button dan toggle
             TextBtn.TextSize = 15.000
             
             UICorner_2.CornerRadius = UDim.new(0, 5)
