@@ -394,13 +394,13 @@ local LogoHub = Instance.new("ImageLabel")
             
             TextBtn.Name = "TextBtn"
             TextBtn.Parent = Button
-            TextBtn.BackgroundColor3 = Color3.fromRGB(0, 0, 0) --45,45,45
+            TextBtn.BackgroundColor3 = Color3.fromRGB(82, 1, 1) --45,45,45
             TextBtn.Position = UDim2.new(0, 1, 0, 1)
             TextBtn.Size = UDim2.new(0, 468, 0, 29)
             TextBtn.AutoButtonColor = false
             TextBtn.Font = Enum.Font.GothamSemibold
             TextBtn.Text = text
-            TextBtn.TextColor3 = Color3.fromRGB(82, 1, 1) --255
+            TextBtn.TextColor3 = Color3.fromRGB(255, 255, 255) --255
             TextBtn.TextSize = 15.000
             
             UICorner_2.CornerRadius = UDim.new(0, 5)
