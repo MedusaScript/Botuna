@@ -573,7 +573,7 @@ local LogoToggle = Instance.new("ImageLabel")
             
             Dropdown.Name = "Dropdown"
             Dropdown.Parent = MainFramePage
-            Dropdown.BackgroundColor3 = Color3.fromRGB(82, 1, 1) --warna toggle dropdown
+            Dropdown.BackgroundColor3 = Color3.fromRGB(163, 105, 18) --warna toggle dropdown
             Dropdown.ClipsDescendants = true
             Dropdown.Size = UDim2.new(0, 470, 0, 31)
             
