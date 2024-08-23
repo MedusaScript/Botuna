@@ -3276,9 +3276,6 @@ end
 end)
 
 
-end
-end)
-
 H:AddSeperator("Quest")
 
 local Bartilo_Quest = H:AddLabel("❌ | Bartilo Quest")
