@@ -344,8 +344,8 @@ end
 
 
 --// Load Key \\--
-if isfile("key") then
-    local key = readfile("key")
+if isfile(key) then
+    local key = readfile(key)
     Notify({
     Description = "Checking Saved Key..";
     Title = "Brutality Hub Gateway";
