@@ -284,7 +284,7 @@ UIAspectRatioConstraint_9.Parent = Key
 UIAspectRatioConstraint_9.AspectRatio = 3.729
 
 logo.Name = "logo"
-logo.Parent = Key
+logo.Parent = logo
 logo.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 logo.BackgroundTransparency = 1.000
 logo.BorderSizePixel = 0
