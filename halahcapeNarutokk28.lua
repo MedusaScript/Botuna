@@ -42,20 +42,6 @@ local _Discord = Tabs.Discord do
   end
 
   local _MainFarm = Tabs.MainFarm do
-    _MainFarm:AddDropdown({"Farm Tool", Loaded.WeaponsList, Settings.ToolFarm, function(Value)
-      Settings.ToolFarm = Value
-    end, "Main/FarmTool"})
     _MainFarm:AddSection("Farm")
-    AddToggle(_MainFarm, {"Auto Farm Level", ("MaxLevel: %i"):format(MSetting.Setting.MaxLevel)}, "Level Farm")
     AddToggle(_MainFarm, {"Auto Farm Nearest"}, "Nearest Farm")
-    _MainFarm:AddSection("Enemies")
-    _MainFarm:AddDropdown({"Select Enemie", Loaded.EnemeiesList, {Loaded.EnemeiesList[1]}, function(Value)
-      _env.SelecetedEnemie = Value
-    end, "Main/SEnemy"})
-    AddToggle(_MainFarm, {"Auto Farm Selected"}, "FS Enemie")
-    AddToggle(_MainFarm, {"Take Quest [ Enemie Selected ]", true}, "FS Take Quest")
-    _MainFarm:AddSection("Boss Farm")
-    AddToggle(_MainFarm, {"Auto Meme Beast [ Spawns every 30 Minutes ]", "Drops: Portal ( <25% ), Meme Cube ( <50% )"}, "Meme Beast")
-    _MainFarm:AddSection("Raid")
-    AddToggle(_MainFarm, {"Auto Farm Raid", "Req: Level 1000"}, "Raid Farm")
   end
