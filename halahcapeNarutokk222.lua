@@ -5493,6 +5493,21 @@ local Elite_Hunter_Status = SV:AddLabel("Only Third Sea")
                 end
             end)
     end)
+
+    local Section = SV:AddSection({
+        Name = "Frozen Dimension Check"
+    })
+    spawn(function()
+        pcall(function()
+            while wait() do
+                if game.Workspace._WorldOrigin.Locations:FindFirstChild('Frozen Dimension') then
+                    FrozenIsland:Set('❄️ | Frozen Dimension Spawning!!')
+                else
+                    FrozenIsland:Set('❌ | Frozen Dimension Not Found')
+                end
+            end
+        end)
+        end)
 end
 
 Mirragecheck = SV:AddLabel("Only Third Sea")
