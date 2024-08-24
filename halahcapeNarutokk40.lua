@@ -344,7 +344,7 @@ end
 
 --// Load Key \\--
 --if isfile("minhtientiny.txt") then
-function confirmkey()
+function verify(key1) --function confirmkey()
     local key = keyBox.Text --readfile("minhtientiny.txt")
     Notify({
     Description = "Checking Saved Key..";
@@ -361,7 +361,7 @@ local CoreGUI = game:GetService("CoreGui")
 local HttpService = game:GetService("HttpService")
 
 --// Get Key \\--
-function confirmkey()
+function verify(key1)
 	local key = keyBox.Text
 	--writefile("minhtientiny.txt", keyBox.Text)
         Notify({
@@ -373,7 +373,7 @@ function confirmkey()
         Verify(key1)
 end
 
-verifyKey.MouseButton1Click:Connect(confirmkey)
+verifyKey.MouseButton1Click:Connect(verify)
 
 function getkey()
 	setclipboard(getLink())
