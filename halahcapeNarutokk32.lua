@@ -2220,7 +2220,7 @@ local _Discord = Tabs.Discord do
     _MainFarm:AddSection("Farm")
     local WeaponList = {"Melee","Sword","Fruit","Gun"}
 _G.SelectWeapon = "Melee"
-AddDropdown("Select Weapon",WeaponList,_G.SelectWeapon,function(value)
+_MainFarm:AddDropdown("Select Weapon",WeaponList,_G.SelectWeapon,function(value)
 _G.SelectWeapon = value
 end)
 
@@ -2266,10 +2266,10 @@ task.spawn(function()
     
 local ListF = {"Normal", "Auto Quest", "Nearest"}
 FarmMode = "Normal"
-AddDropdown("Farm Mode", ListF,FarmMode,function(value)
+_MainFarm:AddDropdown("Farm Mode", ListF,FarmMode,function(value)
     FarmMode = value
 end)
-    AddToggle(_MainFarm, {"Auto Farm Level2"}, _G.AutoFarm, function(value)
+AddToggle(_MainFarm, {"Auto Farm Level2"},_G.AutoFarm,function(value)
         _G.AutoFarm = value
         StopTween(_G.AutoFarm)
     end)
