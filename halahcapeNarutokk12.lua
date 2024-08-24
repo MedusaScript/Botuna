@@ -2562,86 +2562,86 @@ OrionLib:MakeNotification({
 -------------Tab-----------------------
 
 local W = Window:MakeTab({
-    Name = "Thông Tin Hubℹ️",
-    Icon = "rbxassetid://8192162908",
+    Name = "Home",
+    Icon = "rbxassetid://104397992902189",
     PremiumOnly = false
 })
 
 local M = Window:MakeTab({
-    Name = "FARM",
-    Icon = "rbxassetid://8192162908",
+    Name = "FARM Level",
+    Icon = "rbxassetid://104397992902189",
     PremiumOnly = false
 })
 
 local ST = Window:MakeTab({
-    Name = "⚙️CÀI ĐẶT",
-    Icon = "rbxassetid://8192162908",
+    Name = "Setting",
+    Icon = "rbxassetid://104397992902189",
     PremiumOnly = false
 })
 
 local IQ = Window:MakeTab({
-    Name = "⚔️ Item & Quest",
-    Icon = "rbxassetid://8192162908",
+    Name = "Item & Quest",
+    Icon = "rbxassetid://104397992902189",
     PremiumOnly = false
 })
 
 local S = Window:MakeTab({
-    Name = "📈 CHỈ SỐ",
-    Icon = "rbxassetid://8192162908",
+    Name = "Stats",
+    Icon = "rbxassetid://104397992902189",
     PremiumOnly = false
 })
 
 local E = Window:MakeTab({
     Name = "ĐỊNH VỊ",
-    Icon = "rbxassetid://8192162908",
+    Icon = "rbxassetid://104397992902189",
     PremiumOnly = false
 })
 
 local RA = Window:MakeTab({
-    Name = "🎆 Raid",
-    Icon = "rbxassetid://8192162908",
+    Name = "Raid",
+    Icon = "rbxassetid://104397992902189",
     PremiumOnly = false
 })
 
 local LC = Window:MakeTab({
     Name = "🙆‍♂️ BẢN THÂN",
-    Icon = "rbxassetid://8192162908",
+    Icon = "rbxassetid://104397992902189",
     PremiumOnly = false
 })
 
 local Wld = Window:MakeTab({
-    Name = "🚪 Teleport",
-    Icon = "rbxassetid://8192162908",
+    Name = "Teleport",
+    Icon = "rbxassetid://104397992902189",
     PremiumOnly = false
 })
 
 local SV = Window:MakeTab({
-    Name = "📈 thông tin Sever",
-    Icon = "rbxassetid://8192162908",
+    Name = "Status Server",
+    Icon = "rbxassetid://104397992902189",
     PremiumOnly = false
 })
 
 local D = Window:MakeTab({
-    Name = "🍍 trái ắc quỷ",
-    Icon = "rbxassetid://8192162908",
+    Name = "Devil Fruit",
+    Icon = "rbxassetid://104397992902189",
     PremiumOnly = false
 })
 
 local R = Window:MakeTab({
-    Name = "☣️ tộc V4",
-    Icon = "rbxassetid://8192162908",
+    Name = "Race V4",
+    Icon = "rbxassetid://104397992902189",
     PremiumOnly = false
 })
 
 local SH = Window:MakeTab({
-    Name = "🛒 cửa hàng",
-    Icon = "rbxassetid://8192162908",
+    Name = "Shop",
+    Icon = "rbxassetid://104397992902189",
     PremiumOnly = false
 })
 
 local C = Window:MakeTab({
-    Name = "🔰 khác",
-    Icon = "rbxassetid://8192162908",
+    Name = "Misc",
+    Icon = "rbxassetid://104397992902189",
     PremiumOnly = false
 })
 
