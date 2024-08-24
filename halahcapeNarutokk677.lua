@@ -111,14 +111,13 @@ local TweenService = game:GetService("TweenService")
 local function MakeDraggable(topbarobject, object)
     local Dragging = nil
     local DragInput = nil
-    local DragSpeed = 0.25
     local DragStart = nil
     local StartPosition = nil
 
     local function Update(input)
         local Delta = input.Position - DragStart
         local pos = UDim2.new(StartPosition.X.Scale, StartPosition.X.Offset + Delta.X, StartPosition.Y.Scale, StartPosition.Y.Offset + Delta.Y)
-        local Tween = TweenService:Create(object, TweenInfo.new(dragSpeed), {Position = pos})
+        local Tween = TweenService:Create(object, TweenInfo.new(0.15), {Position = pos})
         Tween:Play()
     end
 
