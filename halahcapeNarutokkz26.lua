@@ -468,15 +468,13 @@ local _Discord = Tabs.Discord do
     Logo = "rbxassetid://110958770625024",
     Invite = "https://discord.gg/brutality-hub-1182005198206545941"
   })
-end
-
-_Discord:AddDiscordInvite({
-  Name = "Subscribe Youtube",
-  Description = "Please subscribe for get notify update script",
-  Logo = "rbxassetid://110958770625024",
-  Invite = "www.youtube.com/@medusascriptroblox"
-})
-end
+  _Discord:AddDiscordInvite({
+    Name = "Subscribe Youtube",
+    Description = "Please subscribe for get notify update script",
+    Logo = "rbxassetid://110958770625024",
+    Invite = "www.youtube.com/@medusascriptroblox"
+  })
+  end
 
 local _MainFarm = Tabs.MainFarm do
   _MainFarm:AddDropdown({"Farm Tool", Loaded.WeaponsList, Settings.ToolFarm, function(Value)
