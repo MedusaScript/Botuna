@@ -435,14 +435,14 @@ if not _env.LoadedFarm then
 end
 
 local redzlib = loadstring(game:HttpGet("https://raw.githubusercontent.com/vldtncywdlojtnvjlmvyrbszljd/48139u372988729j82hd/main/%3D2-e0dk2.lua"))()
-local Window = redzlib:MakeWindow({ Title = "BRUTALITY HUB : Meme Sea", SubTitle = "Made by Medusa Script", SaveFolder = "redzHub-MemeSea.json" })
+local Window = redzlib:MakeWindow({ Title = "BRUTALITY HUB V4", SubTitle = "Made by Medusa Script", SaveFolder = "redzHub-MemeSea.json" })
 Window:AddMinimizeButton({
   Button = { Image = "rbxassetid://110958770625024", BackgroundTransparency = 0 },
   Corner = { CornerRadius = UDim.new(0, 6) }
 })
 
 local Tabs = {
-  Discord = Window:MakeTab({"Discord", "Info"}),
+  Discord = Window:MakeTab({"Home", "Info"}),
   MainFarm = Window:MakeTab({"Farm", "Home"}),
   Items = Window:MakeTab({"Items", "Swords"}),
   Stats = Window:MakeTab({"Stats", "Signal"}),
@@ -466,8 +466,16 @@ local _Discord = Tabs.Discord do
     Name = "BRUTALITY HUB V4",
     Description = "Join our discord community to receive information about the next update",
     Logo = "rbxassetid://110958770625024",
-    Invite = "https://discord.gg/7aR7kNVt4g"
+    Invite = "https://discord.gg/brutality-hub-1182005198206545941"
   })
+end
+
+_Discord:AddDiscordInvite({
+  Name = "Subscribe Youtube",
+  Description = "Please subscribe for get notify update script",
+  Logo = "rbxassetid://110958770625024",
+  Invite = "www.youtube.com/@medusascriptroblox"
+})
 end
 
 local _MainFarm = Tabs.MainFarm do
