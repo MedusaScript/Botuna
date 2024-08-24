@@ -2562,86 +2562,86 @@ OrionLib:MakeNotification({
 -------------Tab-----------------------
 
 local W = Window:MakeTab({
-    Name = "Home",
-    Icon = "rbxassetid://104397992902189",
+    Name = "Thông Tin Hubℹ️",
+    Icon = "rbxassetid://8192162908",
     PremiumOnly = false
 })
 
 local M = Window:MakeTab({
-    Name = "FARM Level",
-    Icon = "rbxassetid://104397992902189",
+    Name = "FARM",
+    Icon = "rbxassetid://8192162908",
     PremiumOnly = false
 })
 
 local ST = Window:MakeTab({
-    Name = "Setting",
-    Icon = "rbxassetid://104397992902189",
+    Name = "⚙️CÀI ĐẶT",
+    Icon = "rbxassetid://8192162908",
     PremiumOnly = false
 })
 
 local IQ = Window:MakeTab({
-    Name = "Item & Quest",
-    Icon = "rbxassetid://104397992902189",
+    Name = "⚔️ Item & Quest",
+    Icon = "rbxassetid://8192162908",
     PremiumOnly = false
 })
 
 local S = Window:MakeTab({
-    Name = "Stats",
-    Icon = "rbxassetid://104397992902189",
+    Name = "📈 CHỈ SỐ",
+    Icon = "rbxassetid://8192162908",
     PremiumOnly = false
 })
 
 local E = Window:MakeTab({
     Name = "ĐỊNH VỊ",
-    Icon = "rbxassetid://104397992902189",
+    Icon = "rbxassetid://8192162908",
     PremiumOnly = false
 })
 
 local RA = Window:MakeTab({
-    Name = "Raid",
-    Icon = "rbxassetid://104397992902189",
+    Name = "🎆 Raid",
+    Icon = "rbxassetid://8192162908",
     PremiumOnly = false
 })
 
 local LC = Window:MakeTab({
     Name = "🙆‍♂️ BẢN THÂN",
-    Icon = "rbxassetid://104397992902189",
+    Icon = "rbxassetid://8192162908",
     PremiumOnly = false
 })
 
 local Wld = Window:MakeTab({
-    Name = "Teleport",
-    Icon = "rbxassetid://104397992902189",
+    Name = "🚪 Teleport",
+    Icon = "rbxassetid://8192162908",
     PremiumOnly = false
 })
 
 local SV = Window:MakeTab({
-    Name = "Status Server",
-    Icon = "rbxassetid://104397992902189",
+    Name = "📈 thông tin Sever",
+    Icon = "rbxassetid://8192162908",
     PremiumOnly = false
 })
 
 local D = Window:MakeTab({
-    Name = "Devil Fruit",
-    Icon = "rbxassetid://104397992902189",
+    Name = "🍍 trái ắc quỷ",
+    Icon = "rbxassetid://8192162908",
     PremiumOnly = false
 })
 
 local R = Window:MakeTab({
-    Name = "Race V4",
-    Icon = "rbxassetid://104397992902189",
+    Name = "☣️ tộc V4",
+    Icon = "rbxassetid://8192162908",
     PremiumOnly = false
 })
 
 local SH = Window:MakeTab({
-    Name = "Shop",
-    Icon = "rbxassetid://104397992902189",
+    Name = "🛒 cửa hàng",
+    Icon = "rbxassetid://8192162908",
     PremiumOnly = false
 })
 
 local C = Window:MakeTab({
-    Name = "Misc",
-    Icon = "rbxassetid://104397992902189",
+    Name = "🔰 khác",
+    Icon = "rbxassetid://8192162908",
     PremiumOnly = false
 })
 
@@ -2651,10 +2651,10 @@ local Section = W:AddSection({
 })
 
 
-W:AddLabel("BRUTALITY HUB")
+W:AddLabel("Banana hub")
 
 local Section = W:AddSection({
-    Name = "Version 4.0"
+    Name = "Vision 0.0.1"
 })
 
 
@@ -8386,15 +8386,15 @@ pcall(function()
         if _G.AutoEliteHunter then
             if game:GetService("Players").LocalPlayer.PlayerGui.Main.Quest.Visible == true then
                 OrionLib:MakeNotification({
-                    Name = "BRUTALITY HUB",
+                    Name = "Banana hub(Noitification)",
                     Content = "[EN] : Please cancel the farrm level quest (if any)",
-                    Image = "rbxassetid://104397992902189",
+                    Image = "rbxassetid://8192162908",
                     Time = 9
                 })
                 OrionLib:MakeNotification({
-                    Name = "BRUTALITY HUB",
+                    Name = "Banana hub(Noitification)",
                     Content = "[VN] : Làm ơn hủy nhiệm vụ farrm level(nếu có)",
-                    Image = "rbxassetid://104397992902189",
+                    Image = "rbxassetid://8192162908",
                     Time = 9
                 })
             end
