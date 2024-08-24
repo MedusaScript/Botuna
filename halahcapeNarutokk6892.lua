@@ -33,7 +33,7 @@ do
 end
 
 local Namfon = Instance.new("Part",workspace)
-Namfon.Size = Vector3.new(20,3,10) --ukuran frame tab
+Namfon.Size = Vector3.new(10,1,10) --ukuran frame tab
 Namfon.Name = "BrutalityHub"
 Namfon.Transparency = 1.000
 Namfon.CanCollide = true
