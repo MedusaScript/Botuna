@@ -437,7 +437,7 @@ end
 local redzlib = loadstring(game:HttpGet("https://raw.githubusercontent.com/vldtncywdlojtnvjlmvyrbszljd/48139u372988729j82hd/main/%3D2-e0dk2.lua"))()
 local Window = redzlib:MakeWindow({ Title = "BRUTALITY HUB : Meme Sea", SubTitle = "Made by Medusa Script", SaveFolder = "redzHub-MemeSea.json" })
 Window:AddMinimizeButton({
-  Button = { Image = "rbxassetid://15298567397", BackgroundTransparency = 0 },
+  Button = { Image = "rbxassetid://110958770625024", BackgroundTransparency = 0 },
   Corner = { CornerRadius = UDim.new(0, 6) }
 })
 
