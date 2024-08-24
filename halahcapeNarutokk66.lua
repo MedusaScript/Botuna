@@ -2530,13 +2530,13 @@ spawn(function()
         task.wait()
     until game.Players.LocalPlayer and game.Players.LocalPlayer.Team ~= nil 
     wait(1.5)
-    require(game.ReplicatedStorage.Notification).new("<Color=Red>Banana hub chào ae<Color=/>"):Display()
+    require(game.ReplicatedStorage.Notification).new("<Color=Red>Brutality Hub V4<Color=/>"):Display()
     wait(.5)
-    require(game.ReplicatedStorage.Notification).new("<Color=Yellow>Hãy sử dụng DeltaX Hoặc Fluxus để có trải nghiệm tốt!!<Color=/>"):Display()
+    require(game.ReplicatedStorage.Notification).new("<Color=Yellow>Thanks Use Brutality Hub<Color=/>"):Display()
     wait(.24)
-    require(game.ReplicatedStorage.Notification).new("<Color=Yellow>Tham gia discord để cập nhật thông tin mới nhất nhé<Color=/>"):Display()
+    require(game.ReplicatedStorage.Notification).new("<Color=Yellow>Join Server Discord For Use Webhook Notify<Color=/>"):Display()
     wait(.29)
-    require(game.ReplicatedStorage.Notification).new("<Color=Yellow>Đăng ký kênh khangCC để xem video mới nhất nhé<Color=/>"):Display()
+    require(game.ReplicatedStorage.Notification).new("<Color=Yellow>Please Subscribe Medusa Script Roblox<Color=/>"):Display()
     wait(.36)
 end)
 
@@ -5495,16 +5495,19 @@ local Elite_Hunter_Status = SV:AddLabel("Only Third Sea")
     end)
 end
 
-    local Section = SV:AddSection({
+    local FrozenIsland = SV:AddSection({
         Name = "Frozen Dimension Check"
     })
+
+local FrozenIsland = SV:AddLabel("Only Third Sea")
+
     spawn(function()
         pcall(function()
             while wait() do
                 if game.Workspace._WorldOrigin.Locations:FindFirstChild('Frozen Dimension') then
-                    FrozenIsland:Set('❄️ | Frozen Dimension Spawning!!')
+                    FrozenIsland:Set('Frozen Dimension Spawning | ❄️')
                 else
-                    FrozenIsland:Set('❌ | Frozen Dimension Not Found')
+                    FrozenIsland:Set('Frozen Dimension Not Found | ❌')
                 end
             end
         end)
