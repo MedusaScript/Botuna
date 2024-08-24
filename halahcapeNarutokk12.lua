@@ -2651,10 +2651,10 @@ local Section = W:AddSection({
 })
 
 
-W:AddLabel("Banana hub")
+W:AddLabel("BRUTALITY HUB")
 
 local Section = W:AddSection({
-    Name = "Vision 0.0.1"
+    Name = "Version 4.0"
 })
 
 
@@ -8386,15 +8386,15 @@ pcall(function()
         if _G.AutoEliteHunter then
             if game:GetService("Players").LocalPlayer.PlayerGui.Main.Quest.Visible == true then
                 OrionLib:MakeNotification({
-                    Name = "Banana hub(Noitification)",
+                    Name = "BRUTALITY HUB",
                     Content = "[EN] : Please cancel the farrm level quest (if any)",
-                    Image = "rbxassetid://8192162908",
+                    Image = "rbxassetid://104397992902189",
                     Time = 9
                 })
                 OrionLib:MakeNotification({
-                    Name = "Banana hub(Noitification)",
+                    Name = "BRUTALITY HUB",
                     Content = "[VN] : Làm ơn hủy nhiệm vụ farrm level(nếu có)",
-                    Image = "rbxassetid://8192162908",
+                    Image = "rbxassetid://104397992902189",
                     Time = 9
                 })
             end
