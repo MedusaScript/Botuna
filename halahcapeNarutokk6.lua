@@ -5493,6 +5493,7 @@ local Elite_Hunter_Status = SV:AddLabel("Only Third Sea")
                 end
             end)
     end)
+end
 
     local Section = SV:AddSection({
         Name = "Frozen Dimension Check"
@@ -5507,8 +5508,8 @@ local Elite_Hunter_Status = SV:AddLabel("Only Third Sea")
                 end
             end
         end)
-        end)
-end
+    end)
+
 
 Mirragecheck = SV:AddLabel("Only Third Sea")
 
