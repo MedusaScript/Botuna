@@ -2651,8 +2651,7 @@ local Section = W:AddSection({
 })
 local Section = W:AddSection({
     Name = "Version 4.0"
-    Description = "Testing"
-    Image = "rbxassetid://104397992902189"
+    icon = "rbxassetid://104397992902189"
 })
 
 W:AddLabel("BRUTALITY HUB V4")
