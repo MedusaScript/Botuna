@@ -16207,7 +16207,7 @@ ESX:AddSeperator("STATUS SERVER")
  end)
  local FM = ESX:AddLabel('Third World')
 
---elseif World3 then
+--[[elseif World3 then
     spawn(function()
         pcall(function()
             while wait() do
@@ -16234,7 +16234,7 @@ elseif World3 then
     end)
     
  FrozenIsland = M:AddLabel("")
-
+]]--
 
  ESX:AddSeperator("ESP MENU")
  ESX:AddToggle("ESP Player",false,function(a)
