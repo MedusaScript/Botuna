@@ -2530,18 +2530,18 @@ spawn(function()
         task.wait()
     until game.Players.LocalPlayer and game.Players.LocalPlayer.Team ~= nil 
     wait(1.5)
-    require(game.ReplicatedStorage.Notification).new("<Color=Red>Banana hub chào ae<Color=/>"):Display()
+    require(game.ReplicatedStorage.Notification).new("<Color=Red>BRUTALITY HUB V4<Color=/>"):Display()
     wait(.5)
-    require(game.ReplicatedStorage.Notification).new("<Color=Yellow>Hãy sử dụng DeltaX Hoặc Fluxus để có trải nghiệm tốt!!<Color=/>"):Display()
+    require(game.ReplicatedStorage.Notification).new("<Color=Yellow>THANKS FOR USE<Color=/>"):Display()
     wait(.24)
-    require(game.ReplicatedStorage.Notification).new("<Color=Yellow>Tham gia discord để cập nhật thông tin mới nhất nhé<Color=/>"):Display()
+    require(game.ReplicatedStorage.Notification).new("<Color=Yellow>PLEASE SUBSCRIBE MY YOUTUBE CHANNEL<Color=/>"):Display()
     wait(.29)
-    require(game.ReplicatedStorage.Notification).new("<Color=Yellow>Đăng ký kênh khangCC để xem video mới nhất nhé<Color=/>"):Display()
+    require(game.ReplicatedStorage.Notification).new("<Color=Yellow>HAPPY AND FUN USE MY SCRIPT<Color=/>"):Display()
     wait(.36)
 end)
 
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
-local Window = OrionLib:MakeWindow({Name = "Banana hub", HidePremium = false, IntroText = "Banana hub⚜️", SaveConfig = true, ConfigFolder = "NightHub"})
+local Window = OrionLib:MakeWindow({Name = "Banana hub", HidePremium = false, IntroText = "Banana hub⚜️", SaveConfig = false, ConfigFolder = "NightHub"})
 
 
 
