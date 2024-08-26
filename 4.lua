@@ -2541,21 +2541,21 @@ spawn(function()
 end)
 
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
-local Window = OrionLib:MakeWindow({Name = "Banana hub", HidePremium = false, IntroText = "Banana hub⚜️", SaveConfig = false, ConfigFolder = "NightHub"})
+local Window = OrionLib:MakeWindow({Name = "BRUTALITY HUB V4", HidePremium = false, IntroText = "BRUTALITY HUB V4", SaveConfig = false, ConfigFolder = "NightHub"})
 
 
 
 OrionLib:MakeNotification({
-    Name = "Banana hub",
-    Content = "Please Wait loading script...,Do not enable any function",
-    Image = "rbxassetid://8192162908",
+    Name = "Brutality Hub V4",
+    Content = "Please Wait loading script...",
+    Image = "rbxassetid://104397992902189",
     Time = 5
 })
 wait(3)
 OrionLib:MakeNotification({
-    Name = "Banana hub",
-    Content = "đợi hub load config rồi mới sài nha",
-    Image = "rbxassetid://8192162908",
+    Name = "Brutality Hub V4",
+    Content = "Load successfully completed",
+    Image = "rbxassetid://104397992902189",
     Time = 10
 })
 
@@ -2592,7 +2592,7 @@ local S = Window:MakeTab({
 })
 
 local E = Window:MakeTab({
-    Name = "ĐỊNH VỊ",
+    Name = "Esp",
     Icon = "rbxassetid://104397992902189",
     PremiumOnly = false
 })
@@ -2604,7 +2604,7 @@ local RA = Window:MakeTab({
 })
 
 local LC = Window:MakeTab({
-    Name = "🙆‍♂️ BẢN THÂN",
+    Name = "PVP",
     Icon = "rbxassetid://104397992902189",
     PremiumOnly = false
 })
@@ -2651,16 +2651,16 @@ local Section = W:AddSection({
 })
 
 
-W:AddLabel("BRUTALITY HUB")
+W:AddLabel("BRUTALITY HUB V4")
 
 local Section = W:AddSection({
     Name = "Version 4.0"
 })
 
 
-W:AddLabel("PHÁT TRIỂN BỞI khangCC")
-W:AddLabel("Banana hub SCRIPT")
-W:AddLabel("Discord Banana hub : No")
+W:AddLabel("The longest user of this script will get a prize")
+W:AddLabel("Subscribe to my youtube channel")
+W:AddLabel("Use webhook notification on discord server")
 local Section = W:AddSection({
     Name = "Status"
 })
@@ -2754,7 +2754,7 @@ local locallv = W:AddLabel("Level")
         Name = "Status Hack"
     })
     
-    local LevelFarmFarm W:AddLabel("Kaitun : Đell có(sắp có)")
+    local LevelFarmFarm W:AddLabel("Kaitun : ")
     W:AddLabel("Config Save : Comming Son...")
     local Farmfast = W:AddLabel("Farm Fast : ❌")
     local Bypass = W:AddLabel("Bypass ❌")
@@ -3233,7 +3233,7 @@ end)
 local AttackList = {"0", "0.1", "0.175", "0.2", "0.25", "0.3", "0.35", "0.4", "0.45", "0.5", "0.55", "0.6", "0.65", "0.7", "0.75", "0.8", "0.85", "0.9", "0.95", "0.1"}
 M:AddDropdown({
 	Name = "FastAttack Delay",
-	Default = "0.5",
+	Default = "0.75",
 	Options = AttackList,
     Flag = "FastAttack Delay",
     Save = true,
@@ -3296,7 +3296,7 @@ local Section = M:AddSection({
 })
 
 M:AddToggle({
-    Name = "Bypass TP[BETA]",
+    Name = "Bypass TP",
     Default = false,
     Flag = "Bypass TP",
     Save = true,
@@ -3343,13 +3343,13 @@ Farmfasttoggle = M:AddToggle({
 })
 
 local Section = M:AddSection({
-    Name = "Kaitun dỏm"
+    Name = "Kaitun"
 })
 
 
 
 M:AddToggle({
-    Name = "Kaitun[Ko có kill players]",
+    Name = "Farm Kaitun",
     Default = false,
     Flag = "Kaitun",
     Save = true,
@@ -3373,7 +3373,7 @@ M:AddToggle({
 })
 
 M:AddToggle({
-    Name = "Auto Click[Kick]",
+    Name = "Auto Click [Kick]",
     Default = false,
     Flag = "Auto Click",
     Save = true,
@@ -3484,9 +3484,9 @@ TweenChest = M:AddToggle({
     })
 
     M:AddToggle({
-        Name = "Auto Chest[Bypass]",
+        Name = "Auto Chest Bypass",
         Default = false,
-        Flag = "Auto Chest[Bypass]",
+        Flag = "Auto Chest Bypass",
         Save = true,
         Callback = function(Value)
             _G.ChestBypass = Value
@@ -4880,13 +4880,13 @@ RA:AddToggle({
     end    
 })
 
-local Section = LC:AddSection({
+local Section = Wld:AddSection({
     Name = "Teleport Island"
 })
 
 
 if World1 then
-LC:AddDropdown({
+    Wld:AddDropdown({
     Name = "Select Island",
     Default = "",
     Options = {"WindMill",
@@ -4916,7 +4916,7 @@ LC:AddDropdown({
 end
 
 if World2 then
-LC:AddDropdown({
+    Wld:AddDropdown({
     Name = "Select Island",
     Default = "",
     Options = {"The Cafe",
@@ -4944,7 +4944,7 @@ LC:AddDropdown({
 end
 
 if World3 then
-LC:AddDropdown({
+    Wld:AddDropdown({
     Name = "Select Island",
     Default = "",
     Options = {"Mansion",
@@ -4959,8 +4959,8 @@ LC:AddDropdown({
     "Peanut Island",
     "Cake Island",
     "Cocoa Island",
-    "Tiki Outpost New",
-    "Candy Island New⛄"},
+    "Tiki Outpost",
+    "Candy Island"},
     Flag = "Select Island",
     Save = true,
     Callback = function(Value)
@@ -4969,7 +4969,7 @@ LC:AddDropdown({
 })
 end
 
-LC:AddToggle({
+Wld:AddToggle({
     Name = "Teleport To Island",
     Default = false,
     Callback = function(Value)
@@ -5082,7 +5082,7 @@ LC:AddToggle({
     end    
 })
 
-local Section = LC:AddSection({
+local Section = Wld:AddSection({
     Name = "Teleport NPC"
 })
 
@@ -5135,7 +5135,7 @@ NPC3 = {
 }
 
 if World1 then
-LC:AddDropdown({
+    Wld:AddDropdown({
 	Name = "Select NPC",
 	Default = "",
 	Options = NPC1,
@@ -5147,7 +5147,7 @@ LC:AddDropdown({
 })
 end
 if World2 then
-    LC:AddDropdown({
+    Wld:AddDropdown({
         Name = "Select NPC",
         Default = "",
         Options = NPC2,
@@ -5159,7 +5159,7 @@ if World2 then
     })
 end
     if World3 then
-        LC:AddDropdown({
+        Wld:AddDropdown({
             Name = "Select NPC",
             Default = "",
             Options = NPC3,
@@ -5171,7 +5171,7 @@ end
         })
     end
 
-        LC:AddToggle({
+    Wld:AddToggle({
             Name = "Teleport To NPC",
             Default = false,
             Callback = function(Value)
@@ -5265,11 +5265,11 @@ end
             end    
         })
 
-        local Section = LC:AddSection({
-            Name = "Teleport SeSeabeast"
+        local Section = Wld:AddSection({
+            Name = "Teleport Seabeast"
         })
 
-LC:AddToggle({
+Wld:AddToggle({
     Name = "Teleport to Seabeast",
     Default = false,
     Flag = "Teleport to Seabeast",
@@ -5283,11 +5283,11 @@ LC:AddToggle({
     end    
 })
 
-local Section = LC:AddSection({
+local Section = Wld:AddSection({
     Name = "Teleport Mirrage"
 })
 
-LC:AddButton({
+Wld:AddButton({
     Name = "Revome Frog",
     Callback = function()
         game:GetService("Lighting").LightingLayers:Destroy()
@@ -5295,7 +5295,7 @@ LC:AddButton({
       end    
 })
 
-LC:AddToggle({
+Wld:AddToggle({
     Name = "Teleport To Mirage Island",
     Default = false,
     Flag = "Teleport to Mirage",
