@@ -2541,7 +2541,7 @@ spawn(function()
 end)
 
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
-local Window = OrionLib:MakeWindow({Name = "BRUTALITY HUB V4", HidePremium = false, IntroText = "BRUTALITY HUB V4", SaveConfig = false, ConfigFolder = "NightHub"})
+local Window = OrionLib:MakeWindow({Image = "rbxassetid://104397992902189", Name = "BRUTALITY HUB", HidePremium = false, IntroText = "BRUTALITY HUB V4", SaveConfig = false, ConfigFolder = "NightHub"})
 
 
 
@@ -8561,9 +8561,9 @@ spawn(function()
             if _G.AutoObservation then
                 if game:GetService("Players").LocalPlayer.VisionRadius.Value >= 3000 then
                     OrionLib:MakeNotification({
-                        Name = "Banana hub BOT",
+                        Name = "Brutality Hub V4",
                         Content = "!!You Are Max Point!!",
-                        Image = "rbxassetid://14919714384",
+                        Image = "rbxassetid://104397992902189",
                         Time = 5
                     })
                     
@@ -8710,9 +8710,9 @@ spawn(function()
         if Mybeli <= 2500000 or MyFragment <= 5000 then
             wait(2.0)
             OrionLib:MakeNotification({
-                Name = "Banana hub",
+                Name = "Brutality Hub V4",
                 Content = "You not have beli or fragment!",
-                Image = "rbxassetid://8192162908",
+                Image = "rbxassetid://104397992902189",
                 Time = 5
             })
             end
@@ -8871,9 +8871,9 @@ spawn(function()
                         end
                     else
                         OrionLib:MakeNotification({
-                            Name = "Banana hub BOT",
+                            Name = "Brutality Hub V4",
                             Content = "Not Have Superhuman",
-                            Image = "rbxassetid://14919714384",
+                            Image = "rbxassetid://104397992902189",
                             Time = 5
                         })
                         
@@ -8884,9 +8884,9 @@ spawn(function()
                         end
                     else
                         OrionLib:MakeNotification({
-                            Name = "Banana hub BOT",
+                            Name = "Brutality Hub V4",
                             Content = "Not Have Death Step",
-                            Image = "rbxassetid://14919714384",
+                            Image = "rbxassetid://104397992902189",
                             Time = 5
                         })
                         
@@ -8897,9 +8897,9 @@ spawn(function()
                         end
                     else
                         OrionLib:MakeNotification({
-                            Name = "Banana hub BOT",
+                            Name = "Brutality Hub V4",
                             Content = "Not Have SharkMan Karate",
-                            Image = "rbxassetid://14919714384",
+                            Image = "rbxassetid://104397992902189",
                             Time = 5
                         })
                         
@@ -8910,9 +8910,9 @@ spawn(function()
                         end
                     else
                         gOrionLib:MakeNotification({
-                            Name = "Banana hub BOT",
+                            Name = "Brutality Hub V4",
                             Content = "Not Have Electric Claw",
-                            Image = "rbxassetid://14919714384",
+                            Image = "rbxassetid://104397992902189",
                             Time = 5
                         })
                         
@@ -8921,9 +8921,9 @@ spawn(function()
                         if game.Players.LocalPlayer.Backpack:FindFirstChild("Dragon Talon") and game.Players.LocalPlayer.Backpack:FindFirstChild("Dragon Talon").Level.Value >= 400 or game.Players.LocalPlayer.Character:FindFirstChild("Dragon Talon") and game.Players.LocalPlayer.Character:FindFirstChild("Dragon Talon").Level.Value >= 400 then
                             if string.find(game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuyGodhuman",true), "Bring") then
                                 OrionLib:MakeNotification({
-                                    Name = "Banana hub BOT",
+                                    Name = "Brutality Hub V4",
                                     Content = "Not Have Enough Material",
-                                    Image = "rbxassetid://14919714384",
+                                    Image = "rbxassetid://104397992902189",
                                     Time = 5
                                 })
                                 
@@ -8933,9 +8933,9 @@ spawn(function()
                         end
                     else
                         OrionLib:MakeNotification({
-                            Name = "Banana hub BOT",
+                            Name = "Brutality Hub V4",
                             Content = "You Not Have Dragon Talon! ",
-                            Image = "rbxassetid://14919714384",
+                            Image = "rbxassetid://104397992902189",
                             Time = 5
                         })
                         
@@ -11332,33 +11332,33 @@ spawn(function()
             if game:GetService("Lighting").Sky.MoonTextureId=="http://www.roblox.com/asset/?id=9709149052" or game:GetService("Lighting").Sky.MoonTextureId=="http://www.roblox.com/asset/?id=9709149431" then
                 wait(2.0)
                 OrionLib:MakeNotification({
-                    Name = "Banana hub",
-                    Content = "Turn Off Hop Find Moon Please",
-                    Image = "rbxassetid://8192162908",
+                    Name = "Brutality Hub V4",
+                    Content = "You Server Full Moon!!",
+                    Image = "rbxassetid://104397992902189",
                     Time = 5
                 })
             elseif game:GetService("Lighting").Sky.MoonTextureId=="http://www.roblox.com/asset/?id=9709143733" then
                 Hop()
                 OrionLib:MakeNotification({
-                    Name = "Banana hub",
+                    Name = "Brutality Hub V4",
                     Content = "Hop Server",
-                    Image = "rbxassetid://8192162908",
+                    Image = "rbxassetid://104397992902189",
                     Time = 5
                 })
             elseif game:GetService("Lighting").Sky.MoonTextureId=="http://www.roblox.com/asset/?id=9709150401" then
                 Hop()
                 OrionLib:MakeNotification({
-                    Name = "Banana hub",
+                    Name = "Brutality Hub V4",
                     Content = "Hop Server",
-                    Image = "rbxassetid://8192162908",
+                    Image = "rbxassetid://104397992902189",
                     Time = 5
                 })
             elseif game:GetService("Lighting").Sky.MoonTextureId=="http://www.roblox.com/asset/?id=9709149680" then
                 Hop()
                 OrionLib:MakeNotification({
-                    Name = "Banana hub",
+                    Name = "Brutality Hub V4",
                     Content = "Hop Server",
-                    Image = "rbxassetid://8192162908",
+                    Image = "rbxassetid://104397992902189",
                     Time = 5
                 })
             else
@@ -11369,9 +11369,9 @@ spawn(function()
     end)
 
 OrionLib:MakeNotification({
-        Name = "Banana hub",
+        Name = "Brutality Hub V4",
         Content = "Loading script complete!, You can now enable the function!",
-        Image = "rbxassetid://8192162908",
+        Image = "rbxassetid://104397992902189",
         Time = 5
     })
 
@@ -11402,8 +11402,8 @@ end)
 OrionLib:Init()
 
 OrionLib:MakeNotification({
-    Name = "Banana hub",
+    Name = "Brutality Hub V4",
     Content = "Loading Config Complete!!",
-    Image = "rbxassetid://8192162908",
+    Image = "rbxassetid://104397992902189",
     Time = 5
 })
