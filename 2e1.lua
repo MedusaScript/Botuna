@@ -3068,7 +3068,7 @@ M:AddToggle({
         Name = "Health Mob",
         Min = 0,
         Max = 100,
-        Default = 25,
+        Default = 35,
         Color = Color3.fromRGB(255,255,255),
         Increment = 1,
         ValueName = "Health",
@@ -3081,7 +3081,7 @@ M:AddToggle({
 
     M:AddToggle({
         Name = "Skill Z",
-        Default = false,
+        Default = true,
         Flag = "Skill Z",
         Save = true,
         Callback = function(Value)
@@ -3090,9 +3090,9 @@ M:AddToggle({
     })
 
     M:AddToggle({
-        Name = "Skill! X",
-        Default = false,
-        Default = false,
+        Name = "Skill X",
+        Default = true,
+        Default = true,
         Flag = "Skill X",
         Save = true,
         Callback = function(Value)
@@ -3103,8 +3103,8 @@ M:AddToggle({
 
     M:AddToggle({
         Name = "Skill C",
-        Default = false,
-        Default = false,
+        Default = true,
+        Default = true,
         Flag = "Skill C",
         Save = true,
         Callback = function(Value)
@@ -3126,8 +3126,8 @@ M:AddToggle({
 
     M:AddToggle({
         Name = "Skill F",
-        Default = false,
-        Default = false,
+        Default = true,
+        Default = true,
         Flag = "Skill F",
         Save = true,
         Callback = function(Value)
