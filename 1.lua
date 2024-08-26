@@ -2541,7 +2541,7 @@ spawn(function()
 end)
 
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
-local Window = OrionLib:MakeWindow({Image = "rbxassetid://104397992902189", Name = "BRUTALITY HUB", HidePremium = false, IntroText = "BRUTALITY HUB V4", SaveConfig = false, ConfigFolder = "NightHub"})
+local Window = OrionLib:MakeWindow({Name = "BRUTALITY HUB", HidePremium = false, IntroText = "BRUTALITY HUB V4", SaveConfig = false, ConfigFolder = "NightHub"})
 
 
 
@@ -2649,20 +2649,18 @@ local C = Window:MakeTab({
 local Section = W:AddSection({
     Name = "Credit"
 })
-
-
-W:AddLabel("BRUTALITY HUB V4")
-
 local Section = W:AddSection({
     Name = "Version 4.0"
+    Description = "Testing"
+    Image = "rbxassetid://104397992902189"
 })
 
-
+W:AddLabel("BRUTALITY HUB V4")
 W:AddLabel("The longest user of this script will get a prize")
 W:AddLabel("Subscribe to my youtube channel")
 W:AddLabel("Use webhook notification on discord server")
 local Section = W:AddSection({
-    Name = "Status"
+    Name = "Status Player"
 })
 
 local locallv = W:AddLabel("Level")
