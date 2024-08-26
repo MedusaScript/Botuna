@@ -16185,7 +16185,6 @@ Ss:AddToggle("Remove Fog",RemoveFog,function(value)
 end)
 
 ESX:AddSeperator("STATUS SERVER")
-local FM = ESX:AddLabel('Third World')
  
  task.spawn(function()
          while task.wait() do
@@ -16206,8 +16205,9 @@ local FM = ESX:AddLabel('Third World')
              end)
          end
  end)
+ local FM = ESX:AddLabel('Third World')
 
-elseif World3 then
+--elseif World3 then
     spawn(function()
         pcall(function()
             while wait() do
